@@ -3,7 +3,7 @@ package model.student;
 /**
  * Created by Beruto on 12/3/17.
  */
-public class RegularStudent implements StudentInterface {
+public class RegularStudent {
 
     String nif, username, password, name, email, degree;
     int course;
