@@ -14,8 +14,8 @@ public class SkillMapper implements RowMapper<Skill> {
 
     public Skill mapRow(ResultSet resultSet, int i) throws SQLException {
         Skill skill = new Skill();
-        skill.setName(resultSet.getString("name"));
-        skill.setDescription(resultSet.getString("description"));
+        skill.setName(resultSet.getString("name").toLowerCase());
+        skill.setDescription(resultSet.getString("description").toLowerCase());
         String stringLevel = resultSet.getString("level");
 
 
