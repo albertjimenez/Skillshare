@@ -15,6 +15,12 @@ public class StudentMapper implements RowMapper<RegularStudent> {
         RegularStudent regularStudent = new RegularStudent();
 
         regularStudent.setNif(resultSet.getString("nif").toUpperCase());
+        regularStudent.setUsername(resultSet.getString("username"));
+        regularStudent.setPassword(resultSet.getString("password"));
+        regularStudent.setName(resultSet.getString("name"));
+        regularStudent.setEmail(resultSet.getString("email"));
+        regularStudent.setDegree(resultSet.getString("degree"));
+        regularStudent.setCourse(resultSet.getInt("course"));
         return regularStudent;
     }
 }
