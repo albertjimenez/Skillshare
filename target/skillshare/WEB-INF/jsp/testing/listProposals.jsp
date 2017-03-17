@@ -12,6 +12,9 @@
     <title>Lista de propuestas</title>
 </head>
 <body>
-    <h3>Revisa la consola</h3>
+<c:forEach items="${proposalsList}" var="prop">
+        <p>${prop.nif}</p>
+        <p>${prop.skillname}</p>
+</c:forEach>
 </body>
 </html>
