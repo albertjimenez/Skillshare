@@ -19,9 +19,9 @@
     <%--<p>${skills.name} - ${skills.level}</p>--%>
     <%--<p>${skills.description}</p>--%>
     <b:list>
-    <b:listItem>${skills.name} - ${skills.level}</b:listItem>
-    <b:listItem>${skills.description}</b:listItem>
-    <b:listItem>--------------------------</b:listItem>
+        <b:listItem>${skills.name} - ${skills.level}</b:listItem>
+        <b:listItem>${skills.description}</b:listItem>
+        <b:listItem>--------------------------</b:listItem>
     </b:list>
 </c:forEach>
 </body>

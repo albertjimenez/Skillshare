@@ -1,5 +1,6 @@
 package dao;
 
+import mapper.ProposalMapper;
 import mapper.SkillMapper;
 import model.skill.Level;
 import model.skill.Skill;
@@ -26,6 +27,10 @@ public class SkillDao {
 
     public List<Skill> getSkillsCollection() {
         String sql = "select name, level, description from skill";
+        String anSQL = "select id, nif , skill_name , skill_level , description  , initial_date , finish_date " +
+                " from proposal_of_collaboration";
+        System.out.println(jdbcTemplate.query(anSQL, new ProposalMapper()));
+
         return jdbcTemplate.query(sql, new SkillMapper());
     }
 

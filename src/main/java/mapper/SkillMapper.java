@@ -16,20 +16,7 @@ public class SkillMapper implements RowMapper<Skill> {
         Skill skill = new Skill();
         skill.setName(resultSet.getString("name").toLowerCase());
         skill.setDescription(resultSet.getString("description").toLowerCase());
-        String stringLevel = resultSet.getString("level");
-
-
-        switch (stringLevel.toUpperCase().charAt(0)) {
-            case 'N':
-                skill.setLevel(Level.NEWBIE);
-                break;
-            case 'M':
-                skill.setLevel(Level.MEDIUM);
-                break;
-            case 'A':
-                skill.setLevel(Level.ADVANCED);
-                break;
-        }
+        skill.setLevel(Level.getEnum(resultSet.getString("level")));
         return skill;
     }
 }

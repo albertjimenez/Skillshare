@@ -1,7 +1,7 @@
 package controller;
 
+import dao.ProposalDao;
 import dao.SkillDao;
-import dao.StudentDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class TestController {
 
     private SkillDao skillDao;
-    private StudentDao studentDao;
+    private ProposalDao proposalDao;
+//    private StudentDao studentDao
 
     @Autowired
     public void setSkillDao(SkillDao skillDao) {
@@ -24,19 +25,25 @@ public class TestController {
     }
 
     @Autowired
-    public void setStudentDao(StudentDao studentDao) {
-        this.studentDao = studentDao;
+    public void setProposalDao(ProposalDao proposalDao) {
+        this.proposalDao = proposalDao;
     }
+
+
+    //    @Autowired
+//    public void setStudentDao(StudentDao studentDao) {
+//        this.studentDao = studentDao;
+//    }
 
     @RequestMapping("/listSkill")
     public String getSkillsCollection(Model model) {
         model.addAttribute("listSkills", skillDao.getSkillsCollection());
         return "testing/listSkill";
     }
-    @RequestMapping("listProposals")
-    public String getProposalColab(Model model){
 
-        model.addAttribute("proposals",studentDao.getProposalsByStudent("1"));
-        return "testing/listProposals";
+    @RequestMapping("/proposal")
+    public String getProposalColab(Model model){
+        model.addAttribute("propo", proposalDao.getProposals());
+        return "testing/proposal";
     }
 }
