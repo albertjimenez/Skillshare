@@ -30,4 +30,13 @@
     <!--<url-pattern>/</url-pattern>-->
     <url-pattern>*.html</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ResourceServlet</servlet-name>
+    <servlet-class>org.bootstrapjsp.util.ResourceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResourceServlet</servlet-name>
+    <url-pattern>/bootstrapjsp/*</url-pattern>
+  </servlet-mapping>
 </web-app>
