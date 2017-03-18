@@ -5,7 +5,6 @@
   Time: 1:32
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://bootstrapjsp.org/" prefix="b" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html>
@@ -14,10 +13,8 @@
 </head>
 <body>
 <c:forEach items="${propo}" var="prop">
-    <b:list>
-        <b:listItem>${prop.nif}</b:listItem>
-        <b:listItem>${prop.skillname}</b:listItem>
-    </b:list>
+    <p>${prop.nif}</p>
+    <p>${prop.skillname}</p>
 </c:forEach>
 
 </body>
