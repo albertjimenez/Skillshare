@@ -34,7 +34,7 @@
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons ">menu</i></a>
             <%--Esto es la cabecera de arriba--%>
             <ul class="right hide-on-med-and-down">
-                <li><a href="testing/listSkill.html">Lista de Habilidades</a></li>
+                <li><a href="testing/listSkill.html">Listar Habilidades</a></li>
                 <li><a href="testing/proposal.html">Propuestas</a></li>
             </ul>
             <%--Esto es la cabecera movil--%>
