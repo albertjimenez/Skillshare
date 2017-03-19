@@ -17,11 +17,11 @@ public class ProposalMapper implements RowMapper<Proposal> {
         Proposal proposal = new Proposal();
         proposal.setId(new AtomicInteger(resultSet.getInt("id")));
         proposal.setNif(resultSet.getString("nif"));
-        proposal.setSkillname(resultSet.getString("skill_name"));
+        proposal.setSkillName(resultSet.getString("skill_name"));
         proposal.setLevel(Level.getEnum(resultSet.getString("skill_level")));
         proposal.setDescription(resultSet.getString("description"));
-        proposal.setInitial_date(resultSet.getDate("initial_date"));
-        proposal.setFinish_date(resultSet.getDate("finish_date"));
+        proposal.setInitialDate(resultSet.getDate("initial_date"));
+        proposal.setFinishDate(resultSet.getDate("finish_date"));
 
         return proposal;
     }
