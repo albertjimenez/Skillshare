@@ -7,6 +7,10 @@ public enum Type {
 
     CP, CM, NORMAL, MASTER, POSTGRADUATE;
 
+    /**
+     * @param type: cadena de 2 caracteres que nos indica el tipo de estudiante
+     * @return tipo de estudiante
+     */
     public static Type getType(String type) {
         String data = type.substring(0, 2).toUpperCase();
         if (data.equals("CP"))
