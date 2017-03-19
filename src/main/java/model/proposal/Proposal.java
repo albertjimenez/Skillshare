@@ -11,11 +11,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Proposal {
 
     //For getting sequence: nextval('proposal_of_collaboration_id_seq')
-    AtomicInteger id;
-    String nif, skillname;
-    Level level;
-    String description;
-    Date initial_date, finish_date;
+    private AtomicInteger id;
+    private String nif, skillName, description;
+    private Level level;
+    private Date initialDate, finishDate;
 
     public AtomicInteger getId() {
         return id;
@@ -33,12 +32,12 @@ public class Proposal {
         this.nif = nif;
     }
 
-    public String getSkillname() {
-        return skillname;
+    public String getSkillName() {
+        return skillName;
     }
 
-    public void setSkillname(String skillname) {
-        this.skillname = skillname;
+    public void setSkillName(String skillName) {
+        this.skillName = skillName;
     }
 
     public Level getLevel() {
@@ -57,20 +56,20 @@ public class Proposal {
         this.description = description;
     }
 
-    public Date getInitial_date() {
-        return initial_date;
+    public Date getInitialDate() {
+        return initialDate;
     }
 
-    public void setInitial_date(Date initial_date) {
-        this.initial_date = initial_date;
+    public void setInitialDate(Date initialDate) {
+        this.initialDate = initialDate;
     }
 
-    public Date getFinish_date() {
-        return finish_date;
+    public Date getFinishDate() {
+        return finishDate;
     }
 
-    public void setFinish_date(Date finish_date) {
-        this.finish_date = finish_date;
+    public void setFinishDate(Date finishDate) {
+        this.finishDate = finishDate;
     }
 
     @Override
@@ -87,11 +86,11 @@ public class Proposal {
         return "Proposal{" +
                 "id=" + id +
                 ", nif='" + nif + '\'' +
-                ", skillname='" + skillname + '\'' +
+                ", skillName='" + skillName + '\'' +
                 ", level=" + level +
                 ", description='" + description + '\'' +
-                ", initial_date=" + initial_date +
-                ", finish_date=" + finish_date +
+                ", initialDate=" + initialDate +
+                ", finishDate=" + finishDate +
                 '}';
     }
 }

@@ -16,7 +16,7 @@
 <c:forEach items="${propo}" var="prop">
     <b:list>
         <b:listItem>${prop.nif}</b:listItem>
-        <b:listItem>${prop.skillname}</b:listItem>
+        <b:listItem>${prop.skillName}</b:listItem>
     </b:list>
 </c:forEach>
 
