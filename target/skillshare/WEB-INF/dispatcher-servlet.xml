@@ -25,7 +25,7 @@ http://www.springframework.org/schema/context/spring-context.xsd">
     <bean id="skillDao" class="dao.SkillDao"/>
     <bean id="proposalDao" class="dao.ProposalDao"/>
     <bean id="studentDao" class="dao.StudentDao"/>
-
+    <bean id="bannedDao" class="dao.BannedDao"/>
 
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">

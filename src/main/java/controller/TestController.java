@@ -1,7 +1,6 @@
 package controller;
 
 import dao.ProposalDao;
-import dao.SkillDao;
 import dao.StudentDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,14 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 //@RequestMapping("/testing")
 public class TestController {
 
-    private SkillDao skillDao;
+
     private ProposalDao proposalDao;
     private StudentDao studentDao;
 
-    @Autowired
-    public void setSkillDao(SkillDao skillDao) {
-        this.skillDao = skillDao;
-    }
 
     @Autowired
     public void setProposalDao(ProposalDao proposalDao) {
@@ -36,11 +31,6 @@ public class TestController {
         this.studentDao = studentDao;
     }
 
-    @RequestMapping("/testing/listSkill")
-    public String getSkillsCollection(Model model) {
-        model.addAttribute("listSkills", skillDao.getSkillsCollection());
-        return "testing/listSkill";
-    }
 
     @RequestMapping("/proposal")
     public String getProposalColab(Model model){
@@ -49,11 +39,6 @@ public class TestController {
     }
 
 
-    @RequestMapping(value = "/login/login")
-    public String login(Model model) {
-
-        return "login/login";
-    }
 
 
 }
