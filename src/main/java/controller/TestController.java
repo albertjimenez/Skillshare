@@ -2,6 +2,7 @@ package controller;
 
 import dao.ProposalDao;
 import dao.SkillDao;
+import dao.StudentDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,12 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 
 @Controller
-@RequestMapping("/testing")
+//@RequestMapping("/testing")
 public class TestController {
 
     private SkillDao skillDao;
     private ProposalDao proposalDao;
-//    private StudentDao studentDao
+    private StudentDao studentDao;
 
     @Autowired
     public void setSkillDao(SkillDao skillDao) {
@@ -30,12 +31,12 @@ public class TestController {
     }
 
 
-    //    @Autowired
-//    public void setStudentDao(StudentDao studentDao) {
-//        this.studentDao = studentDao;
-//    }
+    @Autowired
+    public void setStudentDao(StudentDao studentDao) {
+        this.studentDao = studentDao;
+    }
 
-    @RequestMapping("/listSkill")
+    @RequestMapping("/testing/listSkill")
     public String getSkillsCollection(Model model) {
         model.addAttribute("listSkills", skillDao.getSkillsCollection());
         return "testing/listSkill";
@@ -46,4 +47,13 @@ public class TestController {
         model.addAttribute("propo", proposalDao.getProposals());
         return "testing/proposal";
     }
+
+
+    @RequestMapping(value = "/login/login")
+    public String login(Model model) {
+
+        return "login/login";
+    }
+
+
 }
