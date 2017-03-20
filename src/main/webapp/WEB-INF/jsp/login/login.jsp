@@ -5,6 +5,8 @@
   Time: 0:50
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <title>Iniciar sesión</title>
@@ -19,32 +21,33 @@
 <body class="blue lighten-3">
 
 <%--Inicio del navbar con movil--%>
+<nav>
 <div class="navbar-fixed">
-    <nav>
-        <div class="nav-wrapper light-blue">
-            <a class="brand-logo center" href="/">
-                <img src="/images/icono_app.png"
-                     class="responsive-img z-depth-2" alt="" width="40" height="40">
-                Skillshare EI1027
-            </a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons ">menu</i></a>
-            <%--Esto es la cabecera de arriba--%>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="testing/listSkill.html">Listar Habilidades</a></li>
-                <li><a href="testing/proposal.html">Propuestas</a></li>
-            </ul>
-            <%--Esto es la cabecera movil--%>
-            <ul class="side-nav" id="mobile-demo">
-                <li><a href="testing/listSkill.html">Lista de Habilidades</a></li>
-                <li><a href="testing/proposal.html">Propuestas</a></li>
-            </ul>
-        </div>
-    </nav>
+
+    <div class="nav-wrapper light-blue">
+        <a class="brand-logo center" href="/">
+            <img src="/images/icono_app.png"
+                 class="responsive-img z-depth-2" alt="" width="40" height="40">
+            Skillshare EI1027
+        </a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons ">menu</i></a>
+        <%--Esto es la cabecera de arriba--%>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="testing/listSkill.html">Listar Habilidades</a></li>
+            <li><a href="testing/proposal.html">Propuestas</a></li>
+        </ul>
+        <%--Esto es la cabecera movil--%>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="testing/listSkill.html">Lista de Habilidades</a></li>
+            <li><a href="testing/proposal.html">Propuestas</a></li>
+        </ul>
+    </div>
 </div>
+</nav>
 
 <h4 class="center-align hoverable z-depth-1-half">Inicia tu sesión</h4>
 <%--Abrimos formulario--%>
-<%--TODO VIGILA EL ATRIBUTO--%>
+<%--TODO VIGILA EL ATRIBUTO modelAttribute--%>
 <div class="section z-depth-2 transparent hoverable">
     <form:form method="post" modelAttribute="student">
         <div class="row">

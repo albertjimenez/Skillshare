@@ -25,15 +25,20 @@
 
 
 <%--Inicio del navbar con movil--%>
+<%--TODO refactor botones a Iniciar sesión y registrarse--%>
 <div class="navbar-fixed">
     <nav>
         <div class="nav-wrapper light-blue">
-            <a class="brand-logo center">
+            <%--Si se pone fija la barra, la barra de movil no va --%>
+
+            <a class="brand-logo center" href="#about">
                 <img src="images/icono_app.png"
                      class="responsive-img z-depth-2" alt="" width="40" height="40">
                 Skillshare EI1027
             </a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons ">menu</i></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons ">menu</i>
+            </a>
             <%--Esto es la cabecera de arriba--%>
             <ul class="right hide-on-med-and-down">
                 <li><a href="testing/listSkill.html">Listar Habilidades</a></li>
@@ -75,9 +80,9 @@
 
     <%--Botones de Iniciar Sesión y Registrarse--%>
     <div class="card-action">
-        <a class="waves-effect waves-light btn-large" href="login/login.html">
+        <a class="light-blue waves-effect waves-light btn-large" href="login/login.html">
             <i class="material-icons left">person_pin</i>Inicia Sesión</a>
-        <a class="waves-effect waves-light btn-large">
+        <a class="light-blue waves-effect waves-light btn-large">
             <i class="material-icons left">add</i>Regístrate</a>
 
     </div>
@@ -114,6 +119,26 @@
     </div>
 </div>
 
+<%--Sobre nosotros--%>
+<div id="about" class="row z-depth-1 ">
+    <div class="col s6">
+        <div class="center promo promo-example">
+            <%--<i class="large material-icons">group</i>--%>
+            <img class="responsive-img" src="images/profile/albert.png" width="512" height="512">
+            <p class="promo-caption">Albert Jiménez</p>
+            <p class="light center">Soy el amo pero tercera matricula de mates.</p>
+        </div>
+    </div>
+    <div class="col s6">
+        <div class="center promo promo-example">
+            <%--<i class="large material-icons">payment</i>--%>
+            <img src="images/profile/pablo.png" class="responsive-img" width="512" height="512">
+            <p class="promo-caption">Pablo Berbel</p>
+            <p class="light center">A veces navajeo por vicio.</p>
+        </div>
+    </div>
+</div>
+
 <footer class="page-footer light-blue">
     <div class="container">
         <div class="row">
@@ -145,8 +170,10 @@
 <%--Se aconseja moverlos al final de la web para reducir los tiempos de carga--%>
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="js/materialize.min.js"></script>
-<script type="text/javascript" src="js/BarraLateralMovil.js"></script>
-
+<%--<script type="text/javascript" src="js/BarraLateralMovil.js"></script>--%>
+<script>
+    $('.button-collapse').sideNav();
+</script>
 <%--Script de smooth scroll--%>
 <script src="js/scroll.js"></script>
 <script>
