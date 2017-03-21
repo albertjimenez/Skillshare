@@ -1,7 +1,7 @@
 package controller;
 
 import dao.StudentDao;
-import model.student.Student;
+import model.login.LoginEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,17 +28,19 @@ public class LoginRegisterController {
     @RequestMapping(value = "/login/login")
     public String login(Model model) {
 //TODO if hay session y no esta baneado -> redirect to Home else return "login/login"
-        model.addAttribute("student", new Student());
+        model.addAttribute("loginEntity", new LoginEntity());
         return "login/login";
     }
 
     @RequestMapping(value = "/login/login", method = RequestMethod.POST)
-    public String processLogin(@ModelAttribute("student") Student student, Model model, BindingResult bindingResult) {
-        if (bindingResult.hasErrors())
+    public String processAndSubmit(@ModelAttribute("loginEntity") LoginEntity loginEntity,
+                                   BindingResult bindingResult, Model model) {
+        if (bindingResult.hasErrors()) {
+            System.out.println("Tiene errores");
             return "/";
-
-        if (studentDao.getStudent(student.getEmail(), student.getPassword()) != null)
-            return "login/login";
+        }
+        model.addAttribute("user", loginEntity.getUser());
+        System.out.println(loginEntity);
         return "home/home_pc";
     }
 

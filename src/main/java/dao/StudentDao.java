@@ -25,7 +25,7 @@ public class StudentDao {
 
     /**
      * @param email
-     * @return Null si no existe el student
+     * @return Null si no existe el student, {@link Student} vacio si la contraseña es incorrecta y {@link Student} con cosas si es correcta
      */
     public Student getStudent(String email, String password) {
         String sql = "SELECT * FROM student where email = ?";
@@ -37,7 +37,7 @@ public class StudentDao {
             return s;
         }
 
-        return s;
+        return s.getPassword().equals(password) ? s : new Student();
     }
 
 

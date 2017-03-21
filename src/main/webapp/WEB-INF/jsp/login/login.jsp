@@ -5,7 +5,7 @@
   Time: 0:50
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://www.springframework.org/tags/form" %>
+<%--<%@ taglib prefix="c" uri="http://www.springframework.org/tags/form" %>--%>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
@@ -49,19 +49,23 @@
 <%--Abrimos formulario--%>
 <%--TODO VIGILA EL ATRIBUTO modelAttribute--%>
 <div class="section z-depth-2 transparent hoverable">
-    <form:form method="post" modelAttribute="student">
+    <form:form method="post" modelAttribute="loginEntity">
         <div class="row">
             <div class="input-field col s6 offset-s3 ">
                 <i class="material-icons prefix">account_circle</i>
-                <input placeholder="Correo o Nombre de Usuario" id="login_access" type="text">
-                <label for="login_access">Correo o Nombre de Usuario</label>
+                <form:label path="user">Email</form:label>
+                <form:input path="user"/>
+                    <%--<input placeholder="Correo o Nombre de Usuario" id="login_access" type="text">--%>
+                    <%--<label for="login_access">Correo o Nombre de Usuario</label>--%>
             </div>
         </div>
         <div class="row ">
             <div class="input-field col s6 offset-s3">
                 <i class="material-icons prefix">dialpad</i>
-                <input placeholder="Contraseña" id="password" type="password" class="validate">
-                <label for="password">Contraseña</label>
+                    <%--<input placeholder="Contraseña" id="password" type="password" class="validate">--%>
+                <form:label path="password">Contraseña</form:label>
+                <form:input path="password"/>
+                    <%--<label for="password">Contraseña</label>--%>
             </div>
         </div>
 
