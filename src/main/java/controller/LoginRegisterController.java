@@ -2,6 +2,8 @@ package controller;
 
 import dao.StudentDao;
 import model.login.LoginEntity;
+import model.student.Student;
+import model.student.Type;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -39,9 +41,21 @@ public class LoginRegisterController {
             System.out.println("Tiene errores");
             return "/";
         }
-        model.addAttribute("user", loginEntity.getUser());
-        System.out.println(loginEntity);
-        return "home/home_pc";
+
+        Student s = studentDao.getStudent(loginEntity.getUser(), loginEntity.getPassword());
+        if (s == null)
+            return "login/error_username";
+        if (s.getNif() == null) {
+            return "login/error_pass";
+        } else model.addAttribute("error_password", "");
+
+        model.addAttribute("student", s);
+        if (s.getNif().equals("BANEADO"))
+            return "login/banned";
+
+        return s.getType() == Type.CP ? "home/home_pc" : "home/home_student";
+
+
     }
 
 

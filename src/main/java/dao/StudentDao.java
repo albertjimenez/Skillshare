@@ -24,19 +24,37 @@ public class StudentDao {
 
 
     /**
-     * @param email
+     * @param account  Puede ser tanto; email como el username
+     * @param password Contraseña
      * @return Null si no existe el student, {@link Student} vacio si la contraseña es incorrecta y {@link Student} con cosas si es correcta
+     * si el nif del usuario está BANEADO entonces el campo nif tendrá como valor BANEADO
      */
-    public Student getStudent(String email, String password) {
-        String sql = "SELECT * FROM student where email = ?";
+    public Student getStudent(String account, String password) {
+
+        String sqlEmail = "", sqlUsername = "";
         Student s = null;
+        if (account.toLowerCase().contains("@")) sqlEmail = "SELECT * FROM student where account = ?";
+        else sqlUsername = "SELECT * FROM student where username = ?";
         try {
-            s = jdbcTemplate.queryForObject(sql, new Object[]{email}, new StudentMapper());
+            if (!sqlEmail.equals(""))
+                s = jdbcTemplate.queryForObject(sqlEmail.toLowerCase(), new Object[]{account}, new StudentMapper());
+            else
+                s = jdbcTemplate.queryForObject(sqlUsername.toLowerCase(), new Object[]{account}, new StudentMapper());
         } catch (EmptyResultDataAccessException e) {
 
             return s;
         }
+        String sql = "Select * from banned where nif = ?";
+        String banned = null;
+        try {
+            banned = jdbcTemplate.queryForObject(sql, new Object[]{s.getNif().toUpperCase()}, String.class);
+        } catch (EmptyResultDataAccessException e) {
 
+            return s.getPassword().equals(password) ? s : new Student();
+
+        }
+        //Si llegas hasta aqui es que el usuario está baneado
+        s.setNif("BANEADO");
         return s.getPassword().equals(password) ? s : new Student();
     }
 
