@@ -23,6 +23,7 @@
           <element id="library" level="project" name="Maven: org.springframework.retry:spring-retry:1.0.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.postgresql:postgresql:9.3-1100-jdbc41" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.0.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">

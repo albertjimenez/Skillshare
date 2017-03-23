@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body class="blue lighten-3" onload="user_null()">
+<body class="blue lighten-3">
 
 <%--Inicio del navbar con movil--%>
 <nav>
@@ -31,16 +31,16 @@
                 Skillshare EI1027
             </a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons ">menu</i></a>
-            <%--Esto es la cabecera de arriba--%>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="testing/listSkill.html">Listar Habilidades</a></li>
-                <li><a href="testing/proposal.html">Propuestas</a></li>
-            </ul>
-            <%--Esto es la cabecera movil--%>
-            <ul class="side-nav" id="mobile-demo">
-                <li><a href="testing/listSkill.html">Lista de Habilidades</a></li>
-                <li><a href="testing/proposal.html">Propuestas</a></li>
-            </ul>
+            <%--&lt;%&ndash;Esto es la cabecera de arriba&ndash;%&gt;--%>
+            <%--<ul class="right hide-on-med-and-down">--%>
+            <%--<li><a href="testing/listSkill.html">Listar Habilidades</a></li>--%>
+            <%--<li><a href="testing/proposal.html">Propuestas</a></li>--%>
+            <%--</ul>--%>
+            <%--&lt;%&ndash;Esto es la cabecera movil&ndash;%&gt;--%>
+            <%--<ul class="side-nav" id="mobile-demo">--%>
+            <%--<li><a href="testing/listSkill.html">Lista de Habilidades</a></li>--%>
+            <%--<li><a href="testing/proposal.html">Propuestas</a></li>--%>
+            <%--</ul>--%>
         </div>
     </div>
 </nav>

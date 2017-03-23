@@ -45,13 +45,12 @@
             </a>
             <%--Esto es la cabecera de arriba--%>
             <ul class="right hide-on-med-and-down">
-                <li><a href="testing/listSkill.html">Listar Habilidades</a></li>
-                <li><a href="testing/proposal.html">Propuestas</a></li>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="../login/logout.html">Cerrar sesión</a></li>
             </ul>
             <%--Esto es la cabecera movil--%>
             <ul class="side-nav" id="mobile-demo">
-                <li><a href="testing/listSkill.html">Lista de Habilidades</a></li>
-                <li><a href="testing/proposal.html">Propuestas</a></li>
+                <li><a href="../login/logout.html">Cerrar sesión</a></li>
             </ul>
         </div>
     </nav>
@@ -59,11 +58,13 @@
 <div class="row">
     <%--Barra gris--%>
     <div class="col s3 blue-grey darken-1 z-depth-3" style="min-height:100%; min-width: 5%">
+
+        <%--PANEL--%>
         <ul id="slide-out" class="side-nav">
             <li><a href="#!">First Sidebar Link</a></li>
-            <li><a href="#!">Second Sidebar Link</a></li>
+
         </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse">
+        <a href="#" data-activates="slide-out" class="button-collapse" data-toggle="fullscreen">
 
             <h3 class="black-text z-depth-1 btn-large red accent-2">PANEL
                 <i class="material-icons">menu</i>

@@ -32,13 +32,12 @@
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons ">menu</i></a>
             <%--Esto es la cabecera de arriba--%>
             <ul class="right hide-on-med-and-down">
-                <li><a href="testing/listSkill.html">Listar Habilidades</a></li>
-                <li><a href="testing/proposal.html">Propuestas</a></li>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="../login/logout.html">Cerrar sesión</a></li>
             </ul>
             <%--Esto es la cabecera movil--%>
             <ul class="side-nav" id="mobile-demo">
-                <li><a href="testing/listSkill.html">Lista de Habilidades</a></li>
-                <li><a href="testing/proposal.html">Propuestas</a></li>
+                <li><a href="../login/logout.html">Cerrar sesión</a></li>
             </ul>
         </div>
     </div>

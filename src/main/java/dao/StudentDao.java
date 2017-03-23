@@ -33,7 +33,7 @@ public class StudentDao {
 
         String sqlEmail = "", sqlUsername = "";
         Student s = null;
-        if (account.toLowerCase().contains("@")) sqlEmail = "SELECT * FROM student where account = ?";
+        if (account.toLowerCase().contains("@")) sqlEmail = "SELECT * FROM student where email = ?";
         else sqlUsername = "SELECT * FROM student where username = ?";
         try {
             if (!sqlEmail.equals(""))
