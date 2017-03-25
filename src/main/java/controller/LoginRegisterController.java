@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.Map;
@@ -121,11 +120,9 @@ public class LoginRegisterController {
 
     @RequestMapping(value = "register/register", method = RequestMethod.POST)
     public String processRegister(@ModelAttribute("studentRegister") Student student,
-                                  BindingResult bindingResult, HttpServletRequest request,
+                                  BindingResult bindingResult,
                                   Model model) {
 
-        //TODO, da fallo de null porque no inyecta el Type
-        System.out.println(student.getType());
         if (bindingResult.hasErrors()) {
             System.out.println("Tiene errores");
             return "/";

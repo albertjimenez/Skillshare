@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: Beruto and Pablo Berbel for EI1027
@@ -88,28 +89,95 @@
         <ul class="collapsible " data-collapsible="expandable">
             <c:forEach items="${skills}" var="sk">
                 <li>
-                    <div class="collapsible-header red lighten-3 z-depth-1">
+                    <div class="collapsible-header red lighten-3 z-depth-3">
                         <i class="material-icons">
                             touch_app</i>${sk.name} - ${sk.level}</div>
-                    <div class="collapsible-body cyan lighten-4">
+                    <div class="collapsible-body cyan lighten-4 hoverable">
+                        <div class="row">
+                            <div class="col s12">
                         <span>${sk.description}</span>
+                            </div>
+                        </div>
+                            <%--Botonera dentro del cajon--%>
+                        <div class="row">
+                            <div class="col s6">
+                                <a class="waves-effect waves-light btn" href="#modal1">
+                                    <i class="material-icons left ">mode_edit
+                                    </i>Editar habilidad</a>
+                            </div>
+                            <div class="col s6">
+                                <a class="waves-effect waves-light btn">
+                                    <i class="material-icons left">delete</i>
+                                    Borrar habilidad</a>
+                            </div>
+                        </div>
+                            <%--Botonera fija en la parte inferior derecha--%>
+                            <%--Button Material--%>
                         <div class="fixed-action-btn">
                             <a class="btn-floating btn-large red">
                                 <i class="large material-icons">mode_edit</i>
                             </a>
+
+                                <%--SUBButtons--%>
                             <ul>
-                                <li><a class="btn-floating green" href="${sk.name}${sk.level}"><i
+                                <li><a class="btn-floating red" href="${sk.name}${sk.level}"><i
                                         class="material-icons">delete</i></a></li>
-                                <li><a class="btn-floating blue"><i class="material-icons">mode_edit</i></a></li>
+                                <li><a class="btn-floating blue" href="#modal1">
+                                    <i class="material-icons">mode_edit</i></a></li>
                             </ul>
                         </div>
                     </div>
 
                 </li>
+
+                <%--Modal--%>
+                <%--TODO procesar el formulario en otro JSP--%>
+                <div id="modal1" class="modal modal-fixed-footer">
+                    <div class="modal-content">
+                        <h4>Editar habilidad ${sk.name}</h4>
+                        <form:form method="post" modelAttribute="editskill" id="myform" action="home_pc.html">
+                            <div class="row">
+                                <div class="input-field col s6 offset-s3 ">
+                                    <i class="material-icons prefix">supervisor_account</i>
+                                    <form:label path="name">Nombre</form:label>
+                                    <form:input path="name" id="name" cssClass="validate" value="${sk.name}"/>
+                                </div>
+                                <div class="input-field col s6 offset-s3 ">
+                                    <i class="material-icons prefix">dashboard</i>
+                                        <%--<form:label path="level">Nivel</form:label>--%>
+                                        <%--<form:input path="level" id="level" cssClass="validate" value="${sk.level}"/>--%>
+                                    <form:select path="level">
+                                        <form:option value="" disabled="true">
+                                            Escoge qué nivel de habilidad es</form:option>
+                                        <form:option value="A">Advanced</form:option>
+                                        <form:option value="M">Medium</form:option>
+                                        <form:option value="N">Newbie</form:option>
+                                    </form:select>
+                                </div>
+                                <div class="input-field col s6 offset-s3 ">
+                                    <i class="material-icons prefix">toc</i>
+                                    <form:label path="description">Descripción</form:label>
+                                    <form:textarea path="description" id="description" value="${sk.description}"
+                                                   cssClass="validate"/>
+                                        <%--<form:input path="description" id="description" cssClass="validate"/>--%>
+                                </div>
+                                <div class="input-field col s6 offset-s3 ">
+                                        <%--<input type="submit" class="" value="Aceptar" id="edit_ok_btn">--%>
+                                    <button class="btn waves-effect waves-light" type="submit" name="action">Editar
+                                        <i class="material-icons right">send</i>
+                                    </button>
+                                    <a class="modal-close waves-effect waves-green btn-flat" id="close_form_btn">Cancelar</a>
+                                </div>
+                            </div>
+                        </form:form>
+                    </div>
+                </div>
+
             </c:forEach>
         </ul>
 
     </div>
+
 
 </div>
 <footer class="page-footer light-blue">
@@ -123,6 +191,7 @@
                 <h5 class="white-text">Enlaces</h5>
                 <ul>
                     <li><a class="grey-text text-lighten-3" href="login/login.html">Iniciar Sesión</a></li>
+                    <li><a class="grey-text text-lighten-3" href="register/register.html">Regístrate</a></li>
                 </ul>
             </div>
         </div>
@@ -131,7 +200,7 @@
         <div class="container">
             © 2017 Copyright
             <a class="grey-text text-lighten-4 right" href="https://aulavirtual.uji.es/course/view.php?id=47728">Aula
-                Virtual</a>
+                Virtual EI1027</a>
         </div>
     </div>
 </footer>
@@ -140,5 +209,16 @@
 <script type="text/javascript" src="/js/materialize.min.js"></script>
 <script src="/js/scroll.js"></script>
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
+<script>
+    $(document).ready(function () {
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('select').material_select();
+    });
+</script>
 </body>
 </html>

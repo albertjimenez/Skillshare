@@ -5,18 +5,25 @@ package model.skill;
  */
 public enum Level {
 
-    NEWBIE, MEDIUM, ADVANCED, UNKNOWN;
+    N, M, A;
+
+    /**
+     * Newbie, Medium, Advanced
+     *
+     * @param stringLevel
+     * @return
+     */
 
     public static Level getEnum(String stringLevel) {
         switch (stringLevel.toUpperCase().charAt(0)) {
             case 'N':
-                return Level.NEWBIE;
+                return Level.N;
             case 'M':
-                return Level.MEDIUM;
+                return Level.M;
             case 'A':
-                return Level.ADVANCED;
+                return Level.A;
             default:
-                return Level.UNKNOWN;
+                return Level.N;
         }
     }
 }
