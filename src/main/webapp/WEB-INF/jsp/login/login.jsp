@@ -30,17 +30,10 @@
                      class="responsive-img z-depth-2" alt="" width="40" height="40">
                 Skillshare EI1027
             </a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons ">menu</i></a>
-            <%--&lt;%&ndash;Esto es la cabecera de arriba&ndash;%&gt;--%>
-            <%--<ul class="right hide-on-med-and-down">--%>
-            <%--<li><a href="testing/listSkill.html">Listar Habilidades</a></li>--%>
-            <%--<li><a href="testing/proposal.html">Propuestas</a></li>--%>
-            <%--</ul>--%>
-            <%--&lt;%&ndash;Esto es la cabecera movil&ndash;%&gt;--%>
-            <%--<ul class="side-nav" id="mobile-demo">--%>
-            <%--<li><a href="testing/listSkill.html">Lista de Habilidades</a></li>--%>
-            <%--<li><a href="testing/proposal.html">Propuestas</a></li>--%>
-            <%--</ul>--%>
+            <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons ">menu</i>
+            </a>
+
         </div>
     </div>
 </nav>
@@ -53,7 +46,7 @@
         <div class="row">
             <div class="input-field col s6 offset-s3 ">
                 <i class="material-icons prefix">account_circle</i>
-                <form:label path="user">Email, NIF o nombre de usuario</form:label>
+                <form:label path="user">Email o nombre de usuario</form:label>
                 <form:input path="user" id="user" cssClass="validate"/>
             </div>
         </div>

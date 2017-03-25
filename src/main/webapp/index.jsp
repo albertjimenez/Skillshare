@@ -1,4 +1,5 @@
-<%@ taglib prefix="c" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: Beruto
@@ -42,6 +43,7 @@
             <%--Esto es la cabecera de arriba--%>
             <ul class="right hide-on-med-and-down">
                 <li><a href="login/login.html">Iniciar sesión</a></li>
+                <li><a href="register/register.html">Registrarse</a></li>
             </ul>
             <%--Esto es la cabecera movil--%>
             <ul class="side-nav" id="mobile-demo">

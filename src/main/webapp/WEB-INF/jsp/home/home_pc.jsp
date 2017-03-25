@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Beruto and Pablo Berbel for EI1027
@@ -74,14 +75,39 @@
             <div class="card-panel red accent-2">
           <span class="white-text">
           El botón de <i><strong>Panel</strong></i> expande el panel para poder controlar y mostrar más
-              información que la que se muestra.
+              información que la que se muestra. <br>
           </span>
+                <span class="white-text">
+                    Cuando haces clic en una habilidad puedes editarla con el botón flotante que aparece
+                abajo a la izquierda. En él se desplega el subbotón editar y eliminar.</span>
             </div>
         </div>
 
     </div>
     <div class="col s9 ">
-        <!-- Teal page content  -->
+        <ul class="collapsible " data-collapsible="expandable">
+            <c:forEach items="${skills}" var="sk">
+                <li>
+                    <div class="collapsible-header red lighten-3 z-depth-1">
+                        <i class="material-icons">
+                            touch_app</i>${sk.name} - ${sk.level}</div>
+                    <div class="collapsible-body cyan lighten-4">
+                        <span>${sk.description}</span>
+                        <div class="fixed-action-btn">
+                            <a class="btn-floating btn-large red">
+                                <i class="large material-icons">mode_edit</i>
+                            </a>
+                            <ul>
+                                <li><a class="btn-floating green" href="${sk.name}${sk.level}"><i
+                                        class="material-icons">delete</i></a></li>
+                                <li><a class="btn-floating blue"><i class="material-icons">mode_edit</i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </li>
+            </c:forEach>
+        </ul>
 
     </div>
 

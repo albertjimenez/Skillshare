@@ -53,8 +53,9 @@
         <div class="card  blue-grey darken-1">
             <div class="card-content white-text">
                 <span class="card-title">Aviso</span>
-                <p>La contraseña de la cuenta no es correcta.
+                <p>Has intentado inicar sesión o registrarte y la contraseña de la cuenta no es correcta.
                     Por favor verifica que estás introduciendo la información correcta.</p>
+                <p>Si has intentado registrarte y ves esta pantalla, es que ya tenías cuenta creada.</p>
             </div>
             <div class="card-action valign center-align">
                 <a href="login.html">Iniciar sesión otra vez</a>
