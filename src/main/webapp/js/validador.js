@@ -71,3 +71,11 @@ function check_register() {
 
 }
 
+function white_spaces() {
+    if (document.getElementById("name").value.indexOf(' ') > 0) {
+        Materialize.toast('El nombre es solo una palabra no varias!', 4000, 'rounded');
+        return false;
+    }
+    return true;
+}
+

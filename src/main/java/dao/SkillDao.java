@@ -1,6 +1,7 @@
 package dao;
 
 import mapper.SkillMapper;
+import model.skill.Level;
 import model.skill.Skill;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -29,17 +30,22 @@ public class SkillDao {
         return jdbcTemplate.query(sql, new SkillMapper());
     }
 
-//    public List<Skill> getSkillsByName(String name) {
-//        String sql = "select name, level, description from skill where name = ?";
-//        return jdbcTemplate.query(sql, new Object[]{name}, new SkillMapper());
-//    }
 
+    public Skill findSkill(String name, Level level) {
+        String sql = "select name, level, description from skill where name = ? and level = ?";
 
-//    public Skill findSkill(String name, Level level) {
-//        String sql = "select name, level, description from skill where name = ? and skill = ?";
-//        return jdbcTemplate.queryForObject(sql, new Object[]{name, level}, new SkillMapper());
-//
-//    }
+        try {
+            return jdbcTemplate.queryForObject(sql, new Object[]{name, level.toString()}, new SkillMapper());
+        } catch (EmptyResultDataAccessException e) {
+            return new Skill();
+        }
+
+    }
+
+    public List<Skill> findSkillByName(String name) {
+        String sql = "select * from skill where name = ?";
+        return jdbcTemplate.query(sql, new Object[]{name}, new SkillMapper());
+    }
 
     public void editSkill(Skill skill) {
         String sql = "UPDATE Skill set description=? where name=? and level=?";
@@ -59,11 +65,12 @@ public class SkillDao {
         String sqlQuery = "SELECT * from Skill where name = ? and level = ?";
         String sql = "INSERT INTO SKILL VALUES(?,?,?)";
         try {
-            jdbcTemplate.query(sqlQuery,
+            jdbcTemplate.queryForObject(sqlQuery,
                     new Object[]{skill.getName(), skill.getLevel().toString()}, new SkillMapper());
+            System.out.println("sí esta");
             return false;
         } catch (EmptyResultDataAccessException e) {
-
+            System.out.println("no esta");
             jdbcTemplate.update(sql, skill.getName(),
                     skill.getLevel().toString(), skill.getDescription());
             return true;

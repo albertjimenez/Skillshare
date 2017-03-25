@@ -1,5 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: Beruto and Pablo Berbel for EI1027
@@ -7,10 +6,11 @@
   Time: 1:49
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <title>Home Promotor de colaboraciones</title>
-    <title>Iniciar sesión</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection"/>
@@ -80,18 +80,27 @@
           </span>
                 <span class="white-text">
                     Cuando haces clic en una habilidad puedes editarla con el botón flotante que aparece
-                abajo a la izquierda. En él se desplega el subbotón editar y eliminar.</span>
+                abajo a la izquierda. En él se desplega el subbotón editar, eliminar y crear.</span>
             </div>
         </div>
 
     </div>
     <div class="col s9 ">
-        <ul class="collapsible " data-collapsible="expandable">
+        <div class="fixed-action-btn horizontal">
+            <a class="btn-floating btn-large blue">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul>
+                <li><a class="btn-floating green" href="skill/create.html">
+                    <i class="material-icons">playlist_add</i></a></li>
+            </ul>
+        </div>
+        <ul class="collapsible " data-collapsible="accordion">
             <c:forEach items="${skills}" var="sk">
                 <li>
                     <div class="collapsible-header red lighten-3 z-depth-3">
                         <i class="material-icons">
-                            touch_app</i>${sk.name} - ${sk.level}</div>
+                            touch_app</i>#${sk.name} #${sk.level}</div>
                     <div class="collapsible-body cyan lighten-4 hoverable">
                         <div class="row">
                             <div class="col s12">
@@ -101,12 +110,12 @@
                             <%--Botonera dentro del cajon--%>
                         <div class="row">
                             <div class="col s6">
-                                <a class="waves-effect waves-light btn" href="#modal1">
+                                <a class="waves-effect waves-light btn" href="skill/update/${sk.name}/${sk.level}.html">
                                     <i class="material-icons left ">mode_edit
                                     </i>Editar habilidad</a>
                             </div>
                             <div class="col s6">
-                                <a class="waves-effect waves-light btn">
+                                <a class="waves-effect waves-light btn" href="skill/delete/${sk.name}/${sk.level}.html">
                                     <i class="material-icons left">delete</i>
                                     Borrar habilidad</a>
                             </div>
@@ -120,59 +129,16 @@
 
                                 <%--SUBButtons--%>
                             <ul>
-                                <li><a class="btn-floating red" href="${sk.name}${sk.level}"><i
+                                <li><a class="btn-floating red" href="skill/delete/${sk.name}/${sk.level}.html"><i
                                         class="material-icons">delete</i></a></li>
-                                <li><a class="btn-floating blue" href="#modal1">
+                                <li><a class="btn-floating blue" href="skill/update/${sk.name}/${sk.level}.html">
                                     <i class="material-icons">mode_edit</i></a></li>
+                                <li><a class="btn-floating green" href="skill/create.html">
+                                    <i class="material-icons">playlist_add</i></a></li>
                             </ul>
                         </div>
                     </div>
-
                 </li>
-
-                <%--Modal--%>
-                <%--TODO procesar el formulario en otro JSP--%>
-                <div id="modal1" class="modal modal-fixed-footer">
-                    <div class="modal-content">
-                        <h4>Editar habilidad ${sk.name}</h4>
-                        <form:form method="post" modelAttribute="editskill" id="myform" action="home_pc.html">
-                            <div class="row">
-                                <div class="input-field col s6 offset-s3 ">
-                                    <i class="material-icons prefix">supervisor_account</i>
-                                    <form:label path="name">Nombre</form:label>
-                                    <form:input path="name" id="name" cssClass="validate" value="${sk.name}"/>
-                                </div>
-                                <div class="input-field col s6 offset-s3 ">
-                                    <i class="material-icons prefix">dashboard</i>
-                                        <%--<form:label path="level">Nivel</form:label>--%>
-                                        <%--<form:input path="level" id="level" cssClass="validate" value="${sk.level}"/>--%>
-                                    <form:select path="level">
-                                        <form:option value="" disabled="true">
-                                            Escoge qué nivel de habilidad es</form:option>
-                                        <form:option value="A">Advanced</form:option>
-                                        <form:option value="M">Medium</form:option>
-                                        <form:option value="N">Newbie</form:option>
-                                    </form:select>
-                                </div>
-                                <div class="input-field col s6 offset-s3 ">
-                                    <i class="material-icons prefix">toc</i>
-                                    <form:label path="description">Descripción</form:label>
-                                    <form:textarea path="description" id="description" value="${sk.description}"
-                                                   cssClass="validate"/>
-                                        <%--<form:input path="description" id="description" cssClass="validate"/>--%>
-                                </div>
-                                <div class="input-field col s6 offset-s3 ">
-                                        <%--<input type="submit" class="" value="Aceptar" id="edit_ok_btn">--%>
-                                    <button class="btn waves-effect waves-light" type="submit" name="action">Editar
-                                        <i class="material-icons right">send</i>
-                                    </button>
-                                    <a class="modal-close waves-effect waves-green btn-flat" id="close_form_btn">Cancelar</a>
-                                </div>
-                            </div>
-                        </form:form>
-                    </div>
-                </div>
-
             </c:forEach>
         </ul>
 
@@ -209,12 +175,6 @@
 <script type="text/javascript" src="/js/materialize.min.js"></script>
 <script src="/js/scroll.js"></script>
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
-<script>
-    $(document).ready(function () {
-        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-        $('.modal').modal();
-    });
-</script>
 <script>
     $(document).ready(function () {
         $('select').material_select();
