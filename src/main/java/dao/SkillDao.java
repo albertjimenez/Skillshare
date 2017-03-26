@@ -26,7 +26,7 @@ public class SkillDao {
     }
 
     public List<Skill> getSkillsCollection() {
-        String sql = "select name, level, description from skill";
+        String sql = "select name, level, description from skill order by name, description";
         return jdbcTemplate.query(sql, new SkillMapper());
     }
 
