@@ -123,10 +123,12 @@
 <div id="about" class="row z-depth-1 ">
     <div class="col s6">
         <div class="center promo promo-example">
-            <%--<i class="large material-icons">group</i>--%>
             <img class="responsive-img" src="images/profile/albert.png" width="512" height="512">
             <p class="promo-caption">Albert Jiménez</p>
-            <p class="light center">Soy el amo pero tercera matricula de mates.</p>
+            <p class="light center">
+                Entusiasta de las aventuras que deparan los proyectos nuevos como este.
+                Puedes visitar mi portfolio en <a href="https://www.albertjimenez.github.io">Portfolio Github</a>.
+            </p>
         </div>
     </div>
     <div class="col s6">
@@ -134,7 +136,7 @@
             <%--<i class="large material-icons">payment</i>--%>
             <img src="images/profile/pablo.png" class="responsive-img" width="512" height="512">
             <p class="promo-caption">Pablo Berbel</p>
-            <p class="light center">A veces navajeo por vicio.</p>
+            <p class="light center">Rellenar.</p>
         </div>
     </div>
 </div>
@@ -150,9 +152,7 @@
                 <h5 class="white-text">Enlaces</h5>
                 <ul>
                     <li><a class="grey-text text-lighten-3" href="login/login.html">Iniciar Sesión</a></li>
-                    <%--<li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>--%>
-                    <%--<li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>--%>
-                    <%--<li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>--%>
+                    <li><a class="grey-text text-lighten-3" href="register/register.html">Regístrate</a></li>
                 </ul>
             </div>
         </div>
@@ -161,7 +161,7 @@
         <div class="container">
             © 2017 Copyright
             <a class="grey-text text-lighten-4 right" href="https://aulavirtual.uji.es/course/view.php?id=47728">Aula
-                Virtual</a>
+                Virtual EI1027</a>
         </div>
     </div>
 </footer>
