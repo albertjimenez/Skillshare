@@ -59,9 +59,9 @@ public class StudentDao {
             return s;
         }
         String sql = "Select * from banned where nif = ?";
-        String banned = null;
+//        String banned = null;
         try {
-            banned = jdbcTemplate.queryForObject(sql, new Object[]{s.getNif().toUpperCase()}, String.class);
+            jdbcTemplate.queryForObject(sql, new Object[]{s.getNif().toUpperCase()}, String.class);
         } catch (EmptyResultDataAccessException e) {
 
             return s.getPassword().equals(password) ? s : new Student();

@@ -1,5 +1,6 @@
 package controller;
 
+import dao.BannedDao;
 import dao.StudentDao;
 import model.login.LoginEntity;
 import model.student.Student;
@@ -25,6 +26,8 @@ public class LoginRegisterController {
 
     private StudentDao studentDao;
 
+    private BannedDao bannedDao;
+
     @Autowired
     HttpSession httpSession;
 
@@ -33,15 +36,19 @@ public class LoginRegisterController {
         this.studentDao = studentDao;
     }
 
+    @Autowired
+    public void setBannedDao(BannedDao bannedDao) {
+        this.bannedDao = bannedDao;
+    }
 
     @RequestMapping(value = "/login/login")
     public String login(Model model) {
 
-//        HttpSession httpSession = request.getSession();
         model.addAttribute("loginEntity", new LoginEntity());
         if (httpSession.getAttribute("user") != null) {
             Student s = (Student) httpSession.getAttribute("user");
-            //TODO hacer una consulta para saber si el Student está baneado
+            if (bannedDao.isBanned(s.getNif()))
+                return "redirect:../login/banned.html";
             return switchUserType(s);
         }
 
@@ -77,7 +84,7 @@ public class LoginRegisterController {
 //        HttpSession httpSession = request.getSession();
         httpSession.setAttribute("user", s);
 
-        return s.getType() == Type.CP ? "redirect:../home/home_pc.html" : "redirect:../home/home_student";
+        return s.getType() == Type.CP ? "redirect:../home/home_pc.html" : "redirect:../home/home_student.html";
 
 
     }

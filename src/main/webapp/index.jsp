@@ -48,6 +48,8 @@
             <%--Esto es la cabecera movil--%>
             <ul class="side-nav" id="mobile-demo">
                 <li><a href="login/login.html">Iniciar sesión</a></li>
+                <li><a href="register/register.html">Registrarse</a></li>
+
             </ul>
         </div>
     </nav>
@@ -82,7 +84,7 @@
     <div class="card-action">
         <a class="light-blue waves-effect waves-light btn-large" href="login/login.html">
             <i class="material-icons left">person_pin</i>Inicia Sesión</a>
-        <a class="light-blue waves-effect waves-light btn-large">
+        <a class="light-blue waves-effect waves-light btn-large" href="register/register.html">
             <i class="material-icons left">add</i>Regístrate</a>
 
     </div>
