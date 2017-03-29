@@ -5,9 +5,8 @@ package model.skill;
  */
 public class Skill {
 
-    String name;
-    Level level;
-    String description;
+    private String name, description;
+    private Level level;
 
     /**
      * Empty constructor for {@link mapper.SkillMapper}

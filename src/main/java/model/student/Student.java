@@ -7,6 +7,24 @@ public class Student {
 
     private String nif, username, password, name, email, degree;
     private int course;
+    private Type type;
+    private String surname;
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
+
+    public Type getType() {
+        return type;
+    }
 
     public String getNif() {
         return nif;

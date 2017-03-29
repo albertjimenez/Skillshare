@@ -5,7 +5,7 @@ package model.student;
  */
 public enum Type {
 
-    CP, CM, NORMAL, MASTER, POSTGRADUATE;
+    CP, CM, NO, MA, PG;
 
     /**
      * @param type: cadena de 2 caracteres que nos indica el tipo de estudiante
@@ -18,10 +18,12 @@ public enum Type {
         if (data.equals("CM"))
             return Type.CM;
         if (data.equals("MA"))
-            return Type.MASTER;
+            return Type.MA;
         if (data.equals("PG"))
-            return Type.POSTGRADUATE;
-        return Type.NORMAL;
+            return Type.PG;
+        if (data.equals("NO"))
+            return Type.NO;
+        return Type.NO;
 
     }
 }

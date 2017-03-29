@@ -1,6 +1,7 @@
 package mapper;
 
 import model.student.Student;
+import model.student.Type;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
@@ -21,6 +22,8 @@ public class StudentMapper implements RowMapper<Student> {
         student.setEmail(resultSet.getString("email"));
         student.setDegree(resultSet.getString("degree"));
         student.setCourse(resultSet.getInt("course"));
+        student.setType(Type.getType(resultSet.getString("type")));
+        student.setSurname(resultSet.getString("surname"));
         return student;
     }
 }
