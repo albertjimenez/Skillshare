@@ -97,6 +97,7 @@ public class LoginRegisterController {
     }
 
 
+
     @RequestMapping(value = "/login/logout")
     public String logout(Model model) {
         httpSession.invalidate();

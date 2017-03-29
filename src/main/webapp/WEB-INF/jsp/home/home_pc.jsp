@@ -1,3 +1,4 @@
+
 <%--
   Created by IntelliJ IDEA.
   User: Beruto and Pablo Berbel for EI1027
@@ -103,7 +104,7 @@
                     <div class="collapsible-body cyan lighten-4 hoverable">
                         <div class="row">
                             <div class="col s12">
-                                <span>${sk.description}</span>
+                        <span>${sk.description}</span>
                             </div>
                         </div>
                             <%--Botonera dentro del cajon--%>
