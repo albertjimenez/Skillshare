@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Beruto and Pablo Berbel on 25/3/17. Project -> skillshare
@@ -32,13 +34,12 @@ public class HomeController {
     }
 
 
-    //TODO editar funciona pero tienes que borrar todas las habilidades y meterlas en minusculas
     @RequestMapping(value = "home/home_pc")
     public String homePC(Model model) {
-        Student student = (Student) httpSession.getAttribute("user");
-        if (student == null)
-            return "redirect:../login/login.html";
 
+        if (!getSessionStudent())
+            return "redirect:../login/login.html";
+//        Student student = (Student) httpSession.getAttribute("user");
         model.addAttribute("skills", skillDao.getSkillsCollection());
         model.addAttribute("editskill", new Skill());
         return "home/home_pc";
@@ -87,13 +88,14 @@ public class HomeController {
         return "redirect:../../../home_pc.html";
     }
 
-    //    private Map<String, String> getDataSkills() {
-//        Map<String, String> data = new HashMap<String, String>();
-//        data.put("A", "ADVANCED");
-//        data.put("M", "MEDIUM");
-//        data.put("N", "NEWBIE");
-//        return data;
-//    }
+    private Map<String, String> getDataSkills() {
+        Map<String, String> data = new HashMap<String, String>();
+        data.put("A", "ADVANCED");
+        data.put("M", "MEDIUM");
+        data.put("N", "NEWBIE");
+        return data;
+    }
+
     @RequestMapping(value = "home/skill/create")
     public String createSkill(Model model) {
         model.addAttribute("createskill", new Skill());
@@ -115,9 +117,27 @@ public class HomeController {
 
     }
 
+
+    //TODO acuerdate de que esto no va aqui
+
     @RequestMapping(value = "home/home_student")
     public String homeStudent(Model model) {
-
+        if (!getSessionStudent())
+            return "redirect:../login/login.html";
+//        String jsonMap = new Gson().toJson(getDataSkills());
+//        System.out.println(jsonMap);
+//        model.addAttribute("map", getDataSkills());
         return "home/home_student";
+    }
+
+
+    /**
+     * Valida si hay sesion
+     *
+     * @return true si hay sesion o false si es la primera vez que se accede
+     */
+    private boolean getSessionStudent() {
+        Student student = (Student) httpSession.getAttribute("user");
+        return student != null;
     }
 }

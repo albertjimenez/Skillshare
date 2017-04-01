@@ -6,8 +6,11 @@
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
+
     <title>Home Estudiante</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -67,11 +70,22 @@
         </div>
     </div>
 </footer>
+<c:set var="myMap" value="${map}"/>
+
+<%--Declaracion de variables JSP para JS--%>
+
 
 <script type="text/javascript" src="/js/materialize.min.js"></script>
 <script src="/js/scroll.js"></script>
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
+<%--<script>--%>
+<%--alertNameStudent();--%>
+<%--function alertNameStudent() {--%>
+<%--//TODO Esto funciona perfectamente :) chachi piruleta--%>
 
+<%--}--%>
+
+<%--</script>--%>
 
 </body>
 </html>

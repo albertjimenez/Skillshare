@@ -81,7 +81,6 @@ public class LoginRegisterController {
         model.addAttribute("student", s);
         if (s.getNif().equals("BANEADO"))
             return "redirect:banned.html";
-//        HttpSession httpSession = request.getSession();
         httpSession.setAttribute("user", s);
 
         return s.getType() == Type.CP ? "redirect:../home/home_pc.html" : "redirect:../home/home_student.html";
