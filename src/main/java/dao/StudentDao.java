@@ -34,7 +34,10 @@ public class StudentDao {
 
         String sqlEmail = "", sqlUsername = "";
         Student s = null;
-        Student dup = null;
+
+        //Puede parecer algo lioso pero dub es solo usado para registrarse, lo que hace es comprobar que ese NIF no
+        //esté duplicado
+        Student dup;
         try {
             if (nif != null) {
                 String sqlNif = "SELECT * from student where nif = ?";

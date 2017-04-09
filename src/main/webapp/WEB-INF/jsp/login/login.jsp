@@ -48,6 +48,9 @@
                 <i class="material-icons prefix">account_circle</i>
                 <form:label path="user">Email o nombre de usuario</form:label>
                 <form:input path="user" id="user" cssClass="validate"/>
+                <i class="materialize-red-text">
+                    <form:errors path="user"/>
+                </i>
             </div>
         </div>
         <div class="row ">
@@ -55,6 +58,11 @@
                 <i class="material-icons prefix">dialpad</i>
                 <form:label path="password">Contraseña</form:label>
                 <form:password path="password" id="password"/>
+                <i class="materialize-red-text">
+                    <form:errors path="password"/>
+                </i>
+
+
             </div>
         </div>
 

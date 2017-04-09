@@ -124,9 +124,6 @@ public class HomeController {
     public String homeStudent(Model model) {
         if (!getSessionStudent())
             return "redirect:../login/login.html";
-//        String jsonMap = new Gson().toJson(getDataSkills());
-//        System.out.println(jsonMap);
-//        model.addAttribute("map", getDataSkills());
         return "home/home_student";
     }
 

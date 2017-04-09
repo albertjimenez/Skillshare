@@ -55,6 +55,9 @@
                 <i class="material-icons prefix">perm_identity</i>
                 <form:label path="nif">NIF</form:label>
                 <form:input path="nif" id="nif" cssClass="validate"/>
+                <i class="materialize-red-text">
+                    <form:errors path="nif"/>
+                </i>
             </div>
         </div>
         <div class="row">
@@ -71,13 +74,6 @@
                 <form:password path="password" id="password1"/>
             </div>
         </div>
-        <%--<div class="row ">--%>
-        <%--<div class="input-field col s6 offset-s3">--%>
-        <%--<i class="material-icons prefix">dialpad</i>--%>
-        <%--<form:label path="passwordAgain">Repita la Contraseña</form:label>--%>
-        <%--<form:password path="passwordAgain" id="passwordAgain"/>--%>
-        <%--</div>--%>
-        <%--</div>--%>
         <div class="row">
             <div class="input-field col s6 offset-s3 ">
                 <i class="material-icons prefix">assignment_ind</i>
@@ -111,6 +107,9 @@
                 <i class="material-icons prefix">assignment</i>
                 <form:label path="course">Curso</form:label>
                 <form:input path="course" id="course" cssClass="validate"/>
+                <i class="materialize-red-text">
+                    <form:errors path="course"/>
+                </i>
             </div>
         </div>
 

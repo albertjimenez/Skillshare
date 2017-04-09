@@ -1,5 +1,7 @@
 package controller;
 
+import controller.validator.LoginValidator;
+import controller.validator.RegisterValidator;
 import dao.BannedDao;
 import dao.StudentDao;
 import model.login.LoginEntity;
@@ -65,22 +67,24 @@ public class LoginRegisterController {
     public String processAndSubmit(@ModelAttribute("loginEntity") LoginEntity loginEntity,
                                    BindingResult bindingResult,
                                    Model model) {
+        Student s = studentDao.getStudent(null, loginEntity.getUser(), loginEntity.getPassword());
+        LoginValidator loginValidator = new LoginValidator(s);
+        loginValidator.validate(loginEntity, bindingResult);
         if (bindingResult.hasErrors()) {
             System.out.println("Tiene errores");
-            return "/";
+            return "login/login";
         }
 
-        Student s = studentDao.getStudent(null, loginEntity.getUser(), loginEntity.getPassword());
 
-        if (s == null)
-            return "login/error_username";
-        if (s.getNif() == null)
-            return "login/error_pass";
-
+//        if (s == null)
+//            System.out.println("Soy student null");
+//        if (s.getNif() == null)
+////            return "login/error_pass";
+//            System.out.println("Soy student con pass equivocada");
 
         model.addAttribute("student", s);
-        if (s.getNif().equals("BANEADO"))
-            return "redirect:banned.html";
+//        if (s.getNif().equals("BANEADO"))
+//            return "redirect:banned.html";
         httpSession.setAttribute("user", s);
 
         return s.getType() == Type.CP ? "redirect:../home/home_pc.html" : "redirect:../home/home_student.html";
@@ -94,7 +98,6 @@ public class LoginRegisterController {
 
         return "login/banned";
     }
-
 
 
     @RequestMapping(value = "/login/logout")
@@ -129,31 +132,30 @@ public class LoginRegisterController {
                                   BindingResult bindingResult,
                                   Model model) {
 
+        Student anotherStudent = studentDao.getStudent(student.getNif(), student.getEmail(), student.getPassword());
+        RegisterValidator registerValidator = new RegisterValidator(anotherStudent);
+        registerValidator.validate(student, bindingResult);
         if (bindingResult.hasErrors()) {
             System.out.println("Tiene errores");
-            return "/";
+            return "register/register";
         }
 
-        Student anotherStudent = studentDao.getStudent(student.getNif(), student.getEmail(), student.getPassword());
 
         //Al ser nulo, no existe y podemos registrarlo
-        if (anotherStudent == null) {
-            student.setNif(student.getNif().toUpperCase());
-            studentDao.addStudent(student);
-            return switchUserType(student);
-        }
+//        if (anotherStudent == null) {
+        student.setNif(student.getNif().toUpperCase());
+        studentDao.addStudent(student);
+        return switchUserType(student);
+//        }
 
         //Si se encuentra en la base pero password incorrecta
-        if (anotherStudent.getNif() == null)
-            return "redirect:../login/error_pass";
-        if (anotherStudent.getNif().equals("DUP"))
-            return "redirect:../register/duplicated";
+//        if (anotherStudent.getNif() == null)
+//            return "redirect:../login/error_pass";
+//        if (anotherStudent.getNif().equals("DUP"))
+//            return "redirect:../register/duplicated";
         //Finalmente sí tiene cuenta y la contraseña es correcta se le redirige  a su cuenta
-        if (anotherStudent.getNif().equals("BANEADO"))
-            return "redirect:../login/banned";
-
-        else
-            return switchUserType(student);
+//        if (anotherStudent.getNif().equals("BANEADO"))
+//            return "redirect:../login/banned";
 
     }
 
