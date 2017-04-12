@@ -15,10 +15,13 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <%--Avisa al navegador de que el html es valido para moviles--%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
 </head>
 <body class="blue lighten-3">
 
@@ -46,7 +49,66 @@
     </div>
 </nav>
 
-<h1>Hola ${student.name}</h1>
+<div class="row">
+    <%--Barra gris--%>
+    <div class="col s3 blue-grey darken-1 z-depth-3" style="min-height:100%; min-width: 5%">
+
+        <%--PANEL--%>
+        <h3 class="black-text z-depth-1 btn-large red accent-2">PANEL
+            <i class="material-icons">menu</i>
+        </h3>
+        <div class="col s10">
+            <div class="card-panel">
+                <h4 class="black-text font-raleway">
+                    ${type} ${student.name} </h4>
+
+                <div class="divider"></div>
+                <ul>
+                    <li>
+                        <a href="../proposal/list.html">Mis Ofertas</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="#modal-help" class="waves-effect waves-light btn btn-floating">
+                <i class="material-icons">live_help</i>
+            </a>
+
+
+        </div>
+
+    </div>
+    <%--Fondo restante de la web sin panel--%>
+    <div class="col s9 ">
+
+        <%--TODO comprobar que si no tiene ni request ni proposals salga el texto de no tiene na--%>
+        <c:if test="${empty proposals}">
+            <div class="valign-wrapper">
+                <a class="valign" style="font-size: 50px;text-align: center">
+                    <i class="material-icons valign" style="font-size: 200px; text-align: center">insert_invitation</i>
+                    <br>
+                    Esto está vacío... Prueba a empezar creando ofertas o uniéndote a peticiones.</a>
+            </div>
+        </c:if>
+        <c:if test="${not empty proposals}">
+            <p>Pene</p>
+        </c:if>
+    </div>
+
+
+</div>
+
+
+<%--Modal Ayuda--%>
+<div class="modal" id="modal-help">
+    <div class="modal-content cyan lighten-4 hoverable z-depth-5">
+        <h5 class="font-raleway">Bienvenido</h5>
+        <p>Hola ${name}, en el panel gris de tu izquierda encontrarás todas las
+            herramientas de las que puedes hacer uso.</p>
+        <p>¡Pásatelo genial aprendiendo y enseñado con el resto de la comunidad universitaria!</p>
+    </div>
+</div>
+
+</div>
 <footer class="page-footer light-blue">
     <div class="container">
         <div class="row">
@@ -70,22 +132,17 @@
         </div>
     </div>
 </footer>
-<c:set var="myMap" value="${map}"/>
-
-<%--Declaracion de variables JSP para JS--%>
-
 
 <script type="text/javascript" src="/js/materialize.min.js"></script>
 <script src="/js/scroll.js"></script>
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
-<%--<script>--%>
-<%--alertNameStudent();--%>
-<%--function alertNameStudent() {--%>
-<%--//TODO Esto funciona perfectamente :) chachi piruleta--%>
+<script>
+    $(document).ready(function () {
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
+    });
+</script>
 
-<%--}--%>
-
-<%--</script>--%>
 
 </body>
 </html>

@@ -3,8 +3,11 @@ package controller;
 import controller.validator.LoginValidator;
 import controller.validator.RegisterValidator;
 import dao.BannedDao;
+import dao.ProposalDao;
+import dao.SkillDao;
 import dao.StudentDao;
 import model.login.LoginEntity;
+import model.skill.Skill;
 import model.student.Student;
 import model.student.Type;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +32,20 @@ public class LoginRegisterController {
     private StudentDao studentDao;
 
     private BannedDao bannedDao;
+
+    private SkillDao skillDao;
+
+    private ProposalDao proposalDao;
+
+    @Autowired
+    public void setProposalDao(ProposalDao proposalDao) {
+        this.proposalDao = proposalDao;
+    }
+
+    @Autowired
+    public void setSkillDao(SkillDao skillDao) {
+        this.skillDao = skillDao;
+    }
 
     @Autowired
     HttpSession httpSession;
@@ -75,18 +92,8 @@ public class LoginRegisterController {
             return "login/login";
         }
 
-
-//        if (s == null)
-//            System.out.println("Soy student null");
-//        if (s.getNif() == null)
-////            return "login/error_pass";
-//            System.out.println("Soy student con pass equivocada");
-
-        model.addAttribute("student", s);
-//        if (s.getNif().equals("BANEADO"))
-//            return "redirect:banned.html";
+//        model.addAttribute("student", s);
         httpSession.setAttribute("user", s);
-
         return s.getType() == Type.CP ? "redirect:../home/home_pc.html" : "redirect:../home/home_student.html";
 
 
@@ -112,7 +119,7 @@ public class LoginRegisterController {
         if (s != null)
             return switchUserType(s);
         model.addAttribute("studentRegister", new Student());
-        Map data = new HashMap<String, String>();
+        Map<String, String> data = new HashMap<String, String>();
         data.put("NO", "Estudiante de grado");
         data.put("CP", "Promotor de colaboraciones");
         data.put("CM", "Miembro del consejo");
@@ -141,22 +148,37 @@ public class LoginRegisterController {
         }
 
 
-        //Al ser nulo, no existe y podemos registrarlo
-//        if (anotherStudent == null) {
         student.setNif(student.getNif().toUpperCase());
         studentDao.addStudent(student);
         return switchUserType(student);
-//        }
 
-        //Si se encuentra en la base pero password incorrecta
-//        if (anotherStudent.getNif() == null)
-//            return "redirect:../login/error_pass";
-//        if (anotherStudent.getNif().equals("DUP"))
-//            return "redirect:../register/duplicated";
-        //Finalmente sí tiene cuenta y la contraseña es correcta se le redirige  a su cuenta
-//        if (anotherStudent.getNif().equals("BANEADO"))
-//            return "redirect:../login/banned";
+    }
 
+
+    //HOME relate to CPStudent and Regular Student
+    @RequestMapping(value = "home/home_pc")
+    public String homePC(Model model) {
+
+        if (!getSessionStudent())
+            return "redirect:../login/login.html";
+        model.addAttribute("skills", skillDao.getSkillsCollection());
+        model.addAttribute("editskill", new Skill());
+        return "home/home_pc";
+    }
+
+    @RequestMapping(value = "home/home_student")
+    public String homeStudent(Model model) {
+        if (!getSessionStudent())
+            return "redirect:../login/login.html";
+        Student student = (Student) httpSession.getAttribute("user");
+        String name = student.getName().split("\\s+")[0];
+        model.addAttribute("student", student);
+        model.addAttribute("name", name);
+        model.addAttribute("type", Type.getName(student.getType().toString()));
+        model.addAttribute("proposals", proposalDao.getProposalsByNif(student.getNif()));
+
+
+        return "home/home_student";
     }
 
 
@@ -166,4 +188,11 @@ public class LoginRegisterController {
                 "redirect:../home/home_student.html";
 
     }
+
+    private boolean getSessionStudent() {
+        Student student = (Student) httpSession.getAttribute("user");
+        return student != null;
+    }
+
+
 }

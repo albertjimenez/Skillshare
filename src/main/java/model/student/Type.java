@@ -26,4 +26,18 @@ public enum Type {
         return Type.NO;
 
     }
+
+    public static String getName(String type) {
+        String data = type.substring(0, 2).toUpperCase();
+        if (data.equals("CP"))
+            return "Promotor de colaboraciones";
+        if (data.equals("CM"))
+            return "Miembro del consejo";
+        if (data.equals("MA"))
+            return "Estudiante máster";
+        if (data.equals("PG"))
+            return "Postgraduado";
+        return "Estudiante";
+
+    }
 }
