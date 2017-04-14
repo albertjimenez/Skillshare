@@ -1,8 +1,7 @@
 package controller.validator;
 
-import dao.StudentDao;
+import model.student.LoginStatus;
 import model.student.Student;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
@@ -11,16 +10,10 @@ import org.springframework.validation.Validator;
  */
 public class RegisterValidator implements Validator {
 
-    private Student s;
-    private StudentDao studentDao;
+    Student s;
 
     public RegisterValidator(Student s) {
         this.s = s;
-    }
-
-    @Autowired
-    public void setStudentDao(StudentDao studentDao) {
-        this.studentDao = studentDao;
     }
 
 
@@ -32,8 +25,7 @@ public class RegisterValidator implements Validator {
         Student myFormStudent = (Student) o;
 
         if (s != null) {
-            System.out.println("Algo pasa crack ->" + myFormStudent);
-            if (s.getNif() != null && s.getNif().equals("DUP"))
+            if (LoginStatus.getStatus(s) == LoginStatus.DUPLICATED)
                 errors.rejectValue("nif", "Error", "Ya existe el estudiante " + myFormStudent.getName());
             if (myFormStudent.getCourse() < 1)
                 errors.rejectValue("course", "Error", "Curso no válido");

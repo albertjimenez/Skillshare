@@ -26,7 +26,8 @@ public class StudentDao {
     /**
      * @param account  Puede ser tanto; email como el username
      * @param password Contraseña
-     * @return Null si no existe el student, {@link Student} vacio si la contraseña es incorrecta y {@link Student} con cosas si es correcta
+     * @return Null si no existe el student, {@link Student} vacio si la contraseña es incorrecta y
+     * {@link Student} con cosas si es correcta
      * si el nif del usuario está BANEADO entonces el campo nif tendrá como valor BANEADO
      * Tambien devuelve si la  pass  coincide un estudiante con NIF = "DUP"
      */
@@ -35,7 +36,7 @@ public class StudentDao {
         String sqlEmail = "", sqlUsername = "";
         Student s = null;
 
-        //Puede parecer algo lioso pero dub es solo usado para registrarse, lo que hace es comprobar que ese NIF no
+        //Puede parecer algo lioso pero dup es solo usado para registrarse, lo que hace es comprobar que ese NIF no
         //esté duplicado
         Student dup;
         try {
@@ -74,7 +75,6 @@ public class StudentDao {
         s.setNif("BANEADO");
         return s.getPassword().equals(password) ? s : new Student();
     }
-
 
     public void addStudent(Student student) {
         String sql = "INSERT INTO STUDENT VALUES(?,?,?,?,?,?,?,?,?)";

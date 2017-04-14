@@ -1,6 +1,7 @@
 package controller.validator;
 
 import model.login.LoginEntity;
+import model.student.LoginStatus;
 import model.student.Student;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
@@ -22,13 +23,13 @@ public class LoginValidator implements Validator {
 
     public void validate(Object o, Errors errors) {
         LoginEntity loginEntity = (LoginEntity) o;
-        if (s == null)
+        if (LoginStatus.getStatus(s) == LoginStatus.NOT_FOUND)
             errors.rejectValue("user", "Error", "No existe el estudiante " + loginEntity.getUser());
-        else if (s.getNif() == null)
-            //Estudiante vacio por convenio la contraseña es incorrecta
+
+        else if (LoginStatus.getStatus(s) == LoginStatus.WRONG_PSWD)
             errors.rejectValue("password", "Error", "Contraseña incorrecta");
 
-        else if (s.getNif().equals("BANEADO"))
+        else if (LoginStatus.getStatus(s) == LoginStatus.BANNED)
             errors.rejectValue("user", "Error", "Estudiante baneado");
     }
 

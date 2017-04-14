@@ -8,6 +8,7 @@ import dao.SkillDao;
 import dao.StudentDao;
 import model.login.LoginEntity;
 import model.skill.Skill;
+import model.student.LoginStatus;
 import model.student.Student;
 import model.student.Type;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -84,7 +85,9 @@ public class LoginRegisterController {
     public String processAndSubmit(@ModelAttribute("loginEntity") LoginEntity loginEntity,
                                    BindingResult bindingResult,
                                    Model model) {
+        System.out.println(loginEntity);
         Student s = studentDao.getStudent(null, loginEntity.getUser(), loginEntity.getPassword());
+        LoginStatus.setStudent(s);
         LoginValidator loginValidator = new LoginValidator(s);
         loginValidator.validate(loginEntity, bindingResult);
         if (bindingResult.hasErrors()) {
@@ -92,7 +95,6 @@ public class LoginRegisterController {
             return "login/login";
         }
 
-//        model.addAttribute("student", s);
         httpSession.setAttribute("user", s);
         return s.getType() == Type.CP ? "redirect:../home/home_pc.html" : "redirect:../home/home_student.html";
 
