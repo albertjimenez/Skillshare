@@ -85,5 +85,15 @@ public class StudentDao {
                 student.getType().toString(), student.getSurname());
     }
 
+    public Student getStudentByNif(String nif) {
+        try {
+            String sql = "Select * from student where nif = ?";
+            return jdbcTemplate.queryForObject(sql, new Object[]{nif}, new StudentMapper());
+
+        } catch (EmptyResultDataAccessException e) {
+            return null;
+        }
+    }
+
 
 }

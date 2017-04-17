@@ -32,15 +32,13 @@ public class SkillController {
     }
 
 
-
-
-
     @RequestMapping(value = "home/skill/update/{name}/{level}")
     public String homePCEditSkill(@PathVariable(value = "name") String name,
                                   @PathVariable(value = "level") String level,
                                   Model model) {
         Skill skill = skillDao.findSkill(name, Level.getEnum(level));
-        System.out.println("EN BLANCO? " + skill);
+        if (getSessionStudent())
+            model.addAttribute("name", getStudentName());
         model.addAttribute("editskill", skill);
         return "home/skill/update";
 
@@ -57,6 +55,8 @@ public class SkillController {
             System.out.println("Tiene errores");
             return "redirect:/";
         }
+        if (getSessionStudent())
+            model.addAttribute("name", getStudentName());
         skillDao.editSkill(skill);
         return "redirect:../../../home_pc.html";
 
@@ -65,6 +65,8 @@ public class SkillController {
     @RequestMapping(value = "home/skill/delete/{name}/{level}")
     public String deleteSkill(@PathVariable(value = "name") String name,
                               @PathVariable(value = "level") String level, Model model) {
+        if (getSessionStudent())
+            model.addAttribute("name", getStudentName());
         skillDao.removeSkill(skillDao.findSkill(name, Level.getEnum(level)));
         return "redirect:../../../home_pc.html";
     }
@@ -73,6 +75,8 @@ public class SkillController {
     @RequestMapping(value = "home/skill/create")
     public String createSkill(Model model) {
         model.addAttribute("createskill", new Skill());
+        if (getSessionStudent())
+            model.addAttribute("name", getStudentName());
         return "home/skill/create";
     }
 
@@ -83,16 +87,15 @@ public class SkillController {
 
         if (bindingResult.hasErrors()) {
             System.out.println("Tiene errores");
-            return "redirect:/";
+            return "home/skill/create";
         }
         System.out.println("Created skill" + skill);
+        if (getSessionStudent())
+            model.addAttribute("name", getStudentName());
         skillDao.addSkill(skill);
         return "redirect:/home/skill/create.html";
 
     }
-
-
-
 
 
     /**
@@ -103,5 +106,10 @@ public class SkillController {
     private boolean getSessionStudent() {
         Student student = (Student) httpSession.getAttribute("user");
         return student != null;
+    }
+
+    private String getStudentName() {
+        Student student = (Student) httpSession.getAttribute("user");
+        return student.getName();
     }
 }

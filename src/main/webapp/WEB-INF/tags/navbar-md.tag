@@ -5,6 +5,10 @@
   Time: 14:29
 --%>
 <%--Inicio del navbar con movil--%>
+<%@attribute name="name" required="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
 <div class="navbar">
     <nav>
         <div class="nav-wrapper light-blue">
@@ -20,12 +24,22 @@
             </a>
             <%--Esto es la cabecera de arriba--%>
             <ul class="right hide-on-med-and-down">
-                <li><a href="${pageContext.request.contextPath}/login/login.html">Entrar</a></li>
+                <c:if test="${empty name}">
+                    <li><a href="${pageContext.request.contextPath}/login/login.html">Entrar</a></li>
+                </c:if>
+                <c:if test="${not empty name}">
+                    <li><a href="${pageContext.request.contextPath}/login/login.html">${name}</a></li>
+                </c:if>
                 <li><a href="${pageContext.request.contextPath}/register/register.html">Registrarse</a></li>
             </ul>
             <%--Esto es la cabecera movil--%>
             <ul class="side-nav" id="mobile-demo">
-                <li><a href="${pageContext.request.contextPath}/login/login.html">Entrar</a></li>
+                <c:if test="${empty name}">
+                    <li><a href="${pageContext.request.contextPath}/login/login.html">Entrar</a></li>
+                </c:if>
+                <c:if test="${not empty name}">
+                    <li><a href="${pageContext.request.contextPath}/login/login.html">${name}</a></li>
+                </c:if>
                 <li><a href="${pageContext.request.contextPath}/register/register.html">Registrarse</a></li>
 
             </ul>

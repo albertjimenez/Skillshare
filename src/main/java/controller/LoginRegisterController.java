@@ -27,7 +27,6 @@ import java.util.Map;
  * Created by Beruto and Pablo Berbel on 20/3/17. Project -> skillshare
  */
 @Controller
-//@RequestMapping(value = "/login")
 public class LoginRegisterController {
 
     private StudentDao studentDao;
@@ -163,6 +162,7 @@ public class LoginRegisterController {
 
         if (!getSessionStudent())
             return "redirect:../login/login.html";
+        model.addAttribute("name", getStudentName());
         model.addAttribute("skills", skillDao.getSkillsCollection());
         model.addAttribute("editskill", new Skill());
         return "home/home_pc";
@@ -196,5 +196,9 @@ public class LoginRegisterController {
         return student != null;
     }
 
+    private String getStudentName() {
+        Student student = (Student) httpSession.getAttribute("user");
+        return student.getName();
+    }
 
 }

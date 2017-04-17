@@ -25,8 +25,9 @@
     <div class="footer-copyright">
         <div class="container">
             2017 Copyright
-            <a class="grey-text text-lighten-4 right" href="https://aulavirtual.uji.es/course/view.php?id=47728">Aula
-                Virtual EI1027</a>
+            <a class="grey-text text-lighten-4 right"
+               href="https://aulavirtual.uji.es/course/view.php?id=47728">
+                Aula Virtual EI1027</a>
         </div>
     </div>
 </footer>

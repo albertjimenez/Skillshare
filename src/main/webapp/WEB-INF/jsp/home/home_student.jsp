@@ -7,6 +7,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="md" tagdir="/WEB-INF/tags" %>
 
 <html>
 <head>
@@ -26,61 +27,26 @@
 <body class="blue lighten-3">
 
 <%--Inicio del navbar con movil--%>
-<nav>
-    <div class="navbar-fixed">
-
-        <div class="nav-wrapper light-blue">
-            <a class="brand-logo center" href="/">
-                <img src="/images/icono_app.png"
-                     class="responsive-img z-depth-2" alt="" width="40" height="40">
-                Skillshare EI1027
-            </a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons ">menu</i></a>
-            <%--Esto es la cabecera de arriba--%>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="../login/logout.html">Cerrar sesión</a></li>
-            </ul>
-            <%--Esto es la cabecera movil--%>
-            <ul class="side-nav" id="mobile-demo">
-                <li><a href="../login/logout.html">Cerrar sesión</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<md:navbar-md></md:navbar-md>
 
 <div class="row">
     <%--Barra gris--%>
-    <div class="col s3 blue-grey darken-1 z-depth-3" style="min-height:100%; min-width: 5%">
-
-        <%--PANEL--%>
-        <h3 class="black-text z-depth-1 btn-large red accent-2">PANEL
-            <i class="material-icons">menu</i>
-        </h3>
-        <div class="col s10">
-            <div class="card-panel">
-                <h4 class="black-text font-raleway">
+    <md:panel-lateral>
+        <h4 class="black-text font-raleway">
                     ${type} ${student.name} </h4>
 
-                <div class="divider"></div>
-                <ul>
-                    <li>
-                        <a href="../proposal/list.html">Mis Ofertas</a>
-                    </li>
-                </ul>
-            </div>
-            <a href="#modal-help" class="waves-effect waves-light btn btn-floating">
-                <i class="material-icons">live_help</i>
-            </a>
-
-
-        </div>
-
-    </div>
+        <div class="divider"></div>
+        <ul>
+            <li>
+                <a href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
+            </li>
+        </ul>
+        <a href="#modal-help" class="waves-effect waves-light btn btn-floating">
+            <i class="material-icons">live_help</i>
+        </a>
+    </md:panel-lateral>
     <%--Fondo restante de la web sin panel--%>
-    <div class="col s9 ">
-
-        <%--TODO comprobar que si no tiene ni request ni proposals salga el texto de no tiene na--%>
+    <div class="col s12 m8 l9" style="height: 100%">
         <c:if test="${empty proposals}">
             <div class="valign-wrapper">
                 <a class="valign" style="font-size: 50px;text-align: center">
@@ -109,29 +75,7 @@
 </div>
 
 </div>
-<footer class="page-footer light-blue">
-    <div class="container">
-        <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Skillshare Project</h5>
-                <p class="grey-text text-lighten-4">Elaborado con Spring MVC y Materialize.</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Enlaces</h5>
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="login/login.html">Iniciar Sesión</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            © 2017 Copyright
-            <a class="grey-text text-lighten-4 right" href="https://aulavirtual.uji.es/course/view.php?id=47728">Aula
-                Virtual</a>
-        </div>
-    </div>
-</footer>
+<md:footer-md></md:footer-md>
 
 <script type="text/javascript" src="/js/materialize.min.js"></script>
 <script src="/js/scroll.js"></script>
