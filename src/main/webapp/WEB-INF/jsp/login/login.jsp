@@ -7,6 +7,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--<%@ taglib prefix="c" uri="http://www.springframework.org/tags/form" %>--%>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="md" tagdir="/WEB-INF/tags" %>
 <html>
 <head>
     <title>Iniciar sesión</title>
@@ -21,26 +22,27 @@
 <body class="blue lighten-3">
 
 <%--Inicio del navbar con movil--%>
-<nav>
-    <div class="navbar-fixed">
+<%--<nav>--%>
+<%--<div class="navbar-fixed">--%>
 
-        <div class="nav-wrapper light-blue">
-            <a class="brand-logo center" href="/">
-                <img src="/images/icono_app.png"
-                     class="responsive-img z-depth-2" alt="" width="40" height="40">
-                Skillshare EI1027
-            </a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse">
-                <i class="material-icons ">menu</i>
-            </a>
+<%--<div class="nav-wrapper light-blue">--%>
+<%--<a class="brand-logo center" href="/">--%>
+<%--<img src="/images/icono_app.png"--%>
+<%--class="responsive-img z-depth-2" alt="" width="40" height="40">--%>
+<%--Skillshare EI1027--%>
+<%--</a>--%>
+<%--<a href="#" data-activates="mobile-demo" class="button-collapse">--%>
+<%--<i class="material-icons ">menu</i>--%>
+<%--</a>--%>
 
-        </div>
-    </div>
-</nav>
+<%--</div>--%>
+<%--</div>--%>
+<%--</nav>--%>
+<md:navbar-md></md:navbar-md>
 
 <h4 class="center-align hoverable z-depth-1-half">Inicia tu sesión</h4>
+
 <%--Abrimos formulario--%>
-<%--TODO VIGILA EL ATRIBUTO modelAttribute--%>
 <div class="section z-depth-2 transparent hoverable">
     <form:form method="post" modelAttribute="loginEntity" onsubmit="return check();">
         <div class="row">
@@ -88,29 +90,30 @@
     <div class="indeterminate"></div>
 </div>
 <%--Footer--%>
-<footer class="page-footer light-blue">
-    <div class="container">
-        <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Skillshare Project</h5>
-                <p class="grey-text text-lighten-4">Elaborado con Spring MVC y Materialize.</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Enlaces</h5>
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="login/login.html">Iniciar Sesión</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            © 2017 Copyright
-            <a class="grey-text text-lighten-4 right" href="https://aulavirtual.uji.es/course/view.php?id=47728">Aula
-                Virtual</a>
-        </div>
-    </div>
-</footer>
+<md:footer-md></md:footer-md>
+<%--<footer class="page-footer light-blue">--%>
+<%--<div class="container">--%>
+<%--<div class="row">--%>
+<%--<div class="col l6 s12">--%>
+<%--<h5 class="white-text">Skillshare Project</h5>--%>
+<%--<p class="grey-text text-lighten-4">Elaborado con Spring MVC y Materialize.</p>--%>
+<%--</div>--%>
+<%--<div class="col l4 offset-l2 s12">--%>
+<%--<h5 class="white-text">Enlaces</h5>--%>
+<%--<ul>--%>
+<%--<li><a class="grey-text text-lighten-3" href="login/login.html">Iniciar Sesión</a></li>--%>
+<%--</ul>--%>
+<%--</div>--%>
+<%--</div>--%>
+<%--</div>--%>
+<%--<div class="footer-copyright">--%>
+<%--<div class="container">--%>
+<%--© 2017 Copyright--%>
+<%--<a class="grey-text text-lighten-4 right" href="https://aulavirtual.uji.es/course/view.php?id=47728">Aula--%>
+<%--Virtual</a>--%>
+<%--</div>--%>
+<%--</div>--%>
+<%--</footer>--%>
 
 <script type="text/javascript" src="/js/materialize.min.js"></script>
 <script src="/js/scroll.js"></script>

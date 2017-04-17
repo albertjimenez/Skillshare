@@ -1,5 +1,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="md" tagdir="/WEB-INF/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: Beruto
@@ -10,6 +11,7 @@
 
 <html>
 <head>
+    <meta charset="utf-8">
     <title>Indice del proyecto EI1027</title>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -26,36 +28,36 @@
 
 
 <%--Inicio del navbar con movil--%>
-<%--TODO refactor botones a Iniciar sesión y registrarse--%>
-<div class="navbar-fixed">
-    <nav>
-        <div class="nav-wrapper light-blue">
-            <%--Si se pone fija la barra, la barra de movil no va --%>
+<md:navbar-md></md:navbar-md>
+<%--<div class="navbar-fixed">--%>
+<%--<nav>--%>
+<%--<div class="nav-wrapper light-blue">--%>
+<%--&lt;%&ndash;Si se pone fija la barra, la barra de movil no va &ndash;%&gt;--%>
 
-            <a class="brand-logo center" href="#about">
-                <img src="images/icono_app.png"
-                     class="responsive-img z-depth-2" alt="" width="40" height="40">
-                Skillshare EI1027
-            </a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse">
-                <i class="material-icons ">menu</i>
-            </a>
-            <%--Esto es la cabecera de arriba--%>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="login/login.html">Iniciar sesión</a></li>
-                <li><a href="register/register.html">Registrarse</a></li>
-            </ul>
-            <%--Esto es la cabecera movil--%>
-            <ul class="side-nav" id="mobile-demo">
-                <li><a href="login/login.html">Iniciar sesión</a></li>
-                <li><a href="register/register.html">Registrarse</a></li>
+<%--<a class="brand-logo center" href="#about">--%>
+<%--<img src="images/icono_app.png"--%>
+<%--class="responsive-img z-depth-2" alt="" width="40" height="40">--%>
+<%--Skillshare EI1027--%>
+<%--</a>--%>
+<%--<a href="#" data-activates="mobile-demo" class="button-collapse">--%>
+<%--<i class="material-icons ">menu</i>--%>
+<%--</a>--%>
+<%--&lt;%&ndash;Esto es la cabecera de arriba&ndash;%&gt;--%>
+<%--<ul class="right hide-on-med-and-down">--%>
+<%--<li><a href="login/login.html">Iniciar sesión</a></li>--%>
+<%--<li><a href="register/register.html">Registrarse</a></li>--%>
+<%--</ul>--%>
+<%--&lt;%&ndash;Esto es la cabecera movil&ndash;%&gt;--%>
+<%--<ul class="side-nav" id="mobile-demo">--%>
+<%--<li><a href="login/login.html">Iniciar sesión</a></li>--%>
+<%--<li><a href="register/register.html">Registrarse</a></li>--%>
 
-            </ul>
-        </div>
-    </nav>
-</div>
+<%--</ul>--%>
+<%--</div>--%>
+<%--</nav>--%>
+<%--</div>--%>
 
-
+<%--Carrousel--%>
 <div class="carousel carousel-slider">
     <a href="#one!" class="carousel-item"><img src="images/carousel/1.jpeg" alt=""></a>
     <a href="#two!" class="carousel-item"><img src="images/carousel/2.jpg" alt=""></a>
@@ -143,30 +145,33 @@
     </div>
 </div>
 
-<footer class="page-footer light-blue">
-    <div class="container">
-        <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Skillshare Project</h5>
-                <p class="grey-text text-lighten-4">Elaborado con Spring MVC y Materialize.</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Enlaces</h5>
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="login/login.html">Iniciar Sesión</a></li>
-                    <li><a class="grey-text text-lighten-3" href="register/register.html">Regístrate</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            © 2017 Copyright
-            <a class="grey-text text-lighten-4 right" href="https://aulavirtual.uji.es/course/view.php?id=47728">Aula
-                Virtual EI1027</a>
-        </div>
-    </div>
-</footer>
+
+<%--Footer--%>
+<md:footer-md></md:footer-md>
+<%--<footer class="page-footer light-blue">--%>
+<%--<div class="container">--%>
+<%--<div class="row">--%>
+<%--<div class="col l6 s12">--%>
+<%--<h5 class="white-text">Skillshare Project</h5>--%>
+<%--<p class="grey-text text-lighten-4">Elaborado con Spring MVC y Materialize.</p>--%>
+<%--</div>--%>
+<%--<div class="col l4 offset-l2 s12">--%>
+<%--<h5 class="white-text">Enlaces</h5>--%>
+<%--<ul>--%>
+<%--<li><a class="grey-text text-lighten-3" href="login/login.html">Iniciar Sesión</a></li>--%>
+<%--<li><a class="grey-text text-lighten-3" href="register/register.html">Regístrate</a></li>--%>
+<%--</ul>--%>
+<%--</div>--%>
+<%--</div>--%>
+<%--</div>--%>
+<%--<div class="footer-copyright">--%>
+<%--<div class="container">--%>
+<%--© 2017 Copyright--%>
+<%--<a class="grey-text text-lighten-4 right" href="https://aulavirtual.uji.es/course/view.php?id=47728">Aula--%>
+<%--Virtual EI1027</a>--%>
+<%--</div>--%>
+<%--</div>--%>
+<%--</footer>--%>
 
 
 <%--Se aconseja moverlos al final de la web para reducir los tiempos de carga--%>
@@ -179,9 +184,6 @@
 <%--Script de smooth scroll--%>
 <script src="js/scroll.js"></script>
 <script>
-    //    $(document).ready(function(){
-    //        $('.carousel').carousel();
-    //    });
     $(".carousel.carousel-slider").carousel({
         fullWidth: true,
         dist: 0,
@@ -194,7 +196,5 @@
     }
 
 </script>
-
-
 </body>
 </html>
