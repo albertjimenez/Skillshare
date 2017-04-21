@@ -79,3 +79,19 @@ function white_spaces() {
     return true;
 }
 
+function checkProposal() {
+    if (document.getElementById("description").value.trim() == '') {
+        Materialize.toast('Descripción vacía', 4000, 'rounded');
+        return false;
+    }
+    if (document.getElementById("initialDate").value.trim() == '') {
+        Materialize.toast('Fecha inicial vacía', 4000, 'rounded');
+        return false;
+    }
+    if (document.getElementById("finishDate").value.trim() == '') {
+        Materialize.toast('Fecha final vacía', 4000, 'rounded');
+        return false;
+    }
+    return true;
+}
+

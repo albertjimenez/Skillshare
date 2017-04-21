@@ -2,48 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0695153-a83b-4add-9f52-0017f11374ad" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/images/goodbye.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controller/BannedController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/student/BannedStudent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned/ban.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned/create.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/panel-lateral.tag" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/images/foot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/images/goodbye.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/images/password.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/images/usernotexist.png" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controller/validator/ProposalValidator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/SkillDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/SkillDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/StudentDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/StudentDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/SkillMapper.class" afterPath="$PROJECT_DIR$/target/classes/mapper/SkillMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.class" afterPath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/skill/Level.class" afterPath="$PROJECT_DIR$/target/classes/model/skill/Level.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/skill/Skill.class" afterPath="$PROJECT_DIR$/target/classes/model/skill/Skill.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare.war" afterPath="$PROJECT_DIR$/target/skillshare.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/dao/SkillDao.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/dao/SkillDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/dao/StudentDao.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/dao/StudentDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/mapper/SkillMapper.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/mapper/SkillMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/mapper/StudentMapper.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/mapper/StudentMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/model/skill/Level.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/model/skill/Level.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/model/skill/Skill.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/model/skill/Skill.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skillshare.iml" afterPath="$PROJECT_DIR$/skillshare.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/LoginRegisterController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginRegisterController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/SkillController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/SkillController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/BannedDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/BannedDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/StudentDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/StudentDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_student.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_student.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/update.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/update.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/logout.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/logout.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/footer-md.tag" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/footer-md.tag" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/ProposalController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/ProposalController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/validator/RegisterValidator.java" afterPath="$PROJECT_DIR$/src/main/java/controller/validator/RegisterValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/ProposalDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/ProposalDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/SkillDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/SkillDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/create.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/create.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/navbar-md.tag" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/navbar-md.tag" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/index.jsp" afterPath="$PROJECT_DIR$/target/skillshare/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/validador.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/validador.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,53 +29,113 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="skillshare" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BannedController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/BannedController.java">
+      <file leaf-file-name="ProposalController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/ProposalController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="83" column="40" lean-forward="false" selection-start-line="83" selection-start-column="40" selection-end-line="83" selection-end-column="40" />
+            <state relative-caret-position="198">
+              <caret line="91" column="62" lean-forward="false" selection-start-line="91" selection-start-column="62" selection-end-line="91" selection-end-column="62" />
+              <folding>
+                <element signature="e#1179#1180#0" expanded="true" />
+                <element signature="e#1219#1220#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProposalValidator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/validator/ProposalValidator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="35" column="19" lean-forward="false" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#990#991#0" expanded="true" />
-                <element signature="e#1032#1033#0" expanded="true" />
-                <element signature="e#1103#1104#0" expanded="true" />
-                <element signature="e#1147#1148#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BannedDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/BannedDao.java">
+      <file leaf-file-name="register.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register/register.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="68" column="44" lean-forward="false" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
+            <state relative-caret-position="213">
+              <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProposalDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/ProposalDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="60" column="42" lean-forward="false" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
               <folding>
-                <marker date="1492472342000" expanded="true" signature="788:824" ph="select nif f... banned" />
-                <marker date="1492472342000" expanded="true" signature="1102:1124" ph="select nif f... banned" />
-                <marker date="1492472342000" expanded="true" signature="1102:1137" ph="select nif f... banned" />
-                <marker date="1492472342000" expanded="true" signature="1581:1613" ph="DELETE FROM " />
-                <marker date="1492472342000" expanded="true" signature="1851:1879" ph="INSERT INTO BANNED... " />
-                <marker date="1492472342000" expanded="true" signature="1904:1940" ph="select nif f... banned" />
+                <element signature="imports" expanded="true" />
+                <marker date="1492780708000" expanded="true" signature="904:1077" ph="select id , proposal_of_collaboration" />
+                <marker date="1492780708000" expanded="true" signature="1229:1316" ph="select * fro... proposal_of_collaboration" />
+                <marker date="1492780708000" expanded="true" signature="1715:1832" ph="select * fro... proposal_of_collaboration" />
+                <marker date="1492780708000" expanded="true" signature="2122:2201" ph="INSERT INTO proposal_of_collaboration... " />
+                <marker date="1492780708000" expanded="true" signature="2647:2736" ph="UPDATE FROM " />
+                <marker date="1492780708000" expanded="true" signature="2653:2705" ph="DELETE FROM " />
+                <marker date="1492780708000" expanded="true" signature="3143:3179" ph="UPDATE propo... " />
+                <marker date="1492780708000" expanded="true" signature="3143:3229" ph="UPDATE propo... " />
+                <marker date="1492780708000" expanded="true" signature="3143:3283" ph="UPDATE propo... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ban.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned/ban.jsp">
+      <file leaf-file-name="SkillDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/SkillDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="108" column="49" lean-forward="false" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
+            <state relative-caret-position="117">
+              <caret line="73" column="41" lean-forward="false" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="41" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#2923#3149#0" expanded="true" />
+                <element signature="e#3148#3149#0" expanded="true" />
+                <marker date="1492780708000" expanded="true" signature="871:940" ph="select name,... skill" />
+                <marker date="1492780708000" expanded="true" signature="1087:1158" ph="select name,... skill" />
+                <marker date="1492780708000" expanded="true" signature="1465:1499" ph="select * fro... skill" />
+                <marker date="1492780708000" expanded="true" signature="1651:1706" ph="UPDATE Skill... " />
+                <marker date="1492780708000" expanded="true" signature="2155:2203" ph="SELECT * fro... Skill" />
+                <marker date="1492780708000" expanded="true" signature="2228:2259" ph="INSERT INTO SKILL... " />
+                <marker date="1492780708000" expanded="true" signature="2827:2863" ph="Select name skill" />
+                <marker date="1492780708000" expanded="true" signature="3326:3372" ph="DELETE from " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/create.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="47" column="88" lean-forward="false" selection-start-line="47" selection-start-column="88" selection-end-line="47" selection-end-column="88" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navbar-md.tag" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/navbar-md.tag">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="453">
+              <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,9 +156,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Listar</find>
-      <find>for&lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://www.springframework.org/tags/form&quot; %&gt;</find>
-      <find>form</find>
       <find>collap</find>
       <find>model.addAttribute(&quot;user&quot;, new String());</find>
       <find>loginEn</find>
@@ -153,6 +183,9 @@
       <find>home</find>
       <find>sk</find>
       <find>red</find>
+      <find>system</find>
+      <find>help</find>
+      <find>seq</find>
     </findStrings>
     <replaceStrings>
       <replace>proposal</replace>
@@ -178,16 +211,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/js/fullScreen.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/error_username.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/video.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/error_pass.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register/duplicated.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/model/skill/Level.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/select.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/delete.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/validador.js" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/SkillDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/banned.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/proposals/list.jsp" />
@@ -197,12 +225,9 @@
         <option value="$PROJECT_DIR$/src/main/java/util/StaticUtilities.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/student/Type.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/font-raleway.css" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/ProposalController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/font-google.css" />
         <option value="$PROJECT_DIR$/src/main/java/controller/validator/LoginValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/student/LoginStatus.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/validator/RegisterValidator.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tag/navbar-md.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tag/navbar-md.tag" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tag/footer-md.jsp" />
@@ -213,8 +238,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/footer-md.tag" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/panel-lateral.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/navbar-md.tag" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/LoginRegisterController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/dao/StudentDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/update.jsp" />
@@ -227,8 +250,18 @@
         <option value="$PROJECT_DIR$/src/main/java/controller/SkillController.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/student/BannedStudent.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/BannedDao.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned/ban.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/controller/BannedController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned/ban.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/LoginRegisterController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/validator/RegisterValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/validador.js" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/SkillDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/ProposalDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/create.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/ProposalController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/validator/ProposalValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/navbar-md.tag" />
       </list>
     </option>
   </component>
@@ -296,9 +329,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -466,6 +496,10 @@
               <option name="myItemId" value="jsp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proposal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -564,14 +598,6 @@
               <option name="myItemId" value="jsp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skill" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -595,15 +621,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="banned" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -963,6 +981,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -977,7 +998,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="dao&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/SkillDao.java&#10;create&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp&#10;Loginv&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/LoginValidator.java&#10;register&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/RegisterValidator.java&#10;Sk&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/SkillController.java&#10;contro&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;upda&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/update.jsp&#10;crea&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp&#10;home&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp&#10;studen&#9;PSI&#9;JAVA://model.student.Student&#10;tag&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/navbar-md.tag&#10;mapper&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/mapper/ProposalMapper.java&#10;Prop&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;skil&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/SkillController.java&#10;pan&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/panel-lateral.tag&#10;foo&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/footer-md.tag&#10;inde&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/index.jsp&#10;getStudent&#9;PSI&#9;JAVA://dao.StudentDao#getStudent&#10;stude&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/StudentDao.java&#10;ty&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/model/student/Type.java&#10;Proposal&#9;PSI&#9;JAVA://model.proposal.Proposal&#10;reg&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp&#10;pom&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/pom.xml&#10;toLowerC&#9;null&#9;null&#10;Log&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;Skill&#9;PSI&#9;JAVA://model.skill.Skill&#10;Type&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/model/student/Type.java" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/js/validador.js&#10;nav&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/navbar-md.tag&#10;crea&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/create.jsp&#10;reg&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp&#10;validad&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/js/validador.js&#10;Valida&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/RegisterValidator.java&#10;Regi&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;Ski&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/SkillController.java&#10;skild&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/SkillDao.java&#10;regis&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp&#10;Reg&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/RegisterValidator.java&#10;valida&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/LoginValidator.java&#10;Regis&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;Skil&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/SkillController.java&#10;dao&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/BannedDao.java&#10;map&#9;PSI&#9;JAVA://mapper.StudentMapper&#10;Skillda&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/SkillDao.java&#10;Banned&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/BannedController.java&#10;create&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp&#10;registe&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp&#10;log&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;Loginv&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/LoginValidator.java&#10;register&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/RegisterValidator.java&#10;Sk&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/SkillController.java&#10;contro&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;upda&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/update.jsp&#10;home&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp&#10;studen&#9;PSI&#9;JAVA://model.student.Student&#10;tag&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/navbar-md.tag&#10;mapper&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/mapper/ProposalMapper.java&#10;Prop&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;skil&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/SkillController.java&#10;pan&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/panel-lateral.tag&#10;foo&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/footer-md.tag&#10;inde&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/index.jsp&#10;getStudent&#9;PSI&#9;JAVA://dao.StudentDao#getStudent&#10;stude&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/StudentDao.java&#10;ty&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/model/student/Type.java&#10;Proposal&#9;PSI&#9;JAVA://model.proposal.Proposal&#10;pom&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/pom.xml&#10;toLowerC&#9;null&#9;null&#10;Log&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;Skill&#9;PSI&#9;JAVA://model.skill.Skill&#10;Type&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/model/student/Type.java" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="FullScreen" value="true" />
   </component>
@@ -1452,7 +1473,8 @@
       <workItem from="1492208148185" duration="4690000" />
       <workItem from="1492245592601" duration="58000" />
       <workItem from="1492248643833" duration="1029000" />
-      <workItem from="1492353759430" duration="18884000" />
+      <workItem from="1492353759430" duration="19107000" />
+      <workItem from="1492697972070" duration="16897000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit with structure and some basic code for organization. Defined the jdbc.properties">
       <created>1489341291729</created>
@@ -1615,11 +1637,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492441894304</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Create-Read-Delete Banned available. Create through modal!!! But a little bit buggy CHECK Controller">
+      <created>1492472829078</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1492472829078</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196955000" />
+    <option name="totallyTimeSpent" value="214075000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1632,7 +1661,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="1024" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1652,15 +1681,14 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3018868" sideWeight="0.6203554" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.49676898" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39727464" sideWeight="0.6987076" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.49676898" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2976939" sideWeight="0.6987076" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1802935" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3206785" sideWeight="0.49580714" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22213247" sideWeight="0.49580714" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3249476" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26979" sideWeight="0.5041929" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1668,6 +1696,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3249476" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1727,7 +1756,9 @@
     <MESSAGE value="List Proposals Working" />
     <MESSAGE value="Enum for cleaning code" />
     <MESSAGE value="TAGS: Navbar and footer" />
-    <option name="LAST_COMMIT_MESSAGE" value="TAGS: Navbar and footer" />
+    <MESSAGE value="Create-Read-Delete Banned available. Create through modal!!! But a little bit buggy CHECK Controller" />
+    <MESSAGE value="Form creation of the proposal OK. But buggy with a text of the fail conversion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Form creation of the proposal OK. But buggy with a text of the fail conversion" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1740,38 +1771,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/login/LoginEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-          <folding>
-            <element signature="e#1380#1405#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/meta.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="174" column="22" lean-forward="false" selection-start-line="174" selection-start-column="22" selection-end-line="174" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/update.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/util/StaticUtilities.java" />
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/common.rnc">
       <provider selected="true" editor-type-id="text-editor">
@@ -1781,26 +1780,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/font-awesome.css" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/create.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mapper/RequestMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/proposal/Proposal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -1812,14 +1795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="100" column="22" lean-forward="false" selection-start-line="100" selection-start-column="22" selection-end-line="100" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/student/Type.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -1828,26 +1803,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/goodbye.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/goodbye.gif" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/images/wallcard.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/usernotexist.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/foot.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/usernotexist.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/foot.jpg" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/images/footer-log.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1867,14 +1830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="49" lean-forward="false" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="121" column="29" lean-forward="false" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1906,34 +1861,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ProposalController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="44" column="46" lean-forward="false" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ProposalDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-          <folding>
-            <marker date="1490823569000" expanded="true" signature="748:921" ph="select id , proposal_of_collaboration" />
-            <marker date="1490823569000" expanded="true" signature="1073:1160" ph="select * fro... proposal_of_collaboration" />
-            <marker date="1490823569000" expanded="true" signature="1530:1647" ph="select * fro... proposal_of_collaboration" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/java/mapper/ProposalMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1946,14 +1874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/navbar-md.tag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="27" column="72" lean-forward="true" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
           <folding />
         </state>
       </provider>
@@ -1981,9 +1901,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2000,21 +1918,13 @@
         <state relative-caret-position="517">
           <caret line="90" column="19" lean-forward="false" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
           <folding>
-            <marker date="1492457204000" expanded="true" signature="1448:1483" ph="SELECT * fro... student" />
-            <marker date="1492457204000" expanded="true" signature="1889:1926" ph="SELECT * FRO... student" />
-            <marker date="1492457204000" expanded="true" signature="1957:1997" ph="SELECT * FRO... student" />
-            <marker date="1492457204000" expanded="true" signature="2414:2448" ph="Select * fro... banned" />
-            <marker date="1492457204000" expanded="true" signature="2970:3015" ph="INSERT INTO STUDENT... " />
-            <marker date="1492457204000" expanded="true" signature="3409:3444" ph="Select * fro... student" />
+            <marker date="1492472812000" expanded="true" signature="1448:1483" ph="SELECT * fro... student" />
+            <marker date="1492472812000" expanded="true" signature="1889:1926" ph="SELECT * FRO... student" />
+            <marker date="1492472812000" expanded="true" signature="1957:1997" ph="SELECT * FRO... student" />
+            <marker date="1492472812000" expanded="true" signature="2414:2448" ph="Select * fro... banned" />
+            <marker date="1492472812000" expanded="true" signature="2970:3015" ph="INSERT INTO STUDENT... " />
+            <marker date="1492472812000" expanded="true" signature="3409:3444" ph="Select * fro... student" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/LoginRegisterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="163" column="36" lean-forward="false" selection-start-line="163" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2034,11 +1944,153 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/validator/RegisterValidator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/validator/BannedValidator.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned/create.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+        <state relative-caret-position="507">
+          <caret line="35" column="52" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="52" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/student/BannedStudent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding>
+            <element signature="e#211#212#0" expanded="false" />
+            <element signature="e#249#250#0" expanded="false" />
+            <element signature="e#279#280#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/update.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="142" selection-end-column="71" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned/ban.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1275">
+          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE.jar!/META-INF/spring-form.tld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="747" column="8" lean-forward="false" selection-start-line="747" selection-start-column="8" selection-end-line="747" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/BannedController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="104" column="5" lean-forward="true" selection-start-line="101" selection-start-column="4" selection-end-line="104" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mapper/StudentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/BannedDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="44" column="54" lean-forward="true" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="54" />
+          <folding>
+            <element signature="e#1198#1397#0" expanded="true" />
+            <element signature="e#1396#1397#0" expanded="true" />
+            <marker date="1492472812000" expanded="true" signature="788:824" ph="select nif f... banned" />
+            <marker date="1492472812000" expanded="true" signature="1103:1125" ph="select nif f... banned" />
+            <marker date="1492472812000" expanded="true" signature="1103:1138" ph="select nif f... banned" />
+            <marker date="1492472812000" expanded="true" signature="1582:1614" ph="DELETE FROM " />
+            <marker date="1492472812000" expanded="true" signature="1854:1882" ph="INSERT INTO BANNED... " />
+            <marker date="1492472812000" expanded="true" signature="1907:1943" ph="select nif f... banned" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="77" column="42" lean-forward="true" selection-start-line="71" selection-start-column="27" selection-end-line="77" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/SkillController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="89" column="37" lean-forward="false" selection-start-line="89" selection-start-column="37" selection-end-line="89" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/SkillDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="73" column="41" lean-forward="false" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="41" />
+          <folding>
+            <element signature="e#2923#3149#0" expanded="true" />
+            <element signature="e#3148#3149#0" expanded="true" />
+            <marker date="1492780708000" expanded="true" signature="871:940" ph="select name,... skill" />
+            <marker date="1492780708000" expanded="true" signature="1087:1158" ph="select name,... skill" />
+            <marker date="1492780708000" expanded="true" signature="1465:1499" ph="select * fro... skill" />
+            <marker date="1492780708000" expanded="true" signature="1651:1706" ph="UPDATE Skill... " />
+            <marker date="1492780708000" expanded="true" signature="2155:2203" ph="SELECT * fro... Skill" />
+            <marker date="1492780708000" expanded="true" signature="2228:2259" ph="INSERT INTO SKILL... " />
+            <marker date="1492780708000" expanded="true" signature="2827:2863" ph="Select name skill" />
+            <marker date="1492780708000" expanded="true" signature="3326:3372" ph="DELETE from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/LoginRegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="143" column="22" lean-forward="true" selection-start-line="143" selection-start-column="22" selection-end-line="143" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ProposalDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="60" column="42" lean-forward="false" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1492780708000" expanded="true" signature="904:1077" ph="select id , proposal_of_collaboration" />
+            <marker date="1492780708000" expanded="true" signature="1229:1316" ph="select * fro... proposal_of_collaboration" />
+            <marker date="1492780708000" expanded="true" signature="1715:1832" ph="select * fro... proposal_of_collaboration" />
+            <marker date="1492780708000" expanded="true" signature="2122:2201" ph="INSERT INTO proposal_of_collaboration... " />
+            <marker date="1492780708000" expanded="true" signature="2647:2736" ph="UPDATE FROM " />
+            <marker date="1492780708000" expanded="true" signature="2653:2705" ph="DELETE FROM " />
+            <marker date="1492780708000" expanded="true" signature="3143:3179" ph="UPDATE propo... " />
+            <marker date="1492780708000" expanded="true" signature="3143:3229" ph="UPDATE propo... " />
+            <marker date="1492780708000" expanded="true" signature="3143:3283" ph="UPDATE propo... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2050,112 +2102,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/validator/BannedValidator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/validator/RegisterValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        <state relative-caret-position="180">
+          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned/create.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/proposal/Proposal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="35" column="52" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="52" />
+        <state relative-caret-position="-342">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ProposalController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="91" column="62" lean-forward="false" selection-start-line="91" selection-start-column="62" selection-end-line="91" selection-end-column="62" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1179#1180#0" expanded="true" />
+            <element signature="e#1219#1220#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/validator/ProposalValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="35" column="19" lean-forward="false" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/create.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="47" column="88" lean-forward="false" selection-start-line="47" selection-start-column="88" selection-end-line="47" selection-end-column="88" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/validador.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="312">
+          <caret line="81" column="9" lean-forward="false" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/student/BannedStudent.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/navbar-md.tag">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding>
-            <element signature="e#211#212#0" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+        <state relative-caret-position="453">
+          <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/BannedDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="68" column="44" lean-forward="false" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
-          <folding>
-            <marker date="1492472342000" expanded="true" signature="788:824" ph="select nif f... banned" />
-            <marker date="1492472342000" expanded="true" signature="1102:1124" ph="select nif f... banned" />
-            <marker date="1492472342000" expanded="true" signature="1102:1137" ph="select nif f... banned" />
-            <marker date="1492472342000" expanded="true" signature="1581:1613" ph="DELETE FROM " />
-            <marker date="1492472342000" expanded="true" signature="1851:1879" ph="INSERT INTO BANNED... " />
-            <marker date="1492472342000" expanded="true" signature="1904:1940" ph="select nif f... banned" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/SkillDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="29" column="46" lean-forward="false" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
-          <folding>
-            <marker date="1490552173000" expanded="true" signature="738:807" ph="select name,... skill" />
-            <marker date="1490552173000" expanded="true" signature="954:1025" ph="select name,... skill" />
-            <marker date="1490552173000" expanded="true" signature="1332:1366" ph="select * fro... skill" />
-            <marker date="1490552173000" expanded="true" signature="1518:1573" ph="UPDATE Skill... " />
-            <marker date="1490552173000" expanded="true" signature="2006:2054" ph="SELECT * fro... Skill" />
-            <marker date="1490552173000" expanded="true" signature="2079:2110" ph="INSERT INTO SKILL... " />
-            <marker date="1490552173000" expanded="true" signature="2678:2724" ph="DELETE from " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/SkillController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="89" column="37" lean-forward="false" selection-start-line="89" selection-start-column="37" selection-end-line="89" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned/ban.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="108" column="49" lean-forward="false" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/BannedController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="83" column="40" lean-forward="false" selection-start-line="83" selection-start-column="40" selection-end-line="83" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#990#991#0" expanded="true" />
-            <element signature="e#1032#1033#0" expanded="true" />
-            <element signature="e#1103#1104#0" expanded="true" />
-            <element signature="e#1147#1148#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

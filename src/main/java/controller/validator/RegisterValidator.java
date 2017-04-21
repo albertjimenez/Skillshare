@@ -10,7 +10,10 @@ import org.springframework.validation.Validator;
  */
 public class RegisterValidator implements Validator {
 
-    Student s;
+    private Student s;
+
+    //TODO crea un booleano en el constructor que sea fruto de que el DAO tenga un metodo para comprobar
+    //si nickname está disponible
 
     public RegisterValidator(Student s) {
         this.s = s;

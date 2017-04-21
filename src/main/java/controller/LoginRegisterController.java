@@ -84,7 +84,6 @@ public class LoginRegisterController {
     public String processAndSubmit(@ModelAttribute("loginEntity") LoginEntity loginEntity,
                                    BindingResult bindingResult,
                                    Model model) {
-        System.out.println(loginEntity);
         Student s = studentDao.getStudent(null, loginEntity.getUser(), loginEntity.getPassword());
         LoginStatus.setStudent(s);
         LoginValidator loginValidator = new LoginValidator(s);
@@ -172,6 +171,8 @@ public class LoginRegisterController {
     public String homeStudent(Model model) {
         if (!getSessionStudent())
             return "redirect:../login/login.html";
+
+
         Student student = (Student) httpSession.getAttribute("user");
         String name = student.getName().split("\\s+")[0];
         model.addAttribute("student", student);
@@ -185,7 +186,6 @@ public class LoginRegisterController {
 
 
     private String switchUserType(Student s) {
-        System.out.println("MI estudiante switch es " + s.getType());
         return s.getType() == Type.CP ? "redirect:../home/home_pc.html" :
                 "redirect:../home/home_student.html";
 
