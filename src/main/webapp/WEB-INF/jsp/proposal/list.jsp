@@ -27,33 +27,32 @@
 <body class="blue lighten-3">
 
 <%--Inicio del navbar con movil--%>
-<md:navbar-md></md:navbar-md>
+<header>
+    <md:navbar-md name="${name}"></md:navbar-md>
+</header>
 
-<div class="row">
+<%--<div class="row">--%>
     <%--Barra gris--%>
 
 
-    <md:panel-lateral>
-        <h4 class="black-text font-raleway">
-                ${type} ${student.name} </h4>
-
-        <div class="divider"></div>
+<md:sidenav-md name="${name}" type="${type}">
         <ul>
             <li>
-                <a href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
+                <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
             </li>
         </ul>
-    </md:panel-lateral>
+</md:sidenav-md>
 
     <%--Fondo restante de la web sin panel--%>
-    <div class="col s12 m8 l9" style="height: 100%">
+<main>
+    <%--<div class="col s12 m8 l9" style="height: 100%">--%>
         <h1 class="font-raleway">Mis ${count} ofertas</h1>
         <div class="divider"></div>
 
 
         <%--Boton material de crear oferta--%>
         <div class="fixed-action-btn horizontal">
-            <a class="btn-floating btn-large blue">
+            <a class="btn-floating btn-large red">
                 <i class="material-icons">menu</i>
             </a>
             <ul>
@@ -130,13 +129,13 @@
             </ul>
 
         </c:if>
-    </div>
+</main>
+<%--</div>--%>
 
 
-</div>
+<%--</div>--%>
 
 
-</div>
 
 <md:footer-md></md:footer-md>
 <script type="text/javascript" src="/js/materialize.min.js"></script>

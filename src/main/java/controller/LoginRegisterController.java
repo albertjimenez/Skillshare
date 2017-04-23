@@ -109,6 +109,8 @@ public class LoginRegisterController {
 
     @RequestMapping(value = "/login/logout")
     public String logout(Model model) {
+        model.addAttribute("name", getStudentName());
+        model.addAttribute("type", getType());
         httpSession.invalidate();
         return "login/logout";
     }
@@ -162,6 +164,7 @@ public class LoginRegisterController {
         if (!getSessionStudent())
             return "redirect:../login/login.html";
         model.addAttribute("name", getStudentName());
+        model.addAttribute("type", getType());
         model.addAttribute("skills", skillDao.getSkillsCollection());
         model.addAttribute("editskill", new Skill());
         return "home/home_pc";
@@ -199,6 +202,11 @@ public class LoginRegisterController {
     private String getStudentName() {
         Student student = (Student) httpSession.getAttribute("user");
         return student.getName();
+    }
+
+    private String getType() {
+        Student student = (Student) httpSession.getAttribute("user");
+        return Type.getName(student.getType().toString());
     }
 
 }

@@ -21,13 +21,26 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body class="blue lighten-3">
-<md:navbar-md name="${name}"></md:navbar-md>
 
-<div class="row">
+<header>
+    <md:navbar-md name="${name}"></md:navbar-md>
+</header>
 
-    <md:panel-lateral></md:panel-lateral>
+<%--<div class="row">--%>
 
-    <div class="col s12 m8 l9" style="height: 100%">
+<md:sidenav-md name="${name}" type="${type}">
+    <ul>
+        <li>
+            <a class="waves-effect" href="${pageContext.request.contextPath}/home/home_pc.html">Mi área</a>
+        </li>
+        <li>
+            <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
+        </li>
+    </ul>
+</md:sidenav-md>
+
+<main>
+    <%--<div class="col s12 m8 l9" style="height: 100%">--%>
         <c:if test="${empty items}">
             <div class="valign-wrapper">
                 <a class="valign" style="font-size: 50px;text-align: center">
@@ -97,10 +110,11 @@
             </ul>
 
         </c:if>
-    </div>
+</main>
+<%--</div>--%>
 
 
-</div>
+<%--</div>--%>
 
 
 <%--MODAL  CREAR--%>
@@ -117,7 +131,7 @@
     </div>
 </div>
 
-
+<md:footer-md></md:footer-md>
 <script type="text/javascript" src="/js/materialize.min.js"></script>
 <script src="/js/scroll.js"></script>
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>

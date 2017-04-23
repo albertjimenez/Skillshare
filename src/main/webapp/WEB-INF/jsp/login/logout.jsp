@@ -18,6 +18,17 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <style type="text/css">
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
         video#bgvid {
             position: fixed;
             top: 50%;
@@ -48,21 +59,21 @@
 </head>
 
 <body class="blue lighten-3">
-<md:navbar-md></md:navbar-md>
+<header><md:navbar-md></md:navbar-md></header>
+
+<main>
+    <div class="card-content" id="content">
+        <h1 class="center-align">Sesión cerrada ${name}</h1>
+    </div>
+    <video playsinline autoplay muted loop poster="/images/goodbye.png" id="bgvid">
+        <source src="/video/typing.webm" type="video/webm">
+        <source src="/video/typing_.mp4" type="video/mp4">
+    </video>
+</main>
 
 
-<%--TODO de momento dejo un GIF pero me gustaria un video en background--%>
 <%--Enlace del tutorial: https://www.youtube.com/watch?v=W2y33Q2lf3k--%>
 
-
-<video playsinline autoplay muted loop poster="/images/goodbye.png" id="bgvid">
-    <source src="/video/typing.webm" type="video/webm">
-    <source src="/video/typing_.mp4" type="video/mp4">
-</video>
-
-<div class="card-content" id="content">
-    <h1>Sesión cerrada</h1>
-</div>
 
 <md:footer-md></md:footer-md>
 

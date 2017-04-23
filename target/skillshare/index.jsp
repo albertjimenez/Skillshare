@@ -27,9 +27,9 @@
 <body class="blue lighten-3">
 
 
+
 <%--Inicio del navbar con movil--%>
 <md:navbar-md></md:navbar-md>
-
 <%--Carrousel--%>
 <div class="carousel carousel-slider">
     <a href="#one!" class="carousel-item"><img src="images/carousel/1.jpeg" alt=""></a>
@@ -125,12 +125,10 @@
 <%--Se aconseja moverlos al final de la web para reducir los tiempos de carga--%>
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="js/materialize.min.js"></script>
-<%--<script type="text/javascript" src="js/BarraLateralMovil.js"></script>--%>
-<script>
-    $('.button-collapse').sideNav();
-</script>
+
 <%--Script de smooth scroll--%>
-<script src="js/scroll.js"></script>
+<script src="/js/scroll.js"></script>
+<script src="/js/BarraLateralMovil.js"></script>
 <script>
     $(".carousel.carousel-slider").carousel({
         fullWidth: true,

@@ -19,11 +19,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+<style>
+    body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    main {
+        flex: 1 0 auto;
+    }
+</style>
 <body class="blue lighten-3">
 
-<md:navbar-md></md:navbar-md>
-
-<h4 class="center-align hoverable z-depth-1-half">Inicia tu sesión</h4>
+<header>
+    <md:navbar-md></md:navbar-md>
+</header>
+<main>
+    <h4 class="center-align hoverable z-depth-1-half">Inicia la sesión</h4>
 
 <%--Abrimos formulario--%>
 <div class="section z-depth-2 transparent hoverable">
@@ -70,6 +83,7 @@
 <div class="progress" id="progress">
     <div class="indeterminate"></div>
 </div>
+</main>
 <%--Footer--%>
 <md:footer-md></md:footer-md>
 

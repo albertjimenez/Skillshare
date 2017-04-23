@@ -67,6 +67,7 @@ public class ProposalController {
         Student student = (Student) httpSession.getAttribute("user");
         String name = getStudentName();
         model.addAttribute("name", name);
+        model.addAttribute("type", getType());
         model.addAttribute("student", student);
         model.addAttribute("listSkillnames", skillDao.listSkillNames());
         model.addAttribute("newproposal", new Proposal());
@@ -98,6 +99,7 @@ public class ProposalController {
         Student student = (Student) httpSession.getAttribute("user");
         String name = getStudentName();
         model.addAttribute("name", name);
+        model.addAttribute("type", getType());
         model.addAttribute("student", student);
         model.addAttribute("type", Type.getName(student.getType().toString()));
         model.addAttribute("listSkillnames", skillDao.listSkillNames());
@@ -127,6 +129,16 @@ public class ProposalController {
         return student.getName();
     }
 
+    private String getType() {
+        Student student = (Student) httpSession.getAttribute("user");
+        return Type.getName(student.getType().toString());
+    }
+
+
+    @RequestMapping(value = "/testings/test")
+    public String guei() {
+        return "/testings/test";
+    }
 
 
 }

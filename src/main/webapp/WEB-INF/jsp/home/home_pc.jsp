@@ -21,29 +21,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
+<%--<style>--%>
+<%--body {--%>
+<%--display: flex;--%>
+<%--min-height: 100vh;--%>
+<%--flex-direction: column;--%>
+<%--}--%>
+
+<%--main {--%>
+<%--flex: 1 0 auto;--%>
+<%--}--%>
+
+<%--header, main, footer {--%>
+<%--padding-left: 300px;--%>
+<%--}--%>
+
+<%--@media only screen and (max-width : 992px) {--%>
+<%--header, main, footer {--%>
+<%--padding-left: 0;--%>
+<%--}--%>
+<%--}--%>
+<%--</style>--%>
 <body class="blue lighten-3">
 <%--Inicio del navbar con movil--%>
-<md:navbar-md name="${name}"></md:navbar-md>
-<div class="row">
-    <%--Barra gris--%>
-    <md:panel-lateral>
-        <span class="white-text">
-          El botón de <i><strong>Panel</strong></i> expande el panel para poder controlar y mostrar más
-              información que la que se muestra. <br>
-          </span>
-        <span class="white-text">
-                    Cuando haces clic en una habilidad puedes editarla con el botón flotante que aparece
-                abajo a la izquierda. En él se desplega el subbotón editar, eliminar y crear.</span>
-        <div class="card-panel red accent-2 hoverable">
-            <a href="${pageContext.request.contextPath}/banned/ban.html">
-                Lista de Baneados<i class="material-icons">warning</i>
-            </a>
-        </div>
-    </md:panel-lateral>
 
-    <div class="col s12 m8 l9" style="height: 100%">
+<header>
+    <md:navbar-md name="${name}"></md:navbar-md>
+</header>
+    <%--Barra gris--%>
+
+<%--TODO meter todo en <li>--%>
+<md:sidenav-md name="${name}" type="${type}">
+    <li><a class="waves-effect" href="${pageContext.request.contextPath}/banned/ban.html">
+        <i class="material-icons">warning</i>Lista de baneados</a></li>
+</md:sidenav-md>
+
+<%--<div class="col s12 m8 l9" style="height: 100%">--%>
+<main>
         <div class="fixed-action-btn horizontal">
-            <a class="btn-floating btn-large blue">
+            <a class="btn-floating btn-large red">
                 <i class="material-icons">menu</i>
             </a>
             <ul>
@@ -97,11 +114,10 @@
                 </li>
             </c:forEach>
         </ul>
+</main>
+<%--</div>--%>
 
-    </div>
 
-
-</div>
 <md:footer-md></md:footer-md>
 
 <script type="text/javascript" src="/js/materialize.min.js"></script>

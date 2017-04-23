@@ -27,41 +27,42 @@
 <body class="blue lighten-3">
 
 <%--Inicio del navbar con movil--%>
-<md:navbar-md></md:navbar-md>
+<header>
+    <md:navbar-md name="${name}"></md:navbar-md>
+</header>
 
-<div class="row">
-    <%--Barra gris--%>
-    <md:panel-lateral>
-        <h4 class="black-text font-raleway">
-                    ${type} ${student.name} </h4>
+<%--<div class="row">--%>
+<%--Barra gris--%>
+<md:sidenav-md name="${name}" type="${type}">
 
-        <div class="divider"></div>
-        <ul>
-            <li>
-                <a href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
-            </li>
-        </ul>
-        <a href="#modal-help" class="waves-effect waves-light btn btn-floating">
-            <i class="material-icons">live_help</i>
-        </a>
-    </md:panel-lateral>
-    <%--Fondo restante de la web sin panel--%>
-    <div class="col s12 m8 l9" style="height: 100%">
-        <c:if test="${empty proposals}">
-            <div class="valign-wrapper">
-                <a class="valign" style="font-size: 50px;text-align: center">
-                    <i class="material-icons valign" style="font-size: 200px; text-align: center">insert_invitation</i>
-                    <br>
-                    Esto está vacío... Prueba a empezar creando ofertas o uniéndote a peticiones.</a>
-            </div>
-        </c:if>
-        <c:if test="${not empty proposals}">
-            <p>Pene</p>
-        </c:if>
-    </div>
+    <ul>
+        <li>
+            <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
+        </li>
+    </ul>
+    <a href="#modal-help" class="waves-effect">
+        <i class="material-icons">live_help</i>
+    </a>
 
+</md:sidenav-md>
+<%--Fondo restante de la web sin panel--%>
+<%--<div class="col s12 m8 l9" style="height: 100%">--%>
+<main>
+    <c:if test="${empty proposals}">
+        <div class="valign-wrapper">
+            <a class="valign" style="font-size: 50px;text-align: center">
+                <i class="material-icons valign" style="font-size: 200px; text-align: center">insert_invitation</i>
+                <br>
+                Esto está vacío... Prueba a empezar creando ofertas o uniéndote a peticiones.</a>
+        </div>
+    </c:if>
+    <c:if test="${not empty proposals}">
+        <p>Pene</p>
+    </c:if>
+    <%--</div>--%>
+</main>
 
-</div>
+<%--</div>--%>
 
 
 <%--Modal Ayuda--%>

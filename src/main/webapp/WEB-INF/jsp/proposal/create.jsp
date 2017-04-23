@@ -25,31 +25,32 @@
 </head>
 <body class="blue lighten-3">
 
-<md:navbar-md></md:navbar-md>
+<header>
+    <md:navbar-md name="${name}"></md:navbar-md>
+</header>
 
 
-<div class="row">
+<%--<div class="row">--%>
     <%--Panel lateral movil--%>
-    <md:panel-lateral>
-        <h4 class="black-text font-raleway">
-                ${type} ${student.name} </h4>
-
-        <div class="divider"></div>
-        <ul>
+<md:sidenav-md name="${name}" type="${type}">
+    <ul>
             <li>
-                <a href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
+                <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
             </li>
         </ul>
-    </md:panel-lateral>
+</md:sidenav-md>
 
     <%--Resto fondo web--%>
-    <div class="col s12 m8 l9" style="height: 100%">
+<%--<div class="col s12 m8 l9" style="height: 100%">--%>
+<main>
+    <h4 class="font-raleway">Crear oferta</h4>
         <div class="container valign hoverable z-depth-2">
             <form:form method="post" modelAttribute="newproposal" onsubmit="return checkProposal();">
 
                 <div class="row">
                     <div class="input-field col s6 offset-s3 ">
                         <form:select path="skillName">
+                            <form:option value="Lista de habilidades" disabled="true"></form:option>
                             <form:options items="${listSkillnames}"></form:options>
                         </form:select>
                     </div>
@@ -93,21 +94,22 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s6 offset-s3 ">
-                            <%--<input type="submit"  value="Crear Oferta">--%>
+                    <div class="input-field col s6 offset-s3">
                         <button class="btn waves-effect waves-light" type="submit" name="action">Crear oferta
                             <i class="material-icons right">send</i>
                         </button>
                     </div>
                 </div>
+                <div class="row"></div>
 
                 <%--No incluimos ni nif ni ID, los cogemos del cliente al momento de devolver este objeto--%>
 
             </form:form>
         </div>
-    </div>
+</main>
+<%--</div>--%>
 
-</div>
+<%--</div>--%>
 
 
 <md:footer-md></md:footer-md>

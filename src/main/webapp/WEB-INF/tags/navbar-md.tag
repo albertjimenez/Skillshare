@@ -19,9 +19,11 @@
                      class="responsive-img z-depth-2" alt="" width="40" height="40">
                 Skillshare EI1027
             </a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse">
-                <i class="material-icons ">menu</i>
-            </a>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <%--<a href="#" data-activates="mobile-demo" class="button-collapse">--%>
+            <%--<i class="material-icons ">menu</i>--%>
+            <%--</a>--%>
             <%--Esto es la cabecera de arriba--%>
             <ul class="right hide-on-med-and-down">
                 <c:if test="${empty name}">
@@ -35,6 +37,7 @@
 
             </ul>
             <%--Esto es la cabecera movil--%>
+
             <ul class="side-nav" id="mobile-demo">
                 <c:if test="${empty name}">
                     <li><a href="${pageContext.request.contextPath}/login/login.html">Entrar</a></li>

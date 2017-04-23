@@ -24,35 +24,28 @@
 <body class="blue lighten-3">
 
 <%--Inicio del navbar con movil--%>
-<md:navbar-md name="${name}"></md:navbar-md>
+<header><md:navbar-md name="${name}"></md:navbar-md></header>
 <%--Cuerpo principal--%>
 
 <%--Barra gris--%>
-<div class="row">
+<%--<div class="row">--%>
 
-    <md:panel-lateral>
-        <span class="white-text">
-        El botón de <i><strong>Panel</strong></i> expande el panel para poder controlar y mostrar más
-        información que la que se muestra.
-        </span>
-        <span class="white-text">
-                Desde esta página podrás editar habilidades.</span>
-
-        <div class="card-panel red accent-2 hoverable">
+<md:sidenav-md name="${name}" type="${type}">
+    <ul>
+        <li>
             <a href="${pageContext.request.contextPath}/home/home_pc.html">
                 Lista de Habilidades<i class="material-icons">list</i>
-            </a>
-        </div>
-        <div class="card-panel red accent-2 hoverable">
+            </a></li>
+        <li>
             <a href="${pageContext.request.contextPath}/banned/ban.html">
                 Lista de Baneados<i class="material-icons">warning</i>
-            </a>
-        </div>
-    </md:panel-lateral>
+            </a></li>
+    </ul>
+</md:sidenav-md>
 
     <%--Resto de la página--%>
-    <div class="col s9 ">
-
+<%--<div class="col s9 ">--%>
+<main>
         <div class="card hoverable transparent z-depth-1-half">
             <div class="card-image">
                 <img class="responsive-img" src="/images/wallcard.png">
@@ -95,10 +88,10 @@
             </div>
         </div>
 
+</main>
+<%--</div>--%>
 
-    </div>
-
-</div>
+<%--</div>--%>
 
 
 <%--Footer--%>
