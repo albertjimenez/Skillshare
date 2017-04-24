@@ -32,109 +32,138 @@
 </header>
 
 <%--<div class="row">--%>
-    <%--Barra gris--%>
+<%--Barra gris--%>
 
 
 <md:sidenav-md name="${name}" type="${type}">
-        <ul>
-            <li>
-                <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
-            </li>
-        </ul>
+    <ul>
+        <li>
+            <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
+        </li>
+    </ul>
 </md:sidenav-md>
 
-    <%--Fondo restante de la web sin panel--%>
+<%--Fondo restante de la web sin panel--%>
 <main>
     <%--<div class="col s12 m8 l9" style="height: 100%">--%>
-        <h1 class="font-raleway">Mis ${count} ofertas</h1>
-        <div class="divider"></div>
+    <h1 class="font-raleway">Mis ${count} ofertas</h1>
+    <div class="divider"></div>
 
 
-        <%--Boton material de crear oferta--%>
-        <div class="fixed-action-btn horizontal">
-            <a class="btn-floating btn-large red">
-                <i class="material-icons">menu</i>
-            </a>
-            <ul>
-                <li><a class="btn-floating green" href="${pageContext.request.contextPath}/proposal/create.html">
-                    <i class="material-icons">playlist_add</i></a></li>
-            </ul>
+    <%--Boton material de crear oferta--%>
+    <div class="fixed-action-btn horizontal">
+        <a class="btn-floating btn-large red">
+            <i class="material-icons">menu</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating green" href="${pageContext.request.contextPath}/proposal/create.html">
+                <i class="material-icons">playlist_add</i></a></li>
+        </ul>
+    </div>
+
+
+    <%--TODO comprobar que si no tiene ni request ni proposals salga el texto de no tiene na--%>
+    <c:if test="${empty proposals}">
+        <div class="valign-wrapper">
+            <a class="valign" style="font-size: 50px;text-align: center">
+                <i class="material-icons valign" style="font-size: 200px; text-align: center">insert_invitation</i>
+                <br>
+                Esto está vacío... Prueba a empezar creando alguna oferta.</a>
         </div>
+    </c:if>
+    <c:if test="${not empty proposals}">
+        <ul class="collapsible " data-collapsible="accordion">
+            <c:forEach items="${proposals}" var="prop">
 
+                <li>
+                    <div class="collapsible-header blue lighten-4 z-depth-3">
+                        <i class="material-icons">
+                            touch_app</i>ID: ${prop.id} - Habilidad: ${prop.skillName} - Fecha
+                        inicio: ${prop.initialDate}</div>
+                    <div class="collapsible-body blue lighten-5 hoverable">
 
-        <%--TODO comprobar que si no tiene ni request ni proposals salga el texto de no tiene na--%>
-        <c:if test="${empty proposals}">
-            <div class="valign-wrapper">
-                <a class="valign" style="font-size: 50px;text-align: center">
-                    <i class="material-icons valign" style="font-size: 200px; text-align: center">insert_invitation</i>
-                    <br>
-                    Esto está vacío... Prueba a empezar creando alguna oferta.</a>
-            </div>
-        </c:if>
-        <c:if test="${not empty proposals}">
-            <ul class="collapsible " data-collapsible="accordion">
-                <c:forEach items="${proposals}" var="prop">
-
-                    <li>
-                        <div class="collapsible-header red lighten-3 z-depth-3">
-                            <i class="material-icons">
-                                touch_app</i>ID: ${prop.id} - Habilidad: ${prop.skillName} - Fecha
-                            inicio: ${prop.initialDate}</div>
-                        <div class="collapsible-body cyan lighten-4 hoverable">
-                            <div class="row">
-                                <div class="col s12">
-                                    <p>Nivel: ${prop.level}</p>
-                                    <p>Descripción: ${prop.description}</p>
-                                    <p>Fecha fin: ${prop.finishDate}</p>
-                                </div>
-                            </div>
-                                <%--Botonera dentro del cajon--%>
-                            <div class="row">
-                                <div class="col s6">
+                        <table class="highlight bordered">
+                            <tr>
+                                <td><span class="font-raleway">Nivel:</span></td>
+                                <td class="font-raleway">${prop.level}</td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-raleway">Descripción:</span></td>
+                                <td class="font-raleway">${prop.description}</td>
+                            </tr>
+                            <tr>
+                                <td><span class="font-raleway">Fecha fin:</span></td>
+                                <td class="font-raleway">${prop.finishDate}</td>
+                            </tr>
+                            <tr>
+                                <td>
                                     <a class="waves-effect waves-light btn"
                                        href="${pageContext.request.contextPath}/proposal/update/${prop.id}.html">
                                         <i class="material-icons left ">mode_edit
                                         </i>Editar Oferta</a>
-                                </div>
-                                <div class="col s6">
+                                </td>
+                                <td>
                                     <a class="waves-effect waves-light btn"
                                        href="${pageContext.request.contextPath}/proposal/delete/${prop.id}.html">
                                         <i class="material-icons left">delete</i>
                                         Borrar Oferta</a>
-                                </div>
-                            </div>
-                                <%--Botonera fija en la parte inferior derecha--%>
-                                <%--Button Material--%>
-                            <div class="fixed-action-btn">
-                                <a class="btn-floating btn-large red">
-                                    <i class="large material-icons">mode_edit</i>
-                                </a>
+                                </td>
+                            </tr>
+                        </table>
 
-                                    <%--SUBButtons--%>
-                                <ul>
-                                    <li><a class="btn-floating red"
-                                           href="${pageContext.request.contextPath}/proposal/delete/${prop.id}.html"><i
-                                            class="material-icons">delete</i></a></li>
-                                    <li><a class="btn-floating blue"
-                                           href="${pageContext.request.contextPath}/proposal/update/${prop.id}.html">
-                                        <i class="material-icons">mode_edit</i></a></li>
-                                    <li><a class="btn-floating green"
-                                           href="${pageContext.request.contextPath}/proposal/create.html">
-                                        <i class="material-icons">playlist_add</i></a></li>
-                                </ul>
-                            </div>
+                            <%--<div class="row">--%>
+                            <%--<div class="col s12">--%>
+                            <%--<p>Nivel: ${prop.level}</p>--%>
+                            <%--<p>Descripción: ${prop.description}</p>--%>
+                            <%--<p>Fecha fin: ${prop.finishDate}</p>--%>
+                            <%--</div>--%>
+                            <%--</div>--%>
+                            <%--Botonera dentro del cajon--%>
+                            <%--<div class="row">--%>
+                            <%--<div class="col s6">--%>
+                            <%--<a class="waves-effect waves-light btn"--%>
+                            <%--href="${pageContext.request.contextPath}/proposal/update/${prop.id}.html">--%>
+                            <%--<i class="material-icons left ">mode_edit--%>
+                            <%--</i>Editar Oferta</a>--%>
+                            <%--</div>--%>
+                            <%--<div class="col s6">--%>
+                            <%--<a class="waves-effect waves-light btn"--%>
+                            <%--href="${pageContext.request.contextPath}/proposal/delete/${prop.id}.html">--%>
+                            <%--<i class="material-icons left">delete</i>--%>
+                            <%--Borrar Oferta</a>--%>
+                            <%--</div>--%>
+                            <%--</div>--%>
+                            <%--Botonera fija en la parte inferior derecha--%>
+                            <%--Button Material--%>
+                        <div class="fixed-action-btn">
+                            <a class="btn-floating btn-large red">
+                                <i class="large material-icons">mode_edit</i>
+                            </a>
+
+                                <%--SUBButtons--%>
+                            <ul>
+                                <li><a class="btn-floating red"
+                                       href="${pageContext.request.contextPath}/proposal/delete/${prop.id}.html"><i
+                                        class="material-icons">delete</i></a></li>
+                                <li><a class="btn-floating blue"
+                                       href="${pageContext.request.contextPath}/proposal/update/${prop.id}.html">
+                                    <i class="material-icons">mode_edit</i></a></li>
+                                <li><a class="btn-floating green"
+                                       href="${pageContext.request.contextPath}/proposal/create.html">
+                                    <i class="material-icons">playlist_add</i></a></li>
+                            </ul>
                         </div>
-                    </li>
-                </c:forEach>
-            </ul>
+                    </div>
+                </li>
+            </c:forEach>
+        </ul>
 
-        </c:if>
+    </c:if>
 </main>
 <%--</div>--%>
 
 
 <%--</div>--%>
-
 
 
 <md:footer-md></md:footer-md>

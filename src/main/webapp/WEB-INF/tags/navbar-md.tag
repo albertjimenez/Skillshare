@@ -27,12 +27,16 @@
             <%--Esto es la cabecera de arriba--%>
             <ul class="right hide-on-med-and-down">
                 <c:if test="${empty name}">
-                    <li><a href="${pageContext.request.contextPath}/login/login.html">Entrar</a></li>
-                    <li><a href="${pageContext.request.contextPath}/register/register.html">Registrarse</a></li>
+                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/login/login.html">Entrar</a>
+                    </li>
+                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/register/register.html">Registrarse</a>
+                    </li>
                 </c:if>
                 <c:if test="${not empty name}">
-                    <li><a href="${pageContext.request.contextPath}/login/login.html">${name}</a></li>
-                    <li><a href="${pageContext.request.contextPath}/login/logout.html">Salir</a></li>
+                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/login/login.html">${name}</a>
+                    </li>
+                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/login/logout.html">Salir</a>
+                    </li>
                 </c:if>
 
             </ul>
@@ -40,12 +44,16 @@
 
             <ul class="side-nav" id="mobile-demo">
                 <c:if test="${empty name}">
-                    <li><a href="${pageContext.request.contextPath}/login/login.html">Entrar</a></li>
-                    <li><a href="${pageContext.request.contextPath}/register/register.html">Registrarse</a></li>
+                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/login/login.html">Entrar</a>
+                    </li>
+                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/register/register.html">Registrarse</a>
+                    </li>
                 </c:if>
                 <c:if test="${not empty name}">
-                    <li><a href="${pageContext.request.contextPath}/login/login.html">${name}</a></li>
-                    <li><a href="${pageContext.request.contextPath}/login/logout.html">Salir</a></li>
+                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/login/login.html">${name}</a>
+                    </li>
+                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/login/logout.html">Salir</a>
+                    </li>
                 </c:if>
 
 

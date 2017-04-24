@@ -54,5 +54,12 @@
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
 <script type="text/javascript" src="/js/validador.js"></script>
 
+<script>
+    var myWS = new WebSocket("ws://localhost:8080/chat/{22}");
+    window.onbeforeunload = (() = > myWS.close()
+    )
+    ;
+</script>
+
 </body>
 </html>
