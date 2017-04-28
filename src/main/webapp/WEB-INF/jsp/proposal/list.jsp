@@ -75,95 +75,68 @@
         <ul class="collapsible " data-collapsible="accordion">
             <c:forEach items="${proposals}" var="prop">
 
-                <li>
-                    <div class="collapsible-header blue lighten-4 z-depth-3">
-                        <i class="material-icons">
-                            touch_app</i>ID: ${prop.id} - Habilidad: ${prop.skillName} - Fecha
-                        inicio: ${prop.initialDate}</div>
-                    <div class="collapsible-body blue lighten-5 hoverable">
 
-                        <table class="highlight bordered">
-                            <tr>
-                                <td><span class="font-raleway">Nivel:</span></td>
-                                <td class="font-raleway">${prop.level}</td>
-                            </tr>
-                            <tr>
-                                <td><span class="font-raleway">Descripción:</span></td>
-                                <td class="font-raleway">${prop.description}</td>
-                            </tr>
-                            <tr>
-                                <td><span class="font-raleway">Fecha fin:</span></td>
-                                <td class="font-raleway">${prop.finishDate}</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a class="waves-effect waves-light btn"
-                                       href="${pageContext.request.contextPath}/proposal/update/${prop.id}.html">
-                                        <i class="material-icons left ">mode_edit
-                                        </i>Editar Oferta</a>
-                                </td>
-                                <td>
-                                    <a class="waves-effect waves-light btn"
-                                       href="${pageContext.request.contextPath}/proposal/delete/${prop.id}.html">
-                                        <i class="material-icons left">delete</i>
-                                        Borrar Oferta</a>
-                                </td>
-                            </tr>
-                        </table>
+                <md:desplegable-md name="${prop.id}" name2="${prop.skillName}" name3="${prop.initialDate}">
 
-                            <%--<div class="row">--%>
-                            <%--<div class="col s12">--%>
-                            <%--<p>Nivel: ${prop.level}</p>--%>
-                            <%--<p>Descripción: ${prop.description}</p>--%>
-                            <%--<p>Fecha fin: ${prop.finishDate}</p>--%>
-                            <%--</div>--%>
-                            <%--</div>--%>
-                            <%--Botonera dentro del cajon--%>
-                            <%--<div class="row">--%>
-                            <%--<div class="col s6">--%>
-                            <%--<a class="waves-effect waves-light btn"--%>
-                            <%--href="${pageContext.request.contextPath}/proposal/update/${prop.id}.html">--%>
-                            <%--<i class="material-icons left ">mode_edit--%>
-                            <%--</i>Editar Oferta</a>--%>
-                            <%--</div>--%>
-                            <%--<div class="col s6">--%>
-                            <%--<a class="waves-effect waves-light btn"--%>
-                            <%--href="${pageContext.request.contextPath}/proposal/delete/${prop.id}.html">--%>
-                            <%--<i class="material-icons left">delete</i>--%>
-                            <%--Borrar Oferta</a>--%>
-                            <%--</div>--%>
-                            <%--</div>--%>
-                            <%--Botonera fija en la parte inferior derecha--%>
-                            <%--Button Material--%>
-                        <div class="fixed-action-btn">
-                            <a class="btn-floating btn-large red">
-                                <i class="large material-icons">mode_edit</i>
-                            </a>
 
-                                <%--SUBButtons--%>
-                            <ul>
-                                <li><a class="btn-floating red"
-                                       href="${pageContext.request.contextPath}/proposal/delete/${prop.id}.html"><i
-                                        class="material-icons">delete</i></a></li>
-                                <li><a class="btn-floating blue"
-                                       href="${pageContext.request.contextPath}/proposal/update/${prop.id}.html">
-                                    <i class="material-icons">mode_edit</i></a></li>
-                                <li><a class="btn-floating green"
-                                       href="${pageContext.request.contextPath}/proposal/create.html">
-                                    <i class="material-icons">playlist_add</i></a></li>
-                            </ul>
-                        </div>
+                    <table class="highlight bordered">
+                        <tr>
+                            <td><span class="font-raleway">Nivel:</span></td>
+                            <td class="font-raleway">${prop.level}</td>
+                        </tr>
+                        <tr>
+                            <td><span class="font-raleway">Descripción:</span></td>
+                            <td class="font-raleway">${prop.description}</td>
+                        </tr>
+                        <tr>
+                            <td><span class="font-raleway">Fecha fin:</span></td>
+                            <td class="font-raleway">${prop.finishDate}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="waves-effect waves-light btn"
+                                   href="${pageContext.request.contextPath}/proposal/update/${prop.id}.html">
+                                    <i class="material-icons left ">mode_edit
+                                    </i>Editar Oferta</a>
+                            </td>
+                            <td>
+                                <a class="waves-effect waves-light btn"
+                                   href="${pageContext.request.contextPath}/proposal/delete/${prop.id}.html">
+                                    <i class="material-icons left">delete</i>
+                                    Borrar Oferta</a>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                    <%--Botonera fija en la parte inferior derecha--%>
+                    <%--Button Material--%>
+                    <div class="fixed-action-btn">
+                        <a class="btn-floating btn-large red pulse">
+                            <i class="large material-icons">mode_edit</i>
+                        </a>
+
+                            <%--SUBButtons--%>
+                        <ul>
+                            <li><a class="btn-floating red pulse"
+                                   href="${pageContext.request.contextPath}/proposal/delete/${prop.id}.html"><i
+                                    class="material-icons">delete</i></a></li>
+                            <li><a class="btn-floating blue pulse"
+                                   href="${pageContext.request.contextPath}/proposal/update/${prop.id}.html">
+                                <i class="material-icons">mode_edit</i></a></li>
+                            <li><a class="btn-floating green pulse"
+                                   href="${pageContext.request.contextPath}/proposal/create.html">
+                                <i class="material-icons">playlist_add</i></a></li>
+                        </ul>
                     </div>
-                </li>
+
+                </md:desplegable-md>
+
             </c:forEach>
         </ul>
 
     </c:if>
 </main>
-<%--</div>--%>
-
-
-<%--</div>--%>
 
 
 <md:footer-md></md:footer-md>

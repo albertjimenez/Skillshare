@@ -19,7 +19,7 @@
                      class="responsive-img z-depth-2" alt="" width="40" height="40">
                 Skillshare EI1027
             </a>
-            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">settings</i></a>
 
             <%--<a href="#" data-activates="mobile-demo" class="button-collapse">--%>
             <%--<i class="material-icons ">menu</i>--%>

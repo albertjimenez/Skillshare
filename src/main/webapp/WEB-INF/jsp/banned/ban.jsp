@@ -18,6 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <%--Avisa al navegador de que el html es valido para moviles--%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body class="blue lighten-3">
@@ -41,75 +42,132 @@
 
 <main>
     <%--<div class="col s12 m8 l9" style="height: 100%">--%>
-        <c:if test="${empty items}">
-            <div class="valign-wrapper">
-                <a class="valign" style="font-size: 50px;text-align: center">
-                    <i class="material-icons valign" style="font-size: 200px; text-align: center">insert_invitation</i>
-                    <br>
-                    Esto está vacío... Mejor así :).</a>
-            </div>
-        </c:if>
-        <c:if test="${not empty items}">
+    <c:if test="${empty items}">
+        <div class="valign-wrapper">
+            <a class="valign" style="font-size: 50px;text-align: center">
+                <i class="material-icons valign" style="font-size: 200px; text-align: center">insert_invitation</i>
+                <br>
+                Esto está vacío... Mejor así :).</a>
+        </div>
+    </c:if>
+    <c:if test="${not empty items}">
 
-            <%--Boton fijo--%>
-            <div class="fixed-action-btn horizontal">
-                <a class="btn-floating btn-large blue">
-                    <i class="material-icons">menu</i>
-                </a>
-                <ul>
-                    <li><a class="btn-floating green" href="#modal1">
-                        <i class="material-icons">playlist_add</i></a></li>
-                </ul>
-            </div>
-
-            <ul class="collapsible " data-collapsible="accordion">
-                <c:forEach items="${items}" var="item">
-                    <li>
-                        <div class="collapsible-header red lighten-3 z-depth-3">
-                            <i class="material-icons">
-                                touch_app</i>${item.name} - ${item.username}</div>
-                        <div class="collapsible-body cyan lighten-4 hoverable">
-                            <div class="row">
-                                <div class="col s12">
-                                    <p>NIF: ${item.nif} </p>
-                                    <p>EMAIL: ${item.email}</p>
-                                    <p>GRADO: ${item.degree}</p>
-                                </div>
-                            </div>
-                                <%--Botonera dentro del cajon--%>
-                            <div class="row">
-                                <div class="col s6">
-                                    <a class="waves-effect waves-light btn"
-                                       href="${pageContext.request.contextPath}/banned/delete/${item.nif}.html">
-                                        <i class="material-icons left">delete</i>
-                                        Borrar baneado</a>
-                                </div>
-                            </div>
-                                <%--Botonera fija en la parte inferior derecha--%>
-                                <%--Button Material--%>
-                            <div class="fixed-action-btn">
-                                <a class="btn-floating btn-large red">
-                                    <i class="large material-icons">mode_edit</i>
-                                </a>
-
-                                    <%--SUBButtons--%>
-                                <ul>
-                                    <li><a class="btn-floating red"
-                                           href="${pageContext.request.contextPath}/banned/delete/${item.nif}.html"><i
-                                            class="material-icons">delete</i></a></li>
-
-                                    <li><a class="btn-floating green" href="#modal1">
-                                        <i class="material-icons">playlist_add</i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </li>
-
-                </c:forEach>
+        <%--Boton fijo--%>
+        <div class="fixed-action-btn horizontal">
+            <a class="btn-floating btn-large blue">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul>
+                <li><a class="btn-floating green" href="#modal1">
+                    <i class="material-icons">playlist_add</i></a></li>
             </ul>
+        </div>
 
-        </c:if>
+        <ul class="collapsible " data-collapsible="accordion">
+            <c:forEach items="${items}" var="item">
+
+                <md:desplegable-md name="${item.name}" name2="${item.username}">
+                    <table class="highlight bordered font-raleway">
+                        <tr>
+                            <td>NIF:</td>
+                            <td>${item.nif}</td>
+                        </tr>
+                        <tr>
+                            <td>EMAIL:</td>
+                            <td>${item.email}</td>
+                        </tr>
+                        <tr>
+                            <td>GRADO:</td>
+                            <td>${item.degree}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="waves-effect waves-light btn"
+                                   href="${pageContext.request.contextPath}/banned/delete/${item.nif}.html">
+                                    <i class="material-icons left">delete</i>
+                                    Borrar baneado</a>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                    <div class="fixed-action-btn">
+                        <a class="btn-floating btn-large red">
+                            <i class="large material-icons">mode_edit</i>
+                        </a>
+
+                            <%--SUBButtons--%>
+                        <ul>
+                            <li><a class="btn-floating red"
+                                   href="${pageContext.request.contextPath}/banned/delete/${item.nif}.html"><i
+                                    class="material-icons">delete</i></a></li>
+
+                            <li><a class="btn-floating green" href="#modal1">
+                                <i class="material-icons">playlist_add</i></a></li>
+                        </ul>
+                    </div>
+                </md:desplegable-md>
+
+                <%--<li>--%>
+                <%--<div class="collapsible-header blue lighten-4 z-depth-3">--%>
+                <%--<i class="material-icons">--%>
+                <%--touch_app</i>${item.name} - ${item.username}--%>
+                <%--</div>--%>
+                <%--<div class="collapsible-body blue lighten-5 hoverable">--%>
+                <%--&lt;%&ndash;<div class="row">&ndash;%&gt;--%>
+                <%--&lt;%&ndash;<div class="col s12">&ndash;%&gt;--%>
+                <%--<div class="container">--%>
+                <%--<table class="highlight bordered font-raleway">--%>
+                <%--<tr>--%>
+                <%--<td>NIF:</td>--%>
+                <%--<td>${item.nif}</td>--%>
+                <%--</tr>--%>
+                <%--<tr>--%>
+                <%--<td>EMAIL:</td>--%>
+                <%--<td>${item.email}</td>--%>
+                <%--</tr>--%>
+                <%--<tr>--%>
+                <%--<td>GRADO:</td>--%>
+                <%--<td>${item.degree}</td>--%>
+                <%--</tr>--%>
+                <%--<tr>--%>
+                <%--<td>--%>
+                <%--<a class="waves-effect waves-light btn"--%>
+                <%--href="${pageContext.request.contextPath}/banned/delete/${item.nif}.html">--%>
+                <%--<i class="material-icons left">delete</i>--%>
+                <%--Borrar baneado</a>--%>
+                <%--</td>--%>
+                <%--</tr>--%>
+
+                <%--</table>--%>
+                <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+                <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+                <%--&lt;%&ndash;Botonera dentro del cajon&ndash;%&gt;--%>
+                <%--&lt;%&ndash;Botonera fija en la parte inferior derecha&ndash;%&gt;--%>
+                <%--&lt;%&ndash;Button Material&ndash;%&gt;--%>
+                <%--<div class="fixed-action-btn">--%>
+                <%--<a class="btn-floating btn-large red">--%>
+                <%--<i class="large material-icons">mode_edit</i>--%>
+                <%--</a>--%>
+
+                <%--&lt;%&ndash;SUBButtons&ndash;%&gt;--%>
+                <%--<ul>--%>
+                <%--<li><a class="btn-floating red"--%>
+                <%--href="${pageContext.request.contextPath}/banned/delete/${item.nif}.html"><i--%>
+                <%--class="material-icons">delete</i></a></li>--%>
+
+                <%--<li><a class="btn-floating green" href="#modal1">--%>
+                <%--<i class="material-icons">playlist_add</i></a></li>--%>
+                <%--</ul>--%>
+                <%--</div>--%>
+                <%--</div>--%>
+
+                <%--</li>--%>
+
+            </c:forEach>
+        </ul>
+
+    </c:if>
 </main>
 <%--</div>--%>
 

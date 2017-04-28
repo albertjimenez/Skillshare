@@ -19,18 +19,18 @@
         flex: 1 0 auto;
     }
 
-    header, main, footer {
-        padding-left: 300px;
-    }
+    /*header, main, footer {*/
+    /*padding-left: 300px;*/
+    /*}*/
 
-    @media only screen and (max-width: 992px) {
-        header, main, footer {
-            padding-left: 0;
-        }
-    }
+    /*@media only screen and (max-width: 992px) {*/
+    /*header, main, footer {*/
+    /*padding-left: 0;*/
+    /*}*/
+    /*}*/
 </style>
 
-<ul id="slide-out" class="side-nav fixed">
+<ul id="slide-out" class="side-nav">
     <li>
         <div class="userView">
             <div class="background">

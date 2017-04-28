@@ -46,7 +46,6 @@
 
 </md:sidenav-md>
 <%--Fondo restante de la web sin panel--%>
-<%--<div class="col s12 m8 l9" style="height: 100%">--%>
 <main>
     <c:if test="${empty proposals}">
         <div class="valign-wrapper">
