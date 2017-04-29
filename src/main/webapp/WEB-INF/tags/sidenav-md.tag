@@ -42,7 +42,7 @@
                 <a href="${pageContext.request.contextPath}/register/register.html">Registrarse</a>
             </c:if>
             <c:if test="${not empty name}">
-                <a href="#!user"><img class="circle" src="/images/profile/pablo.png"></a>
+                <a href="#!user"><img class="circle responsive-img " src="/images/profile-picture.png"></a>
                 <a href="#${pageContext.request.contextPath}/login/login.html">
                     <span class="blue-text lighten-1">${name}</span></a>
                 <a href="#${pageContext.request.contextPath}/login/login.html">

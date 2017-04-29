@@ -135,10 +135,10 @@ public class ProposalController {
     }
 
 
-    @RequestMapping(value = "/testings/test")
-    public String guei() {
-        return "/testings/test";
-    }
+//    @RequestMapping(value = "/testings/test")
+//    public String guei() {
+//        return "/testings/test";
+//    }
 
 
 }

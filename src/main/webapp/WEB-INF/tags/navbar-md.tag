@@ -7,7 +7,10 @@
 <%--Inicio del navbar con movil--%>
 <%@attribute name="name" required="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<head>
+    <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+</head>
 
 <div class="navbar">
     <nav>
@@ -17,9 +20,10 @@
             <a class="brand-logo center" href="${pageContext.request.contextPath}/">
                 <img src="${pageContext.request.contextPath}/images/icono_app.png"
                      class="responsive-img z-depth-2" alt="" width="40" height="40">
-                Skillshare EI1027
+                <span class="font-lobster">Skillshare</span>
             </a>
-            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">settings</i></a>
+            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i
+                    class="material-icons">menu</i></a>
 
             <%--<a href="#" data-activates="mobile-demo" class="button-collapse">--%>
             <%--<i class="material-icons ">menu</i>--%>

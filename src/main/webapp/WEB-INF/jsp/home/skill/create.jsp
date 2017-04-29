@@ -47,43 +47,46 @@
 
 <%--<div class="col s8">--%>
 <main>
-    <div class="card hoverable transparent z-depth-1-half valign">
-        <div class="card-image medium">
-            <img class="responsive-img" src="/images/wallcard.png" width="200" height="120">
-            <span class="card-title">Crear habilidad</span>
-        </div>
-        <div class="card-content">
-            <form:form method="post" modelAttribute="createskill" onsubmit="white_spaces();">
-                <div class="row">
-                    <div class="input-field col s6 offset-s3 ">
-                        <i class="material-icons prefix">supervisor_account</i>
-                        <form:label path="name">Nombre</form:label>
-                        <form:input path="name" id="name" cssClass="validate"/>
+    <div class="container medium">
+        <div class="card hoverable transparent z-depth-1-half valign">
+            <div class="card-image">
+                <img class="responsive-img" src="/images/wallcard.png">
+                <span class="card-title">Crear habilidad</span>
+            </div>
+
+            <div class="card-content">
+                <form:form method="post" modelAttribute="createskill" onsubmit="white_spaces();">
+                    <div class="row">
+                        <div class="input-field col s6 offset-s3 ">
+                            <i class="material-icons prefix">supervisor_account</i>
+                            <form:label path="name">Nombre</form:label>
+                            <form:input path="name" id="name" cssClass="validate"/>
+                        </div>
+                        <div class="input-field col s6 offset-s3 ">
+                            <i class="material-icons prefix">dashboard</i>
+                            <form:select path="level">
+                                <form:option value="" disabled="true">
+                                    Escoge qué nivel de habilidad es</form:option>
+                                <form:option value="A">Advanced</form:option>
+                                <form:option value="M">Medium</form:option>
+                                <form:option value="N">Newbie</form:option>
+                            </form:select>
+                        </div>
+                        <div class="input-field col s6 offset-s3 ">
+                            <i class="material-icons prefix">toc</i>
+                            <form:label path="description">Descripción</form:label>
+                            <form:textarea path="description" id="description" cssClass="validate"/>
+                        </div>
+                        <div class="input-field col s6 offset-s3 ">
+                            <button class="btn waves-effect waves-light" type="submit" name="action">Crear
+                                <i class="material-icons right">send</i>
+                            </button>
+                            <a class="waves-effect waves-green btn-flat"
+                               href="${pageContext.request.contextPath}/home/home_pc.html">Cancelar</a>
+                        </div>
                     </div>
-                    <div class="input-field col s6 offset-s3 ">
-                        <i class="material-icons prefix">dashboard</i>
-                        <form:select path="level">
-                            <form:option value="" disabled="true">
-                                Escoge qué nivel de habilidad es</form:option>
-                            <form:option value="A">Advanced</form:option>
-                            <form:option value="M">Medium</form:option>
-                            <form:option value="N">Newbie</form:option>
-                        </form:select>
-                    </div>
-                    <div class="input-field col s6 offset-s3 ">
-                        <i class="material-icons prefix">toc</i>
-                        <form:label path="description">Descripción</form:label>
-                        <form:textarea path="description" id="description" cssClass="validate"/>
-                    </div>
-                    <div class="input-field col s6 offset-s3 ">
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Crear
-                            <i class="material-icons right">send</i>
-                        </button>
-                        <a class="waves-effect waves-green btn-flat"
-                           href="${pageContext.request.contextPath}/home/home_pc.html">Cancelar</a>
-                    </div>
-                </div>
-            </form:form>
+                </form:form>
+            </div>
         </div>
     </div>
 </main>
