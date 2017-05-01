@@ -22,7 +22,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-
+    <script>
+        function showSideNav() {
+            $('.button-collapse').sideNav('show');
+        }
+        window.onload = showSideNav;
+    </script>
 </head>
 <body class="blue lighten-3">
 
@@ -39,6 +44,9 @@
         <li>
             <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
         </li>
+        <li>
+            <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Peticiones</a>
+        </li>
     </ul>
     <a href="#modal-help" class="waves-effect">
         <i class="material-icons">live_help</i>
@@ -46,7 +54,7 @@
 
 </md:sidenav-md>
 <%--Fondo restante de la web sin panel--%>
-<main>
+<main class="container">
     <c:if test="${empty proposals}">
         <div class="valign-wrapper">
             <a class="valign" style="font-size: 50px;text-align: center">

@@ -21,6 +21,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+        function showSideNav() {
+            $('.button-collapse').sideNav('show');
+        }
+        window.onload = showSideNav;
+    </script>
 </head>
 
 <body class="blue lighten-3">
@@ -47,7 +53,7 @@
     </li>
 </md:sidenav-md>
 
-<main>
+<main class="container">
         <div class="fixed-action-btn horizontal">
             <a class="btn-floating btn-large red">
                 <i class="material-icons">menu</i>

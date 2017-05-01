@@ -22,10 +22,10 @@ public class RequestDao {
     }
 
 
-    public List<Request> getRequests() {
-        String sql = "select * from request_of_collaboration order by initial_date, skill_name";
-        return jdbcTemplate.query(sql, new RequestMapper());
-    }
+//    public List<Request> getRequests() {
+//        String sql = "select * from request_of_collaboration order by initial_date, skill_name";
+//        return jdbcTemplate.query(sql, new RequestMapper());
+//    }
 
     public List<Request> getRequestsByNif(String nif) {
         String sql = "select * from request_of_collaboration where nif = ? order by initial_date, skill_name";
@@ -35,4 +35,5 @@ public class RequestDao {
             return new ArrayList<Request>();
         }
     }
+
 }

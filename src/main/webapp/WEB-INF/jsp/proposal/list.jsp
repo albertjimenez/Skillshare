@@ -44,11 +44,21 @@
 </md:sidenav-md>
 
 <%--Fondo restante de la web sin panel--%>
-<main>
+<main class="container">
     <%--<div class="col s12 m8 l9" style="height: 100%">--%>
-    <h1 class="font-raleway">Mis ${count} ofertas</h1>
+    <h1 class="font-raleway center-align">Mis ${count} ofertas</h1>
     <div class="divider"></div>
-
+    <form>
+        <div class="row">
+            <%--TODO FORMULARIO DE BUSQUEDA--%>
+            <div class="input-field col s12 hoverable z-depth-2">
+                <i class="material-icons prefix">search</i>
+                <input id="icon_prefix" type="text" class="validate">
+                <label for="icon_prefix">Buscar ofertas por nombre o descripción</label>
+                <%--TODO metele un like en la consulta SQL--%>
+            </div>
+        </div>
+    </form>
 
     <%--Boton material de crear oferta--%>
     <div class="fixed-action-btn horizontal">
@@ -72,36 +82,38 @@
         </div>
     </c:if>
     <c:if test="${not empty proposals}">
+
         <ul class="collapsible " data-collapsible="accordion">
-            <c:forEach items="${proposals}" var="prop">
+
+            <c:forEach items="${proposals}" var="req">
 
 
-                <md:desplegable-md name="${prop.id}" name2="${prop.skillName}" name3="${prop.initialDate}">
+                <md:desplegable-md name="${req.id}" name2="${req.skillName}" name3="${req.initialDate}">
 
 
                     <table class="highlight bordered">
                         <tr>
                             <td><span class="font-raleway">Nivel:</span></td>
-                            <td class="font-raleway">${prop.level}</td>
+                            <td class="font-raleway">${req.level}</td>
                         </tr>
                         <tr>
                             <td><span class="font-raleway">Descripción:</span></td>
-                            <td class="font-raleway">${prop.description}</td>
+                            <td class="font-raleway">${req.description}</td>
                         </tr>
                         <tr>
                             <td><span class="font-raleway">Fecha fin:</span></td>
-                            <td class="font-raleway">${prop.finishDate}</td>
+                            <td class="font-raleway">${req.finishDate}</td>
                         </tr>
                         <tr>
                             <td>
                                 <a class="waves-effect waves-light btn"
-                                   href="${pageContext.request.contextPath}/proposal/update/${prop.id}.html">
+                                   href="${pageContext.request.contextPath}/proposal/update/${req.id}.html">
                                     <i class="material-icons left ">mode_edit
                                     </i>Editar Oferta</a>
                             </td>
                             <td>
                                 <a class="waves-effect waves-light btn"
-                                   href="${pageContext.request.contextPath}/proposal/delete/${prop.id}.html">
+                                   href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html">
                                     <i class="material-icons left">delete</i>
                                     Borrar Oferta</a>
                             </td>
@@ -119,10 +131,10 @@
                             <%--SUBButtons--%>
                         <ul>
                             <li><a class="btn-floating red pulse"
-                                   href="${pageContext.request.contextPath}/proposal/delete/${prop.id}.html"><i
+                                   href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html"><i
                                     class="material-icons">delete</i></a></li>
                             <li><a class="btn-floating blue pulse"
-                                   href="${pageContext.request.contextPath}/proposal/update/${prop.id}.html">
+                                   href="${pageContext.request.contextPath}/proposal/update/${req.id}.html">
                                 <i class="material-icons">mode_edit</i></a></li>
                             <li><a class="btn-floating green pulse"
                                    href="${pageContext.request.contextPath}/proposal/create.html">
@@ -144,6 +156,10 @@
 <script src="/js/scroll.js"></script>
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
 
-
+<script>
+    $(document).ready(function () {
+        $('select').material_select();
+    });
+</script>
 </body>
 </html>

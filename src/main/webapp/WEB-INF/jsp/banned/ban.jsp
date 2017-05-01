@@ -40,7 +40,16 @@
     </ul>
 </md:sidenav-md>
 
-<main>
+<main class="container">
+    <div class="fixed-action-btn horizontal">
+        <a class="btn-floating btn-large blue">
+            <i class="material-icons">menu</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating green" href="#modal1">
+                <i class="material-icons">playlist_add</i></a></li>
+        </ul>
+    </div>
     <%--<div class="col s12 m8 l9" style="height: 100%">--%>
     <c:if test="${empty items}">
         <div class="valign-wrapper">
@@ -53,15 +62,7 @@
     <c:if test="${not empty items}">
 
         <%--Boton fijo--%>
-        <div class="fixed-action-btn horizontal">
-            <a class="btn-floating btn-large blue">
-                <i class="material-icons">menu</i>
-            </a>
-            <ul>
-                <li><a class="btn-floating green" href="#modal1">
-                    <i class="material-icons">playlist_add</i></a></li>
-            </ul>
-        </div>
+
 
         <ul class="collapsible " data-collapsible="accordion">
             <c:forEach items="${items}" var="item">

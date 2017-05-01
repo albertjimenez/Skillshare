@@ -65,9 +65,9 @@
                             <form:select path="level">
                                 <form:option value="" disabled="true">
                                     Escoge qué nivel de habilidad es</form:option>
-                                <form:option value="A">Advanced</form:option>
-                                <form:option value="M">Medium</form:option>
-                                <form:option value="N">Newbie</form:option>
+                                <form:option value="A">Avanzada</form:option>
+                                <form:option value="M">Media</form:option>
+                                <form:option value="N">Novato</form:option>
                             </form:select>
                         </div>
                         <div class="input-field col s6 offset-s3 ">

@@ -21,7 +21,6 @@ public class RequestMapper implements RowMapper<Request> {
         request.setDescription(resultSet.getString("description"));
         request.setInitialDate(resultSet.getDate("initial_date"));
         request.setFinishDate(resultSet.getDate("finish_date"));
-        request.setSeen(resultSet.getBoolean("seen"));
 
         return request;
     }

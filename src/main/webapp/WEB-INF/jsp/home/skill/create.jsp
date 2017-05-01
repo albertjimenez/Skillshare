@@ -35,6 +35,12 @@
 <md:sidenav-md name="${name}" type="${type}">
     <ul>
         <li>
+            <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
+        </li>
+        <li>
+            <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Peticiones</a>
+        </li>
+        <li>
             <a href="${pageContext.request.contextPath}/home/home_pc.html">
                 Lista de Habilidades<i class="material-icons">list</i>
             </a></li>
@@ -67,9 +73,9 @@
                             <form:select path="level">
                                 <form:option value="" disabled="true">
                                     Escoge qué nivel de habilidad es</form:option>
-                                <form:option value="A">Advanced</form:option>
-                                <form:option value="M">Medium</form:option>
-                                <form:option value="N">Newbie</form:option>
+                                <form:option value="A">Avanzada</form:option>
+                                <form:option value="M">Media</form:option>
+                                <form:option value="N">Novato</form:option>
                             </form:select>
                         </div>
                         <div class="input-field col s6 offset-s3 ">

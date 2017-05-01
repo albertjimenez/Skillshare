@@ -13,7 +13,6 @@ public class Request {
     private String nif, description, skillName;
     private Level level;
     private Date initialDate, finishDate;
-    private boolean seen;
 
     public AtomicInteger getId() {
         return id;
@@ -71,13 +70,6 @@ public class Request {
         this.finishDate = finishDate;
     }
 
-    public boolean getSeen() {
-        return seen;
-    }
-
-    public void setSeen(boolean seen) {
-        this.seen = seen;
-    }
 
     @Override
     public boolean equals(Object obj) {

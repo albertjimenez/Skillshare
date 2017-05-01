@@ -18,10 +18,13 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/js/jquery.zmd.hierarchical-display.min.js"></script>
     <%--Avisa al navegador de que el html es valido para moviles--%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="/css/zmd.hierarchical-display.min.css">
+
     <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
 
 
@@ -41,9 +44,9 @@
     <a href="#four!" class="carousel-item"><img src="images/carousel/4.jpg" alt=""></a>
 </div>
 
-
+<div data-animation="hierarchical-display">
 <%--Parte inicial de la web, donde se encuentra la tarjeta de iniciar sesión--%>
-<div class="card transparent hoverable medium">
+    <div class="card transparent hoverable medium section">
     <div class="card-image">
         <img class="responsive-img" src="images/footer-log.jpg">
         <span class="card-title">Primeros Pasos</span>
@@ -70,7 +73,7 @@
 
 
 <%--Explicacion del proyecto--%>
-<div class="row z-depth-1 ">
+    <div class="row z-depth-1 section">
     <div class="col s4">
         <div class="center promo promo-example">
             <i class="large material-icons">group</i>
@@ -100,7 +103,7 @@
 </div>
 
 <%--Sobre nosotros--%>
-<div id="about" class="row z-depth-1 ">
+    <div id="about" class="row z-depth-1 section ">
     <div class="col s6">
         <div class="center promo promo-example">
             <img class="responsive-img" src="images/profile/albert.png" width="512" height="512">
@@ -120,7 +123,7 @@
     </div>
 </div>
 
-
+</div>
 <%--Footer--%>
 <md:footer-md></md:footer-md>
 
@@ -138,6 +141,10 @@
         dist: 0,
         indicators: true
     });
+    $(document).ready(function () {
+        $('#pagepiling').pagepiling();
+    });
+
     autoplay();
     function autoplay() {
         $('.carousel.carousel-slider').carousel('next');

@@ -79,7 +79,7 @@ public class BannedController {
 
         //Añado esto porque sino peta el modal JSP
         model.addAttribute("newbanned", new BannedStudent());
-
+        bannedDao.deleteBanned(nif);
 
         //En principio no debería fallar
         List<Student> l = new LinkedList<>();
@@ -89,7 +89,6 @@ public class BannedController {
         model.addAttribute("items", l);
 
 
-        bannedDao.deleteBanned(nif);
         return "banned/ban";
 
     }
