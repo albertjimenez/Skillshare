@@ -51,10 +51,7 @@
     <h1 class="font-raleway center-align">Mis ${count} Peticiones</h1>
 
     <div class="divider"></div>
-    <form class="searchbox_1" action="">
-        <input type="search" class="search_1" placeholder="Buscar solicitud" />
-        <button type="submit" class="submit_1" value="search">&nbsp;</button>
-    </form>
+
 
     <%--Boton material de crear solicitud--%>
     <div class="fixed-action-btn horizontal">

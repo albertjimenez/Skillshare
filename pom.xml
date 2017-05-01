@@ -91,6 +91,14 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+
     </dependencies>
     <build>
         <finalName>skillshare</finalName>
@@ -145,16 +153,6 @@
                         <goals>
                             <goal>copy-dependencies</goal>
                         </goals>
-                        <configuration>
-                            <artifactItems>
-                                <artifactItem>
-                                    <groupId>org.eclipse.jetty</groupId>
-                                    <artifactId>jetty-runner</artifactId>
-                                    <version>9.2.7.v20150116</version>
-                                    <destFileName>jetty-runner.jar</destFileName>
-                                </artifactItem>
-                            </artifactItems>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -163,9 +161,18 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.2.1</version>
                 <configuration>
-                    <mainClass>main.Application</mainClass>
+                    <mainClass>org.test.int1.Main</mainClass>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>1.1.3</version>
+                <configuration>
+                    <appName>skillshare_ei1027</appName>
+                </configuration>
+            </plugin>
+
             <!--Plugin para evitar confusiones de jars-->
             <!--<plugin>-->
             <!--<groupId>org.apache.maven.plugins</groupId>-->

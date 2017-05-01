@@ -48,17 +48,17 @@
     <%--<div class="col s12 m8 l9" style="height: 100%">--%>
     <h1 class="font-raleway center-align">Mis ${count} ofertas</h1>
     <div class="divider"></div>
-<form>
-    <div class="row">
-        <%--TODO FORMULARIO DE BUSQUEDA--%>
-        <div class="input-field col s12 hoverable z-depth-2">
-            <i class="material-icons prefix">search</i>
-            <input id="icon_prefix" type="text" class="validate">
-            <label for="icon_prefix">Buscar ofertas por nombre o descripción</label>
-            <%--TODO metele un like en la consulta SQL--%>
+    <form>
+        <div class="row">
+            <%--TODO FORMULARIO DE BUSQUEDA--%>
+            <div class="input-field col s12 hoverable z-depth-2">
+                <i class="material-icons prefix">search</i>
+                <input id="icon_prefix" type="text" class="validate">
+                <label for="icon_prefix">Buscar ofertas por nombre o descripción</label>
+                <%--TODO metele un like en la consulta SQL--%>
+            </div>
         </div>
-    </div>
-</form>
+    </form>
 
     <%--Boton material de crear oferta--%>
     <div class="fixed-action-btn horizontal">

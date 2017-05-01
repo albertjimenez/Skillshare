@@ -46,7 +46,7 @@
 
 <div data-animation="hierarchical-display">
 <%--Parte inicial de la web, donde se encuentra la tarjeta de iniciar sesión--%>
-<div class="card transparent hoverable medium section">
+    <div class="card transparent hoverable medium section">
     <div class="card-image">
         <img class="responsive-img" src="images/footer-log.jpg">
         <span class="card-title">Primeros Pasos</span>
@@ -73,7 +73,7 @@
 
 
 <%--Explicacion del proyecto--%>
-<div class="row z-depth-1 section">
+    <div class="row z-depth-1 section">
     <div class="col s4">
         <div class="center promo promo-example">
             <i class="large material-icons">group</i>
@@ -103,7 +103,7 @@
 </div>
 
 <%--Sobre nosotros--%>
-<div id="about" class="row z-depth-1 section ">
+    <div id="about" class="row z-depth-1 section ">
     <div class="col s6">
         <div class="center promo promo-example">
             <img class="responsive-img" src="images/profile/albert.png" width="512" height="512">
@@ -141,7 +141,7 @@
         dist: 0,
         indicators: true
     });
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('#pagepiling').pagepiling();
     });
 

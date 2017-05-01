@@ -32,7 +32,7 @@ public class RequestDao {
         try {
             return jdbcTemplate.query(sql, new Object[]{nif}, new RequestMapper());
         } catch (EmptyResultDataAccessException e) {
-            return new ArrayList<Request>();
+            return new ArrayList<>();
         }
     }
 

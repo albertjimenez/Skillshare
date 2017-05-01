@@ -32,6 +32,8 @@
           <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-security:9.2.11.v20150529" />
           <element id="library" level="project" name="Maven: javax.websocket:javax.websocket-api:1.1" />
           <element id="library" level="project" name="Maven: javax.json:javax.json-api:1.0" />
+          <element id="library" level="project" name="Maven: commons-dbcp:commons-dbcp:1.4" />
+          <element id="library" level="project" name="Maven: commons-pool:commons-pool:1.5.4" />
         </element>
       </element>
       <element id="directory" name="META-INF">
