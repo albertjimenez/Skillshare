@@ -20,29 +20,17 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
-<style>
-
-    header, main, footer {
-        padding-left: 300px;
-    }
-
-    @media only screen and (max-width: 992px) {
-        header, main, footer {
-            padding-left: 0;
-        }
-    }
-</style>
 <body class="blue lighten-3">
 
 
-<md:sidenav-md></md:sidenav-md>
+<md:sidenav-md name="${name}" type="${type}"></md:sidenav-md>
 
 <header>
-    <md:navbar-md></md:navbar-md>
+    <md:navbar-md name="${name}"></md:navbar-md>
 </header>
 
 <main>
-    <p class="green">Guei</p>
+    <p class="green">WS</p>
 
 </main>
 
@@ -55,8 +43,20 @@
 <script type="text/javascript" src="/js/validador.js"></script>
 
 <script>
-    var myWS = new WebSocket("ws://localhost:8080/chat/{22}");
+    //TODO cuidado con la direccion del websocket, de localhost a skillshare
+    //HAy una funcion setTimeout para enviar periodicamente mensajes
+    //var ruta = window.location.host;
+    var myWS = new WebSocket("ws://skillshare-uji.herokuapp.com/chat/{22}");
+    myWS.onopen = (() = > console.log("Guei abierto")
+    )
+    ;
     window.onbeforeunload = (() = > myWS.close()
+    )
+    ;
+    myWS.onclose = (() = > console.log("Guei cerrado")
+    )
+    ;
+    myWS.onerror = (() = > console.log("Guei error")
     )
     ;
 </script>

@@ -213,4 +213,20 @@ public class LoginRegisterController {
         return Type.getName(student.getType().toString());
     }
 
+    @RequestMapping("/testings/test")
+    public String testWS(Model model) {
+        if (!getSessionStudent())
+            return "redirect:../login/login.html";
+        Student student = (Student) httpSession.getAttribute("user");
+        String name = student.getName().split("\\s+")[0];
+        model.addAttribute("student", student);
+        model.addAttribute("name", name);
+        model.addAttribute("type", Type.getName(student.getType().toString()));
+        return "testings/test";
+
+    }
+
+
+
+
 }

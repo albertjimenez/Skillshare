@@ -3,10 +3,7 @@ package websocket;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
-import javax.websocket.OnClose;
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
+import javax.websocket.*;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.io.StringReader;
@@ -46,6 +43,12 @@ public class ChatWS {
         //Mirar http://stackoverflow.com/questions/15761101/how-to-get-a-date-from-a-json-object
 
         chatWSHandler.handleMessage(mensajesWS);
+    }
+
+    @OnError
+    public void error(Session session, Throwable throwable) {
+        System.out.println("Error de mensajes");
+        System.out.println(throwable.getMessage());
     }
 }
 

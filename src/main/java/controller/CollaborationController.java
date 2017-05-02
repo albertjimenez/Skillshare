@@ -18,4 +18,6 @@ public class CollaborationController {
     public void setCollaborationDao(CollaborationDao collaborationDao) {
         this.collaborationDao = collaborationDao;
     }
+
+
 }

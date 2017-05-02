@@ -49,5 +49,5 @@ http://www.springframework.org/schema/context/spring-context.xsd">
     <!--<property name="username" value="${jdbc.username}"/>-->
     <!--<property name="password" value="${jdbc.password}"/>-->
     <!--</bean>-->
-    <!--<context:property-placeholder location="classpath:jdbc.properties"/>-->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
 </beans>
