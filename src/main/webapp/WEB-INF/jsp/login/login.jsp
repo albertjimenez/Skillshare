@@ -18,6 +18,7 @@
     <%--Avisa al navegador de que el html es valido para moviles--%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/animate.css">
 </head>
 <style>
     body {
@@ -35,11 +36,11 @@
 <header>
     <md:navbar-md></md:navbar-md>
 </header>
-<main>
-    <h4 class="center-align hoverable z-depth-1-half">Inicia la sesión</h4>
+<main class="container">
+    <h4 class="center-align hoverable z-depth-1-half animated slideInDown">Inicia la sesión</h4>
 
 <%--Abrimos formulario--%>
-<div class="section z-depth-2 transparent hoverable">
+    <div class="section z-depth-2 transparent hoverable animated slideInUp">
     <form:form method="post" modelAttribute="loginEntity" onsubmit="return check();">
         <div class="row">
             <div class="input-field col s6 offset-s3 ">

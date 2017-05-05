@@ -44,6 +44,22 @@ public class ProposalController {
         this.skillDao = skillDao;
     }
 
+    @RequestMapping("/proposal/all")
+    public String getAllProposals(Model model) {
+        if (!getSessionStudent())
+            return "redirect:../login/login.html";
+        Student student = (Student) httpSession.getAttribute("user");
+        String name = getStudentName();
+        model.addAttribute("student", student);
+        model.addAttribute("name", name);
+        model.addAttribute("type", Type.getName(student.getType().toString()));
+        List<Proposal> l = proposalDao.getProposals();
+        model.addAttribute("proposals", l);
+        model.addAttribute("count", l.size());
+        return "proposal/all";
+
+    }
+
     @RequestMapping(value = "/proposal/list")
     public String getProposalByNif(Model model) {
         if (!getSessionStudent())

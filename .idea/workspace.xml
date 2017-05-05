@@ -2,34 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0695153-a83b-4add-9f52-0017f11374ad" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_0_28.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_servlet_api_8_0_28.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_util_8_0_28.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_websocket_8_0_28.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_websocket_api_8_0_28.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/LoginRegisterController.class" afterPath="$PROJECT_DIR$/target/classes/controller/LoginRegisterController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/websocket/ChatWS.class" afterPath="$PROJECT_DIR$/target/classes/websocket/ChatWS.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/images/wall-card.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/all.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/animate.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/aos.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/aos.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/initial.min.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/zmd.hierarchical-display.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/zmd.hierarchical-display.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.zmd.hierarchical-display.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.zmd.hierarchical-display.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.zmd.hierarchical-display.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/skillshare/css/zmd.hierarchical-display.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/skillshare/css/zmd.hierarchical-display.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/skillshare/js/jquery.zmd.hierarchical-display.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/skillshare/js/jquery.zmd.hierarchical-display.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/skillshare/js/jquery.zmd.hierarchical-display.min.js.map" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/ProposalController.class" afterPath="$PROJECT_DIR$/target/classes/controller/ProposalController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare.war" afterPath="$PROJECT_DIR$/target/skillshare.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/LoginRegisterController.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/LoginRegisterController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/websocket/ChatWS.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/websocket/ChatWS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/images/search-white.png" afterPath="$PROJECT_DIR$/target/skillshare/images/search-white.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/skillshare_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/skillshare_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/ProposalController.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/ProposalController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skillshare.iml" afterPath="$PROJECT_DIR$/skillshare.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/CollaborationController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/CollaborationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/LoginRegisterController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginRegisterController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/websocket/ChatWS.java" afterPath="$PROJECT_DIR$/src/main/java/websocket/ChatWS.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/ProposalController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/ProposalController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned/ban.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned/ban.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/testings/test.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/testings/test.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/dispatcher-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/banned/ban.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/banned/ban.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/login/login.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/login/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/proposal/list.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/proposal/list.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/testings/test.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/testings/test.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/css/zmd.hierarchical-display.css" afterPath="$PROJECT_DIR$/target/skillshare/css/zmd.hierarchical-display.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/css/zmd.hierarchical-display.min.css" afterPath="$PROJECT_DIR$/target/skillshare/css/zmd.hierarchical-display.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/js/jquery.min.js" afterPath="$PROJECT_DIR$/target/skillshare/js/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/js/jquery.zmd.hierarchical-display.js" afterPath="$PROJECT_DIR$/target/skillshare/js/jquery.zmd.hierarchical-display.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/js/jquery.zmd.hierarchical-display.min.js" afterPath="$PROJECT_DIR$/target/skillshare/js/jquery.zmd.hierarchical-display.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/js/jquery.zmd.hierarchical-display.min.js.map" afterPath="$PROJECT_DIR$/target/skillshare/js/jquery.zmd.hierarchical-display.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/index.jsp" afterPath="$PROJECT_DIR$/target/skillshare/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,34 +63,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="list.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1665">
-              <caret line="111" column="57" lean-forward="false" selection-start-line="111" selection-start-column="57" selection-end-line="111" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ban.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned/ban.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="22" lean-forward="false" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+            <state relative-caret-position="-1673">
+              <caret line="73" column="51" lean-forward="false" selection-start-line="67" selection-start-column="3" selection-end-line="73" selection-end-column="51" />
               <folding>
-                <marker date="1493660793000" expanded="false" signature="1932:1944" ph="..." />
+                <marker date="1493986109000" expanded="false" signature="2225:2237" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Type.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/student/Type.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -101,45 +88,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginRegisterController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/LoginRegisterController.java">
+      <file leaf-file-name="ProposalController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/ProposalController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="216" column="24" lean-forward="false" selection-start-line="216" selection-start-column="24" selection-end-line="216" selection-end-column="24" />
+            <state relative-caret-position="270">
+              <caret line="62" column="45" lean-forward="false" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/testings/test.jsp">
+      <file leaf-file-name="all.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/all.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="46" column="68" lean-forward="false" selection-start-line="46" selection-start-column="68" selection-end-line="46" selection-end-column="68" />
+            <state relative-caret-position="75">
+              <caret line="96" column="84" lean-forward="false" selection-start-line="96" selection-start-column="84" selection-end-line="96" selection-end-column="84" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChatWS.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/websocket/ChatWS.java">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="50" column="49" lean-forward="false" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+            <state relative-caret-position="156">
+              <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="136" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dispatcher-servlet.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
+      <file leaf-file-name="Proposal.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/proposal/Proposal.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding>
-                <marker date="1493734026000" expanded="false" signature="1972:1995" ph="org.postgresql.Driver" />
-                <marker date="1493734026000" expanded="false" signature="2049:2060" ph="jdbc:postgres://qzniawupamynrm:5eb51574767a1fd450ed22a560dfc12774700d43d6030984826f32c948f9d02e@ec2-54-228-182-57.eu-west-1.compute.amazonaws.com:5432/dbrn488j2oc2sc" />
-              </folding>
+              <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="42" column="70" lean-forward="false" selection-start-line="42" selection-start-column="70" selection-end-line="42" selection-end-column="70" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -152,9 +146,9 @@
         <option value="Interface" />
         <option value="JavaScript File" />
         <option value="Enum" />
-        <option value="Jsp File" />
         <option value="CSS File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -217,7 +211,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/dao/StudentDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/validator/BannedValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/SkillController.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/student/BannedStudent.java" />
@@ -229,7 +222,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sidenav-md.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/panel-lateral.tag" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/footer-md.tag" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned/create.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/create.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/logout.jsp" />
@@ -240,22 +232,18 @@
         <option value="$PROJECT_DIR$/src/main/webapp/css/font-google.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/navbar-md.tag" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sidenav-md.tag" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/ProposalController.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/ProposalDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/RequestController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/desplegable-md.tag" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/mapper/RequestMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/request/Request.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/search-box.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/search.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/model/student/Type.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_student.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/update.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned/ban.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/controller/BannedController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp" />
         <option value="$PROJECT_DIR$/Procfile" />
@@ -264,10 +252,16 @@
         <option value="$PROJECT_DIR$/src/main/java/dao/RequestDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/CollaborationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/LoginRegisterController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/java/websocket/ChatWS.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/testings/test.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/ProposalController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned/ban.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/all.jsp" />
       </list>
     </option>
   </component>
@@ -339,7 +333,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="height" value="1024" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -381,8 +375,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -781,6 +773,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skillshare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skillshare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skillshare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skillshare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -861,7 +905,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -876,22 +922,22 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="pom&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/pom.xml&#10;ws&#9;PSI&#9;JAVA://websocket.ChatWS&#10;chat&#9;PSI&#9;JAVA://websocket.ChatWSHandler&#10;dis&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/dispatcher-servlet.xml&#10;web&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/web.xml&#10;xml&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/dispatcher-servlet.xml&#10;pom.xm&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/pom.xml&#10;ban&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/banned/ban.jsp&#10;update&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/update.jsp&#10;level&#9;PSI&#9;JAVA://model.skill.Level&#10;crea&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp&#10;home&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_student.jsp&#10;inde&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/index.jsp&#10;list&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/list.jsp&#10;reque&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/mapper/RequestMapper.java&#10;propos&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/ProposalDao.java&#10;propo&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;eq&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/model/request/Request.java&#10;Regi&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;requ&#9;PSI&#9;JAVA://mapper.RequestMapper&#10;side&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/sidenav-md.tag&#10;ind&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/index.jsp&#10;create&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp&#10;na&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/navbar-md.tag&#10;test&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/testings/test.jsp&#10;mens&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/websocket/MensajesWS.java&#10;ski&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/SkillDao.java&#10;disp&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/dispatcher-servlet.xml&#10;collabo&#9;PSI&#9;JAVA://model.collaboration.Collaboration&#10;pom.xml&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/pom.xml&#10;logi&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;nav&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/navbar-md.tag&#10;reg&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp&#10;validad&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/js/validador.js&#10;Valida&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/RegisterValidator.java&#10;Ski&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/SkillController.java&#10;skild&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/SkillDao.java&#10;regis&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp&#10;Reg&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/RegisterValidator.java&#10;valida&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/LoginValidator.java&#10;Regis&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;Skil&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/SkillController.java&#10;dao&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/BannedDao.java&#10;map&#9;PSI&#9;JAVA://mapper.StudentMapper&#10;Skillda&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/SkillDao.java&#10;Banned&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/BannedController.java&#10;registe&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp&#10;log&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;Loginv&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/LoginValidator.java" />
+    <property name="SearchEverywhereHistoryKey" value="log&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/login/login.jsp&#10;inde&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/index.jsp&#10;prop&#9;PSI&#9;JAVA://model.proposal.Proposal&#10;propos&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;pom&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/pom.xml&#10;ws&#9;PSI&#9;JAVA://websocket.ChatWS&#10;chat&#9;PSI&#9;JAVA://websocket.ChatWSHandler&#10;dis&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/dispatcher-servlet.xml&#10;web&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/web.xml&#10;xml&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/dispatcher-servlet.xml&#10;pom.xm&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/pom.xml&#10;ban&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/banned/ban.jsp&#10;update&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/update.jsp&#10;level&#9;PSI&#9;JAVA://model.skill.Level&#10;crea&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp&#10;home&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_student.jsp&#10;list&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/list.jsp&#10;reque&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/mapper/RequestMapper.java&#10;propo&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;eq&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/model/request/Request.java&#10;Regi&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;requ&#9;PSI&#9;JAVA://mapper.RequestMapper&#10;side&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/sidenav-md.tag&#10;ind&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/index.jsp&#10;create&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp&#10;na&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/navbar-md.tag&#10;test&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/testings/test.jsp&#10;mens&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/websocket/MensajesWS.java&#10;ski&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/SkillDao.java&#10;disp&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/dispatcher-servlet.xml&#10;collabo&#9;PSI&#9;JAVA://model.collaboration.Collaboration&#10;pom.xml&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/pom.xml&#10;logi&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;nav&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/navbar-md.tag&#10;reg&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp&#10;validad&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/js/validador.js&#10;Valida&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/RegisterValidator.java&#10;Ski&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/SkillController.java&#10;skild&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/SkillDao.java&#10;regis&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp&#10;Reg&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/RegisterValidator.java&#10;valida&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/LoginValidator.java&#10;Regis&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;Skil&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/SkillController.java&#10;dao&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/BannedDao.java&#10;map&#9;PSI&#9;JAVA://mapper.StudentMapper&#10;Skillda&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/SkillDao.java&#10;Banned&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/BannedController.java&#10;registe&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="FullScreen" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/css" />
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/js" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/css" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/images/profile" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Skillshare">
@@ -1381,7 +1427,8 @@
       <workItem from="1493293895730" duration="1192000" />
       <workItem from="1493387112820" duration="2632000" />
       <workItem from="1493419707910" duration="37062000" />
-      <workItem from="1493732828800" duration="3837000" />
+      <workItem from="1493732828800" duration="3881000" />
+      <workItem from="1493903215542" duration="7390000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit with structure and some basic code for organization. Defined the jdbc.properties">
       <created>1489341291729</created>
@@ -1628,11 +1675,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493676938782</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="HEROKU - WS FIXED">
+      <created>1493737716216</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1493737716216</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277848000" />
+    <option name="totallyTimeSpent" value="285282000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1644,7 +1698,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="1024" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1656,6 +1710,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1667,10 +1722,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.49676898" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35753426" sideWeight="0.6987076" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35744235" sideWeight="0.6987076" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52465755" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24232633" sideWeight="0.49041095" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2463651" sideWeight="0.49041095" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22859451" sideWeight="0.509589" order="7" side_tool="true" content_ui="tabs" />
@@ -1678,7 +1733,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3249476" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1755,7 +1809,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Finally!!!! Session WORKING! so the app remember who you are." />
     <MESSAGE value="Video background added" />
     <MESSAGE value="Registration FORM working OK. Pending skillDao and homePC" />
     <MESSAGE value="Edit skill working but needs to be moved to a new JSP (Modal buggy with MVC)" />
@@ -1780,7 +1833,8 @@
     <MESSAGE value="HEROKU - Main class 2" />
     <MESSAGE value="HEROKU - Main class 3" />
     <MESSAGE value="HEROKU - WORKING!!!!! uncomment and comment dispatcher servlet for connect to Heroku or Uji DB" />
-    <option name="LAST_COMMIT_MESSAGE" value="HEROKU - WORKING!!!!! uncomment and comment dispatcher servlet for connect to Heroku or Uji DB" />
+    <MESSAGE value="HEROKU - WS FIXED" />
+    <option name="LAST_COMMIT_MESSAGE" value="HEROKU - WS FIXED" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1793,32 +1847,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ProposalDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="22" column="80" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/zmd.hierarchical-display.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/jquery.zmd.hierarchical-display.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/jquery.pagepiling.css" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/gulpfile.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/bower.json" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/jquery.focuspoint.helper-basic.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/focuspoint.css" />
     <entry file="file://$PROJECT_DIR$/src/main/java/model/request/Request.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -2006,7 +2034,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2034,14 +2061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="92" lean-forward="true" selection-start-line="19" selection-start-column="92" selection-end-line="19" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sidenav-md.tag">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="709">
@@ -2058,21 +2077,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned/ban.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="22" lean-forward="false" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
-          <folding>
-            <marker date="1493660793000" expanded="false" signature="1932:1944" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/src.zip!/org/omg/PortableServer/POAManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2101,34 +2109,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1212">
-          <caret line="25" column="50" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1665">
-          <caret line="111" column="57" lean-forward="false" selection-start-line="111" selection-start-column="57" selection-end-line="111" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/BannedController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="81" column="36" lean-forward="false" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ProposalController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-237">
-          <caret line="89" column="33" lean-forward="true" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -2163,25 +2147,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/RequestDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <marker date="1493676698000" expanded="true" signature="683:755" ph="select * fro... request_of_collaboration" />
-            <marker date="1493676698000" expanded="true" signature="908:994" ph="select * fro... request_of_collaboration" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/LoginRegisterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="216" column="24" lean-forward="false" selection-start-line="216" selection-start-column="24" selection-end-line="216" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2190,22 +2155,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <marker date="1493734026000" expanded="false" signature="1972:1995" ph="org.postgresql.Driver" />
-            <marker date="1493734026000" expanded="false" signature="2049:2060" ph="jdbc:postgres://qzniawupamynrm:5eb51574767a1fd450ed22a560dfc12774700d43d6030984826f32c948f9d02e@ec2-54-228-182-57.eu-west-1.compute.amazonaws.com:5432/dbrn488j2oc2sc" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/websocket/MensajesWS.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-33">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2227,16 +2180,164 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/websocket/ChatWS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
+        <state relative-caret-position="660">
           <caret line="50" column="49" lean-forward="false" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="47" column="11" lean-forward="true" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
+          <folding>
+            <element signature="e#2195#2213#0" expanded="true" />
+            <element signature="e#2252#2270#0" expanded="true" />
+            <marker date="1493903286000" expanded="false" signature="2017:2040" ph="org.postgresql.Driver" />
+            <marker date="1493903286000" expanded="true" signature="2080:2091" ph="jdbc:postgres://qzniawupamynrm:5eb51574767a1fd450ed22a560dfc12774700d43d6030984826f32c948f9d02e@ec2-54-228-182-57.eu-west-1.compute.amazonaws.com:5432/dbrn488j2oc2sc" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/testings/test.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="46" column="68" lean-forward="false" selection-start-line="46" selection-start-column="68" selection-end-line="46" selection-end-column="68" />
+        <state relative-caret-position="600">
+          <caret line="40" column="22" lean-forward="false" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#span#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/LoginRegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="216" column="24" lean-forward="false" selection-start-line="216" selection-start-column="24" selection-end-line="216" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/RequestDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <marker date="1493676698000" expanded="true" signature="683:755" ph="select * fro... request_of_collaboration" />
+            <marker date="1493676698000" expanded="true" signature="908:994" ph="select * fro... request_of_collaboration" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ProposalDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <marker date="1492780708000" expanded="true" signature="904:1077" ph="select id , proposal_of_collaboration" />
+            <marker date="1492780708000" expanded="true" signature="1229:1316" ph="select * fro... proposal_of_collaboration" />
+            <marker date="1492780708000" expanded="true" signature="1715:1832" ph="select * fro... proposal_of_collaboration" />
+            <marker date="1492780708000" expanded="true" signature="2122:2201" ph="INSERT INTO proposal_of_collaboration... " />
+            <marker date="1492780708000" expanded="true" signature="2647:2736" ph="UPDATE FROM " />
+            <marker date="1492780708000" expanded="true" signature="3143:3283" ph="UPDATE propo... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ProposalController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="62" column="45" lean-forward="false" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="25" column="50" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/proposal/Proposal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="136" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1403">
+          <caret line="50" column="13" lean-forward="false" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned/ban.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1673">
+          <caret line="73" column="51" lean-forward="false" selection-start-line="67" selection-start-column="3" selection-end-line="73" selection-end-column="51" />
+          <folding>
+            <marker date="1493986109000" expanded="false" signature="2225:2237" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/aos.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/aos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/animate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="42" column="70" lean-forward="false" selection-start-line="42" selection-start-column="70" selection-end-line="42" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/initial.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/all.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="96" column="84" lean-forward="false" selection-start-line="96" selection-start-column="84" selection-end-line="96" selection-end-column="84" />
           <folding />
         </state>
       </provider>

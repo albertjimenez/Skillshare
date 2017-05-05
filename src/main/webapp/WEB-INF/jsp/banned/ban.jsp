@@ -35,7 +35,14 @@
             <a class="waves-effect" href="${pageContext.request.contextPath}/home/home_pc.html">Mi área</a>
         </li>
         <li>
+            <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/all.html">Ofertas de la
+                comunidad</a>
+        </li>
+        <li>
             <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
+        </li>
+        <li>
+            <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Peticiones</a>
         </li>
     </ul>
 </md:sidenav-md>
@@ -56,7 +63,7 @@
             <a class="valign" style="font-size: 50px;text-align: center">
                 <i class="material-icons valign" style="font-size: 200px; text-align: center">insert_invitation</i>
                 <br>
-                Esto está vacío... Mejor así :).</a>
+                Esto está vacío... Mejor así :)</a>
         </div>
     </c:if>
     <c:if test="${not empty items}">

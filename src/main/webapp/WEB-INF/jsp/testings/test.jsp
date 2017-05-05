@@ -31,6 +31,14 @@
 
 <main>
     <p class="green">WS</p>
+    <span style="display: block !important; width: 180px; text-align: center; font-family: sans-serif; font-size: 12px;"><a
+            href="http://espanol.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:00000.123.08286&bannertypeclick=wu_travel_jet3"
+            title="Castellon de la Plana, Spain Weather Forecast" target="_blank"><img
+            src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_travel_jet3_metric&airportcode=LEBT&ForcedCity=Castellon de la Plana&ForcedState=Spain&wmo=08286&language=SP"
+            alt="Find more about Weather in Castellon de la Plana, SP" width="160"/></a><br><a
+            href="http://espanol.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:00000.123.08286&bannertypeclick=wu_travel_jet3"
+            title="Get latest Weather Forecast updates" style="font-family: sans-serif; font-size: 12px"
+            target="_blank">Click for weather forecast</a></span>
 
 </main>
 

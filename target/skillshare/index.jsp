@@ -141,9 +141,6 @@
         dist: 0,
         indicators: true
     });
-    $(document).ready(function () {
-        $('#pagepiling').pagepiling();
-    });
 
     autoplay();
     function autoplay() {
