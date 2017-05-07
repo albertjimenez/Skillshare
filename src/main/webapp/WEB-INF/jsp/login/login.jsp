@@ -10,7 +10,8 @@
 <%@ taglib prefix="md" tagdir="/WEB-INF/tags" %>
 <html>
 <head>
-    <title>Iniciar sesión</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection"/>
@@ -19,17 +20,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="/css/animate.css">
+    <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/my-backgrounds-opac.css"/>
+    <title>Iniciar sesión</title>
 </head>
 <style>
     body {
         display: flex;
         min-height: 100vh;
         flex-direction: column;
+        background-image: url("/images/background-login.jpg");
     }
 
     main {
         flex: 1 0 auto;
+        opacity: 0.7;
     }
+
 </style>
 <body class="blue lighten-3">
 
@@ -37,12 +44,12 @@
     <md:navbar-md></md:navbar-md>
 </header>
 <main class="container">
-    <h4 class="center-align hoverable z-depth-1-half animated slideInDown">Inicia la sesión</h4>
+    <h4 class="center-align animated slideInDown font-lobster">Inicia la sesión</h4>
 
 <%--Abrimos formulario--%>
-    <div class="section z-depth-2 transparent hoverable animated slideInUp">
+    <div class="section z-depth-2 my-bw-nw  hoverable animated slideInUp" id="myForm">
     <form:form method="post" modelAttribute="loginEntity" onsubmit="return check();">
-        <div class="row">
+        <div class="row" id="userSection">
             <div class="input-field col s6 offset-s3 ">
                 <i class="material-icons prefix">account_circle</i>
                 <form:label path="user">Email o nombre de usuario</form:label>
@@ -52,13 +59,13 @@
                 </i>
             </div>
         </div>
-        <div class="row ">
+        <div class="row" id="passSection">
             <div class="input-field col s6 offset-s3">
                 <i class="material-icons prefix">dialpad</i>
                 <form:label path="password">Contraseña</form:label>
                 <form:password path="password" id="password"/>
                 <i class="materialize-red-text">
-                    <form:errors path="password"/>
+                    <form:errors path="password" id="wrongPass"/>
                 </i>
             </div>
         </div>
@@ -100,6 +107,19 @@
     $("#login_btn").click(function () {
         $(".progress").show();
     });
+</script>
+<script>
+    if ($('#wrongPass').get().length > 0) {
+        console.log('yee');
+        $('#myForm').removeClass('animated slideInUp');
+        $("#passSection").addClass('animated shake');
+        Materialize.toast("Contraseña incorrecta", 4000, 'rounded');
+    }
+    //    if ($('#userSection').get().length > 0) {
+    //        console.log('yee');
+    //        $('#myForm').removeClass('animated slideInUp');
+    //        $("#userSection").addClass('animated shake');
+    //    }
 </script>
 </body>
 </html>

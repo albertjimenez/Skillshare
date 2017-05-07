@@ -26,6 +26,7 @@ public class SkillController {
 
     private SkillDao skillDao;
 
+
     @Autowired
     public void setSkillDao(SkillDao skillDao) {
         this.skillDao = skillDao;
@@ -40,6 +41,7 @@ public class SkillController {
         if (getSessionStudent())
             model.addAttribute("name", getStudentName());
         model.addAttribute("editskill", skill);
+        tempSkill = skill;
         return "home/skill/update";
 
     }
@@ -50,15 +52,18 @@ public class SkillController {
                                    @ModelAttribute(value = "editskill") Skill skill,
                                    BindingResult bindingResult,
                                    Model model) {
-
         if (bindingResult.hasErrors()) {
             System.out.println("Tiene errores");
-            return "redirect:/";
+//            return "redirect:/";
         }
         if (getSessionStudent())
             model.addAttribute("name", getStudentName());
+        skill.setName(tempSkill.getName());
+        skill.setLevel(tempSkill.getLevel());
         skillDao.editSkill(skill);
-        return "redirect:../../../home_pc.html";
+        System.out.println("Skill-> " + skill);
+
+        return "redirect:/home/home_pc.html";
 
     }
 
@@ -74,6 +79,7 @@ public class SkillController {
 
     @RequestMapping(value = "home/skill/create")
     public String createSkill(Model model) {
+
         model.addAttribute("createskill", new Skill());
         if (getSessionStudent())
             model.addAttribute("name", getStudentName());
@@ -89,6 +95,10 @@ public class SkillController {
             System.out.println("Tiene errores");
             return "home/skill/create";
         }
+//        String name = Normalizer.normalize(skill.getName(), Normalizer.Form.NFC);
+//        String description = Normalizer.normalize(skill.getDescription(), Normalizer.Form.NFC).replaceAll("[^\\\\p{ASCII}]","");
+//        skill.setName(name);
+//        skill.setDescription(description);
         System.out.println("Created skill" + skill);
         if (getSessionStudent())
             model.addAttribute("name", getStudentName());
@@ -112,4 +122,7 @@ public class SkillController {
         Student student = (Student) httpSession.getAttribute("user");
         return student.getName();
     }
+
+
+    private Skill tempSkill;
 }

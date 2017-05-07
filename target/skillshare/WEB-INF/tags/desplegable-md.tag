@@ -14,9 +14,13 @@
 <li>
     <%--Encabezado que siemre se muestra con icono--%>
     <div class="collapsible-header blue lighten-4 z-depth-3">
-        <i class="material-icons">
-            touch_app</i>
-        ${name} ${name2}</div>
+        <%--<i class="material-icons">--%>
+            <%--touch_app</i>--%>
+            <img class="circle activator profile center-align" data-name=${name}}" height="50" width="50">
+        <span>
+            ${name} ${name2}
+        </span>
+    </div>
 
     </div>
     <div class="collapsible-body blue lighten-5 hoverable">

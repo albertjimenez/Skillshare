@@ -110,10 +110,10 @@ public class LoginRegisterController {
     @RequestMapping(value = "/login/logout")
     public String logout(Model model) {
 
-        if (getSessionStudent()) {
-            model.addAttribute("name", getStudentName());
-            model.addAttribute("type", getType());
-        }
+//        if (getSessionStudent()) {
+//            model.addAttribute("name", getStudentName());
+//            model.addAttribute("type", getType());
+//        }
 
         httpSession.invalidate();
         return "login/logout";

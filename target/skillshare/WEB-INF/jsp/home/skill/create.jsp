@@ -18,6 +18,18 @@
     <%--Avisa al navegador de que el html es valido para moviles--%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" href="/css/font-google.css">
+    <link type="text/css" href="/css/animate.css">
+    <link href="/css/my-backgrounds-opac.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("/images/background-create-skill.jpg");
+        }
+
+        main {
+            opacity: 0.85;
+        }
+    </style>
 </head>
 <body class="blue lighten-3">
 
@@ -26,41 +38,34 @@
 </header>
 
 
-<%--Cuerpo principal--%>
 
-<%--Barra gris--%>
-<%--<div class="row">--%>
 
 
 <md:sidenav-md name="${name}" type="${type}">
-    <ul>
-        <li>
-            <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
-        </li>
-        <li>
-            <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Peticiones</a>
-        </li>
-        <li>
-            <a href="${pageContext.request.contextPath}/home/home_pc.html">
-                Lista de Habilidades<i class="material-icons">list</i>
-            </a></li>
-        <li>
-            <a href="${pageContext.request.contextPath}/banned/ban.html">
-                Lista de Baneados<i class="material-icons">warning</i>
-            </a></li>
-    </ul>
+    <li>
+        <a class="waves-effect" href="${pageContext.request.contextPath}/home/home_pc.html">Colección de Habilidades</a>
+    </li>
+    <li>
+        <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
+    </li>
+    <li>
+        <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/all.html">Ofertas de la
+            comunidad</a>
+    </li>
+    <li>
+        <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Peticiones</a>
+    </li>
+    <li><a class="subheader">Promotor de colaboraciones</a></li>
+    <li>
+        <a class="waves-effect" href="${pageContext.request.contextPath}/banned/ban.html">
+            <i class="material-icons">warning</i>Lista de baneados</a>
+    </li>
 </md:sidenav-md>
 
 <%--<div class="col s8">--%>
-<main>
-    <div class="container medium">
-        <div class="card hoverable transparent z-depth-1-half valign">
-            <div class="card-image">
-                <img class="responsive-img" src="/images/wallcard.png">
-                <span class="card-title">Crear habilidad</span>
-            </div>
-
-            <div class="card-content">
+<main class="container">
+            <h4 class="font-lobster center-align blue-text">Crear habilidad</h4>
+    <div class="section z-depth-2 my-bw-nw animated fadeInDown ">
                 <form:form method="post" modelAttribute="createskill" onsubmit="white_spaces();">
                     <div class="row">
                         <div class="input-field col s6 offset-s3 ">
@@ -91,9 +96,8 @@
                                href="${pageContext.request.contextPath}/home/home_pc.html">Cancelar</a>
                         </div>
                     </div>
+
                 </form:form>
-            </div>
-        </div>
     </div>
 </main>
 

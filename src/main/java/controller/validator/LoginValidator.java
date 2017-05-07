@@ -27,7 +27,7 @@ public class LoginValidator implements Validator {
             errors.rejectValue("user", "Error", "No existe el estudiante " + loginEntity.getUser());
 
         else if (LoginStatus.getStatus(s) == LoginStatus.WRONG_PSWD)
-            errors.rejectValue("password", "Error", "Contraseña incorrecta");
+            errors.rejectValue("password", "Error", "");
 
         else if (LoginStatus.getStatus(s) == LoginStatus.BANNED)
             errors.rejectValue("user", "Error", "Estudiante baneado");

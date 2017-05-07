@@ -41,7 +41,8 @@
             <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
         </li>
         <li>
-            <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/all.html">Ofertas de la comunidad</a>
+            <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/all.html">Ofertas de la
+                comunidad</a>
         </li>
         <li>
             <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>

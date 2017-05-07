@@ -18,15 +18,15 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="/js/jquery.zmd.hierarchical-display.min.js"></script>
+    <script src="/js/aos.js"></script>
     <%--Avisa al navegador de que el html es valido para moviles--%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link rel="stylesheet" href="/css/zmd.hierarchical-display.min.css">
-
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/aos.css">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
-
 
 </head>
 
@@ -35,7 +35,21 @@
 
 
 <%--Inicio del navbar con movil--%>
-<md:navbar-md></md:navbar-md>
+<header>
+    <md:navbar-md></md:navbar-md>
+</header>
+
+
+<md:sidenav-md name="Invitado" type="Invitado">
+    <ul>
+        <li>
+            <a class="waves-effect" href="${pageContext.request.contextPath}/login/login.html">Iniciar sesión</a>
+        </li>
+        <li>
+            <a class="waves-effect" href="${pageContext.request.contextPath}/register/register.html">Registrarse</a>
+        </li>
+    </ul>
+</md:sidenav-md>
 <%--Carrousel--%>
 <div class="carousel carousel-slider">
     <a href="#one!" class="carousel-item"><img src="images/carousel/1.jpeg" alt=""></a>
@@ -44,36 +58,35 @@
     <a href="#four!" class="carousel-item"><img src="images/carousel/4.jpg" alt=""></a>
 </div>
 
-<div data-animation="hierarchical-display">
+<div data-aos="zoom-in-left">
 <%--Parte inicial de la web, donde se encuentra la tarjeta de iniciar sesión--%>
     <div class="card transparent hoverable medium section">
     <div class="card-image">
-        <img class="responsive-img" src="images/footer-log.jpg">
-        <span class="card-title">Primeros Pasos</span>
+        <img class="responsive-img" src="images/footer-img.jpg" style="border-radius: 25px">
+        <span class="card-title blue-text" ><strong>Primeros Pasos</strong></span>
     </div>
     <div class="card-content">
-        <p>Si nunca has usado este servico te recomendamos que sigas bajando para conocer más
+        <span>Si nunca has usado este servico te recomendamos que sigas bajando para conocer más
             y después, si te animas, regístrate. Si ya estás registrado, ya sabes como va, así que
-            inicia sesión y haz tu día más productivo.
-            <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-            <i class="em em-mortar_board"></i>
-        </p>
+            ¡Inicia sesión!
+            <%--<i class="em em-mortar_board"></i>--%>
+        </span>
     </div>
 
 
     <%--Botones de Iniciar Sesión y Registrarse--%>
-    <div class="card-action">
-        <a class="light-blue waves-effect waves-light btn-large" href="login/login.html">
+    <div class="card-action" data-aos="zoom-in-right">
+        <a class="light-blue waves-effect waves-light btn animated pulse" href="login/login.html">
             <i class="material-icons left">person_pin</i>Inicia Sesión</a>
-        <a class="light-blue waves-effect waves-light btn-large" href="register/register.html">
+        <a class="light-blue waves-effect waves-light btn animated pulse" href="register/register.html">
             <i class="material-icons left">add</i>Regístrate</a>
-
+    </div>
     </div>
 </div>
 
 
 <%--Explicacion del proyecto--%>
-    <div class="row z-depth-1 section">
+    <div class="row z-depth-1 section" data-aos="zoom-out">
     <div class="col s4">
         <div class="center promo promo-example">
             <i class="large material-icons">group</i>
@@ -103,14 +116,14 @@
 </div>
 
 <%--Sobre nosotros--%>
-    <div id="about" class="row z-depth-1 section ">
+    <div id="about" class="row z-depth-1 section " data-aos="fade-right">
     <div class="col s6">
         <div class="center promo promo-example">
             <img class="responsive-img" src="images/profile/albert.png" width="512" height="512">
             <p class="promo-caption">Albert Jiménez</p>
             <p class="light center">
                 Entusiasta de las aventuras que deparan los proyectos nuevos como este.
-                Puedes visitar mi portfolio en <a href="https://www.albertjimenez.github.io">Portfolio Github</a>.
+                Puedes visitar mi portfolio en <a href="http://albertjimenez.github.io">Portfolio Github</a>.
             </p>
         </div>
     </div>
@@ -142,12 +155,16 @@
         indicators: true
     });
 
+</script>
+<script>
     autoplay();
     function autoplay() {
         $('.carousel.carousel-slider').carousel('next');
         setTimeout(autoplay, 10000);
     }
-
+</script>
+<script>
+    AOS.init();
 </script>
 </body>
 </html>

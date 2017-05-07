@@ -1,0 +1,6 @@
+.grid {
+    display: grid;
+    grid-auto-columns: 35%;
+    grid-auto-rows: 35%;
+    grid-auto-flow: row;
+}

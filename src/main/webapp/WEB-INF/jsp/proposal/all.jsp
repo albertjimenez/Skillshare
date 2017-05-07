@@ -21,6 +21,7 @@
     <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="stylesheet" href="/css/aos.css">
+    <link rel="stylesheet" href="/css/grid.css">
 
 </head>
 <body class="blue lighten-3">
@@ -91,7 +92,7 @@
             <%--</div>--%>
             <%--</div>--%>
             <%--</div> --%>
-            <div class="row">
+            <div class="row grid" data-size="${count}">
                 <div class="col s12 m10 l12">
                     <div class="card medium" data-aos="flip-up">
                         <div class="card-image waves-effect waves-block waves-light">
