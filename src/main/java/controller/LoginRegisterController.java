@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * Created by Beruto and Pablo Berbel on 20/3/17. Project -> skillshare
@@ -102,11 +103,11 @@ public class LoginRegisterController {
     }
 
 //
-//    @RequestMapping(value = "login/banned")
-//    public String banned(Model model) {
-//
-//        return "login/banned";
-//    }
+@RequestMapping(value = "login/banned")
+public String banned(Model model) {
+
+    return "login/banned";
+}
 
 
     @RequestMapping(value = "/login/logout")
@@ -222,6 +223,12 @@ public class LoginRegisterController {
         model.addAttribute("type", Type.getName(student.getType().toString()));
         return "testings/test";
 
+    }
+
+    private TreeMap<String, String> dataCareers() {
+        TreeMap<String, String> map = new TreeMap<>();
+        //TODO poner nombre de carreras
+        return map;
     }
 
 

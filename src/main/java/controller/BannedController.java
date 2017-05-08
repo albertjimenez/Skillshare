@@ -26,6 +26,8 @@ import java.util.List;
 @Controller
 public class BannedController {
 
+
+    private final String CP_STRING = "Promotor de colaboraciones";
     private BannedDao bannedDao;
 
     private StudentDao studentDao;
@@ -48,10 +50,11 @@ public class BannedController {
 
         if (!getSessionStudent())
             return "redirect:../login/login.html";
-        if (Type.getType(getType()) != Type.CP)
+
+        if (!getType().equals(CP_STRING))
             return "home/home_student";
         model.addAttribute("name", getStudentName());
-
+        System.out.println("mi tipo es" + getType());
         List<Student> l = new LinkedList<>();
         List<String> bannedList = bannedDao.getBanneds();
         for (String nif : bannedList)

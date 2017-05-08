@@ -36,7 +36,7 @@
 
 <%--<div class="row">--%>
 
-<md:sidenav-md name="${name}" type="${type}">
+<md:sidenav-md name="${name}" type="${type}" cp="${cp}">
     <ul>
         <li>
             <a class="waves-effect" href="${pageContext.request.contextPath}/home/home_pc.html">Mi área</a>
@@ -59,15 +59,28 @@
 </md:sidenav-md>
 
 <main class="container">
+
+    <%--<div class="fixed-action-btn horizontal">--%>
+    <%--<a class="btn-floating btn-large blue">--%>
+    <%--<i class="material-icons">menu</i>--%>
+    <%--</a>--%>
+    <%--<ul>--%>
+    <%--<li><a class="btn-floating green" href="#modal1">--%>
+    <%--<i class="material-icons">playlist_add</i></a></li>--%>
+    <%--</ul>--%>
+    <%--</div>--%>
+    <%--Boton material de crear solicitud--%>
     <div class="fixed-action-btn horizontal">
-        <a class="btn-floating btn-large blue">
+        <a class="btn-floating btn-large red">
             <i class="material-icons">menu</i>
         </a>
         <ul>
-            <li><a class="btn-floating green" href="#modal1">
+            <li><a class="btn-floating blue" href="#modal1">
                 <i class="material-icons">playlist_add</i></a></li>
         </ul>
     </div>
+
+
     <%--<div class="col s12 m8 l9" style="height: 100%">--%>
     <c:if test="${empty items}">
         <div class="valign-wrapper">

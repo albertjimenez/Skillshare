@@ -59,10 +59,10 @@
         <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Peticiones</a>
     </li>
     <li><a class="subheader">Promotor de colaboraciones</a></li>
-    <li>
-        <a class="waves-effect" href="${pageContext.request.contextPath}/banned/ban.html">
-            <i class="material-icons">warning</i>Lista de baneados</a>
-    </li>
+    <%--<li>--%>
+        <%--<a class="waves-effect" href="${pageContext.request.contextPath}/banned/ban.html">--%>
+            <%--<i class="material-icons">warning</i>Lista de baneados</a>--%>
+    <%--</li>--%>
 </md:sidenav-md>
 
 <main class="container">

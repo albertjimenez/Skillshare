@@ -53,15 +53,15 @@ function check_register() {
         Materialize.toast('Titulación actual en blanco', 4000, 'rounded');
         return false;
     }
-    if (document.getElementById("course").value.trim() == '') {
-        Materialize.toast('Curso en blanco', 4000, 'rounded');
-        return false;
-    }
-    var course = parseInt(document.getElementById("course").value.trim());
-    if (isNaN(course)) {
-        Materialize.toast('Curso inválido', 4000, 'rounded');
-        return false;
-    }
+    // if (document.getElementById("course").value.trim() == '') {
+    //     Materialize.toast('Curso en blanco', 4000, 'rounded');
+    //     return false;
+    // }
+    // var course = parseInt(document.getElementById("course").value.trim());
+    // if (isNaN(course)) {
+    //     Materialize.toast('Curso inválido', 4000, 'rounded');
+    //     return false;
+    // }
     if (course <= 0 || course >= 6) {
         Materialize.toast('Curso excesivo, revisa el número', 4000, 'rounded');
         return false;

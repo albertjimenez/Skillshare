@@ -46,9 +46,9 @@
                 </a>
             </c:if>
             <c:if test="${not empty cp}">
-            <a class="subheader">Promotor de colaboraciones</a>
-        <a class="waves-effect" href="${pageContext.request.contextPath}/banned/ban.html">
-            <i class="material-icons">warning</i>Lista de baneados</a>
+                <a class="subheader">Promotor de colaboraciones</a>
+                <a class="waves-effect" href="${pageContext.request.contextPath}/banned/ban.html">
+                    <i class="material-icons">warning</i>Lista de baneados</a>
             </c:if>
         </div>
     </li>
