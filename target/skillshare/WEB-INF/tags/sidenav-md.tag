@@ -6,6 +6,7 @@
 --%>
 <%@attribute name="name" required="false" %>
 <%@attribute name="type" required="false" %>
+<%@attribute name="cp" required="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <style>
@@ -19,15 +20,6 @@
         flex: 1 0 auto;
     }
 
-    /*header, main, footer {*/
-    /*padding-left: 300px;*/
-    /*}*/
-
-    /*@media only screen and (max-width: 992px) {*/
-    /*header, main, footer {*/
-    /*padding-left: 0;*/
-    /*}*/
-    /*}*/
 </style>
 
 <ul id="slide-out" class="side-nav">
@@ -48,10 +40,15 @@
                 <a href="#${pageContext.request.contextPath}/login/login.html">
                     <span class="blue-text lighten-1 name">${type}</span></a>
                 <a href="${pageContext.request.contextPath}/login/logout.html">
-                        <span class="blue-grey-text darken-2">
+                        <span class="red-text darken-2">
                             Salir
                         </span>
                 </a>
+            </c:if>
+            <c:if test="${not empty cp}">
+            <a class="subheader">Promotor de colaboraciones</a>
+        <a class="waves-effect" href="${pageContext.request.contextPath}/banned/ban.html">
+            <i class="material-icons">warning</i>Lista de baneados</a>
             </c:if>
         </div>
     </li>

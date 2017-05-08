@@ -22,7 +22,7 @@
     <link type="text/css" rel="stylesheet" href="/css/animate.css">
     <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
     <link type="text/css" rel="stylesheet" href="/css/my-backgrounds-opac.css"/>
-    <title >Iniciar sesión</title>
+    <title>Iniciar sesión</title>
 </head>
 <style>
     body {
@@ -59,7 +59,7 @@
                 </i>
             </div>
         </div>
-        <div class="row" id="passSection" >
+        <div class="row" id="passSection">
             <div class="input-field col s6 offset-s3">
                 <i class="material-icons prefix">dialpad</i>
                 <form:label path="password">Contraseña</form:label>
@@ -113,13 +113,13 @@
         console.log('yee');
         $('#myForm').removeClass('animated slideInUp');
         $("#passSection").addClass('animated shake');
-        Materialize.toast("Contraseña incorrecta",4000,'rounded');
+        Materialize.toast("Contraseña incorrecta", 4000, 'rounded');
     }
-//    if ($('#userSection').get().length > 0) {
-//        console.log('yee');
-//        $('#myForm').removeClass('animated slideInUp');
-//        $("#userSection").addClass('animated shake');
-//    }
+    //    if ($('#userSection').get().length > 0) {
+    //        console.log('yee');
+    //        $('#myForm').removeClass('animated slideInUp');
+    //        $("#userSection").addClass('animated shake');
+    //    }
 </script>
 </body>
 </html>

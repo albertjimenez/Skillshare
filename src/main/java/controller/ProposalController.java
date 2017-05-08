@@ -56,6 +56,9 @@ public class ProposalController {
         List<Proposal> l = proposalDao.getProposals();
         model.addAttribute("proposals", l);
         model.addAttribute("count", l.size());
+
+        if (Type.getType(getType()) == Type.CP)
+            model.addAttribute("cp", "-");
         return "proposal/all";
 
     }
@@ -72,6 +75,9 @@ public class ProposalController {
         List<Proposal> l = proposalDao.getProposalsByNif(student.getNif());
         model.addAttribute("proposals", l);
         model.addAttribute("count", l.size());
+
+        if (Type.getType(getType()) == Type.CP)
+            model.addAttribute("cp", "-");
         return "proposal/list";
 
     }
@@ -93,6 +99,10 @@ public class ProposalController {
         System.out.println("Calendario" + calendar.getTime().toString());
 
 
+        if (Type.getType(getType()) == Type.CP)
+            model.addAttribute("cp", "-");
+
+
         return "proposal/create";
     }
 
@@ -103,6 +113,8 @@ public class ProposalController {
         ProposalValidator proposalValidator = new ProposalValidator();
         proposalValidator.validate(proposal, bindingResult);
         model.addAttribute("listSkillnames", skillDao.listSkillNames());
+        if (Type.getType(getType()) == Type.CP)
+            model.addAttribute("cp", "-");
         if (!getSessionStudent())
             return "redirect:../login/login.html";
         if (bindingResult.hasErrors()) {
@@ -151,10 +163,6 @@ public class ProposalController {
     }
 
 
-//    @RequestMapping(value = "/testings/test")
-//    public String guei() {
-//        return "/testings/test";
-//    }
 
 
 }

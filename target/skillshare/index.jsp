@@ -63,7 +63,7 @@
     <div class="card transparent hoverable medium section">
     <div class="card-image">
         <img class="responsive-img" src="images/footer-img.jpg" style="border-radius: 25px">
-        <span class="card-title blue-text" ><strong>Primeros Pasos</strong></span>
+        <span class="card-title blue-text"><strong>Primeros Pasos</strong></span>
     </div>
     <div class="card-content">
         <span>Si nunca has usado este servico te recomendamos que sigas bajando para conocer más
@@ -75,18 +75,18 @@
 
 
     <%--Botones de Iniciar Sesión y Registrarse--%>
-    <div class="card-action" data-aos="zoom-in-right">
-        <a class="light-blue waves-effect waves-light btn animated pulse" href="login/login.html">
+        <div class="card-action" data-aos="zoom-in-right">
+            <a class="light-blue waves-effect waves-light btn animated pulse" href="login/login.html">
             <i class="material-icons left">person_pin</i>Inicia Sesión</a>
-        <a class="light-blue waves-effect waves-light btn animated pulse" href="register/register.html">
+            <a class="light-blue waves-effect waves-light btn animated pulse" href="register/register.html">
             <i class="material-icons left">add</i>Regístrate</a>
-    </div>
+        </div>
     </div>
 </div>
 
 
 <%--Explicacion del proyecto--%>
-    <div class="row z-depth-1 section" data-aos="zoom-out">
+<div class="row z-depth-1 section" data-aos="zoom-out">
     <div class="col s4">
         <div class="center promo promo-example">
             <i class="large material-icons">group</i>
@@ -116,7 +116,7 @@
 </div>
 
 <%--Sobre nosotros--%>
-    <div id="about" class="row z-depth-1 section " data-aos="fade-right">
+<div id="about" class="row z-depth-1 section " data-aos="fade-right">
     <div class="col s6">
         <div class="center promo promo-example">
             <img class="responsive-img" src="images/profile/albert.png" width="512" height="512">

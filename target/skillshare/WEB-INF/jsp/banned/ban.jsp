@@ -19,8 +19,15 @@
     <%--Avisa al navegador de que el html es valido para moviles--%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
+    <link rel="stylesheet" href="/css/my-backgrounds-opac.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
+
+<style>
+    body {
+        background-image: url("/images/banned-jail.jpg");
+    }
+</style>
 <body class="blue lighten-3">
 
 <header>
@@ -43,6 +50,10 @@
         </li>
         <li>
             <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Peticiones</a>
+        </li>
+        <li>
+            <a class="waves-effect" href="${pageContext.request.contextPath}/banned/ban.html">
+                <i class="material-icons">warning</i>Lista de baneados</a>
         </li>
     </ul>
 </md:sidenav-md>
@@ -71,7 +82,7 @@
         <%--Boton fijo--%>
 
 
-        <ul class="collapsible " data-collapsible="accordion">
+        <ul class="collapsible popout" data-collapsible="accordion" style="">
             <c:forEach items="${items}" var="item">
 
                 <md:desplegable-md name="${item.name}" name2="${item.username}">
@@ -116,61 +127,6 @@
                     </div>
                 </md:desplegable-md>
 
-                <%--<li>--%>
-                <%--<div class="collapsible-header blue lighten-4 z-depth-3">--%>
-                <%--<i class="material-icons">--%>
-                <%--touch_app</i>${item.name} - ${item.username}--%>
-                <%--</div>--%>
-                <%--<div class="collapsible-body blue lighten-5 hoverable">--%>
-                <%--&lt;%&ndash;<div class="row">&ndash;%&gt;--%>
-                <%--&lt;%&ndash;<div class="col s12">&ndash;%&gt;--%>
-                <%--<div class="container">--%>
-                <%--<table class="highlight bordered font-raleway">--%>
-                <%--<tr>--%>
-                <%--<td>NIF:</td>--%>
-                <%--<td>${item.nif}</td>--%>
-                <%--</tr>--%>
-                <%--<tr>--%>
-                <%--<td>EMAIL:</td>--%>
-                <%--<td>${item.email}</td>--%>
-                <%--</tr>--%>
-                <%--<tr>--%>
-                <%--<td>GRADO:</td>--%>
-                <%--<td>${item.degree}</td>--%>
-                <%--</tr>--%>
-                <%--<tr>--%>
-                <%--<td>--%>
-                <%--<a class="waves-effect waves-light btn"--%>
-                <%--href="${pageContext.request.contextPath}/banned/delete/${item.nif}.html">--%>
-                <%--<i class="material-icons left">delete</i>--%>
-                <%--Borrar baneado</a>--%>
-                <%--</td>--%>
-                <%--</tr>--%>
-
-                <%--</table>--%>
-                <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-                <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-                <%--&lt;%&ndash;Botonera dentro del cajon&ndash;%&gt;--%>
-                <%--&lt;%&ndash;Botonera fija en la parte inferior derecha&ndash;%&gt;--%>
-                <%--&lt;%&ndash;Button Material&ndash;%&gt;--%>
-                <%--<div class="fixed-action-btn">--%>
-                <%--<a class="btn-floating btn-large red">--%>
-                <%--<i class="large material-icons">mode_edit</i>--%>
-                <%--</a>--%>
-
-                <%--&lt;%&ndash;SUBButtons&ndash;%&gt;--%>
-                <%--<ul>--%>
-                <%--<li><a class="btn-floating red"--%>
-                <%--href="${pageContext.request.contextPath}/banned/delete/${item.nif}.html"><i--%>
-                <%--class="material-icons">delete</i></a></li>--%>
-
-                <%--<li><a class="btn-floating green" href="#modal1">--%>
-                <%--<i class="material-icons">playlist_add</i></a></li>--%>
-                <%--</ul>--%>
-                <%--</div>--%>
-                <%--</div>--%>
-
-                <%--</li>--%>
 
             </c:forEach>
         </ul>
@@ -187,9 +143,10 @@
 <div id="modal1" class="modal">
     <div class="modal-content">
         <h4>Escriba el NIF del usuario a prohibir</h4>
-        <form:form method="post" modelAttribute="newbanned">
+        <form:form method="post" modelAttribute="newbanned" onsubmit="return checkBanned();">
             <form:label path="nif">NIF:</form:label>
             <form:input path="nif" id="nif" cssClass="validate"/>
+            <form:errors path="nif" id="wrongPass"/>
             <button class="btn waves-effect waves-light" type="submit" name="action">Añadir
                 <i class="material-icons right">send</i>
             </button>
@@ -201,6 +158,7 @@
 <script type="text/javascript" src="/js/materialize.min.js"></script>
 <script src="/js/scroll.js"></script>
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
+<script type="text/javascript" src="/js/validador.js"></script>
 <script>
     $(document).ready(function () {
         $('select').material_select();
@@ -211,6 +169,17 @@
         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
         $('.modal').modal();
     });
+</script>
+<script type="text/javascript" src="/js/initial.min.js"></script>
+<script>
+    $('.profile').initial();
+</script>
+
+<script>
+    if ($('#wrongPass').get().length > 0) {
+        Materialize.toast('No existe el estudiante solicitado o ya se encuentra baneado', 6000, 'rounded');
+
+    }
 </script>
 </body>
 </html>

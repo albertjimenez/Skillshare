@@ -1,5 +1,7 @@
 package dao;
 
+import mapper.StudentMapper;
+import model.student.ErrorCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -60,13 +62,24 @@ public class BannedDao {
         }
     }
 
-    public void ban(String nif) {
-        String insert = "INSERT INTO BANNED VALUES(?)";
-        String sql = "select nif from banned where nif = ?";
+    public ErrorCode ban(String nif) {
+        final String insert = "INSERT INTO BANNED VALUES(?)";
+        final String sql = "select nif from banned where nif = ?";
+        final String checkStudent = "select nif from student where nif = ?";
         try {
             jdbcTemplate.queryForObject(sql, new Object[]{nif}, String.class);
+            return ErrorCode.ALREADY_BANNED;
         } catch (EmptyResultDataAccessException e) {
-            jdbcTemplate.update(insert, nif);
+
+            try {
+                jdbcTemplate.queryForObject(checkStudent, new Object[]{nif}, new StudentMapper());
+                jdbcTemplate.update(insert, nif);
+                return ErrorCode.BANNED;
+            } catch (EmptyResultDataAccessException e1) {
+                System.out.println("No existe el estudiante " + nif);
+                return ErrorCode.NOT_EXISTS;
+            }
+
         }
     }
 }

@@ -73,42 +73,43 @@
 <main class="container">
     <h4 class="center-align font-lobster">Editar habilidad ${editskill.name}</h4>
     <div class="section z-depth-2 my-bw-nw animated fadeInDown ">
-                <form:form method="post" modelAttribute="editskill" id="myform" >
+        <form:form method="post" modelAttribute="editskill" id="myform">
                     <div class="row">
                         <div class="input-field col s6 offset-s3 ">
                             <i class="material-icons prefix">supervisor_account</i>
                             <form:label path="name">Nombre</form:label>
-                            <form:input path="name" id="name" cssClass="validate" value="${editskill.name}" disabled="true"/>
+                            <form:input path="name" id="name" cssClass="validate" value="${editskill.name}"
+                                        disabled="true"/>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s6 offset-s3 ">
-                            <i class="material-icons prefix">dashboard</i>
-                            <form:select path="level" disabled="true">
-                                <form:option value="" disabled="true">
-                                    Escoge qué nivel de habilidad es</form:option>
-                                <form:option value="A">Avanzada</form:option>
-                                <form:option value="M">Media</form:option>
-                                <form:option value="N">Novato</form:option>
-                            </form:select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s6 offset-s3 ">
-                            <i class="material-icons prefix">toc</i>
-                            <form:label path="description">Descripción</form:label>
-                            <form:textarea path="description" id="description" value="${editskill.description}"
-                                           cssClass="validate"/>
-                        </div>
-                        </div>
-                    <div class="row">
-                        <div class="input-field col s6 offset-s3 ">
-                            <button class="btn waves-effect waves-light" type="submit" name="action">Editar
-                                <i class="material-icons right">send</i>
-                            </button>
-                            <a class="waves-effect waves-green btn-flat" href="../../../home_pc.html">Cancelar</a>
-                        </div>
-                        </div>
+            <div class="row">
+                <div class="input-field col s6 offset-s3 ">
+                    <i class="material-icons prefix">dashboard</i>
+                    <form:select path="level" disabled="true">
+                        <form:option value="" disabled="true">
+                            Escoge qué nivel de habilidad es</form:option>
+                        <form:option value="A">Avanzada</form:option>
+                        <form:option value="M">Media</form:option>
+                        <form:option value="N">Novato</form:option>
+                    </form:select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6 offset-s3 ">
+                    <i class="material-icons prefix">toc</i>
+                    <form:label path="description">Descripción</form:label>
+                    <form:textarea path="description" id="description" value="${editskill.description}"
+                                   cssClass="validate"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6 offset-s3 ">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Editar
+                        <i class="material-icons right">send</i>
+                    </button>
+                    <a class="waves-effect waves-green btn-flat" href="../../../home_pc.html">Cancelar</a>
+                </div>
+            </div>
                 </form:form>
             </div>
 

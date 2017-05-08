@@ -35,7 +35,7 @@
 <%--Barra gris--%>
 
 
-<md:sidenav-md name="${name}" type="${type}">
+<md:sidenav-md name="${name}" type="${type}" cp="${cp}">
     <ul>
         <li>
             <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
@@ -43,9 +43,6 @@
         <li>
             <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/all.html">Ofertas de la
                 comunidad</a>
-        </li>
-        <li>
-            <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
         </li>
         <li>
             <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Peticiones</a>
@@ -56,19 +53,7 @@
 <%--Fondo restante de la web sin panel--%>
 <main class="container">
     <%--<div class="col s12 m8 l9" style="height: 100%">--%>
-    <h1 class="font-raleway center-align">Mis ${count} ofertas</h1>
-    <div class="divider"></div>
-    <form>
-        <div class="row">
-            <%--TODO FORMULARIO DE BUSQUEDA--%>
-            <div class="input-field col s12 hoverable z-depth-2">
-                <i class="material-icons prefix">search</i>
-                <input id="icon_prefix" type="text" class="validate">
-                <label for="icon_prefix">Buscar ofertas por nombre o descripción</label>
-                <%--TODO metele un like en la consulta SQL--%>
-            </div>
-        </div>
-    </form>
+    <h4 class="font-lobster center-align">Mis ${count} ofertas</h4>
 
     <%--Boton material de crear oferta--%>
     <div class="fixed-action-btn horizontal">
@@ -93,12 +78,12 @@
     </c:if>
     <c:if test="${not empty proposals}">
 
-        <ul class="collapsible " data-collapsible="accordion">
+        <ul class="collapsible popout" data-collapsible="accordion">
 
             <c:forEach items="${proposals}" var="req">
 
 
-                <md:desplegable-md name="${req.id}" name2="${req.skillName}" name3="${req.initialDate}">
+                <md:desplegable-md name="${req.skillName}" name2="${req.initialDate}">
 
 
                     <table class="highlight bordered">
@@ -171,5 +156,10 @@
         $('select').material_select();
     });
 </script>
+<script type="text/javascript" src="/js/initial.min.js"></script>
+<script>
+    $('.profile').initial();
+</script>
+
 </body>
 </html>

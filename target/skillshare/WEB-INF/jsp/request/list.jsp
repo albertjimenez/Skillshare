@@ -23,7 +23,6 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link href="/css/search.css" rel="stylesheet">
 
 </head>
 <body class="blue lighten-3">
@@ -33,24 +32,24 @@
     <md:navbar-md name="${name}"></md:navbar-md>
 </header>
 
-<md:sidenav-md name="${name}" type="${type}">
+<md:sidenav-md name="${name}" type="${type}" cp="${cp}">
     <li>
         <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
     </li>
     <li>
+        <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/all.html">Ofertas de la
+            comunidad</a>
+    </li>
+    <li>
         <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Peticiones</a>
     </li>
-    <li><a class="subheader">Promotor de colaboraciones</a></li>
-    <li>
-        <a class="waves-effect" href="${pageContext.request.contextPath}/banned/ban.html">
-            <i class="material-icons">warning</i>Lista de baneados</a>
-    </li>
+
+
 </md:sidenav-md>
 
 <main class="container">
-    <h1 class="font-raleway center-align">Mis ${count} Peticiones</h1>
+    <h4 class="font-lobster center-align">Mis ${count} Peticiones</h4>
 
-    <div class="divider"></div>
 
 
     <%--Boton material de crear solicitud--%>
@@ -74,12 +73,12 @@
     </c:if>
     <c:if test="${not empty requests}">
 
-        <ul class="collapsible " data-collapsible="accordion">
+        <ul class="collapsible popout" data-collapsible="accordion">
 
 
             <c:forEach items="${requests}" var="req">
 
-                <md:desplegable-md name="${req.id}" name2="${req.skillName}" name3="${req.initialDate}">
+                <md:desplegable-md name="${req.skillName}" name2="${req.initialDate}">
 
                     <table class="highlight bordered">
                         <tr>
@@ -140,6 +139,11 @@
         $('select').material_select();
     });
 </script>
+<script type="text/javascript" src="/js/initial.min.js"></script>
+<script>
+    $('.profile').initial();
+</script>
+
 
 </body>
 </html>

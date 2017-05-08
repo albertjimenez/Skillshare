@@ -37,11 +37,13 @@ public class SkillController {
     public String homePCEditSkill(@PathVariable(value = "name") String name,
                                   @PathVariable(value = "level") String level,
                                   Model model) {
+
         Skill skill = skillDao.findSkill(name, Level.getEnum(level));
         if (getSessionStudent())
             model.addAttribute("name", getStudentName());
         model.addAttribute("editskill", skill);
         tempSkill = skill;
+        model.addAttribute("cp", "-");
         return "home/skill/update";
 
     }
@@ -62,7 +64,7 @@ public class SkillController {
         skill.setLevel(tempSkill.getLevel());
         skillDao.editSkill(skill);
         System.out.println("Skill-> " + skill);
-
+        model.addAttribute("cp", "-");
         return "redirect:/home/home_pc.html";
 
     }
@@ -73,6 +75,7 @@ public class SkillController {
         if (getSessionStudent())
             model.addAttribute("name", getStudentName());
         skillDao.removeSkill(skillDao.findSkill(name, Level.getEnum(level)));
+        model.addAttribute("cp", "-");
         return "redirect:../../../home_pc.html";
     }
 
@@ -83,6 +86,7 @@ public class SkillController {
         model.addAttribute("createskill", new Skill());
         if (getSessionStudent())
             model.addAttribute("name", getStudentName());
+        model.addAttribute("cp", "-");
         return "home/skill/create";
     }
 
@@ -102,6 +106,7 @@ public class SkillController {
         System.out.println("Created skill" + skill);
         if (getSessionStudent())
             model.addAttribute("name", getStudentName());
+        model.addAttribute("cp", "-");
         skillDao.addSkill(skill);
         return "redirect:/home/skill/create.html";
 

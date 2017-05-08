@@ -24,16 +24,17 @@
 
 
     <style>
-        body{
+        body {
             background-image: url("/images/pc-wallpaper.jpg");
         }
+
         main {
             opacity: 0.9;
         }
     </style>
 </head>
 
-<body >
+<body>
 <%--Inicio del navbar con movil--%>
 
 <header>
@@ -75,7 +76,7 @@
                     <i class="material-icons">playlist_add</i></a></li>
             </ul>
         </div>
-        <ul class="collapsible popout " data-collapsible="accordion">
+    <ul class="collapsible popout " data-collapsible="accordion">
             <c:forEach items="${skills}" var="sk">
 
                 <md:desplegable-md name="${sk.name}" name2="${sk.level}">

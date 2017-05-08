@@ -21,7 +21,8 @@
     <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="stylesheet" href="/css/aos.css">
-    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/my-grid.css">
+    <link rel="stylesheet" href="/css/animate.css">
 
 </head>
 <body class="blue lighten-3">
@@ -52,6 +53,8 @@
 
 
 <main class="container">
+
+    <h4 class="center-align font-lobster">Ofertas disponibles</h4>
     <div class="fixed-action-btn horizontal">
         <a class="btn-floating btn-large blue">
             <i class="material-icons">menu</i>
@@ -74,48 +77,18 @@
     <c:if test="${not empty proposals}">
 
         <%--Boton fijo--%>
-
+        <ul class="rig columns-4">
         <c:forEach items="${proposals}" var="prop">
-
-            <%--<div class="row">--%>
-            <%--<div class="col s12 m6">--%>
-            <%--<div class="card">--%>
-            <%--<div class="card-image">--%>
-            <%--<img src="/images/wall-card.jpg">--%>
-            <%--<span class="card-title">${prop.skillName} ${prop.level}</span>--%>
-            <%--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">submit</i></a>--%>
-            <%--</div>--%>
-            <%--<div class="card-content">--%>
-            <%--<p>${prop.initialDate}</p>--%>
-            <%--<p>${prop.description}</p>--%>
-            <%--</div>--%>
-            <%--</div>--%>
-            <%--</div>--%>
-            <%--</div> --%>
-            <div class="row grid" data-size="${count}">
-                <div class="col s12 m10 l12">
-                    <div class="card medium" data-aos="flip-up">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator profile" data-name=${prop.skillName}}" width="100">
-                        </div>
-                        <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">${prop.skillName} - ${prop.level}
-                    <i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Colaborar</a></p>
-                            <p><a href="#">Visitar colaborador</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">${prop.skillName} - ${prop.level}<i
-                                    class="material-icons right">close</i></span>
-                            <p>${prop.initialDate}</p>
-                            <p>${prop.description}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <a href="#${prop.id}">
+                <li class="hoverable animated flipInY">
+                    <img class="activator profile center-align circle" data-name=${prop.skillName}}">
+                    <h3 class="center-align">${prop.skillName}</h3>
+                    <p class="center-align">${prop.description}</p>
+                </li>
+            </a>
 
         </c:forEach>
-
+        </ul>
 
     </c:if>
 </main>

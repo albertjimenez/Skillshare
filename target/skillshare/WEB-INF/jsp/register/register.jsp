@@ -19,17 +19,50 @@
     <%--Avisa al navegador de que el html es valido para moviles--%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/font-google.css">
+    <link rel="stylesheet" type="text/css" href="/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="/css/my-backgrounds-opac.css">
+
+<style>
+
+    video#bgvid {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+
+        z-index: -100;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        background: url(/images/whiteboard.png) no-repeat;
+        background-size: cover;
+    }
+.section {
+    opacity: 0.9;
+}
+
+</style>
 </head>
 
 <body class="blue lighten-3">
 <md:navbar-md></md:navbar-md>
 
-<h4 class="center-align hoverable z-depth-1-half">Regístrate</h4>
+<h4 class="center-align font-lobster"><strong>Regístrate</strong></h4>
 
+<main class="container">
+
+    <video playsinline autoplay muted loop poster="/images/whiteboard.png" id="bgvid">
+        <source src="/video/whiteboard.webm" type="video/webm">
+        <source src="/video/whiteboard.mp4" type="video/mp4">
+    </video>
 <%--Formulario de registro con objeto Student--%>
-<div class="section z-depth-2 transparent hoverable">
-    <form:form method="post" modelAttribute="studentRegister" onsubmit="return check_register();">
-        <%--TODO he copiado esto de login.jsp,recuerda de cambiarlo a registro--%>
+<div class="section z-depth-2 my-bw-nw">
+    <form:form method="post" modelAttribute="studentRegister" onsubmit="return check_register();" cssClass="animated lightSpeedIn">
         <div class="row">
             <div class="input-field col s6 offset-s3 ">
                 <i class="material-icons prefix">perm_identity</i>
@@ -116,8 +149,8 @@
             </div>
         </div>
     </form:form>
-
 </div>
+</main>
 
 <md:footer-md></md:footer-md>
 
@@ -125,11 +158,14 @@
 <script src="/js/scroll.js"></script>
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
 <script type="text/javascript" src="/js/validador.js"></script>
+<script type="text/javascript" src="/js/aos.js"></script>
 <script>
     $(document).ready(function () {
         $('select').material_select();
     });
 </script>
-
+<script>
+    AOS.init();
+</script>
 </body>
 </html>

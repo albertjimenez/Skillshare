@@ -95,3 +95,11 @@ function checkProposal() {
     return true;
 }
 
+function checkBanned() {
+    if (document.getElementById("nif").value.trim() == '') {
+        Materialize.toast('NIF vacío', 4000, 'rounded');
+        return false;
+    }
+    return true;
+}
+

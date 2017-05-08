@@ -94,26 +94,23 @@ public class LoginRegisterController {
         }
 
         httpSession.setAttribute("user", s);
+        if (s.getType() == Type.CP)
+            model.addAttribute("cp", "-");
         return s.getType() == Type.CP ? "redirect:../home/home_pc.html" : "redirect:../home/home_student.html";
 
 
     }
 
-
-    @RequestMapping(value = "login/banned")
-    public String banned(Model model) {
-
-        return "login/banned";
-    }
+//
+//    @RequestMapping(value = "login/banned")
+//    public String banned(Model model) {
+//
+//        return "login/banned";
+//    }
 
 
     @RequestMapping(value = "/login/logout")
     public String logout(Model model) {
-
-//        if (getSessionStudent()) {
-//            model.addAttribute("name", getStudentName());
-//            model.addAttribute("type", getType());
-//        }
 
         httpSession.invalidate();
         return "login/logout";
@@ -171,6 +168,7 @@ public class LoginRegisterController {
         model.addAttribute("type", getType());
         model.addAttribute("skills", skillDao.getSkillsCollection());
         model.addAttribute("editskill", new Skill());
+        model.addAttribute("cp", "-");
         return "home/home_pc";
     }
 

@@ -64,7 +64,7 @@
 
 <%--<div class="col s8">--%>
 <main class="container">
-            <h4 class="font-lobster center-align blue-text">Crear habilidad</h4>
+    <h4 class="font-lobster center-align blue-text">Crear habilidad</h4>
     <div class="section z-depth-2 my-bw-nw animated fadeInDown ">
                 <form:form method="post" modelAttribute="createskill" onsubmit="white_spaces();">
                     <div class="row">

@@ -1,9 +1,12 @@
 package controller;
 
+import controller.validator.BannedValidator;
 import dao.BannedDao;
 import dao.StudentDao;
 import model.student.BannedStudent;
+import model.student.ErrorCode;
 import model.student.Student;
+import model.student.Type;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -45,6 +48,8 @@ public class BannedController {
 
         if (!getSessionStudent())
             return "redirect:../login/login.html";
+        if (Type.getType(getType()) != Type.CP)
+            return "home/home_student";
         model.addAttribute("name", getStudentName());
 
         List<Student> l = new LinkedList<>();
@@ -52,23 +57,36 @@ public class BannedController {
         for (String nif : bannedList)
             l.add(studentDao.getStudentByNif(nif));
         model.addAttribute("items", l);
-
+        model.addAttribute("cp", "-");
         model.addAttribute("newbanned", new BannedStudent());
         return "banned/ban";
 
     }
 
 
-    @RequestMapping(value = "banned/ban", method = RequestMethod.POST)
+    @RequestMapping(value = "/banned/ban", method = RequestMethod.POST)
     public String createBannedModal(@ModelAttribute(value = "newbanned") BannedStudent b,
                                     BindingResult bindingResult,
                                     Model model) {
+
+        ErrorCode errorCode = bannedDao.ban(b.getNif());
+        BannedValidator bannedValidator = new BannedValidator(errorCode);
+        bannedValidator.validate(b, bindingResult);
+        List<Student> l = new LinkedList<>();
+        List<String> bannedList = bannedDao.getBanneds();
+        for (String s : bannedList)
+            l.add(studentDao.getStudentByNif(s));
+        model.addAttribute("items", l);
+        model.addAttribute("name", getStudentName());
+        model.addAttribute("type", getType());
+        model.addAttribute("cp", "-");
         if (bindingResult.hasErrors()) {
             System.out.println("Tiene errores");
             return "banned/ban";
         }
-        bannedDao.ban(b.getNif());
-        return "redirect:/banned/ban.html";
+
+
+        return "banned/ban";
     }
 
     @RequestMapping(value = "/banned/delete/{nif}")
@@ -76,7 +94,7 @@ public class BannedController {
         if (!getSessionStudent())
             return "redirect:../login/login.html";
         model.addAttribute("name", getStudentName());
-
+        model.addAttribute("type", getType());
         //Añado esto porque sino peta el modal JSP
         model.addAttribute("newbanned", new BannedStudent());
         bannedDao.deleteBanned(nif);
@@ -89,6 +107,7 @@ public class BannedController {
         model.addAttribute("items", l);
 
 
+        model.addAttribute("cp", "-");
         return "banned/ban";
 
     }
@@ -102,4 +121,10 @@ public class BannedController {
         Student student = (Student) httpSession.getAttribute("user");
         return student.getName();
     }
+
+    private String getType() {
+        Student student = (Student) httpSession.getAttribute("user");
+        return Type.getName(student.getType().toString());
+    }
+
 }

@@ -40,6 +40,8 @@ public class RequestController {
         List<Request> l = requestDao.getRequestsByNif(student.getNif());
         model.addAttribute("requests", l);
         model.addAttribute("count", l.size());
+        if (Type.getType(getType()) == Type.CP)
+            model.addAttribute("cp", "-");
         return "request/list";
     }
 
