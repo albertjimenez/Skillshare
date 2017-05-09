@@ -28,7 +28,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
-            font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+            font-family: Raleway, Open Sans, Droid Sans, Roboto, arial, sans-serif;
         }
 
         .blurred-bg {
@@ -98,7 +98,7 @@
                         <div class="input-field col s6 offset-s3 ">
                             <i class="material-icons prefix">toc</i>
                             <form:label path="description">Descripción</form:label>
-                            <form:textarea path="description" id="description" cssClass="validate"/>
+                            <form:textarea path="description" id="description" cssClass="validate" data-length="140" maxlength="140"/>
                         </div>
                         <div class="input-field col s6 offset-s3 ">
                             <button class="btn waves-effect waves-light" type="submit" name="action">Crear
@@ -134,6 +134,11 @@
 
     });
 </script>
+<script>
+    $(document).ready(function () {
+        $('input#input_text, textarea#textarea1').characterCounter();
+    });
 
+</script>
 </body>
 </html>

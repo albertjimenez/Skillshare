@@ -104,7 +104,7 @@
                         <i class="material-icons prefix">mode_edit</i>
                         <form:label path="description">Descripción breve</form:label>
                         <form:textarea path="description" cssClass="materialize-textarea" id="description"
-                                       data-length="140"></form:textarea>
+                                       data-length="140" maxlength="140"></form:textarea>
                         <form:errors path="description"></form:errors>
                     </div>
                 </div>

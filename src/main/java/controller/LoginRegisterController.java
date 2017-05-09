@@ -169,9 +169,12 @@ public String banned(Model model) {
         model.addAttribute("type", getType());
         model.addAttribute("skills", skillDao.getSkillsCollection());
         model.addAttribute("editskill", new Skill());
-        if (Type.getType(getType()) == Type.CP)
+        Student student = (Student) httpSession.getAttribute("user");
+        System.out.println(student.getType() == Type.CP);
+        System.out.println(student.getType());
+        //TODO esto es lo que funciona
+        if (student.getType() == Type.CP)
             model.addAttribute("cp", "-");
-
         else
             return "redirect:../home/home_student.html";
         return "home/home_pc";

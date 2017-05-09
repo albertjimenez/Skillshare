@@ -30,7 +30,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+        font-family: Raleway, Open Sans, Droid Sans, Roboto, arial, sans-serif;
     }
 
     .blurred-bg {

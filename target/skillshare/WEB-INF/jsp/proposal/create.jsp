@@ -25,12 +25,13 @@
 
     <style>
         @import url(http://fonts.googleapis.com/css?family=Raleway:100,400,700);
+
         body {
             background-image: url("/images/proposal-create.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
-            font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+            font-family: Raleway, Open Sans, Droid Sans, Roboto, arial, sans-serif;
         }
 
         .blurred-bg {
@@ -47,9 +48,6 @@
     </style>
 </head>
 <body class="blue lighten-3">
-
-
-
 
 
 <header>
@@ -77,7 +75,7 @@
 <%--<div class="col s12 m8 l9" style="height: 100%">--%>
 <main class="container">
     <h4 class="font-lobster animated lightSpeedIn center-align">Crear oferta</h4>
-        <div class=" valign hoverable z-depth-2 my-bw-nw blurred-bg tinted shaded blue-text animated flipInY blue-text" >
+    <div class=" valign hoverable z-depth-2 my-bw-nw blurred-bg tinted shaded blue-text animated flipInY blue-text">
             <form:form method="post" modelAttribute="newproposal" onsubmit="return checkProposal();">
 
                 <div class="row">
@@ -106,7 +104,7 @@
                         <i class="material-icons prefix">mode_edit</i>
                         <form:label path="description">Descripción breve</form:label>
                         <form:textarea path="description" cssClass="materialize-textarea" id="description"
-                                       data-length="140"></form:textarea>
+                                       data-length="140" maxlength="140"></form:textarea>
                         <form:errors path="description"></form:errors>
                     </div>
                 </div>
