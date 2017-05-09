@@ -26,4 +26,20 @@ public enum Level {
                 return Level.N;
         }
     }
+
+    public static String getLevelToString(Level level) {
+        switch (level) {
+            case A:
+                return "Avanzado";
+            case M:
+                return "Medio";
+            default:
+                return "Novato";
+        }
+    }
+
+    @Override
+    public String toString() {
+        return getLevelToString(this);
+    }
 }

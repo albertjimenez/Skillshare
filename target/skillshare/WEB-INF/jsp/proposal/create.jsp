@@ -20,10 +20,37 @@
     <%--Avisa al navegador de que el html es valido para moviles--%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="/css/animate.css" rel="stylesheet">
+    <link href="/css/my-backgrounds-opac.css" rel="stylesheet">
 
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Raleway:100,400,700);
+        body {
+            background-image: url("/images/proposal-create.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+        }
+
+        .blurred-bg {
+            background-image: url("/images/proposal-create-blur.jpg");
+            background-repeat: no-repeat;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+
+    </style>
 </head>
 <body class="blue lighten-3">
+
+
+
+
 
 <header>
     <md:navbar-md name="${name}"></md:navbar-md>
@@ -32,19 +59,25 @@
 
 <%--<div class="row">--%>
     <%--Panel lateral movil--%>
-<md:sidenav-md name="${name}" type="${type}">
-    <ul>
-            <li>
-                <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
-            </li>
-        </ul>
+<md:sidenav-md name="${name}" type="${type}" cp="${cp}">
+    <li>
+        <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
+    </li>
+    <li>
+        <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/all.html">Ofertas de la
+            comunidad</a>
+    </li>
+    <li>
+        <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Peticiones</a>
+    </li>
+
 </md:sidenav-md>
 
     <%--Resto fondo web--%>
 <%--<div class="col s12 m8 l9" style="height: 100%">--%>
-<main>
-    <h4 class="font-raleway">Crear oferta</h4>
-        <div class="container valign hoverable z-depth-2">
+<main class="container">
+    <h4 class="font-lobster animated lightSpeedIn center-align">Crear oferta</h4>
+        <div class=" valign hoverable z-depth-2 my-bw-nw blurred-bg tinted shaded blue-text animated flipInY blue-text" >
             <form:form method="post" modelAttribute="newproposal" onsubmit="return checkProposal();">
 
                 <div class="row">

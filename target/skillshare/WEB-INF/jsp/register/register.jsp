@@ -120,8 +120,8 @@
             <div class="row">
                 <div class="input-field col s6 offset-s3 ">
                     <i class="material-icons prefix">assignment</i>
-                    <form:label path="course">Curso</form:label>
-                    <%--<form:input path="course" id="course" cssClass="validate"/>--%>
+                    <form:label path="course"></form:label>
+                        <%--<form:input path="course" id="course" cssClass="validate"/>--%>
                     <form:select path="course">
                         <form:option value="" disabled="true">
                             Escoge tu curso</form:option>
@@ -132,9 +132,7 @@
                         <form:option value="5">Quinto curso</form:option>
                         <form:option value="6">Sexto curso</form:option>
                     </form:select>
-                    <%--<i class="materialize-red-text">--%>
-                        <%--<form:errors path="course"/>--%>
-                    <%--</i>--%>
+
                 </div>
             </div>
 

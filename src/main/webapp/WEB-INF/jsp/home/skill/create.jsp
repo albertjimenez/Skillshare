@@ -22,13 +22,25 @@
     <link type="text/css" href="/css/animate.css">
     <link href="/css/my-backgrounds-opac.css" rel="stylesheet">
     <style>
+        @import url(http://fonts.googleapis.com/css?family=Raleway:100,400,700);
         body {
             background-image: url("/images/background-create-skill.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Raleway, Open Sans, Droid Sans, Roboto, arial, sans-serif;
         }
 
-        main {
-            opacity: 0.85;
+        .blurred-bg {
+            background-image: url("/images/background-create-skill-blur.jpg");
+            background-repeat: no-repeat;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-attachment: fixed;
         }
+
     </style>
 </head>
 <body class="blue lighten-3">
@@ -65,7 +77,7 @@
 <%--<div class="col s8">--%>
 <main class="container">
     <h4 class="font-lobster center-align blue-text">Crear habilidad</h4>
-    <div class="section z-depth-2 my-bw-nw animated fadeInDown ">
+    <div class="section z-depth-2 my-bw-nw animated fadeInDown blurred-bg blue-text">
                 <form:form method="post" modelAttribute="createskill" onsubmit="white_spaces();">
                     <div class="row">
                         <div class="input-field col s6 offset-s3 ">

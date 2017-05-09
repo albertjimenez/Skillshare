@@ -28,6 +28,8 @@ public class ProposalDao {
     }
 
 
+    //TODO return Maps instead of List
+
     public List<Proposal> getProposals() {
         String sql = "select id , nif , skill_name , skill_level , description  , initial_date , finish_date " +
                 " from proposal_of_collaboration order by initial_date, skill_name";

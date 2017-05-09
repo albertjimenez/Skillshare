@@ -24,9 +24,25 @@
 </head>
 
 <style>
+    @import url(http://fonts.googleapis.com/css?family=Raleway:100,400,700);
     body {
         background-image: url("/images/banned-jail.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: Raleway, Open Sans, Droid Sans, Roboto, arial, sans-serif;
     }
+
+    .blurred-bg {
+        background-image: url("/images/banned-jail-blur.jpg");
+        background-repeat: no-repeat;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
 </style>
 <body class="blue lighten-3">
 
@@ -58,18 +74,8 @@
     </ul>
 </md:sidenav-md>
 
-<main class="container">
+<main class="container ">
 
-    <%--<div class="fixed-action-btn horizontal">--%>
-    <%--<a class="btn-floating btn-large blue">--%>
-    <%--<i class="material-icons">menu</i>--%>
-    <%--</a>--%>
-    <%--<ul>--%>
-    <%--<li><a class="btn-floating green" href="#modal1">--%>
-    <%--<i class="material-icons">playlist_add</i></a></li>--%>
-    <%--</ul>--%>
-    <%--</div>--%>
-    <%--Boton material de crear solicitud--%>
     <div class="fixed-action-btn horizontal">
         <a class="btn-floating btn-large red">
             <i class="material-icons">menu</i>
@@ -83,7 +89,7 @@
 
     <%--<div class="col s12 m8 l9" style="height: 100%">--%>
     <c:if test="${empty items}">
-        <div class="valign-wrapper">
+        <div class="valign-wrapper ">
             <a class="valign" style="font-size: 50px;text-align: center">
                 <i class="material-icons valign" style="font-size: 200px; text-align: center">insert_invitation</i>
                 <br>
@@ -95,7 +101,7 @@
         <%--Boton fijo--%>
 
 
-        <ul class="collapsible popout" data-collapsible="accordion" style="">
+        <ul class="collapsible popout " data-collapsible="accordion">
             <c:forEach items="${items}" var="item">
 
                 <md:desplegable-md name="${item.name}" name2="${item.username}">

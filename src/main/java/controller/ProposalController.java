@@ -57,8 +57,11 @@ public class ProposalController {
         model.addAttribute("proposals", l);
         model.addAttribute("count", l.size());
 
-        if (Type.getType(getType()) == Type.CP)
+        if (Type.getType(getType()) == Type.CP) {
+            System.out.println(Type.getType(getType()));
+            System.out.println(Type.getType(getType()) == Type.CP);
             model.addAttribute("cp", "-");
+        }
         return "proposal/all";
 
     }

@@ -32,7 +32,7 @@
 </header>
 
 
-<md:sidenav-md name="${name}" type="${type}">
+<md:sidenav-md name="${name}" type="${type}" cp="${cp}">
     <ul>
         <li>
             <a class="waves-effect" href="${pageContext.request.contextPath}/home/home_pc.html">Mi área</a>
@@ -82,7 +82,7 @@
             <a href="#${prop.id}">
                 <li class="hoverable animated flipInY">
                     <img class="activator profile center-align circle" data-name=${prop.skillName}}">
-                    <h3 class="center-align">${prop.skillName}</h3>
+                    <h3 class="center-align">${prop.skillName} ${prop.level}</h3>
                     <p class="center-align">${prop.description}</p>
                 </li>
             </a>

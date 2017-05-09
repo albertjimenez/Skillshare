@@ -169,7 +169,11 @@ public String banned(Model model) {
         model.addAttribute("type", getType());
         model.addAttribute("skills", skillDao.getSkillsCollection());
         model.addAttribute("editskill", new Skill());
-        model.addAttribute("cp", "-");
+        if (Type.getType(getType()) == Type.CP)
+            model.addAttribute("cp", "-");
+
+        else
+            return "redirect:../home/home_student.html";
         return "home/home_pc";
     }
 
