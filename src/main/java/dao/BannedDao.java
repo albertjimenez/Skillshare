@@ -1,6 +1,5 @@
 package dao;
 
-import mapper.StudentMapper;
 import model.student.ErrorCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -72,7 +71,7 @@ public class BannedDao {
         } catch (EmptyResultDataAccessException e) {
 
             try {
-                jdbcTemplate.queryForObject(checkStudent, new Object[]{nif}, new StudentMapper());
+                jdbcTemplate.queryForObject(checkStudent, new Object[]{nif}, String.class);
                 jdbcTemplate.update(insert, nif);
                 return ErrorCode.BANNED;
             } catch (EmptyResultDataAccessException e1) {

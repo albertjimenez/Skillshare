@@ -19,18 +19,19 @@
     <%--Avisa al navegador de que el html es valido para moviles--%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/css/my-backgrounds-opac.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
 
 <style>
-    @import url(http://fonts.googleapis.com/css?family=Raleway:100,400,700);
+    /*@import url(http://fonts.googleapis.com/css?family=Raleway:100,400,700);*/
     body {
         background-image: url("/images/banned-jail.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        font-family: Raleway, Open Sans, Droid Sans, Roboto, arial, sans-serif;
+        /*font-family: Raleway, Open Sans, Droid Sans, Roboto, arial, sans-serif;*/
     }
 
     .blurred-bg {
@@ -101,7 +102,7 @@
         <%--Boton fijo--%>
 
 
-        <ul class="collapsible popout " data-collapsible="accordion">
+        <ul class="collapsible popout blurred-bg" data-collapsible="accordion">
             <c:forEach items="${items}" var="item">
 
                 <md:desplegable-md name="${item.name}" name2="${item.username}">

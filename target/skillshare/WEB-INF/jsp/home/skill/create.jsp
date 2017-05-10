@@ -98,7 +98,8 @@
                         <div class="input-field col s6 offset-s3 ">
                             <i class="material-icons prefix">toc</i>
                             <form:label path="description">Descripción</form:label>
-                            <form:textarea path="description" id="description" cssClass="validate" data-length="140" maxlength="140"/>
+                            <form:textarea path="description" id="description" cssClass="validate" data-length="140"
+                                           maxlength="140"/>
                         </div>
                         <div class="input-field col s6 offset-s3 ">
                             <button class="btn waves-effect waves-light" type="submit" name="action">Crear
