@@ -72,7 +72,7 @@ public class BannedController {
                                     BindingResult bindingResult,
                                     Model model) {
 
-        ErrorCode errorCode = bannedDao.ban(b.getNif());
+        ErrorCode errorCode = bannedDao.ban(b.getNif().toUpperCase());
         BannedValidator bannedValidator = new BannedValidator(errorCode);
         bannedValidator.validate(b, bindingResult);
         List<Student> l = new LinkedList<>();

@@ -176,7 +176,6 @@ public class LoginRegisterController {
         Student student = (Student) httpSession.getAttribute("user");
         System.out.println(student.getType() == Type.CP);
         System.out.println(student.getType());
-        //TODO esto es lo que funciona
         if (student.getType() == Type.CP)
             model.addAttribute("cp", "-");
         else

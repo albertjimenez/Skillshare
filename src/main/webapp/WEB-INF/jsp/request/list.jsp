@@ -11,7 +11,6 @@
 <html>
 <head>
     <title>Mis peticiones</title>
-    <title>Home Promotor de colaboraciones</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection"/>
@@ -20,10 +19,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
+    <style>
+        body {
+            background-image: url("/images/background-list-req.jpg");
+        }
+    </style>
 </head>
 <body class="blue lighten-3">
 
@@ -68,7 +68,7 @@
             <a class="valign" style="font-size: 50px;text-align: center">
                 <i class="material-icons valign" style="font-size: 200px; text-align: center">insert_invitation</i>
                 <br>
-                Esto está vacío... Prueba a empezar creando alguna oferta.</a>
+                Esto está vacío... Prueba creando alguna petición.</a>
         </div>
     </c:if>
     <c:if test="${not empty requests}">

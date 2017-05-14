@@ -48,9 +48,7 @@
 <%--<div class="row">--%>
 
 <md:sidenav-md name="${name}" type="${type}">
-    <li>
-        <a class="waves-effect" href="${pageContext.request.contextPath}/home/home_pc.html">Colección de Habilidades</a>
-    </li>
+
     <li>
         <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
     </li>
@@ -61,11 +59,7 @@
     <li>
         <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Peticiones</a>
     </li>
-    <li><a class="subheader">Promotor de colaboraciones</a></li>
-    <li>
-        <a class="waves-effect" href="${pageContext.request.contextPath}/banned/ban.html">
-            <i class="material-icons">warning</i>Lista de baneados</a>
-    </li>
+
 </md:sidenav-md>
 
     <%--Resto de la página--%>
@@ -123,6 +117,8 @@
 <script type="text/javascript" src="/js/materialize.min.js"></script>
 <script src="/js/scroll.js"></script>
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
+<script type="text/javascript" src="/js/aos.js"></script>
+
 <script>
     $(document).ready(function () {
         $('select').material_select();

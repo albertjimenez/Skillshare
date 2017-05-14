@@ -13,7 +13,9 @@ import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.TreeSet;
 
 /**
  * Created by Beruto and Pablo Berbel on 15/3/17. Project -> skillshare
@@ -82,15 +84,16 @@ public class SkillDao {
     }
 
 
-    public List<String> listSkillNames() {
-        String sql = "Select name from skill order by name";
+    public Collection<String> listSkillNames() {
+        String sql = "Select name from skill";
+
         try {
-            return jdbcTemplate.query(sql, new RowMapper<String>() {
+            return new TreeSet<>(jdbcTemplate.query(sql, new RowMapper<String>() {
                 @Override
                 public String mapRow(ResultSet resultSet, int i) throws SQLException {
                     return resultSet.getString("name");
                 }
-            });
+            }));
         } catch (EmptyResultDataAccessException e) {
             return new ArrayList<>();
         }

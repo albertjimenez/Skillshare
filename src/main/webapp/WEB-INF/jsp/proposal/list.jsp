@@ -21,7 +21,7 @@
     <%--Avisa al navegador de que el html es valido para moviles--%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
 
 </head>
 <body class="blue lighten-3">
@@ -67,7 +67,6 @@
     </div>
 
 
-    <%--TODO comprobar que si no tiene ni request ni proposals salga el texto de no tiene na--%>
     <c:if test="${empty proposals}">
         <div class="valign-wrapper">
             <a class="valign" style="font-size: 50px;text-align: center">

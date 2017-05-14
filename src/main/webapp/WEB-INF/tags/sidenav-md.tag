@@ -39,16 +39,20 @@
                     <span class="blue-text lighten-1">${name}</span></a>
                 <a href="#${pageContext.request.contextPath}/login/login.html">
                     <span class="blue-text lighten-1 name">${type}</span></a>
-                <a href="${pageContext.request.contextPath}/login/logout.html">
+
+            </c:if>
+            <c:if test="${not empty cp}">
+                <a class="subheader">Promotor de colaboraciones</a>
+                <a class="waves-effect" href="${pageContext.request.contextPath}/banned/ban.html">
+                    <i class="material-icons">warning</i>Lista de baneados</a>
+                <a class="waves-effect" href="${pageContext.request.contextPath}/home/home_pc.html">
+                    Listado de Habilidades</a>
+            </c:if>
+            <a href="${pageContext.request.contextPath}/login/logout.html">
                         <span class="red-text darken-2">
                             Salir
                         </span>
-                </a>
-            </c:if>
-            <c:if test="${not empty cp}">
-                <a class="waves-effect" href="${pageContext.request.contextPath}/banned/ban.html">
-                    <i class="material-icons">warning</i>Lista de baneados</a>
-            </c:if>
+            </a>
         </div>
     </li>
     <li><a class="subheader">Herramientas</a></li>

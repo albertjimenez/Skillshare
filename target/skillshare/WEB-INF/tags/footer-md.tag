@@ -4,7 +4,7 @@
   Date: 17/4/17
   Time: 14:34
 --%>
-<footer class="page-footer light-blue">
+<footer class="page-footer light-blue z-depth-2">
     <div class="container">
         <div class="row">
             <div class="col l6 s12">

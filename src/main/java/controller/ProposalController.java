@@ -57,11 +57,8 @@ public class ProposalController {
         model.addAttribute("proposals", l);
         model.addAttribute("count", l.size());
 
-        if (Type.getType(getType()) == Type.CP) {
-            System.out.println(Type.getType(getType()));
-            System.out.println(Type.getType(getType()) == Type.CP);
+        if (student.getType() == Type.CP)
             model.addAttribute("cp", "-");
-        }
         return "proposal/all";
 
     }
@@ -79,7 +76,7 @@ public class ProposalController {
         model.addAttribute("proposals", l);
         model.addAttribute("count", l.size());
 
-        if (Type.getType(getType()) == Type.CP)
+        if (student.getType() == Type.CP)
             model.addAttribute("cp", "-");
         return "proposal/list";
 
@@ -102,7 +99,7 @@ public class ProposalController {
         System.out.println("Calendario" + calendar.getTime().toString());
 
 
-        if (Type.getType(getType()) == Type.CP)
+        if (student.getType() == Type.CP)
             model.addAttribute("cp", "-");
 
 
