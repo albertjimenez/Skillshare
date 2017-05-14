@@ -64,7 +64,6 @@
     </div>
 
 
-    <%--TODO abrir el otro div donde va el resto de la web (NO panel)--%>
 
 </body>
 </html>

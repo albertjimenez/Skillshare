@@ -127,6 +127,7 @@ public class ProposalController {
         }
         if (proposal.getFinishDate() == null || proposal.getInitialDate() == null)
             return "proposal/create";
+        System.out.println(proposal);
         Student student = (Student) httpSession.getAttribute("user");
         String name = getStudentName();
         model.addAttribute("name", name);

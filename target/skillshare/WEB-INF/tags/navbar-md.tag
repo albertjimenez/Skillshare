@@ -22,7 +22,8 @@
                      class="responsive-img z-depth-2" alt="" width="40" height="40">
                 <span class="font-lobster">Skillshare</span>
             </a>
-            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i
+            <a onmouseenter="showSideNav();" href="#" data-activates="slide-out"
+               class="button-collapse show-on-large"><i
                     class="material-icons">menu</i></a>
 
             <%--<a href="#" data-activates="mobile-demo" class="button-collapse">--%>
@@ -65,3 +66,8 @@
         </div>
     </nav>
 </div>
+<script>
+    function showSideNav() {
+        $('.button-collapse').sideNav('show');
+    }
+</script>
