@@ -22,6 +22,7 @@
     <link type="text/css" rel="stylesheet" href="/css/animate.css">
     <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
     <link type="text/css" rel="stylesheet" href="/css/my-backgrounds-opac.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/loader-bar.css"/>
     <title>Iniciar sesión</title>
 </head>
 <style>
@@ -50,6 +51,12 @@
 <header>
     <md:navbar-md></md:navbar-md>
 </header>
+
+<div class="load-bar" id="load-bar">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</div>
 <main class="container">
     <h4 class="center-align animated slideInDown font-lobster">Inicia la sesión</h4>
 
@@ -95,9 +102,9 @@
     </form:form>
 </div>
 
-<div class="progress" id="progress">
-    <div class="indeterminate"></div>
-</div>
+    <%--<div class="progress" id="progress">--%>
+    <%--<div class="indeterminate"></div>--%>
+    <%--</div>--%>
 </main>
 <%--Footer--%>
 <md:footer-md></md:footer-md>
@@ -107,12 +114,14 @@
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
 <script type="text/javascript" src="/js/validador.js"></script>
 <script>
-    $("#progress").hide();
+    $("#load-bar").hide();
 </script>
 
 <script>
     $("#login_btn").click(function () {
-        $(".progress").show();
+//        $(".progress").show();
+        $('#load-bar').show();
+
     });
 </script>
 <script>

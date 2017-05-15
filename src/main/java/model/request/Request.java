@@ -12,7 +12,8 @@ public class Request {
     private AtomicInteger id;
     private String nif, description, skillName;
     private Level level;
-    private Date initialDate, finishDate;
+    private Date initialDate;
+    private Date finishDate;
 
     public AtomicInteger getId() {
         return id;
@@ -59,7 +60,7 @@ public class Request {
     }
 
     public void setInitialDate(Date initialDate) {
-        this.initialDate = this.initialDate;
+        this.initialDate = initialDate;
     }
 
     public Date getFinishDate() {

@@ -76,7 +76,7 @@ public class RequestController {
 
     }
 
-    @DateTimeFormat(pattern = "dd-MM-yyyy")
+
     @RequestMapping(value = "/request/create", method = RequestMethod.POST)
     public String processCreateProposal(@ModelAttribute("newrequest") Request request,
                                         BindingResult bindingResult, Model model) {

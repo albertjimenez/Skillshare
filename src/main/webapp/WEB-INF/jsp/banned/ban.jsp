@@ -87,7 +87,7 @@
         </ul>
     </div>
 
-
+    <h4 class="center-align font-lobster blue-text"><strong>Listado de baneados</strong></h4>
     <%--<div class="col s12 m8 l9" style="height: 100%">--%>
     <c:if test="${empty items}">
         <div class="valign-wrapper ">
@@ -102,7 +102,7 @@
         <%--Boton fijo--%>
 
 
-        <ul class="collapsible popout blurred-bg" data-collapsible="accordion">
+        <ul class="collapsible popout" data-collapsible="accordion">
             <c:forEach items="${items}" var="item">
 
                 <md:desplegable-md name="${item.name}" name2="${item.username}">
