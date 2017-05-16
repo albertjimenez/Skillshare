@@ -63,6 +63,8 @@ public class LoginRegisterController {
         this.bannedDao = bannedDao;
     }
 
+    private static boolean registered = false;
+
     @RequestMapping(value = "/login/login")
     public String login(Model model) {
 
@@ -134,6 +136,7 @@ public class LoginRegisterController {
         model.addAttribute("UJI", data);
         model.addAttribute("degrees", dataDegrees());
         model.addAttribute("masters", dataMasters());
+        model.addAttribute("success", "success");
 
 
         return "register/register";
@@ -158,6 +161,9 @@ public class LoginRegisterController {
 
         student.setNif(student.getNif().toUpperCase());
         studentDao.addStudent(student);
+        httpSession.setAttribute("user", student);
+        registered = true;
+        model.addAttribute("success", "Estudiante " + student.getName() + " registrado correctamente");
         return switchUserType(student);
 
     }
@@ -176,6 +182,10 @@ public class LoginRegisterController {
         Student student = (Student) httpSession.getAttribute("user");
         System.out.println(student.getType() == Type.CP);
         System.out.println(student.getType());
+        if (registered) {
+            model.addAttribute("success", "Estudiante " + student.getName() + " registrado correctamente");
+            registered = false;
+        }
         if (student.getType() == Type.CP)
             model.addAttribute("cp", "-");
         else
@@ -195,6 +205,10 @@ public class LoginRegisterController {
         model.addAttribute("name", name);
         model.addAttribute("type", Type.getName(student.getType().toString()));
         model.addAttribute("proposals", proposalDao.getProposalsByNif(student.getNif()));
+        if (registered) {
+            model.addAttribute("success", "Estudiante " + student.getName() + " registrado correctamente");
+            registered = false;
+        }
 
 
         return "home/home_student";

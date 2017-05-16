@@ -22,6 +22,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script>
         function showSideNav() {
             $('.button-collapse').sideNav('show');
@@ -92,13 +95,22 @@
 <script type="text/javascript" src="/js/materialize.min.js"></script>
 <script src="/js/scroll.js"></script>
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
+<script type="text/javascript" src="/js/mytoast.js"></script>
 <script>
     $(document).ready(function () {
         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
         $('.modal').modal();
     });
 </script>
-
+<script>
+    $(document).ready(function () {
+        var suc = '${success}';
+        console.log(suc);
+        if (suc != null && suc.length > 0) {
+            mytoast('Éxito', suc);
+        }
+    });
+</script>
 
 </body>
 </html>

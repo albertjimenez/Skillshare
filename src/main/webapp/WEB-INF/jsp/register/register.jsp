@@ -22,6 +22,9 @@
     <link rel="stylesheet" type="text/css" href="/css/font-google.css">
     <link rel="stylesheet" type="text/css" href="/css/animate.css">
     <link rel="stylesheet" type="text/css" href="/css/my-backgrounds-opac.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
     <style>
 
@@ -52,6 +55,13 @@
 
 <body class="blue lighten-3">
 <md:navbar-md></md:navbar-md>
+
+<md:sidenav-md>
+    <li><a class="grey-text text-lighten-3" href="${pageContext.request.contextPath}/login/login.html">Entrar</a>
+    </li>
+    <li><a class="grey-text text-lighten-3"
+           href="${pageContext.request.contextPath}/register/register.html">Registro</a></li>
+</md:sidenav-md>
 
 <h4 class="center-align font-lobster"><strong>Regístrate</strong></h4>
 
@@ -180,6 +190,7 @@
         $('select').material_select();
     });
 </script>
+<script src="/js/mytoast.js"></script>
 <script>
     AOS.init();
 </script>

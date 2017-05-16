@@ -23,6 +23,9 @@
     <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
     <link type="text/css" rel="stylesheet" href="/css/my-backgrounds-opac.css"/>
     <link type="text/css" rel="stylesheet" href="/css/loader-bar.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <title>Iniciar sesión</title>
 </head>
 <style>
