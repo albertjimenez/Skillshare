@@ -21,6 +21,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/my-backgrounds-opac.css" rel="stylesheet">
     <link href="/css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <style>
         body {
             background-image: url("/images/background-create-req.jpg");
@@ -54,8 +57,8 @@
 
 <main class="container">
     <h4 class="center-align font-lobster">Crear petición</h4>
-    <div class="section z-depth-2 my-bw-nw animated fadeInDown ">
-        <form:form method="post" modelAttribute="newrequest" id="myform">
+    <div class="section z-depth-2 my-bw-nw animated fadeInDown" id="myForm">
+        <form:form method="post" modelAttribute="newrequest" onsubmit="return checkProposalRequest();">
             <div class="row">
                 <div class="input-field col s6 offset-s3 ">
                     <form:select path="skillName">
@@ -83,7 +86,7 @@
                     <form:label path="description">Descripción breve</form:label>
                     <form:textarea path="description" cssClass="materialize-textarea" id="description"
                                    data-length="140" maxlength="140"></form:textarea>
-                    <form:errors path="description"></form:errors>
+                    <form:errors path="description" id="errorDescription"></form:errors>
                 </div>
             </div>
             <div class="row">
@@ -91,7 +94,7 @@
                     <i class="material-icons prefix">date_range</i>
                     <form:label path="initialDate">Fecha de inicio</form:label>
                     <form:input path="initialDate" cssClass="datepicker" id="initialDate"></form:input>
-                    <form:errors path="initialDate"></form:errors>
+                    <form:errors path="initialDate" id="errorinitialDate"></form:errors>
                 </div>
             </div>
             <div class="row">
@@ -99,7 +102,7 @@
                     <i class="material-icons prefix">date_range</i>
                     <form:label path="finishDate">Fecha de fin</form:label>
                     <form:input path="finishDate" cssClass="datepicker" id="finishDate"></form:input>
-                    <form:errors path="finishDate"></form:errors>
+                    <form:errors path="finishDate" id="errorfinishDate"></form:errors>
                 </div>
             </div>
             <div class="row">
@@ -122,16 +125,14 @@
 <script src="/js/scroll.js"></script>
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
 <script type="text/javascript" src="/js/aos.js"></script>
-<script type="text/javascript" src="/js/initial.min.js"></script>
+<script type="text/javascript" src="/js/validador.js"></script>
 <script>
     $(document).ready(function () {
         $('select').material_select();
     });
 </script>
 
-<script>
-    $('.profile').initial();
-</script>
+
 <script>
     AOS.init();
 </script>
@@ -140,6 +141,23 @@
         selectMonths: true, // Creates a dropdown to control month
         selectYears: 15 // Creates a dropdown of 15 years to control year
     });
+</script>
+<script>
+    if ($('#errorinitialDate').get().length > 0) {
+        $('#myForm').removeClass('animated fadeInDown');
+        $('#initialDate').addClass('animated shake');
+        toastr.warning('Revisa la fecha');
+    }
+    if ($('#errorfinishlDate').get().length > 0) {
+        $('#myForm').removeClass('animated fadeInDown');
+        $('#finishDate').addClass('animated shake');
+        toastr.warning('Revisa la fecha');
+    }
+    if ($('#errorDescription').get().length > 0) {
+        $('#myForm').removeClass('animated fadeInDown');
+        $('#description').addClass('animated shake');
+        toastr.warning('Descripción vacía');
+    }
 </script>
 </body>
 </html>

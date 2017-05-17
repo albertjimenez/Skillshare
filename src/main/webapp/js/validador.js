@@ -79,7 +79,7 @@ function white_spaces() {
     return true;
 }
 
-function checkProposal() {
+function checkProposalRequest() {
     if (document.getElementById("description").value.trim() == '') {
         Materialize.toast('Descripción vacía', 4000, 'rounded');
         return false;

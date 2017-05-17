@@ -190,7 +190,6 @@
         $('select').material_select();
     });
 </script>
-<script src="/js/mytoast.js"></script>
 <script>
     AOS.init();
 </script>

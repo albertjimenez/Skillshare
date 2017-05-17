@@ -45,16 +45,6 @@ public class ProposalDao {
         }
     }
 
-    //Esto es para buscar propuestas
-    public List<Proposal> findBySkillName(String skillName) {
-        final String likeSkillName = '%' + skillName + '%';
-        String sql = "select * from proposal_of_collaboration where skill_name like " + likeSkillName + " order by initial_date, skill_name";
-        try {
-            return jdbcTemplate.query(sql, new Object[]{skillName}, new ProposalMapper());
-        } catch (EmptyResultDataAccessException e) {
-            return new ArrayList<>();
-        }
-    }
 
     public void createProposal(Proposal proposal) {
         String sql = "INSERT INTO proposal_of_collaboration VALUES(" + sequence + ",?,?,?,?,?,?" + ")";

@@ -22,7 +22,8 @@
     <link rel="stylesheet" type="text/css" href="/css/font-google.css">
     <link rel="stylesheet" type="text/css" href="/css/animate.css">
     <link rel="stylesheet" type="text/css" href="/css/my-backgrounds-opac.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
     <style>
@@ -189,7 +190,6 @@
         $('select').material_select();
     });
 </script>
-<script src="/js/mytoast.js"></script>
 <script>
     AOS.init();
 </script>

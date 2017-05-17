@@ -16,9 +16,11 @@
     <div class="collapsible-header blue lighten-4 z-depth-3">
         <%--<i class="material-icons">--%>
         <%--touch_app</i>--%>
-        <img class="circle activator profile center-align" data-name=${name}}" height="50" width="50">
-        <span>
-            ${name} ${name2}
+            <div>
+        <img class=" activator profile" data-name=${name}}">
+            </div>
+        <span class="font-raleway">
+            Nombre: ${name} /\ ${name2}
         </span>
     </div>
 

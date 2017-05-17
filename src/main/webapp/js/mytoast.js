@@ -1,10 +1,10 @@
 /**
  * Created by Beruto on 16/5/17.
  */
-function mytoast(title, message) {
+function mytoast(message) {
     $(document).ready(function () {
 
 
-        toastr.success(title, message);
+        toastr.success(message);
     });
 }

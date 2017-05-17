@@ -23,7 +23,8 @@
     <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
     <link type="text/css" rel="stylesheet" href="/css/my-backgrounds-opac.css"/>
     <link type="text/css" rel="stylesheet" href="/css/loader-bar.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <title>Iniciar sesión</title>
 </head>
@@ -62,47 +63,47 @@
 <main class="container">
     <h4 class="center-align animated slideInDown font-lobster">Inicia la sesión</h4>
 
-<%--Abrimos formulario--%>
+    <%--Abrimos formulario--%>
     <div class="section z-depth-2 my-bw-nw  hoverable animated slideInUp" id="myForm">
-    <form:form method="post" modelAttribute="loginEntity" onsubmit="return check();">
-        <div class="row" id="userSection">
-            <div class="input-field col s6 offset-s3 ">
-                <i class="material-icons prefix">account_circle</i>
-                <form:label path="user">Email o nombre de usuario</form:label>
-                <form:input path="user" id="user" cssClass="validate"/>
-                <i class="materialize-red-text">
-                    <form:errors path="user"/>
-                </i>
+        <form:form method="post" modelAttribute="loginEntity" onsubmit="return check();">
+            <div class="row" id="userSection">
+                <div class="input-field col s6 offset-s3 ">
+                    <i class="material-icons prefix">account_circle</i>
+                    <form:label path="user">Email o nombre de usuario</form:label>
+                    <form:input path="user" id="user" cssClass="validate"/>
+                    <i class="materialize-red-text">
+                        <form:errors path="user"/>
+                    </i>
+                </div>
             </div>
-        </div>
-        <div class="row" id="passSection">
-            <div class="input-field col s6 offset-s3">
-                <i class="material-icons prefix">dialpad</i>
-                <form:label path="password">Contraseña</form:label>
-                <form:password path="password" id="password"/>
-                <i class="materialize-red-text">
-                    <form:errors path="password" id="wrongPass"/>
-                </i>
+            <div class="row" id="passSection">
+                <div class="input-field col s6 offset-s3">
+                    <i class="material-icons prefix">dialpad</i>
+                    <form:label path="password">Contraseña</form:label>
+                    <form:password path="password" id="password"/>
+                    <i class="materialize-red-text">
+                        <form:errors path="password" id="wrongPass"/>
+                    </i>
+                </div>
             </div>
-        </div>
 
-        <div class="row center-align valign">
-            <div class="col s6 offset-s3">
-                <a class="waves-effect waves-green btn-flat tooltipped" data-position="left" data-delay="50"
-                   data-tooltip="Sirvo para iniciar sesión">
-                    <input type="submit" value="Iniciar Sesión" id="login_btn">
-                </a>
+            <div class="row center-align valign">
+                <div class="col s6 offset-s3">
+                    <a class="waves-effect waves-green btn-flat tooltipped" data-position="left" data-delay="50"
+                       data-tooltip="Sirvo para iniciar sesión">
+                        <input type="submit" value="Iniciar Sesión" id="login_btn">
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="row center-align valign">
-            <div class="col s6 offset-s3">
-                <a href="/" class="waves-effect waves-green btn-flat">Volver</a>
+            <div class="row center-align valign">
+                <div class="col s6 offset-s3">
+                    <a href="/" class="waves-effect waves-green btn-flat">Volver</a>
+                </div>
             </div>
-        </div>
 
 
-    </form:form>
-</div>
+        </form:form>
+    </div>
 
     <%--<div class="progress" id="progress">--%>
     <%--<div class="indeterminate"></div>--%>
@@ -120,9 +121,20 @@
 </script>
 
 <script>
+
     $("#login_btn").click(function () {
 //        $(".progress").show();
-        $('#load-bar').show();
+        var test = true;
+        if (document.getElementById("user").value.trim() == '') {
+            test= false;
+        }
+        if (document.getElementById("password").value.trim() == '') {
+            test = false;
+        }
+        if(test){
+            $('#load-bar').show();
+        }
+
 
     });
 </script>

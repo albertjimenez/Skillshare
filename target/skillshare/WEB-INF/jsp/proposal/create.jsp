@@ -76,7 +76,7 @@
 <main class="container">
     <h4 class="font-lobster animated lightSpeedIn center-align">Crear oferta</h4>
     <div class=" valign hoverable z-depth-2 my-bw-nw blurred-bg tinted shaded blue-text animated flipInY blue-text">
-            <form:form method="post" modelAttribute="newproposal" onsubmit="return checkProposal();">
+            <form:form method="post" modelAttribute="newproposal" onsubmit="return checkProposalRequest();">
 
                 <div class="row">
                     <div class="input-field col s6 offset-s3 ">

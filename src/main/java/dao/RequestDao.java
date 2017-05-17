@@ -15,6 +15,7 @@ import java.util.List;
  */
 public class RequestDao {
     private JdbcTemplate jdbcTemplate;
+    private final String sequence = "nextval('request_of_collaboration_id_seq')";
 
     @Autowired
     public void setJdbcTemplate(DataSource dataSource) {
@@ -35,5 +36,14 @@ public class RequestDao {
             return new ArrayList<>();
         }
     }
+
+    public void createRequest(Request request) {
+        String sql = "INSERT INTO request_of_collaboration VALUES(" + sequence + ",?,?,?,?,?,?" + ")";
+        jdbcTemplate.update(sql, request.getNif(),
+                request.getSkillName(), request.getLevel().toString(),
+                request.getDescription(),
+                request.getInitialDate(), request.getFinishDate());
+    }
+
 
 }

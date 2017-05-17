@@ -141,7 +141,9 @@
 </script>
 <script type="text/javascript" src="/js/initial.min.js"></script>
 <script>
-    $('.profile').initial();
+    $('.profile').initial({
+        width:40,height:40
+    });
 </script>
 
 

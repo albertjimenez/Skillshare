@@ -21,10 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpSession;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.TreeSet;
+import java.util.*;
 
 /**
  * Created by Beruto and Pablo Berbel on 20/3/17. Project -> skillshare
@@ -243,6 +240,11 @@ public class LoginRegisterController {
         Student student = (Student) httpSession.getAttribute("user");
         String name = student.getName().split("\\s+")[0];
         model.addAttribute("student", student);
+        //TODO borra esto, es solo para la tabla
+        List<Skill> list = skillDao.getSkillsCollection();
+        Gson gson = new Gson();
+        System.out.println(gson.toJson(list));
+        model.addAttribute("skills", gson.toJson(list));
         model.addAttribute("name", name);
         model.addAttribute("type", Type.getName(student.getType().toString()));
         return "testings/test";

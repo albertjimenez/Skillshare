@@ -143,13 +143,13 @@
         var suc = '${success}';
         console.log(suc);
         if (suc != null && suc.length > 0) {
-            mytoast('Éxito', suc);
+            mytoast(suc);
         }
     });
 </script>
 <script type="text/javascript" src="/js/initial.min.js"></script>
 <script>
-    $('.profile').initial();
+    $('.profile').initial({height: 46, width: 46, fontSize: 20, fontWeight: 700});
 </script>
 <script>
     function showSideNav() {

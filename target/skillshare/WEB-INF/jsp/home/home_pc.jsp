@@ -21,7 +21,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
     <style>
         body {
@@ -130,14 +132,24 @@
 <script type="text/javascript" src="/js/materialize.min.js"></script>
 <script src="/js/scroll.js"></script>
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
+<script type="text/javascript" src="/js/mytoast.js"></script>
 <script>
     $(document).ready(function () {
         $('select').material_select();
     });
 </script>
+<script>
+    $(document).ready(function () {
+        var suc = '${success}';
+        console.log(suc);
+        if (suc != null && suc.length > 0) {
+            mytoast(suc);
+        }
+    });
+</script>
 <script type="text/javascript" src="/js/initial.min.js"></script>
 <script>
-    $('.profile').initial();
+    $('.profile').initial({height:46,width:46,fontSize:20,fontWeight:700});
 </script>
 <script>
     function showSideNav() {

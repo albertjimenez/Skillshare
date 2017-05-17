@@ -40,7 +40,7 @@
 </header>
 
 
-<md:sidenav-md name="Invitado" type="Invitado">
+<md:sidenav-md>
     <ul>
         <li>
             <a class="waves-effect" href="${pageContext.request.contextPath}/login/login.html">Iniciar sesión</a>

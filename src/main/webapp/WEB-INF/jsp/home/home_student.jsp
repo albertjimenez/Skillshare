@@ -107,7 +107,7 @@
         var suc = '${success}';
         console.log(suc);
         if (suc != null && suc.length > 0) {
-            mytoast('Éxito', suc);
+            mytoast(suc);
         }
     });
 </script>

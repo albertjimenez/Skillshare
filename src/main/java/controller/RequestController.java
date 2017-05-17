@@ -1,5 +1,6 @@
 package controller;
 
+import controller.validator.RequestValidator;
 import dao.RequestDao;
 import dao.SkillDao;
 import model.request.Request;
@@ -78,8 +79,11 @@ public class RequestController {
 
 
     @RequestMapping(value = "/request/create", method = RequestMethod.POST)
-    public String processCreateProposal(@ModelAttribute("newrequest") Request request,
-                                        BindingResult bindingResult, Model model) {
+    public String processCreateRequest(@ModelAttribute("newrequest") Request request,
+                                       BindingResult bindingResult, Model model) {
+
+        RequestValidator requestValidator = new RequestValidator();
+        requestValidator.validate(request, bindingResult);
 
         if (!getSessionStudent())
             return "redirect:../login/login.html";
@@ -99,12 +103,12 @@ public class RequestController {
         //If it does not exists on DB
         Skill aSkill = new Skill(request.getSkillName(), request.getLevel(), "Creada automáticamente");
         skillDao.addSkill(aSkill);
+        request.setNif(student.getNif());
         System.out.println(request);
-        //TODO finish him!
-
-
+        requestDao.createRequest(request);
         List<Request> l = requestDao.getRequestsByNif(student.getNif());
         model.addAttribute("requests", l);
+        model.addAttribute("count", l.size());
         return "request/list";
 
     }

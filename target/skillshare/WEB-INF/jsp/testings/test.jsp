@@ -19,6 +19,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="/css/jquery.dynatable.css" rel="stylesheet">
+    <script src="/js/jquery.dynatable.js"></script>
+
 </head>
 <body class="blue lighten-3">
 
@@ -29,22 +32,43 @@
     <md:navbar-md name="${name}"></md:navbar-md>
 </header>
 
-<main>
+<main class="container">
     <p class="green">WS</p>
-    <span style="display: block !important; width: 180px; text-align: center; font-family: sans-serif; font-size: 12px;"><a
-            href="http://espanol.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:00000.123.08286&bannertypeclick=wu_travel_jet3"
-            title="Castellon de la Plana, Spain Weather Forecast" target="_blank"><img
-            src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_travel_jet3_metric&airportcode=LEBT&ForcedCity=Castellon de la Plana&ForcedState=Spain&wmo=08286&language=SP"
-            alt="Find more about Weather in Castellon de la Plana, SP" width="160"/></a><br><a
-            href="http://espanol.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:00000.123.08286&bannertypeclick=wu_travel_jet3"
-            title="Get latest Weather Forecast updates" style="font-family: sans-serif; font-size: 12px"
-            target="_blank">Click for weather forecast</a></span>
-
+    <div id="example-table"></div>
+    <table id="my-final-table" class="hoverable z-depth-3" style="border-radius: 25px">
+        <thead>
+        <th data-dynatable-column="name" class="blue lighten-4">Nombre</th>
+        <th data-dynatable-column="description" class="blue lighten-4">Descripción</th>
+        <th data-dynatable-column="level" class="blue lighten-4">Nivel</th>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
 </main>
+<md:footer-md></md:footer-md>
 
-<footer>
-    <md:footer-md></md:footer-md>
-</footer>
+<script>
+    var records = ${skills};
+    $('#my-final-table').dynatable({
+        dataset: {
+            records: records,
+            perPageDefault: 10,
+            perPageOptions: [10,25,50,75,100]
+        },
+        inputs: {
+            paginationPrev:'Anterior',
+            paginationNext:'Siguiente',
+            perPageText: 'Mostrar: ',
+            recordCountText: 'Mostrando-> ',
+            processingText: 'Procesando...'
+        }
+    });
+
+    $('.input').addClass('search_1');
+
+</script>
+
+
 <script type="text/javascript" src="/js/materialize.min.js"></script>
 <script src="/js/scroll.js"></script>
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
@@ -68,6 +92,7 @@
     )
     ;
 </script>
+
 
 </body>
 </html>
