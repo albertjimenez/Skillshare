@@ -53,11 +53,11 @@
         dataset: {
             records: records,
             perPageDefault: 10,
-            perPageOptions: [10,25,50,75,100]
+            perPageOptions: [10, 25, 50, 75, 100]
         },
         inputs: {
-            paginationPrev:'Anterior',
-            paginationNext:'Siguiente',
+            paginationPrev: 'Anterior',
+            paginationNext: 'Siguiente',
             perPageText: 'Mostrar: ',
             recordCountText: 'Mostrando-> ',
             processingText: 'Procesando...'

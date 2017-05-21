@@ -18,6 +18,10 @@
     <%--Avisa al navegador de que el html es valido para moviles--%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
+    <link rel="stylesheet" href="/css/aos.css">
+    <link rel="stylesheet" href="/css/my-grid.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/search.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         body {
@@ -72,59 +76,89 @@
         </div>
     </c:if>
     <c:if test="${not empty requests}">
-
-        <ul class="collapsible popout" data-collapsible="accordion">
-
-
-            <c:forEach items="${requests}" var="req">
-
-                <md:desplegable-md name="${req.skillName}" name2="${req.initialDate}">
-
-                    <table class="highlight bordered">
-                        <tr>
-                            <td><span class="font-raleway">Nivel:</span></td>
-                            <td class="font-raleway">${req.level}</td>
-                        </tr>
-                        <tr>
-                            <td><span class="font-raleway">Descripción:</span></td>
-                            <td class="font-raleway">${req.description}</td>
-                        </tr>
-                        <tr>
-                            <td><span class="font-raleway">Fecha fin:</span></td>
-                            <td class="font-raleway">${req.finishDate}</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a class="waves-effect waves-light btn"
-                                   href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html">
-                                    <i class="material-icons left">delete</i>
-                                    Borrar Solicitud</a>
-                            </td>
-                        </tr>
-                    </table>
+        <div id="search-wrapper">
+            <input type="text" id="search" class="live-search-box" placeholder="Buscar ofertas" />
+            <div id="close-icon"></div>
+        </div>
 
 
-                    <%--Botonera fija en la parte inferior derecha--%>
-                    <%--Button Material--%>
-                    <div class="fixed-action-btn">
-                        <a class="btn-floating btn-large red pulse">
-                            <i class="large material-icons">mode_edit</i>
-                        </a>
+        <ul class="rig columns-4 live-search-list">
+            <c:forEach items="${requests}" var="prop">
+                <a href="#${prop.id}">
+                    <li class="hoverable animated flipInY">
+                        <img class="activator profile center-align circle" data-name=${prop.skillName}}">
+                        <h3 class="center-align">${prop.skillName} ${prop.level}</h3>
+                        <p>Descripción:</p>
+                        <p class="center-align">${prop.description}</p>
+                        <p class="">Inicio: ${prop.initialDate}</p>
+                        <p class="">Fin: ${prop.finishDate}</p>
 
-                            <%--SUBButtons--%>
-                        <ul>
-                            <li><a class="btn-floating red pulse"
-                                   href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html"><i
-                                    class="material-icons">delete</i></a></li>
-                            <li><a class="btn-floating green pulse"
-                                   href="${pageContext.request.contextPath}/proposal/create.html">
-                                <i class="material-icons">playlist_add</i></a></li>
-                        </ul>
-                    </div>
+                    </li>
+                </a>
+                <%--<a class="waves-effect waves-light btn"--%>
+                <%--href="${pageContext.request.contextPath}/proposal/update/${req.id}.html">--%>
+                <%--<i class="material-icons left ">mode_edit--%>
+                <%--</i>Editar Oferta</a>--%>
+                <%--<a class="waves-effect waves-light btn"--%>
+                <%--href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html">--%>
+                <%--<i class="material-icons left">delete</i>--%>
+                <%--Borrar Oferta</a>--%>
 
-                </md:desplegable-md>
             </c:forEach>
         </ul>
+
+        <%--<ul class="collapsible popout" data-collapsible="accordion">--%>
+
+
+            <%--<c:forEach items="${requests}" var="req">--%>
+
+                <%--<md:desplegable-md name="${req.skillName}" name2="${req.initialDate}">--%>
+
+                    <%--<table class="highlight bordered">--%>
+                        <%--<tr>--%>
+                            <%--<td><span class="font-raleway">Nivel:</span></td>--%>
+                            <%--<td class="font-raleway">${req.level}</td>--%>
+                        <%--</tr>--%>
+                        <%--<tr>--%>
+                            <%--<td><span class="font-raleway">Descripción:</span></td>--%>
+                            <%--<td class="font-raleway">${req.description}</td>--%>
+                        <%--</tr>--%>
+                        <%--<tr>--%>
+                            <%--<td><span class="font-raleway">Fecha fin:</span></td>--%>
+                            <%--<td class="font-raleway">${req.finishDate}</td>--%>
+                        <%--</tr>--%>
+                        <%--<tr>--%>
+                            <%--<td>--%>
+                                <%--<a class="waves-effect waves-light btn"--%>
+                                   <%--href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html">--%>
+                                    <%--<i class="material-icons left">delete</i>--%>
+                                    <%--Borrar Solicitud</a>--%>
+                            <%--</td>--%>
+                        <%--</tr>--%>
+                    <%--</table>--%>
+
+
+                    <%--&lt;%&ndash;Botonera fija en la parte inferior derecha&ndash;%&gt;--%>
+                    <%--&lt;%&ndash;Button Material&ndash;%&gt;--%>
+                    <%--<div class="fixed-action-btn">--%>
+                        <%--<a class="btn-floating btn-large red pulse">--%>
+                            <%--<i class="large material-icons">mode_edit</i>--%>
+                        <%--</a>--%>
+
+                            <%--&lt;%&ndash;SUBButtons&ndash;%&gt;--%>
+                        <%--<ul>--%>
+                            <%--<li><a class="btn-floating red pulse"--%>
+                                   <%--href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html"><i--%>
+                                    <%--class="material-icons">delete</i></a></li>--%>
+                            <%--<li><a class="btn-floating green pulse"--%>
+                                   <%--href="${pageContext.request.contextPath}/proposal/create.html">--%>
+                                <%--<i class="material-icons">playlist_add</i></a></li>--%>
+                        <%--</ul>--%>
+                    <%--</div>--%>
+
+                <%--</md:desplegable-md>--%>
+            <%--</c:forEach>--%>
+        <%--</ul>--%>
     </c:if>
 </main>
 
@@ -134,6 +168,7 @@
 <script type="text/javascript" src="/js/materialize.min.js"></script>
 <script src="/js/scroll.js"></script>
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
+<script type="text/javascript" src="/js/search.js"></script>
 <script>
     $(document).ready(function () {
         $('select').material_select();
@@ -141,9 +176,8 @@
 </script>
 <script type="text/javascript" src="/js/initial.min.js"></script>
 <script>
-    $('.profile').initial({
-        width:40,height:40
-    });
+    $('.profile').initial();
+    AOS.init();
 </script>
 
 

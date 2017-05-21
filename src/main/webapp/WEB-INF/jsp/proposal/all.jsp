@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/css/aos.css">
     <link rel="stylesheet" href="/css/my-grid.css">
     <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/search.css">
 
 </head>
 <body class="blue lighten-3">
@@ -51,7 +52,6 @@
     </ul>
 </md:sidenav-md>
 
-
 <main class="container">
 
     <h4 class="center-align font-lobster">Ofertas disponibles</h4>
@@ -76,14 +76,26 @@
 
     <c:if test="${not empty proposals}">
 
+        <%--<div class="wrap">--%>
+        <%--<input type="text" class="live-search-box search" placeholder="Buscar ofertas" />--%>
+        <%--</div>--%>
+        <div id="search-wrapper">
+            <input type="text" id="search" class="live-search-box" placeholder="Buscar ofertas"/>
+            <div id="close-icon"></div>
+        </div>
+
+
         <%--Boton fijo--%>
-        <ul class="rig columns-4">
+        <ul class="rig columns-4 live-search-list">
         <c:forEach items="${proposals}" var="prop">
             <a href="#${prop.id}">
                 <li class="hoverable animated flipInY">
                     <img class="activator profile center-align circle" data-name=${prop.skillName}}">
                     <h3 class="center-align">${prop.skillName} ${prop.level}</h3>
+                    <p>Descripción:</p>
                     <p class="center-align">${prop.description}</p>
+                    <p class="">Inicio: ${prop.initialDate}</p>
+                    <p class="">Fin: ${prop.finishDate}</p>
                 </li>
             </a>
 
@@ -105,9 +117,12 @@
 <script src="/js/scroll.js"></script>
 <script src="/js/aos.js"></script>
 <script src="/js/BarraLateralMovil.js"></script>
+<script type="text/javascript" src="/js/search.js"></script>
 
 <script>
     AOS.init();
 </script>
+
+
 </body>
 </html>

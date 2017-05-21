@@ -126,12 +126,12 @@
 //        $(".progress").show();
         var test = true;
         if (document.getElementById("user").value.trim() == '') {
-            test= false;
+            test = false;
         }
         if (document.getElementById("password").value.trim() == '') {
             test = false;
         }
-        if(test){
+        if (test) {
             $('#load-bar').show();
         }
 

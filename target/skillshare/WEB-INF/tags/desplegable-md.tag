@@ -16,9 +16,9 @@
     <div class="collapsible-header blue lighten-4 z-depth-3">
         <%--<i class="material-icons">--%>
         <%--touch_app</i>--%>
-            <div>
-        <img class=" activator profile" data-name=${name}}">
-            </div>
+        <div>
+            <img class=" activator profile" data-name=${name}}">
+        </div>
         <span class="font-raleway">
             Nombre: ${name} /\ ${name2}
         </span>

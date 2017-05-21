@@ -47,27 +47,11 @@
             </ul>
             <%--Esto es la cabecera movil--%>
 
-            <ul class="side-nav" id="mobile-demo">
-                <c:if test="${empty name}">
-                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/login/login.html">Entrar</a>
-                    </li>
-                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/register/register.html">Registrarse</a>
-                    </li>
-                </c:if>
-                <c:if test="${not empty name}">
-                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/login/login.html">${name}</a>
-                    </li>
-                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/login/logout.html">Salir</a>
-                    </li>
-                </c:if>
-
-
-            </ul>
         </div>
     </nav>
 </div>
 <script>
-    function showSideNav() {
-        $('.button-collapse').sideNav('show');
-    }
+//    function showSideNav() {
+//        $('.button-collapse').sideNav('show');
+//    }
 </script>

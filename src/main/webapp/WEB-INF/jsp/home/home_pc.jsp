@@ -24,7 +24,7 @@
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-
+    <link rel="stylesheet" href="/css/search.css">
     <style>
         body {
             background-image: url("/images/pc-wallpaper.jpg");
@@ -78,6 +78,7 @@
                     <i class="material-icons">playlist_add</i></a></li>
             </ul>
         </div>
+
     <ul class="collapsible popout " data-collapsible="accordion">
             <c:forEach items="${skills}" var="sk">
 
@@ -133,6 +134,7 @@
 <script src="/js/scroll.js"></script>
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
 <script type="text/javascript" src="/js/mytoast.js"></script>
+<script type="text/javascript" src="/js/search.js"></script>
 <script>
     $(document).ready(function () {
         $('select').material_select();
