@@ -25,8 +25,17 @@
     <%--Avisa al navegador de que el html es valido para moviles--%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/css/my-backgrounds-opac.css" rel="stylesheet">
 
+<style>
+    body {
+        background-image: url("/images/background-list-req.jpg");
+    }
 
+    main {
+        opacity: 0.8;
+    }
+</style>
 </head>
 <body class="blue lighten-3">
 
@@ -82,7 +91,7 @@
     <c:if test="${not empty proposals}">
 
         <div id="search-wrapper">
-            <input type="text" id="search" class="live-search-box" placeholder="Buscar ofertas" />
+            <input type="text" id="search" class="live-search-box" placeholder="Buscar ofertas"/>
             <div id="close-icon"></div>
         </div>
 
@@ -101,79 +110,79 @@
                     </li>
                 </a>
                 <%--<a class="waves-effect waves-light btn"--%>
-                   <%--href="${pageContext.request.contextPath}/proposal/update/${req.id}.html">--%>
-                    <%--<i class="material-icons left ">mode_edit--%>
-                    <%--</i>Editar Oferta</a>--%>
+                <%--href="${pageContext.request.contextPath}/proposal/update/${req.id}.html">--%>
+                <%--<i class="material-icons left ">mode_edit--%>
+                <%--</i>Editar Oferta</a>--%>
                 <%--<a class="waves-effect waves-light btn"--%>
-                   <%--href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html">--%>
-                    <%--<i class="material-icons left">delete</i>--%>
-                    <%--Borrar Oferta</a>--%>
+                <%--href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html">--%>
+                <%--<i class="material-icons left">delete</i>--%>
+                <%--Borrar Oferta</a>--%>
 
             </c:forEach>
         </ul>
 
         <%--<ul class="collapsible popout" data-collapsible="accordion">--%>
 
-            <%--<c:forEach items="${proposals}" var="req">--%>
+        <%--<c:forEach items="${proposals}" var="req">--%>
 
 
-                <%--<md:desplegable-md name="${req.skillName}" name2="${req.initialDate}">--%>
+        <%--<md:desplegable-md name="${req.skillName}" name2="${req.initialDate}">--%>
 
 
-                    <%--<table class="highlight bordered">--%>
-                        <%--<tr>--%>
-                            <%--<td><span class="font-raleway">Nivel:</span></td>--%>
-                            <%--<td class="font-raleway">${req.level}</td>--%>
-                        <%--</tr>--%>
-                        <%--<tr>--%>
-                            <%--<td><span class="font-raleway">Descripción:</span></td>--%>
-                            <%--<td class="font-raleway">${req.description}</td>--%>
-                        <%--</tr>--%>
-                        <%--<tr>--%>
-                            <%--<td><span class="font-raleway">Fecha fin:</span></td>--%>
-                            <%--<td class="font-raleway">${req.finishDate}</td>--%>
-                        <%--</tr>--%>
-                        <%--<tr>--%>
-                            <%--<td>--%>
-                                <%--<a class="waves-effect waves-light btn"--%>
-                                   <%--href="${pageContext.request.contextPath}/proposal/update/${req.id}.html">--%>
-                                    <%--<i class="material-icons left ">mode_edit--%>
-                                    <%--</i>Editar Oferta</a>--%>
-                            <%--</td>--%>
-                            <%--<td>--%>
-                                <%--<a class="waves-effect waves-light btn"--%>
-                                   <%--href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html">--%>
-                                    <%--<i class="material-icons left">delete</i>--%>
-                                    <%--Borrar Oferta</a>--%>
-                            <%--</td>--%>
-                        <%--</tr>--%>
-                    <%--</table>--%>
+        <%--<table class="highlight bordered">--%>
+        <%--<tr>--%>
+        <%--<td><span class="font-raleway">Nivel:</span></td>--%>
+        <%--<td class="font-raleway">${req.level}</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+        <%--<td><span class="font-raleway">Descripción:</span></td>--%>
+        <%--<td class="font-raleway">${req.description}</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+        <%--<td><span class="font-raleway">Fecha fin:</span></td>--%>
+        <%--<td class="font-raleway">${req.finishDate}</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+        <%--<td>--%>
+        <%--<a class="waves-effect waves-light btn"--%>
+        <%--href="${pageContext.request.contextPath}/proposal/update/${req.id}.html">--%>
+        <%--<i class="material-icons left ">mode_edit--%>
+        <%--</i>Editar Oferta</a>--%>
+        <%--</td>--%>
+        <%--<td>--%>
+        <%--<a class="waves-effect waves-light btn"--%>
+        <%--href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html">--%>
+        <%--<i class="material-icons left">delete</i>--%>
+        <%--Borrar Oferta</a>--%>
+        <%--</td>--%>
+        <%--</tr>--%>
+        <%--</table>--%>
 
 
-                    <%--&lt;%&ndash;Botonera fija en la parte inferior derecha&ndash;%&gt;--%>
-                    <%--&lt;%&ndash;Button Material&ndash;%&gt;--%>
-                    <%--<div class="fixed-action-btn">--%>
-                        <%--<a class="btn-floating btn-large red pulse">--%>
-                            <%--<i class="large material-icons">mode_edit</i>--%>
-                        <%--</a>--%>
+        <%--&lt;%&ndash;Botonera fija en la parte inferior derecha&ndash;%&gt;--%>
+        <%--&lt;%&ndash;Button Material&ndash;%&gt;--%>
+        <%--<div class="fixed-action-btn">--%>
+        <%--<a class="btn-floating btn-large red pulse">--%>
+        <%--<i class="large material-icons">mode_edit</i>--%>
+        <%--</a>--%>
 
-                            <%--&lt;%&ndash;SUBButtons&ndash;%&gt;--%>
-                        <%--&lt;%&ndash;<ul>&ndash;%&gt;--%>
-                            <%--&lt;%&ndash;<li><a class="btn-floating red pulse"&ndash;%&gt;--%>
-                                   <%--&lt;%&ndash;href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html"><i&ndash;%&gt;--%>
-                                    <%--&lt;%&ndash;class="material-icons">delete</i></a></li>&ndash;%&gt;--%>
-                            <%--&lt;%&ndash;<li><a class="btn-floating blue pulse"&ndash;%&gt;--%>
-                                   <%--&lt;%&ndash;href="${pageContext.request.contextPath}/proposal/update/${req.id}.html">&ndash;%&gt;--%>
-                                <%--&lt;%&ndash;<i class="material-icons">mode_edit</i></a></li>&ndash;%&gt;--%>
-                            <%--&lt;%&ndash;<li><a class="btn-floating green pulse"&ndash;%&gt;--%>
-                                   <%--&lt;%&ndash;href="${pageContext.request.contextPath}/proposal/create.html">&ndash;%&gt;--%>
-                                <%--&lt;%&ndash;<i class="material-icons">playlist_add</i></a></li>&ndash;%&gt;--%>
-                        <%--&lt;%&ndash;</ul>&ndash;%&gt;--%>
-                    <%--</div>--%>
+        <%--&lt;%&ndash;SUBButtons&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<ul>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<li><a class="btn-floating red pulse"&ndash;%&gt;--%>
+        <%--&lt;%&ndash;href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html"><i&ndash;%&gt;--%>
+        <%--&lt;%&ndash;class="material-icons">delete</i></a></li>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<li><a class="btn-floating blue pulse"&ndash;%&gt;--%>
+        <%--&lt;%&ndash;href="${pageContext.request.contextPath}/proposal/update/${req.id}.html">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<i class="material-icons">mode_edit</i></a></li>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<li><a class="btn-floating green pulse"&ndash;%&gt;--%>
+        <%--&lt;%&ndash;href="${pageContext.request.contextPath}/proposal/create.html">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<i class="material-icons">playlist_add</i></a></li>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</ul>&ndash;%&gt;--%>
+        <%--</div>--%>
 
-                <%--</md:desplegable-md>--%>
+        <%--</md:desplegable-md>--%>
 
-            <%--</c:forEach>--%>
+        <%--</c:forEach>--%>
         <%--</ul>--%>
 
     </c:if>

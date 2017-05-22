@@ -27,6 +27,10 @@
         body {
             background-image: url("/images/background-list-req.jpg");
         }
+
+        main {
+            opacity: 0.8;
+        }
     </style>
 </head>
 <body class="blue lighten-3">
@@ -77,7 +81,7 @@
     </c:if>
     <c:if test="${not empty requests}">
         <div id="search-wrapper">
-            <input type="text" id="search" class="live-search-box" placeholder="Buscar ofertas"/>
+            <input type="text" id="search" class="live-search-box" placeholder="Buscar peticiones"/>
             <div id="close-icon"></div>
         </div>
 

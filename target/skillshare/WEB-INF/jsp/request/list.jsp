@@ -77,7 +77,7 @@
     </c:if>
     <c:if test="${not empty requests}">
         <div id="search-wrapper">
-            <input type="text" id="search" class="live-search-box" placeholder="Buscar ofertas" />
+            <input type="text" id="search" class="live-search-box" placeholder="Buscar peticiones"/>
             <div id="close-icon"></div>
         </div>
 
@@ -110,54 +110,54 @@
         <%--<ul class="collapsible popout" data-collapsible="accordion">--%>
 
 
-            <%--<c:forEach items="${requests}" var="req">--%>
+        <%--<c:forEach items="${requests}" var="req">--%>
 
-                <%--<md:desplegable-md name="${req.skillName}" name2="${req.initialDate}">--%>
+        <%--<md:desplegable-md name="${req.skillName}" name2="${req.initialDate}">--%>
 
-                    <%--<table class="highlight bordered">--%>
-                        <%--<tr>--%>
-                            <%--<td><span class="font-raleway">Nivel:</span></td>--%>
-                            <%--<td class="font-raleway">${req.level}</td>--%>
-                        <%--</tr>--%>
-                        <%--<tr>--%>
-                            <%--<td><span class="font-raleway">Descripción:</span></td>--%>
-                            <%--<td class="font-raleway">${req.description}</td>--%>
-                        <%--</tr>--%>
-                        <%--<tr>--%>
-                            <%--<td><span class="font-raleway">Fecha fin:</span></td>--%>
-                            <%--<td class="font-raleway">${req.finishDate}</td>--%>
-                        <%--</tr>--%>
-                        <%--<tr>--%>
-                            <%--<td>--%>
-                                <%--<a class="waves-effect waves-light btn"--%>
-                                   <%--href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html">--%>
-                                    <%--<i class="material-icons left">delete</i>--%>
-                                    <%--Borrar Solicitud</a>--%>
-                            <%--</td>--%>
-                        <%--</tr>--%>
-                    <%--</table>--%>
+        <%--<table class="highlight bordered">--%>
+        <%--<tr>--%>
+        <%--<td><span class="font-raleway">Nivel:</span></td>--%>
+        <%--<td class="font-raleway">${req.level}</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+        <%--<td><span class="font-raleway">Descripción:</span></td>--%>
+        <%--<td class="font-raleway">${req.description}</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+        <%--<td><span class="font-raleway">Fecha fin:</span></td>--%>
+        <%--<td class="font-raleway">${req.finishDate}</td>--%>
+        <%--</tr>--%>
+        <%--<tr>--%>
+        <%--<td>--%>
+        <%--<a class="waves-effect waves-light btn"--%>
+        <%--href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html">--%>
+        <%--<i class="material-icons left">delete</i>--%>
+        <%--Borrar Solicitud</a>--%>
+        <%--</td>--%>
+        <%--</tr>--%>
+        <%--</table>--%>
 
 
-                    <%--&lt;%&ndash;Botonera fija en la parte inferior derecha&ndash;%&gt;--%>
-                    <%--&lt;%&ndash;Button Material&ndash;%&gt;--%>
-                    <%--<div class="fixed-action-btn">--%>
-                        <%--<a class="btn-floating btn-large red pulse">--%>
-                            <%--<i class="large material-icons">mode_edit</i>--%>
-                        <%--</a>--%>
+        <%--&lt;%&ndash;Botonera fija en la parte inferior derecha&ndash;%&gt;--%>
+        <%--&lt;%&ndash;Button Material&ndash;%&gt;--%>
+        <%--<div class="fixed-action-btn">--%>
+        <%--<a class="btn-floating btn-large red pulse">--%>
+        <%--<i class="large material-icons">mode_edit</i>--%>
+        <%--</a>--%>
 
-                            <%--&lt;%&ndash;SUBButtons&ndash;%&gt;--%>
-                        <%--<ul>--%>
-                            <%--<li><a class="btn-floating red pulse"--%>
-                                   <%--href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html"><i--%>
-                                    <%--class="material-icons">delete</i></a></li>--%>
-                            <%--<li><a class="btn-floating green pulse"--%>
-                                   <%--href="${pageContext.request.contextPath}/proposal/create.html">--%>
-                                <%--<i class="material-icons">playlist_add</i></a></li>--%>
-                        <%--</ul>--%>
-                    <%--</div>--%>
+        <%--&lt;%&ndash;SUBButtons&ndash;%&gt;--%>
+        <%--<ul>--%>
+        <%--<li><a class="btn-floating red pulse"--%>
+        <%--href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html"><i--%>
+        <%--class="material-icons">delete</i></a></li>--%>
+        <%--<li><a class="btn-floating green pulse"--%>
+        <%--href="${pageContext.request.contextPath}/proposal/create.html">--%>
+        <%--<i class="material-icons">playlist_add</i></a></li>--%>
+        <%--</ul>--%>
+        <%--</div>--%>
 
-                <%--</md:desplegable-md>--%>
-            <%--</c:forEach>--%>
+        <%--</md:desplegable-md>--%>
+        <%--</c:forEach>--%>
         <%--</ul>--%>
     </c:if>
 </main>

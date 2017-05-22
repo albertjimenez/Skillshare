@@ -180,7 +180,7 @@ public class LoginRegisterController {
         System.out.println(student.getType() == Type.CP);
         System.out.println(student.getType());
         if (registered) {
-            model.addAttribute("success", "Estudiante " + student.getName() + " registrado correctamente");
+            model.addAttribute("success", "-");
             registered = false;
         }
         if (student.getType() == Type.CP)
@@ -203,7 +203,7 @@ public class LoginRegisterController {
         model.addAttribute("type", Type.getName(student.getType().toString()));
         model.addAttribute("proposals", proposalDao.getProposalsByNif(student.getNif()));
         if (registered) {
-            model.addAttribute("success", "Estudiante " + student.getName() + " registrado correctamente");
+            model.addAttribute("success", "-");
             registered = false;
         }
 

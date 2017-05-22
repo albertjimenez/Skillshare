@@ -60,7 +60,7 @@
             <i class="material-icons">menu</i>
         </a>
         <ul>
-            <li><a class="btn-floating green" href="#modal1">
+            <li><a class="btn-floating green" href="${pageContext.request.contextPath}/proposal/create.html">
                 <i class="material-icons">playlist_add</i></a></li>
         </ul>
     </div>

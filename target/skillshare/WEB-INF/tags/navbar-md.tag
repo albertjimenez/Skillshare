@@ -51,7 +51,7 @@
     </nav>
 </div>
 <script>
-//    function showSideNav() {
-//        $('.button-collapse').sideNav('show');
-//    }
+    //    function showSideNav() {
+    //        $('.button-collapse').sideNav('show');
+    //    }
 </script>

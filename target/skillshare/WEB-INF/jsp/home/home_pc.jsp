@@ -124,6 +124,12 @@
 
             </c:forEach>
         </ul>
+    <c:if test="${not empty success}">
+        <script>
+            toastr.success('Registrado correctamente');
+        </script>
+    </c:if>
+
 </main>
 <%--</div>--%>
 
@@ -133,20 +139,11 @@
 <script type="text/javascript" src="/js/materialize.min.js"></script>
 <script src="/js/scroll.js"></script>
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
-<script type="text/javascript" src="/js/mytoast.js"></script>
+<%--<script type="text/javascript" src="/js/mytoast.js"></script>--%>
 <script type="text/javascript" src="/js/search.js"></script>
 <script>
     $(document).ready(function () {
         $('select').material_select();
-    });
-</script>
-<script>
-    $(document).ready(function () {
-        var suc = '${success}';
-        console.log(suc);
-        if (suc != null && suc.length > 0) {
-            mytoast(suc);
-        }
     });
 </script>
 <script type="text/javascript" src="/js/initial.min.js"></script>

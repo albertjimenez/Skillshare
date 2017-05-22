@@ -25,8 +25,17 @@
     <%--Avisa al navegador de que el html es valido para moviles--%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/css/my-backgrounds-opac.css" rel="stylesheet">
 
+    <style>
+        body {
+            background-image: url("/images/background-list-req.jpg");
+        }
 
+        main {
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body class="blue lighten-3">
 

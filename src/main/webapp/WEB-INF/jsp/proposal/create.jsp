@@ -34,15 +34,10 @@
             font-family: Raleway, Open Sans, Droid Sans, Roboto, arial, sans-serif;
         }
 
-        .blurred-bg {
-            background-image: url("/images/proposal-create-blur.jpg");
-            background-repeat: no-repeat;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            -webkit-background-size: cover;
-            background-size: cover;
-            background-attachment: fixed;
+        main {
+            opacity: 0.9;
         }
+
 
 
     </style>
@@ -75,7 +70,7 @@
 <%--<div class="col s12 m8 l9" style="height: 100%">--%>
 <main class="container">
     <h4 class="font-lobster animated lightSpeedIn center-align">Crear oferta</h4>
-    <div class=" valign hoverable z-depth-2 my-bw-nw blurred-bg tinted shaded blue-text animated flipInY blue-text">
+    <div class=" valign hoverable z-depth-2 my-bw-nw animated flipInY blue-text">
         <form:form method="post" modelAttribute="newproposal" onsubmit="return checkProposalRequest();">
 
                 <div class="row">

@@ -138,7 +138,7 @@
                 <div class="input-field col s6 offset-s3 ">
                     <i class="material-icons prefix">business</i>
                     <form:label path="degree">Titulación</form:label>
-                    <form:input path="degree" id="autocomplete-input" cssClass="autocomplete"/>
+                    <form:input path="degree" id="autocomplete-input" cssClass="autocomplete" autocomplete="false"/>
                 </div>
             </div>
             <div class="row">
