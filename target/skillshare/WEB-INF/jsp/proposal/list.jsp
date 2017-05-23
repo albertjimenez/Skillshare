@@ -27,15 +27,15 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/my-backgrounds-opac.css" rel="stylesheet">
 
-<style>
-    body {
-        background-image: url("/images/background-list-req.jpg");
-    }
+    <style>
+        body {
+            background-image: url("/images/background-list-req.jpg");
+        }
 
-    main {
-        opacity: 0.8;
-    }
-</style>
+        main {
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body class="blue lighten-3">
 

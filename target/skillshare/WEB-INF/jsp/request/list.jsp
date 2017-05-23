@@ -27,6 +27,10 @@
         body {
             background-image: url("/images/background-list-req.jpg");
         }
+
+        main {
+            opacity: 0.8;
+        }
     </style>
 </head>
 <body class="blue lighten-3">

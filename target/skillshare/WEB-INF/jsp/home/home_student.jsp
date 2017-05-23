@@ -75,6 +75,11 @@
     </c:if>
     <%--</div>--%>
 </main>
+<c:if test=" ${not empty success}">
+    <script>
+        toastr.success('Registrado correctamente');
+    </script>
+</c:if>
 
 <%--</div>--%>
 
@@ -95,20 +100,11 @@
 <script type="text/javascript" src="/js/materialize.min.js"></script>
 <script src="/js/scroll.js"></script>
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
-<script type="text/javascript" src="/js/mytoast.js"></script>
+<%--<script type="text/javascript" src="/js/mytoast.js"></script>--%>
 <script>
     $(document).ready(function () {
         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
         $('.modal').modal();
-    });
-</script>
-<script>
-    $(document).ready(function () {
-        var suc = '${success}';
-        console.log(suc);
-        if (suc != null && suc.length > 0) {
-            mytoast(suc);
-        }
     });
 </script>
 

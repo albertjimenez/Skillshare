@@ -129,6 +129,11 @@
             toastr.success('Registrado correctamente');
         </script>
     </c:if>
+    <c:if test="${not empty create}">
+        <script>
+            toastr.success('Habilidad añadida ');
+        </script>
+    </c:if>
 
 </main>
 <%--</div>--%>

@@ -1,5 +1,6 @@
 package controller;
 
+import controller.validator.SkillValidator;
 import dao.SkillDao;
 import model.skill.Level;
 import model.skill.Skill;
@@ -56,7 +57,7 @@ public class SkillController {
                                    Model model) {
         if (bindingResult.hasErrors()) {
             System.out.println("Tiene errores");
-//            return "redirect:/";
+            return "home/skill/update";
         }
         if (getSessionStudent())
             model.addAttribute("name", getStudentName());
@@ -92,23 +93,25 @@ public class SkillController {
 
 
     @RequestMapping(value = "home/skill/create", method = RequestMethod.POST)
-    public String processCreateSkill(@ModelAttribute(value = "createSkill") Skill skill,
+    public String processCreateSkill(@ModelAttribute(value = "createskill") Skill skill,
                                      BindingResult bindingResult, Model model) {
 
-        if (bindingResult.hasErrors()) {
-            System.out.println("Tiene errores");
-            return "home/skill/create";
-        }
-//        String name = Normalizer.normalize(skill.getName(), Normalizer.Form.NFC);
-//        String description = Normalizer.normalize(skill.getDescription(), Normalizer.Form.NFC).replaceAll("[^\\\\p{ASCII}]","");
-//        skill.setName(name);
-//        skill.setDescription(description);
-        System.out.println("Created skill" + skill);
+
         if (getSessionStudent())
             model.addAttribute("name", getStudentName());
         model.addAttribute("cp", "-");
-        skillDao.addSkill(skill);
-        return "redirect:/home/skill/create.html";
+
+        SkillValidator skillValidator = new SkillValidator(skillDao.addSkill(skill));
+        skillValidator.validate(skill, bindingResult);
+        if (bindingResult.hasErrors()) {
+            System.out.println("Tiene errores");
+            model.addAttribute("repeat", "x");
+            return "home/skill/create";
+        }
+        System.out.println("Skill ->" + skill);
+
+        model.addAttribute("create", "-");
+        return "redirect:/home/home_pc.html";
 
     }
 

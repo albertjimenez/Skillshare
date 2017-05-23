@@ -77,6 +77,7 @@ public class SkillDao {
             return false;
         } catch (EmptyResultDataAccessException e) {
             System.out.println("no esta");
+
             jdbcTemplate.update(sql, skill.getName(),
                     skill.getLevel().toString(), skill.getDescription());
             return true;
