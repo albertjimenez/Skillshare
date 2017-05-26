@@ -69,5 +69,7 @@
     <orderEntry type="library" name="toastr" level="application" />
     <orderEntry type="library" name="tabulator" level="application" />
     <orderEntry type="library" name="jquery-ui" level="application" />
+    <orderEntry type="library" name="sweetalert2" level="application" />
+    <orderEntry type="library" name="core" level="application" />
   </component>
 </module>

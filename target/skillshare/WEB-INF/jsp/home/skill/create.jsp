@@ -6,6 +6,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="md" tagdir="/WEB-INF/tags" %>
 
 <html>
@@ -21,8 +22,12 @@
     <link type="text/css" href="/css/font-google.css">
     <link type="text/css" href="/css/animate.css">
     <link href="/css/my-backgrounds-opac.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <style>
         @import url(http://fonts.googleapis.com/css?family=Raleway:100,400,700);
+
         body {
             background-image: url("/images/background-create-skill.jpg");
             background-repeat: no-repeat;
@@ -31,15 +36,19 @@
             font-family: Raleway, Open Sans, Droid Sans, Roboto, arial, sans-serif;
         }
 
-        .blurred-bg {
-            background-image: url("/images/background-create-skill-blur.jpg");
-            background-repeat: no-repeat;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            -webkit-background-size: cover;
-            background-size: cover;
-            background-attachment: fixed;
+        main {
+            opacity: 0.8;
         }
+
+        /*.blurred-bg {*/
+        /*background-image: url("/images/background-create-skill-blur.jpg");*/
+        /*background-repeat: no-repeat;*/
+        /*-moz-background-size: cover;*/
+        /*-o-background-size: cover;*/
+        /*-webkit-background-size: cover;*/
+        /*background-size: cover;*/
+        /*background-attachment: fixed;*/
+        /*}*/
 
     </style>
 </head>
@@ -48,9 +57,6 @@
 <header>
     <md:navbar-md name="${name}"></md:navbar-md>
 </header>
-
-
-
 
 
 <md:sidenav-md name="${name}" type="${type}">
@@ -76,43 +82,58 @@
 
 <%--<div class="col s8">--%>
 <main class="container">
-    <h4 class="font-lobster center-align blue-text">Crear habilidad</h4>
-    <div class="section z-depth-2 my-bw-nw animated fadeInDown blurred-bg blue-text">
-                <form:form method="post" modelAttribute="createskill" onsubmit="white_spaces();">
-                    <div class="row">
-                        <div class="input-field col s6 offset-s3 ">
-                            <i class="material-icons prefix">supervisor_account</i>
-                            <form:label path="name">Nombre</form:label>
-                            <form:input path="name" id="name" cssClass="validate"/>
-                        </div>
-                        <div class="input-field col s6 offset-s3 ">
-                            <i class="material-icons prefix">dashboard</i>
-                            <form:select path="level">
-                                <form:option value="" disabled="true">
-                                    Escoge qué nivel de habilidad es</form:option>
-                                <form:option value="A">Avanzada</form:option>
-                                <form:option value="M">Media</form:option>
-                                <form:option value="N">Novato</form:option>
-                            </form:select>
-                        </div>
-                        <div class="input-field col s6 offset-s3 ">
-                            <i class="material-icons prefix">toc</i>
-                            <form:label path="description">Descripción</form:label>
-                            <form:textarea path="description" id="description" cssClass="validate" data-length="140"
-                                           maxlength="140"/>
-                        </div>
-                        <div class="input-field col s6 offset-s3 ">
-                            <button class="btn waves-effect waves-light" type="submit" name="action">Crear
-                                <i class="material-icons right">send</i>
-                            </button>
-                            <a class="waves-effect waves-green btn-flat"
-                               href="${pageContext.request.contextPath}/home/home_pc.html">Cancelar</a>
-                        </div>
-                    </div>
+    <h2 class="font-lobster center-align blue-text animated slideInDown">Crear habilidad</h2>
+    <div class="section z-depth-2 my-bw-nw animated slideInDown blue-text" id="myForm">
+        <form:form method="post" modelAttribute="createskill" onsubmit="return white_spaces();">
+            <div class="row">
+                <div class="input-field col s6 offset-s3 " id="nameSection">
+                    <i class="material-icons prefix">supervisor_account</i>
+                    <form:label path="name">Nombre</form:label>
+                    <form:input path="name" id="name" cssClass="validate"/>
+                    <i class="red-text" id="errorName">
+                        <form:errors path="name"></form:errors>
+                    </i>
+                </div>
+                <div class="input-field col s6 offset-s3 " id="levelSection">
+                    <i class="material-icons prefix">dashboard</i>
+                    <form:select path="level">
+                        <form:option value="" disabled="true">
+                            Escoge qué nivel de habilidad es</form:option>
+                        <form:option value="A">Avanzada</form:option>
+                        <form:option value="M">Media</form:option>
+                        <form:option value="N">Novato</form:option>
+                    </form:select>
+                </div>
+                <div class="input-field col s6 offset-s3 ">
+                    <i class="material-icons prefix">toc</i>
+                    <form:label path="description">Descripción</form:label>
+                    <form:textarea path="description" id="description" cssClass="validate" data-length="140"
+                                   maxlength="140"/>
+                    <i class="red-text">
+                        <form:errors path="description" id="errorDescription"></form:errors>
+                    </i>
+                </div>
+                <div class="input-field col s6 offset-s3 ">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Crear
+                        <i class="material-icons right">send</i>
+                    </button>
+                    <a class="waves-effect waves-green btn-flat"
+                       href="${pageContext.request.contextPath}/home/home_pc.html">Cancelar</a>
+                </div>
+            </div>
 
-                </form:form>
+        </form:form>
     </div>
 </main>
+
+<c:if test="${not empty repeat}">
+    <script>
+        $('#myForm').removeClass('animated fadeInDown');
+        $("#nameSection").addClass('animated shake');
+        $("#levelSection").addClass('animated shake');
+        toastr.error('ya existe esa habilidad con ese nivel');
+    </script>
+</c:if>
 
 <%--</div>--%>
 
@@ -141,5 +162,6 @@
     });
 
 </script>
+
 </body>
 </html>

@@ -24,6 +24,10 @@
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.4/sweetalert2.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.4/sweetalert2.min.css">
     <link rel="stylesheet" href="/css/search.css">
     <style>
         body {
@@ -97,9 +101,15 @@
                                     </i>Editar habilidad</a>
                             </td>
                             <td>
-                                <a class="waves-effect waves-light btn" href="skill/delete/${sk.name}/${sk.level}.html">
+
+                                    <%--<a class="waves-effect waves-light btn" id="deletebtn" href="skill/delete/${sk.name}/${sk.level}.html">--%>
+                                    <%--<i class="material-icons left">delete</i>--%>
+                                    <%--Borrar habilidad</a>--%>
+                                <button class="waves-effect waves-light btn"
+                                        id="${pageContext.request.contextPath}/skill/delete/${sk.name}/${sk.level}.html">
                                     <i class="material-icons left">delete</i>
-                                    Borrar habilidad</a>
+                                    Borrar habilidad
+                                </button>
                             </td>
                         </tr>
                     </table>
@@ -111,8 +121,12 @@
 
                             <%--SUBButtons--%>
                         <ul>
-                            <li><a class="btn-floating red" href="skill/delete/${sk.name}/${sk.level}.html"><i
-                                    class="material-icons">delete</i></a></li>
+                            <li>
+                                <button class="btn-floating red"
+                                        id="${pageContext.request.contextPath}/skill/delete/${sk.name}/${sk.level}.html">
+                                    <i
+                                            class="material-icons">delete</i></button>
+                            </li>
                             <li><a class="btn-floating blue" href="skill/update/${sk.name}/${sk.level}.html">
                                 <i class="material-icons">mode_edit</i></a></li>
                             <li><a class="btn-floating green" href="skill/create.html">
@@ -161,5 +175,34 @@
     }
     window.onload = showSideNav;
 </script>
+<script>
+
+    $('button').click(function () {
+        console.log(this.id);
+        var myURL = this.id;
+        console.log('hola');
+
+        swal({
+            title: '¿Quieres borrar la habilidad?',
+            text: "Se borrarán las colaboraciones, propuestas y ofertas",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '¡Sí, borra la habilidad!',
+            cancelButtonText: 'Cancelar'
+        }).then(function () {
+            swal(
+                'Borrada!',
+                'Éxito al borrar.',
+                'success'
+            );
+            window.location.href = "/home/" + myURL;
+        });
+    });
+
+</script>
+
+
 </body>
 </html>

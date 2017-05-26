@@ -76,6 +76,14 @@ function white_spaces() {
         Materialize.toast('El nombre es solo una palabra no varias!', 4000, 'rounded');
         return false;
     }
+    if (document.getElementById("name").value.trim() == '') {
+        Materialize.toast('Nombre vacío', 4000, 'rounded');
+        return false;
+    }
+    if (document.getElementById("description").value.trim() == '') {
+        Materialize.toast('Descripción vacía', 4000, 'rounded');
+        return false;
+    }
     return true;
 }
 
