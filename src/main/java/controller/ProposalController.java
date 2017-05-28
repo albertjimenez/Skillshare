@@ -3,6 +3,7 @@ package controller;
 import controller.validator.ProposalValidator;
 import dao.ProposalDao;
 import dao.SkillDao;
+import model.Tools.Pair;
 import model.proposal.Proposal;
 import model.skill.Skill;
 import model.student.Student;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -19,6 +21,7 @@ import javax.servlet.http.HttpSession;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Created by Beruto and Pablo Berbel on 12/4/17. Project -> skillshare
@@ -148,6 +151,56 @@ public class ProposalController {
         return "proposal/list";
     }
 
+    @RequestMapping(value = "/proposal/detail/{id}", method = RequestMethod.GET)
+    public String detailedProposal(@PathVariable(value = "id") String id,
+                                   Model model) {
+
+        if (!getSessionStudent())
+            return "redirect:../../login/login.html";
+        if (Type.getType(getType()) == Type.CP)
+            model.addAttribute("cp", "-");
+
+//        if (bindingResult.hasErrors()) {
+//            System.out.println("Tiene errores");
+//            return "proposal/all";
+//
+//        }
+        Student student = (Student) httpSession.getAttribute("user");
+        String name = getStudentName();
+        model.addAttribute("name", name);
+        model.addAttribute("type", getType());
+        model.addAttribute("student", student);
+        model.addAttribute("type", Type.getName(student.getType().toString()));
+        //TODO hacer un try para convertir correctamente
+        Pair<Student, Proposal> pair = proposalDao.getProposalByID(new AtomicInteger(Integer.parseInt(id)));
+        model.addAttribute("student_proposal", pair.getLeft());
+        model.addAttribute("proposal", pair.getRight());
+
+
+        return "proposal/detail";
+
+    }
+
+    @RequestMapping(value = "/proposal/detail")
+    public String detailedProposalGeneric(Model model) {
+        if (!getSessionStudent())
+            return "redirect:../../login/login.html";
+        if (Type.getType(getType()) == Type.CP)
+            model.addAttribute("cp", "-");
+
+        Student student = (Student) httpSession.getAttribute("user");
+        String name = getStudentName();
+        model.addAttribute("name", name);
+        model.addAttribute("type", getType());
+        model.addAttribute("student", student);
+        model.addAttribute("type", Type.getName(student.getType().toString()));
+        List<Proposal> l = proposalDao.getProposalsByNif(student.getNif());
+        model.addAttribute("proposals", l);
+        model.addAttribute("count", l.size());
+        return "proposal/list";
+    }
+
+
     private boolean getSessionStudent() {
         Student student = (Student) httpSession.getAttribute("user");
         return student != null;
@@ -162,8 +215,6 @@ public class ProposalController {
         Student student = (Student) httpSession.getAttribute("user");
         return Type.getName(student.getType().toString());
     }
-
-
 
 
 }

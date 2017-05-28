@@ -86,7 +86,7 @@
         </div>
 
 
-        <ul class="rig columns-4 live-search-list">
+        <ul class="rig columns-3 live-search-list">
             <c:forEach items="${requests}" var="prop">
                 <a href="#${prop.id}">
                     <li class="hoverable animated flipInY">

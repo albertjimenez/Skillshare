@@ -102,12 +102,14 @@
                             </td>
                             <td>
 
-                                <%--<a class="waves-effect waves-light btn" id="deletebtn" href="skill/delete/${sk.name}/${sk.level}.html">--%>
+                                    <%--<a class="waves-effect waves-light btn" id="deletebtn" href="skill/delete/${sk.name}/${sk.level}.html">--%>
                                     <%--<i class="material-icons left">delete</i>--%>
                                     <%--Borrar habilidad</a>--%>
-                                <button class="waves-effect waves-light btn" id="${pageContext.request.contextPath}/skill/delete/${sk.name}/${sk.level}.html" >
+                                <button class="waves-effect waves-light btn"
+                                        id="${pageContext.request.contextPath}/skill/delete/${sk.name}/${sk.level}.html">
                                     <i class="material-icons left">delete</i>
-                                    Borrar habilidad</button>
+                                    Borrar habilidad
+                                </button>
                             </td>
                         </tr>
                     </table>
@@ -119,8 +121,12 @@
 
                             <%--SUBButtons--%>
                         <ul>
-                            <li><button class="btn-floating red" id="${pageContext.request.contextPath}/skill/delete/${sk.name}/${sk.level}.html"><i
-                                    class="material-icons">delete</i></button></li>
+                            <li>
+                                <button class="btn-floating red"
+                                        id="${pageContext.request.contextPath}/skill/delete/${sk.name}/${sk.level}.html">
+                                    <i
+                                            class="material-icons">delete</i></button>
+                            </li>
                             <li><a class="btn-floating blue" href="skill/update/${sk.name}/${sk.level}.html">
                                 <i class="material-icons">mode_edit</i></a></li>
                             <li><a class="btn-floating green" href="skill/create.html">
@@ -191,7 +197,7 @@
                 'Éxito al borrar.',
                 'success'
             );
-            window.location.href = "/home/"+myURL;
+            window.location.href = "/home/" + myURL;
         });
     });
 

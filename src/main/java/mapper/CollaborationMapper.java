@@ -12,12 +12,11 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class CollaborationMapper implements RowMapper<Collaboration> {
     public Collaboration mapRow(ResultSet resultSet, int i) throws SQLException {
-        Collaboration proposal = new Collaboration();
-        proposal.setIdProposal(new AtomicInteger(resultSet.getInt("id_proposal")));
-        proposal.setIdRequest(new AtomicInteger(resultSet.getInt("id_request")));
-        proposal.setHours(resultSet.getInt("hours"));
-        proposal.setRating(resultSet.getInt("rating")); // Rating can be null
+        Collaboration collab = new Collaboration();
+        collab.setId(new AtomicInteger(resultSet.getInt("id")));
+        collab.setHours(resultSet.getInt("hours"));
+        collab.setRating(resultSet.getInt("rating")); // Rating can be null
 
-        return proposal;
+        return collab;
     }
 }

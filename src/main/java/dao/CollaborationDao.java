@@ -3,15 +3,17 @@ package dao;
 import mapper.CollaborationMapper;
 import model.collaboration.Collaboration;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
-import java.util.List;
 
 /**
  * Created by Beruto and Pablo Berbel on 29/3/17. Project -> skillshare
  */
+
+//TODO Pendiente de hablar con Vervhel
 @Repository
 public class CollaborationDao {
     private JdbcTemplate jdbcTemplate;
@@ -22,10 +24,30 @@ public class CollaborationDao {
     }
 
 
-    public List<Collaboration> getCollaborations() {
-        String sql = "select * from collaboration";
-        return jdbcTemplate.query(sql, new CollaborationMapper());
+    /**
+     * Designed for statistical purposes. Get number of collaborations done
+     *
+     * @return
+     */
+    public Integer getCollaborationsNumber() {
+        String sql = "select * from " + Collaboration.TABLE_COLLAB_PROP;
+        Integer num = 0;
+        try {
+            num += jdbcTemplate.query(sql, new CollaborationMapper()).size();
+        } catch (EmptyResultDataAccessException e) {
+            System.out.println("No hay Colaboraciones de propuesta");
+        }
+        String sql2 = "select * from " + Collaboration.TABLE_COLLAB_REQ;
+        try {
+            num += jdbcTemplate.query(sql2, new CollaborationMapper()).size();
+        } catch (EmptyResultDataAccessException e) {
+            System.out.println("No hay Colaboraciones de petición");
+        }
+
+        return num;
     }
 
-//    TODO Select collaborations by nif: it is mandatory to join three tables
+//    public List<Collaboration> myCollaborations(String nif){
+//
+//    }
 }

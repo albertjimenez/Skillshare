@@ -1,7 +1,10 @@
 package dao;
 
 import mapper.ProposalMapper;
+import mapper.StudentMapper;
+import model.Tools.Pair;
 import model.proposal.Proposal;
+import model.student.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -31,13 +34,13 @@ public class ProposalDao {
     //TODO return Maps instead of List
 
     public List<Proposal> getProposals() {
-        String sql = "select id , nif , skill_name , skill_level , description  , initial_date , finish_date " +
-                " from proposal_of_collaboration order by initial_date, skill_name";
+        String sql = "SELECT id , nif , skill_name , skill_level , description  , initial_date , finish_date " +
+                " FROM proposal_of_collaboration ORDER BY initial_date, skill_name";
         return jdbcTemplate.query(sql, new ProposalMapper());
     }
 
     public List<Proposal> getProposalsByNif(String nif) {
-        String sql = "select * from proposal_of_collaboration where nif = ? order by initial_date, skill_name";
+        String sql = "SELECT * FROM proposal_of_collaboration WHERE nif = ? ORDER BY initial_date, skill_name";
         try {
             return jdbcTemplate.query(sql, new Object[]{nif}, new ProposalMapper());
         } catch (EmptyResultDataAccessException e) {
@@ -86,5 +89,25 @@ public class ProposalDao {
         } catch (EmptyResultDataAccessException e) {
             return false;
         }
+    }
+
+    public Pair<Student, Proposal> getProposalByID(AtomicInteger id) {
+        Proposal p;
+        String sql = "SELECT * FROM proposal_of_collaboration WHERE id = ?";
+        Student student;
+        String sql_student = "SELECT * FROM student WHERE nif = ?";
+
+        try {
+            p = jdbcTemplate.queryForObject(sql, new Object[]{id.get()}, new ProposalMapper());
+            student = jdbcTemplate.queryForObject(sql_student, new Object[]{p.getNif()}, new StudentMapper());
+            student.setPassword("-");
+            student.setNif("-");
+            return new Pair<>(student, p);
+        } catch (EmptyResultDataAccessException e) {
+            System.out.println("Propuesta no encontrada " + id);
+            return null;
+        }
+
+
     }
 }
