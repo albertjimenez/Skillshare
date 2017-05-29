@@ -71,5 +71,6 @@
     <orderEntry type="library" name="jquery-ui" level="application" />
     <orderEntry type="library" name="sweetalert2" level="application" />
     <orderEntry type="library" name="core" level="application" />
+    <orderEntry type="library" name="headroom" level="application" />
   </component>
 </module>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{animsition, aos, core, jquery, jquery-ui, sweetalert2, tabulator, toastr}" />
+    <file url="PROJECT" libraries="{animsition, aos, core, headroom, jquery, jquery-ui, sweetalert2, tabulator, toastr}" />
   </component>
 </project>

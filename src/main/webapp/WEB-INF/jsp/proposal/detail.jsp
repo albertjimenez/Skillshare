@@ -61,17 +61,17 @@
 
     <h2 class="center-align font-lobster">Oferta - ${proposal.skillName} | ${proposal.level}  </h2>
     <div class="animated zoomInRight z-depth-3 hoverable" style="border-radius: 25px">
-        <div class="card">
+        <div class="card blue">
             <%--<div class="card-image">--%>
             <%--<img class="activator profile center-align circle" data-name=${proposal.skillName}}">--%>
             <%--</div>--%>
-            <div class="card-content blue">
+            <div class="card-content white-text">
                 En la pestaña de <strong>Oferta</strong>, encontrarás más detalles de la oferta.
                 En la pestaña de <strong>Estudiante</strong> encontrarás la información del estudiante así como sus
                 datos de contacto.
             </div>
-            <div class="card-tabs blue">
-                <ul class="tabs tabs-fixed-width">
+            <div class="card-tabs ">
+                <ul class="tabs tabs-fixed-width tabs-transparent ">
                     <li class="tab"><a class="active" href="#test5">Oferta</a></li>
                     <li class="tab"><a href="#test4">Estudiante</a></li>
                 </ul>
@@ -96,7 +96,8 @@
                 </div>
             </div>
             <div class="card-action blue lighten-4">
-                <a href="#">Colaborar</a>
+                <a href="#"><i class="material-icons">supervisor_account</i>
+                    Colaborar</a>
             </div>
         </div>
     </div>
