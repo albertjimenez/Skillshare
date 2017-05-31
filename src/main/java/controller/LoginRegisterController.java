@@ -187,6 +187,7 @@ public class LoginRegisterController {
             model.addAttribute("cp", "-");
         else
             return "redirect:../home/home_student.html";
+
         return "home/home_pc";
     }
 
@@ -240,7 +241,6 @@ public class LoginRegisterController {
         Student student = (Student) httpSession.getAttribute("user");
         String name = student.getName().split("\\s+")[0];
         model.addAttribute("student", student);
-        //TODO borra esto, es solo para la tabla
         List<Skill> list = skillDao.getSkillsCollection();
         Gson gson = new Gson();
         System.out.println(gson.toJson(list));
@@ -343,6 +343,5 @@ public class LoginRegisterController {
         return new Gson().toJson(list);
 
     }
-
 
 }

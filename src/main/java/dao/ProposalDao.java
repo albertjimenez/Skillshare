@@ -23,7 +23,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class ProposalDao {
 
     private JdbcTemplate jdbcTemplate;
-    private final String sequence = "nextval('proposal_of_collaboration_id_seq')";
+    private static final String SEQUENCE = "nextval('proposal_of_collaboration_id_seq')";
 
     @Autowired
     public void setJdbcTemplate(DataSource dataSource) {
@@ -31,26 +31,27 @@ public class ProposalDao {
     }
 
 
-    //TODO return Maps instead of List
-
     public List<Proposal> getProposals() {
         String sql = "SELECT id , nif , skill_name , skill_level , description  , initial_date , finish_date " +
-                " FROM proposal_of_collaboration ORDER BY initial_date, skill_name";
+                " FROM proposal_of_collaboration " + "WHERE finish_date > CURRENT_DATE " +
+                "ORDER BY initial_date, skill_name";
         return jdbcTemplate.query(sql, new ProposalMapper());
     }
 
     public List<Proposal> getProposalsByNif(String nif) {
-        String sql = "SELECT * FROM proposal_of_collaboration WHERE nif = ? ORDER BY initial_date, skill_name";
+        String sql = "SELECT * FROM proposal_of_collaboration WHERE nif = ? " +
+                "and finish_date > CURRENT_DATE " +
+                "ORDER BY initial_date, skill_name";
         try {
             return jdbcTemplate.query(sql, new Object[]{nif}, new ProposalMapper());
         } catch (EmptyResultDataAccessException e) {
-            return new ArrayList<Proposal>();
+            return new ArrayList<>();
         }
     }
 
 
     public void createProposal(Proposal proposal) {
-        String sql = "INSERT INTO proposal_of_collaboration VALUES(" + sequence + ",?,?,?,?,?,?" + ")";
+        String sql = "INSERT INTO proposal_of_collaboration VALUES(" + SEQUENCE + ",?,?,?,?,?,?" + ")";
         jdbcTemplate.update(sql, proposal.getNif(),
                 proposal.getSkillName(), proposal.getLevel().toString(),
                 proposal.getDescription(),
@@ -93,13 +94,13 @@ public class ProposalDao {
 
     public Pair<Student, Proposal> getProposalByID(AtomicInteger id) {
         Proposal p;
-        String sql = "SELECT * FROM proposal_of_collaboration WHERE id = ?";
+        String sql = "SELECT * FROM proposal_of_collaboration WHERE id = ? and finish_date > CURRENT_DATE";
         Student student;
-        String sql_student = "SELECT * FROM student WHERE nif = ?";
+        String sqlStudent = "SELECT * FROM student WHERE nif = ?";
 
         try {
             p = jdbcTemplate.queryForObject(sql, new Object[]{id.get()}, new ProposalMapper());
-            student = jdbcTemplate.queryForObject(sql_student, new Object[]{p.getNif()}, new StudentMapper());
+            student = jdbcTemplate.queryForObject(sqlStudent, new Object[]{p.getNif()}, new StudentMapper());
             student.setPassword("-");
             student.setNif("-");
             return new Pair<>(student, p);

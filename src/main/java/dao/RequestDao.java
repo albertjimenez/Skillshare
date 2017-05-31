@@ -29,7 +29,7 @@ public class RequestDao {
 //    }
 
     public List<Request> getRequestsByNif(String nif) {
-        String sql = "select * from request_of_collaboration where nif = ? order by initial_date, skill_name";
+        String sql = "select * from request_of_collaboration where nif = ? AND finish_date > CURRENT_DATE order by initial_date, skill_name";
         try {
             return jdbcTemplate.query(sql, new Object[]{nif}, new RequestMapper());
         } catch (EmptyResultDataAccessException e) {

@@ -36,6 +36,8 @@ public class ProposalController {
     @Autowired
     private HttpSession httpSession;
 
+    private static final String LOGIN_URL = "redirect:../login/login.html";
+
 
     @Autowired
     public void setProposalDao(ProposalDao proposalDao) {
@@ -50,7 +52,7 @@ public class ProposalController {
     @RequestMapping("/proposal/all")
     public String getAllProposals(Model model) {
         if (!getSessionStudent())
-            return "redirect:../login/login.html";
+            return LOGIN_URL;
         Student student = (Student) httpSession.getAttribute("user");
         String name = getStudentName();
         model.addAttribute("student", student);
@@ -69,7 +71,7 @@ public class ProposalController {
     @RequestMapping(value = "/proposal/list")
     public String getProposalByNif(Model model) {
         if (!getSessionStudent())
-            return "redirect:../login/login.html";
+            return LOGIN_URL;
         Student student = (Student) httpSession.getAttribute("user");
         String name = getStudentName();
         model.addAttribute("student", student);
@@ -88,7 +90,7 @@ public class ProposalController {
     @RequestMapping(value = "/proposal/create")
     public String createProposal(Model model) {
         if (!getSessionStudent())
-            return "redirect:../login/login.html";
+            return LOGIN_URL;
         Student student = (Student) httpSession.getAttribute("user");
         String name = getStudentName();
         model.addAttribute("name", name);
@@ -119,7 +121,7 @@ public class ProposalController {
         if (Type.getType(getType()) == Type.CP)
             model.addAttribute("cp", "-");
         if (!getSessionStudent())
-            return "redirect:../login/login.html";
+            return LOGIN_URL;
         if (bindingResult.hasErrors()) {
             System.out.println("Tiene errores \n" + proposal);
             return "proposal/create";
@@ -160,24 +162,27 @@ public class ProposalController {
         if (Type.getType(getType()) == Type.CP)
             model.addAttribute("cp", "-");
 
-//        if (bindingResult.hasErrors()) {
-//            System.out.println("Tiene errores");
-//            return "proposal/all";
-//
-//        }
         Student student = (Student) httpSession.getAttribute("user");
         String name = getStudentName();
         model.addAttribute("name", name);
         model.addAttribute("type", getType());
         model.addAttribute("student", student);
         model.addAttribute("type", Type.getName(student.getType().toString()));
-        //TODO hacer un try para convertir correctamente
-        Pair<Student, Proposal> pair = proposalDao.getProposalByID(new AtomicInteger(Integer.parseInt(id)));
-        model.addAttribute("student_proposal", pair.getLeft());
-        model.addAttribute("proposal", pair.getRight());
+        Pair<Student, Proposal> pair = null;
+        try {
+
+            model.addAttribute("id", id);
+            pair = proposalDao.getProposalByID(new AtomicInteger(Integer.parseInt(id)));
+            if (pair != null) {
+                model.addAttribute("student_proposal", pair.getLeft());
+                model.addAttribute("proposal", pair.getRight());
+            }
+        } catch (NumberFormatException e) {
+            return "proposal/error";
+        }
 
 
-        return "proposal/detail";
+        return pair == null ? "proposal/error" : "proposal/detail";
 
     }
 
