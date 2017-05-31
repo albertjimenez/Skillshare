@@ -1,7 +1,10 @@
 package dao;
 
 import mapper.RequestMapper;
+import mapper.StudentMapper;
+import model.Tools.Pair;
 import model.request.Request;
+import model.student.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -9,6 +12,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import javax.sql.DataSource;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Created by Beruto and Pablo Berbel on 29/3/17. Project -> skillshare
@@ -43,6 +47,26 @@ public class RequestDao {
                 request.getSkillName(), request.getLevel().toString(),
                 request.getDescription(),
                 request.getInitialDate(), request.getFinishDate());
+    }
+
+    public Pair<Student, Request> getRequestsByID(AtomicInteger id) {
+        Request p;
+        String sql = "SELECT * FROM request_of_collaboration WHERE id = ? and finish_date > CURRENT_DATE";
+        Student student;
+        String sqlStudent = "SELECT * FROM student WHERE nif = ?";
+
+        try {
+            p = jdbcTemplate.queryForObject(sql, new Object[]{id.get()}, new RequestMapper());
+            student = jdbcTemplate.queryForObject(sqlStudent, new Object[]{p.getNif()}, new StudentMapper());
+            student.setPassword("-");
+            student.setNif("-");
+            return new Pair<>(student, p);
+        } catch (EmptyResultDataAccessException e) {
+            System.out.println("Solicitud no encontrada " + id);
+            return null;
+        }
+
+
     }
 
 

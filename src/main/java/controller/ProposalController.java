@@ -168,7 +168,7 @@ public class ProposalController {
         model.addAttribute("type", getType());
         model.addAttribute("student", student);
         model.addAttribute("type", Type.getName(student.getType().toString()));
-        Pair<Student, Proposal> pair = null;
+        Pair<Student, Proposal> pair;
         try {
 
             model.addAttribute("id", id);

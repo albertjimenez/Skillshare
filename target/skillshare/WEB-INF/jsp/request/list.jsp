@@ -88,7 +88,7 @@
 
         <ul class="rig columns-3 live-search-list">
             <c:forEach items="${requests}" var="prop">
-                <a href="#${prop.id}">
+                <a href="${pageContext.request.contextPath}/request/detail/${prop.id}.html">
                     <li class="hoverable animated flipInY">
                         <img class="activator profile center-align circle" data-name=${prop.skillName}}">
                         <h3 class="center-align">${prop.skillName} ${prop.level}</h3>

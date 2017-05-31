@@ -3,6 +3,7 @@ package controller;
 import controller.validator.RequestValidator;
 import dao.RequestDao;
 import dao.SkillDao;
+import model.Tools.Pair;
 import model.request.Request;
 import model.skill.Skill;
 import model.student.Student;
@@ -13,11 +14,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Created by Beruto and Pablo Berbel on 29/4/17. Project -> skillshare
@@ -111,6 +114,58 @@ public class RequestController {
         model.addAttribute("count", l.size());
         return "request/list";
 
+    }
+
+    @RequestMapping(value = "/request/detail/{id}", method = RequestMethod.GET)
+    public String detailedRequest(@PathVariable(value = "id") String id,
+                                  Model model) {
+
+        if (!getSessionStudent())
+            return "redirect:../../login/login.html";
+        if (Type.getType(getType()) == Type.CP)
+            model.addAttribute("cp", "-");
+
+        Student student = (Student) httpSession.getAttribute("user");
+        String name = getStudentName();
+        model.addAttribute("name", name);
+        model.addAttribute("type", getType());
+        model.addAttribute("student", student);
+        model.addAttribute("type", Type.getName(student.getType().toString()));
+        Pair<Student, Request> pair;
+        try {
+
+            model.addAttribute("id", id);
+            pair = requestDao.getRequestsByID(new AtomicInteger(Integer.parseInt(id)));
+            if (pair != null) {
+                model.addAttribute("student_request", pair.getLeft());
+                model.addAttribute("request", pair.getRight());
+            }
+        } catch (NumberFormatException e) {
+            return "request/error";
+        }
+
+
+        return pair == null ? "request/error" : "request/detail";
+
+    }
+
+    @RequestMapping(value = "/request/detail")
+    public String detailedRequestGeneric(Model model) {
+        if (!getSessionStudent())
+            return "redirect:../../login/login.html";
+        if (Type.getType(getType()) == Type.CP)
+            model.addAttribute("cp", "-");
+
+        Student student = (Student) httpSession.getAttribute("user");
+        String name = getStudentName();
+        model.addAttribute("name", name);
+        model.addAttribute("type", getType());
+        model.addAttribute("student", student);
+        model.addAttribute("type", Type.getName(student.getType().toString()));
+        List<Request> l = requestDao.getRequestsByNif(student.getNif());
+        model.addAttribute("requests", l);
+        model.addAttribute("count", l.size());
+        return "request/list";
     }
 
     private boolean getSessionStudent() {

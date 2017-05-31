@@ -38,9 +38,11 @@
                     </li>
                 </c:if>
                 <c:if test="${not empty name}">
-                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/login/login.html">${name}</a>
+                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/login/login.html">
+                        <i class="material-icons left">home</i>${name}</a>
                     </li>
-                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/login/logout.html">Salir</a>
+                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/login/logout.html">
+                        <i class="material-icons right">exit_to_app</i>Salir</a>
                     </li>
                 </c:if>
 
