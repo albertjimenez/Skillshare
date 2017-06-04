@@ -4,6 +4,7 @@ import mapper.ProposalMapper;
 import mapper.StudentMapper;
 import model.Tools.Pair;
 import model.proposal.Proposal;
+import model.request.Request;
 import model.student.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -24,6 +25,7 @@ public class ProposalDao {
 
     private JdbcTemplate jdbcTemplate;
     private static final String SEQUENCE = "nextval('proposal_of_collaboration_id_seq')";
+    private final static String DESCRIPTION = "Creada automáticamente";
 
     @Autowired
     public void setJdbcTemplate(DataSource dataSource) {
@@ -108,7 +110,27 @@ public class ProposalDao {
             System.out.println("Propuesta no encontrada " + id);
             return null;
         }
+    }
 
+    /**
+     * @param skillName A skillName
+     * @return A list containing all your proposals that match with skillName
+     */
+    public List<Proposal> getProposalWithSkills(String skillName, String nif) {
+        String sql = "SELECT * FROM proposal_of_collaboration WHERE skill_name = ? AND nif = ?";
+        return jdbcTemplate.query(sql, new Object[]{skillName, nif}, new ProposalMapper());
 
+    }
+
+    /**
+     * @param nif     Primary key for the creator of the proposal
+     * @param request The request which values will be copied to an autoproposal
+     */
+    public void createAutoproposal(String nif, Request request) {
+        String sql = "INSERT INTO proposal_of_collaboration VALUES(" + SEQUENCE + ",?,?,?,?,?,?" + ")";
+        jdbcTemplate.update(sql, nif,
+                request.getSkillName(), request.getLevel().toString(),
+                DESCRIPTION,
+                request.getInitialDate(), request.getFinishDate());
     }
 }

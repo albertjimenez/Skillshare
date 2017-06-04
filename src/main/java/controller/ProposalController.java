@@ -5,6 +5,7 @@ import dao.ProposalDao;
 import dao.SkillDao;
 import model.Tools.Pair;
 import model.proposal.Proposal;
+import model.request.Request;
 import model.skill.Skill;
 import model.student.Student;
 import model.student.Type;
@@ -153,7 +154,7 @@ public class ProposalController {
         return "proposal/list";
     }
 
-    @RequestMapping(value = "/proposal/detail/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/proposal/detail/{id}")
     public String detailedProposal(@PathVariable(value = "id") String id,
                                    Model model) {
 
@@ -184,6 +185,13 @@ public class ProposalController {
 
         return pair == null ? "proposal/error" : "proposal/detail";
 
+    }
+
+    @RequestMapping(value = "/proposal/detail/{id}", method = RequestMethod.POST)
+    public String processCollaborationFromProposal(@ModelAttribute("newrequest")
+                                                           Request request,
+                                                   BindingResult bindingResult, Model model) {
+        return "request/detail";
     }
 
     @RequestMapping(value = "/proposal/detail")

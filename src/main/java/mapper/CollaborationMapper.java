@@ -13,7 +13,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class CollaborationMapper implements RowMapper<Collaboration> {
     public Collaboration mapRow(ResultSet resultSet, int i) throws SQLException {
         Collaboration collab = new Collaboration();
-        collab.setId(new AtomicInteger(resultSet.getInt("id")));
+        collab.setIdProposal(new AtomicInteger(resultSet.getInt("id_pro")));
+        collab.setIdRequest(new AtomicInteger(resultSet.getInt("id_req")));
         collab.setHours(resultSet.getInt("hours"));
         collab.setRating(resultSet.getInt("rating")); // Rating can be null
 

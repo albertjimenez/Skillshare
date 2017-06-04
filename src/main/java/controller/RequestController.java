@@ -1,10 +1,13 @@
 package controller;
 
 import controller.validator.RequestValidator;
+import dao.ProposalDao;
 import dao.RequestDao;
 import dao.SkillDao;
 import model.Tools.Pair;
+import model.proposal.Proposal;
 import model.request.Request;
+import model.skill.Level;
 import model.skill.Skill;
 import model.student.Student;
 import model.student.Type;
@@ -19,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpSession;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -29,6 +33,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class RequestController {
 
     private RequestDao requestDao;
+
+    private ProposalDao proposalDao;
 
     private SkillDao skillDao;
 
@@ -43,6 +49,11 @@ public class RequestController {
     @Autowired
     public void setSkillDao(SkillDao skillDao) {
         this.skillDao = skillDao;
+    }
+
+    @Autowired
+    public void setProposalDao(ProposalDao proposalDao) {
+        this.proposalDao = proposalDao;
     }
 
     @RequestMapping(value = "/request/list")
@@ -116,7 +127,7 @@ public class RequestController {
 
     }
 
-    @RequestMapping(value = "/request/detail/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/request/detail/{id}")
     public String detailedRequest(@PathVariable(value = "id") String id,
                                   Model model) {
 
@@ -130,6 +141,8 @@ public class RequestController {
         model.addAttribute("name", name);
         model.addAttribute("type", getType());
         model.addAttribute("student", student);
+//        model.addAttribute("newcollaboration", new Collaboration());
+        model.addAttribute("newproposal", new Proposal());
         model.addAttribute("type", Type.getName(student.getType().toString()));
         Pair<Student, Request> pair;
         try {
@@ -139,6 +152,15 @@ public class RequestController {
             if (pair != null) {
                 model.addAttribute("student_request", pair.getLeft());
                 model.addAttribute("request", pair.getRight());
+                List<Proposal> l = proposalDao.getProposalWithSkills
+                        (pair.getRight().getSkillName(), student.getNif());
+                List<String> skillNames = new LinkedList<>();
+                for (Proposal p : l)
+                    skillNames.add(p.getId() + "-" + p.getSkillName() + "-" + Level.getLevelToString(p.getLevel()));
+
+                System.out.println(l);
+                System.out.println(skillNames);
+                model.addAttribute("match_proposals", skillNames);
             }
         } catch (NumberFormatException e) {
             return "request/error";
@@ -148,6 +170,19 @@ public class RequestController {
         return pair == null ? "request/error" : "request/detail";
 
     }
+
+    @RequestMapping(value = "/request/detail/{id}", method = RequestMethod.POST)
+    public String processCollaborationFromRequest(@PathVariable(value = "id") String id,
+                                                  @ModelAttribute("newproposal")
+                                                          Proposal proposal,
+                                                  BindingResult bindingResult, Model model) {
+        System.out.println("mi propuesta->" + proposal);
+//De path variable tengo un id y el otro está en la propuesta, en la descripcion de proposal
+        //esta el numero de horas
+        return "request/detail";
+
+    }
+
 
     @RequestMapping(value = "/request/detail")
     public String detailedRequestGeneric(Model model) {

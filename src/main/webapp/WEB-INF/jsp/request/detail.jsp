@@ -21,6 +21,10 @@
     <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/my-backgrounds-opac.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.4/sweetalert2.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.4/sweetalert2.min.css">
 
     <style>
         main {
@@ -95,14 +99,56 @@
                         Correo UJI</a>
                 </div>
             </div>
-            <div class="card-action blue lighten-4">
-                <a href="#"><i class="material-icons">supervisor_account</i>
+                <div class="card-action blue center-align lighten-4">
+                    <a href="#modal1" class="red  lighten-2  center-align btn waves-effect"><i class="material-icons">supervisor_account</i>
                     Colaborar</a>
             </div>
         </div>
     </div>
 
+
 </main>
+
+
+<%--Modal de colaboracion - request--%>
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h3 class="center-align font-lobster blue-text">Colaborar</h3>
+        <form:form method="post" modelAttribute="newproposal" id="myForm">
+
+            <c:if test="${empty match_proposals}">
+                <p class="center-align red-text">No hay propuestas que coincidan,
+                    se creará automáticamente a partir de esta solicitud</p>
+            </c:if>
+            <c:if test="${not empty match_proposals}">
+                <div class="row">
+                    <div class="col s6 offset-s3 ">
+                            <%--<i class="material-icons">announcement</i>--%>
+                        <form:label path="skillName">Nombre de tu propuesta</form:label>
+                        <form:select path="skillName">
+                            <form:option value="Lista de propuestas que coinciden" disabled="true"></form:option>
+                            <form:options items="${match_proposals}"></form:options>
+                        </form:select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 offset-s3 ">
+                            <%--<i class="material-icons">format_list_numbered</i>--%>
+                        <form:label path="description">Número de horas que dedicarás</form:label>
+                        <form:input path="description"></form:input>
+
+                    </div>
+                </div>
+            </c:if>
+
+        </form:form>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" id="accept" class="modal-action waves-effect waves-purple blue btn-flat right">Aceptar</a>
+        <a href="#!" class="modal-close waves-effect waves-purple red btn-flat left">Cancelar</a>
+    </div>
+</div>
+
 
 <md:footer-md></md:footer-md>
 
@@ -111,8 +157,36 @@
 <script type="text/javascript" src="/js/initial.min.js"></script>
 <script>
     $('.profile').initial();
+    $('.modal').modal();
 </script>
 <%--Script de smooth scroll--%>
 <script src="/js/BarraLateralMovil.js"></script>
+<%--Script para confirmar--%>
+<script>
+    $('#accept').click(function () {
+        swal({
+            title: '¿Quieres realizar la colaboración?',
+            text: "Recuerda dedicar mínimo 2 horas. ¡Aprende mucho!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '¡Sí, realiza la colaboración!',
+            cancelButtonText: 'Cancelar'
+        }).then(function () {
+            swal(
+                'Colaboración iniciada!',
+                'Se te redirigirá al inicio.',
+                'success'
+            );
+            $('#myForm').trigger('submit');
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('select').material_select();
+    });
+</script>
 </body>
 </html>

@@ -6,17 +6,15 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Created by PabloBerbel on 28/03/2017.
  */
 public class Collaboration {
-    private AtomicInteger id;
-    public final static String TABLE_COLLAB_PROP = "collaboration_prop";
-    public final static String TABLE_COLLAB_REQ = "collaboration_req";
+    private AtomicInteger idProposal, idRequest;
     private int hours, rating;
 
-    public AtomicInteger getId() {
-        return id;
+    public AtomicInteger getIdProposal() {
+        return idProposal;
     }
 
-    public void setId(AtomicInteger id) {
-        this.id = id;
+    public void setIdProposal(AtomicInteger idProposal) {
+        this.idProposal = idProposal;
     }
 
 
@@ -36,11 +34,20 @@ public class Collaboration {
         this.rating = rating;
     }
 
+    public AtomicInteger getIdRequest() {
+        return idRequest;
+    }
+
+    public void setIdRequest(AtomicInteger idRequest) {
+        this.idRequest = idRequest;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Collaboration) {
             Collaboration anotherCollaboration = (Collaboration) obj;
-            return this.id.equals(anotherCollaboration.id);
+            return this.idProposal.equals(anotherCollaboration.idProposal)
+                    && this.idRequest.equals(anotherCollaboration.idRequest);
         }
         return false;
     }
@@ -48,7 +55,8 @@ public class Collaboration {
     @Override
     public String toString() {
         return "Collaboration{" +
-                "id=" + id +
+                "idProposal=" + idProposal +
+                ", idRequest=" + idRequest +
                 ", hours=" + hours +
                 ", rating=" + rating +
                 '}';

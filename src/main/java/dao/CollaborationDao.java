@@ -8,12 +8,13 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by Beruto and Pablo Berbel on 29/3/17. Project -> skillshare
  */
 
-//TODO Pendiente de hablar con Vervhel
 @Repository
 public class CollaborationDao {
     private JdbcTemplate jdbcTemplate;
@@ -29,25 +30,45 @@ public class CollaborationDao {
      *
      * @return
      */
-    public Integer getCollaborationsNumber() {
-        String sql = "select * from " + Collaboration.TABLE_COLLAB_PROP;
-        Integer num = 0;
-        try {
-            num += jdbcTemplate.query(sql, new CollaborationMapper()).size();
-        } catch (EmptyResultDataAccessException e) {
-            System.out.println("No hay Colaboraciones de propuesta");
-        }
-        String sql2 = "select * from " + Collaboration.TABLE_COLLAB_REQ;
-        try {
-            num += jdbcTemplate.query(sql2, new CollaborationMapper()).size();
-        } catch (EmptyResultDataAccessException e) {
-            System.out.println("No hay Colaboraciones de petición");
-        }
-
-        return num;
+    public List<Collaboration> getAllCollaborations() {
+        String sql = "select * from collaboration";
+        List<Collaboration> l = new LinkedList<>();
+        return jdbcTemplate.query(sql, new CollaborationMapper());
     }
 
-//    public List<Collaboration> myCollaborations(String nif){
-//
-//    }
+    /**
+     * @param collaboration A collaboration to insert
+     * @return True if it could be inserted successfully or false if not
+     */
+    public boolean insertCollab(Collaboration collaboration) {
+        //Checking if not exists
+        String existsSql = "Select * from collaboration where id_pro = ? and id_req = ?";
+
+        try {
+            jdbcTemplate.queryForObject(existsSql, new Object[]{collaboration.getIdProposal(),
+                            collaboration.getIdRequest()},
+                    new CollaborationMapper());
+            return false;
+        } catch (EmptyResultDataAccessException e) {
+            String sql;
+            if (collaboration.getHours() != 0) {
+                sql = "insert into collaboration values (?,?,?)";
+                jdbcTemplate.update(sql, new Object[]{collaboration.getIdProposal(),
+                        collaboration.getIdRequest(), collaboration.getHours()});
+            } else {
+                sql = "insert into collaboration values (?,?)";
+                jdbcTemplate.update(sql, new Object[]{collaboration.getIdProposal(),
+                        collaboration.getIdRequest()});
+            }
+
+            return true;
+        }
+
+    }
+
+    public List<Collaboration> myCollaborations(String nif) {
+        String sql = "select * from collaboration where nif = ?";
+        return jdbcTemplate.query(sql, new Object[]{nif}, new CollaborationMapper());
+
+    }
 }

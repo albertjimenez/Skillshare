@@ -33,17 +33,14 @@
 </header>
 
 <main class="container">
-    <p class="green">WS</p>
-    <div id="example-table"></div>
-    <table id="my-final-table" class="hoverable z-depth-3" style="border-radius: 25px">
-        <thead>
-        <th data-dynatable-column="name" class="blue lighten-4">Nombre</th>
-        <th data-dynatable-column="description" class="blue lighten-4">Descripción</th>
-        <th data-dynatable-column="level" class="blue lighten-4">Nivel</th>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+    <p class="">WS</p>
+    <form>
+        Quantity (between 1 and 5):
+        <input type="number" name="quantity" min="1" max="5">
+        <input type="submit">
+    </form>
+
+
 </main>
 <md:footer-md></md:footer-md>
 
