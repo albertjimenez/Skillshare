@@ -25,12 +25,12 @@
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-    <script>
-        function showSideNav() {
-            $('.button-collapse').sideNav('show');
-        }
-        window.onload = showSideNav;
-    </script>
+    <%--<script>--%>
+        <%--function showSideNav() {--%>
+            <%--$('.button-collapse').sideNav('show');--%>
+        <%--}--%>
+        <%--window.onload = showSideNav;--%>
+    <%--</script>--%>
 </head>
 <body class="blue lighten-3">
 

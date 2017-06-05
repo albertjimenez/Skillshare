@@ -2,10 +2,12 @@ package controller;
 
 import controller.validator.ProposalValidator;
 import dao.ProposalDao;
+import dao.RequestDao;
 import dao.SkillDao;
 import model.Tools.Pair;
 import model.proposal.Proposal;
 import model.request.Request;
+import model.skill.Level;
 import model.skill.Skill;
 import model.student.Student;
 import model.student.Type;
@@ -21,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpSession;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -33,11 +36,17 @@ public class ProposalController {
 
     private ProposalDao proposalDao;
     private SkillDao skillDao;
+    private RequestDao requestDao;
 
     @Autowired
     private HttpSession httpSession;
 
     private static final String LOGIN_URL = "redirect:../login/login.html";
+
+    @Autowired
+    public void setRequestDao(RequestDao requestDao) {
+        this.requestDao = requestDao;
+    }
 
 
     @Autowired
@@ -62,6 +71,8 @@ public class ProposalController {
         List<Proposal> l = proposalDao.getProposals();
         model.addAttribute("proposals", l);
         model.addAttribute("count", l.size());
+        if (l.isEmpty())
+            model.addAttribute("tour2", "-");
 
         if (student.getType() == Type.CP)
             model.addAttribute("cp", "-");
@@ -81,6 +92,7 @@ public class ProposalController {
         List<Proposal> l = proposalDao.getProposalsByNif(student.getNif());
         model.addAttribute("proposals", l);
         model.addAttribute("count", l.size());
+
 
         if (student.getType() == Type.CP)
             model.addAttribute("cp", "-");
@@ -168,6 +180,7 @@ public class ProposalController {
         model.addAttribute("name", name);
         model.addAttribute("type", getType());
         model.addAttribute("student", student);
+        model.addAttribute("newrequest", new Request());
         model.addAttribute("type", Type.getName(student.getType().toString()));
         Pair<Student, Proposal> pair;
         try {
@@ -177,6 +190,15 @@ public class ProposalController {
             if (pair != null) {
                 model.addAttribute("student_proposal", pair.getLeft());
                 model.addAttribute("proposal", pair.getRight());
+                List<Request> l = requestDao.getRequestWithSkills
+                        (pair.getRight().getSkillName(), student.getNif());
+                List<String> skillNames = new LinkedList<>();
+                for (Request r : l)
+                    skillNames.add(r.getId() + "-" + r.getSkillName() + "-" + Level.getLevelToString(r.getLevel()));
+
+                System.out.println(l);
+                System.out.println(skillNames);
+                model.addAttribute("match_request", skillNames);
             }
         } catch (NumberFormatException e) {
             return "proposal/error";
@@ -187,12 +209,6 @@ public class ProposalController {
 
     }
 
-    @RequestMapping(value = "/proposal/detail/{id}", method = RequestMethod.POST)
-    public String processCollaborationFromProposal(@ModelAttribute("newrequest")
-                                                           Request request,
-                                                   BindingResult bindingResult, Model model) {
-        return "request/detail";
-    }
 
     @RequestMapping(value = "/proposal/detail")
     public String detailedProposalGeneric(Model model) {
@@ -211,6 +227,18 @@ public class ProposalController {
         model.addAttribute("proposals", l);
         model.addAttribute("count", l.size());
         return "proposal/list";
+    }
+
+    @RequestMapping(value = "/proposal/detail/{id}", method = RequestMethod.POST)
+    public String processCollaborationFromProposal(@PathVariable(value = "id") String id,
+                                                   @ModelAttribute("newrequest")
+                                                           Request request,
+                                                   BindingResult bindingResult, Model model) {
+        System.out.println("mi propuesta->" + request);
+//De path variable tengo un id y el otro está en la propuesta, en la descripcion de proposal
+        //esta el numero de horas
+        return "proposal/detail";
+
     }
 
 

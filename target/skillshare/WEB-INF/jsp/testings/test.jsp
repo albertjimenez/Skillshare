@@ -34,7 +34,7 @@
 
 <main class="container">
     <p class="">WS</p>
-    <form >
+    <form>
         Quantity (between 1 and 5):
         <input type="number" name="quantity" min="1" max="5">
         <input type="submit">

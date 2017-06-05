@@ -83,5 +83,6 @@
     <orderEntry type="library" name="Maven: javax.mail:javax.mail-api:1.5.5" level="project" />
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4.7" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
+    <orderEntry type="library" name="intro" level="application" />
   </component>
 </module>

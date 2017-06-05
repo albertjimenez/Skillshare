@@ -169,12 +169,12 @@
 <script>
     $('.profile').initial({height: 46, width: 46, fontSize: 20, fontWeight: 700});
 </script>
-<script>
-    function showSideNav() {
-        $('.button-collapse').sideNav('show');
-    }
-    window.onload = showSideNav;
-</script>
+<%--<script>--%>
+<%--function showSideNav() {--%>
+<%--$('.button-collapse').sideNav('show');--%>
+<%--}--%>
+<%--window.onload = showSideNav;--%>
+<%--</script>--%>
 <script>
 
     $('button').click(function () {

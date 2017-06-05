@@ -38,7 +38,7 @@
 
     main {
         flex: 1 0 auto;
-        opacity: 0.7;
+        /*opacity: 0.7;*/
     }
 
 </style>

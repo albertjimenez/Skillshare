@@ -144,7 +144,7 @@
         </form:form>
     </div>
     <div class="modal-footer">
-        <a href="#!" id="accept" class="modal-action waves-effect waves-purple blue btn-flat right">Aceptar</a>
+        <a href="#!" id="accept" class="modal-action waves-effect waves-purple blue btn-flat right">Colaborar</a>
         <a href="#!" class="modal-close waves-effect waves-purple red btn-flat left">Cancelar</a>
     </div>
 </div>

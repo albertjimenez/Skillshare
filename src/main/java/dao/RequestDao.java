@@ -3,6 +3,7 @@ package dao;
 import mapper.RequestMapper;
 import mapper.StudentMapper;
 import model.Tools.Pair;
+import model.proposal.Proposal;
 import model.request.Request;
 import model.student.Student;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,8 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class RequestDao {
     private JdbcTemplate jdbcTemplate;
-    private final String sequence = "nextval('request_of_collaboration_id_seq')";
+    private final String SEQUENCE = "nextval('request_of_collaboration_id_seq')";
+    private final static String DESCRIPTION = "Creada automáticamente";
 
     @Autowired
     public void setJdbcTemplate(DataSource dataSource) {
@@ -42,7 +44,7 @@ public class RequestDao {
     }
 
     public void createRequest(Request request) {
-        String sql = "INSERT INTO request_of_collaboration VALUES(" + sequence + ",?,?,?,?,?,?" + ")";
+        String sql = "INSERT INTO request_of_collaboration VALUES(" + SEQUENCE + ",?,?,?,?,?,?" + ")";
         jdbcTemplate.update(sql, request.getNif(),
                 request.getSkillName(), request.getLevel().toString(),
                 request.getDescription(),
@@ -69,5 +71,26 @@ public class RequestDao {
 
     }
 
+    /**
+     * @param skillName A skillName
+     * @return A list containing all your request that match with skillName
+     */
+    public List<Request> getRequestWithSkills(String skillName, String nif) {
+        String sql = "SELECT * FROM request_of_collaboration WHERE skill_name = ? AND nif = ?";
+        return jdbcTemplate.query(sql, new Object[]{skillName, nif}, new RequestMapper());
+
+    }
+
+    /**
+     * @param nif      Primary key for the creator of the request
+     * @param proposal The proposal which values will be copied to an autorequest
+     */
+    public void createAutorequest(String nif, Proposal proposal) {
+        String sql = "INSERT INTO request_of_collaboration VALUES(" + SEQUENCE + ",?,?,?,?,?,?" + ")";
+        jdbcTemplate.update(sql, nif,
+                proposal.getSkillName(), proposal.getLevel().toString(),
+                DESCRIPTION,
+                proposal.getInitialDate(), proposal.getFinishDate());
+    }
 
 }

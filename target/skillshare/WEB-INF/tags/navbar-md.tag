@@ -10,6 +10,10 @@
 <head>
     <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/introjs.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/intro.min.js"></script>
 </head>
 
 <div class="navbar">
@@ -22,9 +26,18 @@
                      class="responsive-img z-depth-2" alt="" width="40" height="40">
                 <span class="font-lobster">Skillshare</span>
             </a>
-            <a onmouseenter="showSideNav();" href="#" data-activates="slide-out"
-               class="button-collapse show-on-large"><i
-                    class="material-icons">menu</i></a>
+
+            <c:if test="${not empty tour}">
+                <a onmouseenter="showSideNav();" href="#" data-activates="slide-out" id="tour"
+                   data-intro='Este es el boton menu que muestra las opciones y los sitios a los que puedes ir, Dale click para comenzar'
+                   class="button-collapse show-on-large"><i
+                        class="material-icons">menu</i></a>
+            </c:if>
+            <c:if test="${empty tour}">
+                <a onmouseenter="showSideNav();" href="#" data-activates="slide-out"
+                   class="button-collapse show-on-large"><i
+                        class="material-icons">menu</i></a>
+            </c:if>
 
             <%--<a href="#" data-activates="mobile-demo" class="button-collapse">--%>
             <%--<i class="material-icons ">menu</i>--%>
@@ -38,9 +51,11 @@
                     </li>
                 </c:if>
                 <c:if test="${not empty name}">
-                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/login/login.html">${name}</a>
+                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/login/login.html">
+                        <i class="material-icons left">home</i>${name}</a>
                     </li>
-                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/login/logout.html">Salir</a>
+                    <li><a class="waves-effect" href="${pageContext.request.contextPath}/login/logout.html">
+                        <i class="material-icons right">exit_to_app</i>Salir</a>
                     </li>
                 </c:if>
 
@@ -51,6 +66,19 @@
     </nav>
 </div>
 <script>
+    introJs().start();
+    introJs().oncomplete(function () {
+        console.log('hola');
+        $('.button-collapse').sideNav('show');
+    });
+    var elem = document.getElementById('tour');
+    introJs().onchange(function(elem) {
+        alert("new step");
+    });
+</script>
+
+<script>
+
     //    function showSideNav() {
     //        $('.button-collapse').sideNav('show');
     //    }

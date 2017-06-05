@@ -3,10 +3,7 @@ package controller;
 import com.google.gson.Gson;
 import controller.validator.LoginValidator;
 import controller.validator.RegisterValidator;
-import dao.BannedDao;
-import dao.ProposalDao;
-import dao.SkillDao;
-import dao.StudentDao;
+import dao.*;
 import model.login.LoginEntity;
 import model.skill.Skill;
 import model.student.LoginStatus;
@@ -33,9 +30,16 @@ public class LoginRegisterController {
 
     private BannedDao bannedDao;
 
+    private RequestDao requestDao;
+
     private SkillDao skillDao;
 
     private ProposalDao proposalDao;
+
+    @Autowired
+    public void setRequestDao(RequestDao requestDao) {
+        this.requestDao = requestDao;
+    }
 
     @Autowired
     public void setProposalDao(ProposalDao proposalDao) {
@@ -203,6 +207,9 @@ public class LoginRegisterController {
         model.addAttribute("name", name);
         model.addAttribute("type", Type.getName(student.getType().toString()));
         model.addAttribute("proposals", proposalDao.getProposalsByNif(student.getNif()));
+        //Creates the tour
+        if (proposalDao.getProposalsByNif(student.getNif()).isEmpty() && requestDao.getRequestsByNif(student.getNif()).isEmpty())
+            model.addAttribute("tour", "-");
         if (registered) {
             model.addAttribute("success", "-");
             registered = false;
