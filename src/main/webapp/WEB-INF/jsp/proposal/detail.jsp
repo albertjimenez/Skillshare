@@ -24,6 +24,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.4/sweetalert2.min.js"></script>
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.4/sweetalert2.min.css">
+    <script src="/js/effect-text-3d.js"></script>
     <style>
         main {
             opacity: 0.9;
@@ -61,7 +62,7 @@
 
 <main class="container">
 
-    <h2 class="center-align font-lobster">Oferta - ${proposal.skillName} | ${proposal.level}  </h2>
+    <h2 class="center-align font-lobster text3d">Oferta - ${proposal.skillName} | ${proposal.level}  </h2>
     <div class="animated zoomInRight z-depth-3 hoverable" style="border-radius: 25px">
         <div class="card blue">
             <%--<div class="card-image">--%>

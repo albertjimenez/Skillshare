@@ -8,7 +8,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
-import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -32,7 +31,6 @@ public class CollaborationDao {
      */
     public List<Collaboration> getAllCollaborations() {
         String sql = "select * from collaboration";
-        List<Collaboration> l = new LinkedList<>();
         return jdbcTemplate.query(sql, new CollaborationMapper());
     }
 
@@ -45,20 +43,20 @@ public class CollaborationDao {
         String existsSql = "Select * from collaboration where id_pro = ? and id_req = ?";
 
         try {
-            jdbcTemplate.queryForObject(existsSql, new Object[]{collaboration.getIdProposal(),
-                            collaboration.getIdRequest()},
+            jdbcTemplate.queryForObject(existsSql, new Object[]{collaboration.getIdProposal().get(),
+                            collaboration.getIdRequest().get()},
                     new CollaborationMapper());
             return false;
         } catch (EmptyResultDataAccessException e) {
             String sql;
             if (collaboration.getHours() != 0) {
                 sql = "insert into collaboration values (?,?,?)";
-                jdbcTemplate.update(sql, new Object[]{collaboration.getIdProposal(),
-                        collaboration.getIdRequest(), collaboration.getHours()});
+                jdbcTemplate.update(sql, new Object[]{collaboration.getIdProposal().get(),
+                        collaboration.getIdRequest().get(), collaboration.getHours()});
             } else {
                 sql = "insert into collaboration values (?,?)";
-                jdbcTemplate.update(sql, new Object[]{collaboration.getIdProposal(),
-                        collaboration.getIdRequest()});
+                jdbcTemplate.update(sql, new Object[]{collaboration.getIdProposal().get(),
+                        collaboration.getIdRequest().get()});
             }
 
             return true;

@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="/js/effect-text-3d.js"></script>
     <%--<script>--%>
     <%--function showSideNav() {--%>
     <%--$('.button-collapse').sideNav('show');--%>
@@ -71,7 +72,7 @@
         </div>
     </c:if>
     <c:if test="${not empty proposals}">
-        <p>Pene</p>
+        <p>Ultima colab,req y prop</p>
     </c:if>
     <%--</div>--%>
 </main>
@@ -88,7 +89,7 @@
 <div class="modal" id="modal-help">
     <div class="modal-content cyan lighten-4 hoverable z-depth-5">
         <h5 class="font-raleway">Bienvenido</h5>
-        <p>Hola ${name}, en el panel gris de tu izquierda encontrarás todas las
+        <p>Hola ${name}, en el panel blanco de tu izquierda encontrarás todas las
             herramientas de las que puedes hacer uso.</p>
         <p>¡Pásatelo genial aprendiendo y enseñado con el resto de la comunidad universitaria!</p>
     </div>

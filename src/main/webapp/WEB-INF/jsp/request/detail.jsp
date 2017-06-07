@@ -25,6 +25,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.4/sweetalert2.min.js"></script>
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.4/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="/js/effect-text-3d.js"></script>
 
     <style>
         main {
@@ -61,9 +65,15 @@
     </ul>
 </md:sidenav-md>
 
+<c:if test="${not empty duplicated}">
+    <script>
+        toastr.error('Colaboración repetida');
+    </script>
+</c:if>
+
 <main class="container">
 
-    <h2 class="center-align font-lobster">Solicitud - ${request.skillName} | ${request.level}  </h2>
+    <h2 class="center-align font-lobster text3d">Solicitud - ${request.skillName} | ${request.level}  </h2>
     <div class="animated zoomInRight z-depth-3 hoverable" style="border-radius: 25px">
         <div class="card blue">
             <%--<div class="card-image">--%>
@@ -119,6 +129,7 @@
             <c:if test="${empty match_proposals}">
                 <p class="center-align red-text">No hay propuestas que coincidan,
                     se creará automáticamente a partir de esta solicitud</p>
+
             </c:if>
             <c:if test="${not empty match_proposals}">
                 <div class="row">
@@ -131,15 +142,15 @@
                         </form:select>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="input-field col s6 offset-s3 ">
-                            <%--<i class="material-icons">format_list_numbered</i>--%>
-                        <form:label path="description">Número de horas que dedicarás</form:label>
-                        <form:input path="description"></form:input>
-
-                    </div>
-                </div>
             </c:if>
+            <div class="row">
+                <div class="input-field col s6 offset-s3 ">
+                        <%--<i class="material-icons">format_list_numbered</i>--%>
+                    <form:label path="description">Número de horas que dedicarás</form:label>
+                    <form:input path="description"></form:input>
+
+                </div>
+            </div>
 
         </form:form>
     </div>

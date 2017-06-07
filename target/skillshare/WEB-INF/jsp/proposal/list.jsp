@@ -26,6 +26,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/my-backgrounds-opac.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/introjs.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/intro.min.js"></script>
+    <script src="/js/effect-text-3d.js"></script>
 
     <style>
         body {
@@ -33,7 +37,7 @@
         }
 
         main {
-            opacity: 0.8;
+            opacity: 0.9;
         }
     </style>
 </head>
@@ -66,19 +70,36 @@
 <%--Fondo restante de la web sin panel--%>
 <main class="container">
     <%--<div class="col s12 m8 l9" style="height: 100%">--%>
-    <h4 class="font-lobster center-align">Mis ${count} ofertas</h4>
+    <h4 class="font-lobster center-align text3d">Mis ${count} ofertas</h4>
 
     <%--Boton material de crear oferta--%>
-    <div class="fixed-action-btn horizontal">
-        <a class="btn-floating btn-large red">
-            <i class="material-icons">menu</i>
-        </a>
-        <ul>
-            <li><a class="btn-floating green" href="${pageContext.request.contextPath}/proposal/create.html">
-                <i class="material-icons">playlist_add</i></a></li>
-        </ul>
-    </div>
+    <c:if test="${not empty tour2}">
+        <div class="fixed-action-btn horizontal" id="tour2"
+             data-intro='Este es el boton extra que muestra opciones adicionales para cada elemento.'
+             data-position='top'>
 
+            <a class="btn-floating btn-large red">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul>
+                <li><a class="btn-floating green" href="${pageContext.request.contextPath}/proposal/create.html">
+                    <i class="material-icons">playlist_add</i></a></li>
+            </ul>
+        </div>
+    </c:if>
+
+    <c:if test="${empty tour2}">
+        <div class="fixed-action-btn horizontal">
+
+            <a class="btn-floating btn-large red">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul>
+                <li><a class="btn-floating green" href="${pageContext.request.contextPath}/proposal/create.html">
+                    <i class="material-icons">playlist_add</i></a></li>
+            </ul>
+        </div>
+    </c:if>
 
     <c:if test="${empty proposals}">
         <div class="valign-wrapper">
@@ -109,81 +130,9 @@
 
                     </li>
                 </a>
-                <%--<a class="waves-effect waves-light btn"--%>
-                <%--href="${pageContext.request.contextPath}/proposal/update/${req.id}.html">--%>
-                <%--<i class="material-icons left ">mode_edit--%>
-                <%--</i>Editar Oferta</a>--%>
-                <%--<a class="waves-effect waves-light btn"--%>
-                <%--href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html">--%>
-                <%--<i class="material-icons left">delete</i>--%>
-                <%--Borrar Oferta</a>--%>
-
             </c:forEach>
         </ul>
 
-        <%--<ul class="collapsible popout" data-collapsible="accordion">--%>
-
-        <%--<c:forEach items="${proposals}" var="req">--%>
-
-
-        <%--<md:desplegable-md name="${req.skillName}" name2="${req.initialDate}">--%>
-
-
-        <%--<table class="highlight bordered">--%>
-        <%--<tr>--%>
-        <%--<td><span class="font-raleway">Nivel:</span></td>--%>
-        <%--<td class="font-raleway">${req.level}</td>--%>
-        <%--</tr>--%>
-        <%--<tr>--%>
-        <%--<td><span class="font-raleway">Descripción:</span></td>--%>
-        <%--<td class="font-raleway">${req.description}</td>--%>
-        <%--</tr>--%>
-        <%--<tr>--%>
-        <%--<td><span class="font-raleway">Fecha fin:</span></td>--%>
-        <%--<td class="font-raleway">${req.finishDate}</td>--%>
-        <%--</tr>--%>
-        <%--<tr>--%>
-        <%--<td>--%>
-        <%--<a class="waves-effect waves-light btn"--%>
-        <%--href="${pageContext.request.contextPath}/proposal/update/${req.id}.html">--%>
-        <%--<i class="material-icons left ">mode_edit--%>
-        <%--</i>Editar Oferta</a>--%>
-        <%--</td>--%>
-        <%--<td>--%>
-        <%--<a class="waves-effect waves-light btn"--%>
-        <%--href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html">--%>
-        <%--<i class="material-icons left">delete</i>--%>
-        <%--Borrar Oferta</a>--%>
-        <%--</td>--%>
-        <%--</tr>--%>
-        <%--</table>--%>
-
-
-        <%--&lt;%&ndash;Botonera fija en la parte inferior derecha&ndash;%&gt;--%>
-        <%--&lt;%&ndash;Button Material&ndash;%&gt;--%>
-        <%--<div class="fixed-action-btn">--%>
-        <%--<a class="btn-floating btn-large red pulse">--%>
-        <%--<i class="large material-icons">mode_edit</i>--%>
-        <%--</a>--%>
-
-        <%--&lt;%&ndash;SUBButtons&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<ul>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<li><a class="btn-floating red pulse"&ndash;%&gt;--%>
-        <%--&lt;%&ndash;href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html"><i&ndash;%&gt;--%>
-        <%--&lt;%&ndash;class="material-icons">delete</i></a></li>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<li><a class="btn-floating blue pulse"&ndash;%&gt;--%>
-        <%--&lt;%&ndash;href="${pageContext.request.contextPath}/proposal/update/${req.id}.html">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<i class="material-icons">mode_edit</i></a></li>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<li><a class="btn-floating green pulse"&ndash;%&gt;--%>
-        <%--&lt;%&ndash;href="${pageContext.request.contextPath}/proposal/create.html">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<i class="material-icons">playlist_add</i></a></li>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</ul>&ndash;%&gt;--%>
-        <%--</div>--%>
-
-        <%--</md:desplegable-md>--%>
-
-        <%--</c:forEach>--%>
-        <%--</ul>--%>
 
     </c:if>
 </main>
@@ -208,5 +157,8 @@
     AOS.init();
 </script>
 
+<script>
+    introJs().start();
+</script>
 </body>
 </html>

@@ -72,7 +72,7 @@
         $('.button-collapse').sideNav('show');
     });
     var elem = document.getElementById('tour');
-    introJs().onchange(function(elem) {
+    introJs().onchange(function (elem) {
         alert("new step");
     });
 </script>

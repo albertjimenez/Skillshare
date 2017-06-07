@@ -22,6 +22,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/animate.css" rel="stylesheet">
     <link href="/css/my-backgrounds-opac.css" rel="stylesheet">
+    <script src="/js/effect-text-3d.js"></script>
 
     <style>
         @import url(http://fonts.googleapis.com/css?family=Raleway:100,400,700);
@@ -35,7 +36,7 @@
         }
 
         main {
-            opacity: 0.9;
+            /*opacity: 0.9;*/
         }
 
 
@@ -69,7 +70,7 @@
     <%--Resto fondo web--%>
 <%--<div class="col s12 m8 l9" style="height: 100%">--%>
 <main class="container">
-    <h4 class="font-lobster animated lightSpeedIn center-align">Crear oferta</h4>
+    <h4 class="font-lobster animated lightSpeedIn center-align text3d">Crear oferta</h4>
     <div class=" valign hoverable z-depth-2 my-bw-nw animated flipInY blue-text">
         <form:form method="post" modelAttribute="newproposal" onsubmit="return checkProposalRequest();">
 

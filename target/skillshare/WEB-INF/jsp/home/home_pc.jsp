@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.4/sweetalert2.min.css">
     <link rel="stylesheet" href="/css/search.css">
+    <script src="/js/effect-text-3d.js"></script>
     <style>
         body {
             background-image: url("/images/pc-wallpaper.jpg");
@@ -64,15 +65,10 @@
     <li>
         <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Peticiones</a>
     </li>
-    <li><a class="subheader">Promotor de colaboraciones</a></li>
-    <%--<li>--%>
-    <%--<a class="waves-effect" href="${pageContext.request.contextPath}/banned/ban.html">--%>
-    <%--<i class="material-icons">warning</i>Lista de baneados</a>--%>
-    <%--</li>--%>
 </md:sidenav-md>
 
 <main class="container">
-    <h4 class="font-lobster center-align">Colección de habilidades</h4>
+    <h4 class="font-lobster center-align text3d">Colección de habilidades</h4>
         <div class="fixed-action-btn horizontal">
             <a class="btn-floating btn-large red">
                 <i class="material-icons">menu</i>
@@ -170,10 +166,10 @@
     $('.profile').initial({height: 46, width: 46, fontSize: 20, fontWeight: 700});
 </script>
 <%--<script>--%>
-    <%--function showSideNav() {--%>
-        <%--$('.button-collapse').sideNav('show');--%>
-    <%--}--%>
-    <%--window.onload = showSideNav;--%>
+<%--function showSideNav() {--%>
+<%--$('.button-collapse').sideNav('show');--%>
+<%--}--%>
+<%--window.onload = showSideNav;--%>
 <%--</script>--%>
 <script>
 

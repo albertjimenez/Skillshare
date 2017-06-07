@@ -68,7 +68,7 @@ public class ProposalController {
         model.addAttribute("student", student);
         model.addAttribute("name", name);
         model.addAttribute("type", Type.getName(student.getType().toString()));
-        List<Proposal> l = proposalDao.getProposals();
+        List<Proposal> l = proposalDao.getProposals(student.getNif());
         model.addAttribute("proposals", l);
         model.addAttribute("count", l.size());
         if (l.isEmpty())

@@ -54,7 +54,7 @@ public class BannedController {
         if (!getType().equals(CP_STRING))
             return "home/home_student";
         model.addAttribute("name", getStudentName());
-        System.out.println("mi tipo es" + getType());
+        model.addAttribute("type", getType());
         List<Student> l = new LinkedList<>();
         List<String> bannedList = bannedDao.getBanneds();
         for (String nif : bannedList)

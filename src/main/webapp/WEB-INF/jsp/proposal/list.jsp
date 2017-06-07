@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/introjs.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/intro.min.js"></script>
+    <script src="/js/effect-text-3d.js"></script>
 
     <style>
         body {
@@ -69,7 +70,7 @@
 <%--Fondo restante de la web sin panel--%>
 <main class="container">
     <%--<div class="col s12 m8 l9" style="height: 100%">--%>
-    <h4 class="font-lobster center-align">Mis ${count} ofertas</h4>
+    <h4 class="font-lobster center-align text3d">Mis ${count} ofertas</h4>
 
     <%--Boton material de crear oferta--%>
     <c:if test="${not empty tour2}">

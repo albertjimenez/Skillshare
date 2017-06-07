@@ -24,13 +24,14 @@
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="/js/effect-text-3d.js"></script>
     <style>
         body {
             background-image: url("/images/background-create-req.jpg");
         }
 
         main {
-            opacity: 0.8;
+            /*opacity: 0.8;*/
         }
     </style>
 
@@ -56,7 +57,7 @@
 </md:sidenav-md>
 
 <main class="container">
-    <h4 class="center-align font-lobster">Crear petición</h4>
+    <h4 class="center-align font-lobster text3d">Crear petición</h4>
     <div class="section z-depth-2 my-bw-nw animated fadeInDown" id="myForm">
         <form:form method="post" modelAttribute="newrequest" onsubmit="return checkProposalRequest();">
             <div class="row">

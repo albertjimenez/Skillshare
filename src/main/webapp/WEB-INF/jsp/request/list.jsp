@@ -23,13 +23,14 @@
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/search.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="/js/effect-text-3d.js"></script>
     <style>
         body {
             background-image: url("/images/background-list-req.jpg");
         }
 
         main {
-            opacity: 0.8;
+            /*opacity: 0.8;*/
         }
     </style>
 </head>
@@ -56,7 +57,7 @@
 </md:sidenav-md>
 
 <main class="container">
-    <h4 class="font-lobster center-align">Mis ${count} Peticiones</h4>
+    <h4 class="font-lobster center-align text3d">Mis ${count} Peticiones</h4>
 
 
 

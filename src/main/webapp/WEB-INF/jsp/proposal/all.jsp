@@ -24,7 +24,12 @@
     <link rel="stylesheet" href="/css/my-grid.css">
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/search.css">
-
+    <script src="/js/effect-text-3d.js"></script>
+    <style>
+        body {
+            background-image: url("/images/waveps3.jpg");
+        }
+    </style>
 </head>
 <body class="blue lighten-3">
 
@@ -54,7 +59,7 @@
 
 <main class="container">
 
-    <h4 class="center-align font-lobster">Ofertas disponibles</h4>
+    <h4 class="center-align font-lobster text3d">Ofertas disponibles</h4>
     <div class="fixed-action-btn horizontal">
         <a class="btn-floating btn-large blue">
             <i class="material-icons">menu</i>
@@ -92,10 +97,11 @@
                 <li class="hoverable animated flipInY">
                     <img class="activator profile center-align circle" data-name=${prop.skillName}}">
                     <h3 class="center-align">${prop.skillName} ${prop.level}</h3>
-                    <p>Descripción:</p>
-                    <p class="center-align">${prop.description}</p>
-                    <p class="">Inicio: ${prop.initialDate}</p>
-                    <p class="">Fin: ${prop.finishDate}</p>
+                    <p class="blue-grey-text darken-3"><strong>Descripción:</strong></p>
+                    <p class="center-align blue-text">${prop.description}</p>
+                    <p class="black-text"><strong>Inicio:</strong> ${prop.initialDate}</p>
+                    <p class="black-text"><strong>Fin:</strong> ${prop.finishDate}</p>
+
                 </li>
             </a>
 

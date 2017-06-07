@@ -58,6 +58,10 @@
 
     <div class="light-blue lighten-3">
         <jsp:doBody/>
+        <li>
+            <a class="waves-effect" href="${pageContext.request.contextPath}/request/all.html">Solicitudes
+                disponibles</a>
+        </li>
     </div>
 
 </ul>

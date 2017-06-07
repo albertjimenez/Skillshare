@@ -33,11 +33,11 @@ public class ProposalDao {
     }
 
 
-    public List<Proposal> getProposals() {
+    public List<Proposal> getProposals(String nif) {
         String sql = "SELECT id , nif , skill_name , skill_level , description  , initial_date , finish_date " +
-                " FROM proposal_of_collaboration " + "WHERE finish_date > CURRENT_DATE " +
+                " FROM proposal_of_collaboration " + "WHERE finish_date > CURRENT_DATE AND nif != ?" +
                 "ORDER BY initial_date, skill_name";
-        return jdbcTemplate.query(sql, new ProposalMapper());
+        return jdbcTemplate.query(sql, new Object[]{nif}, new ProposalMapper());
     }
 
     public List<Proposal> getProposalsByNif(String nif) {
@@ -104,7 +104,7 @@ public class ProposalDao {
             p = jdbcTemplate.queryForObject(sql, new Object[]{id.get()}, new ProposalMapper());
             student = jdbcTemplate.queryForObject(sqlStudent, new Object[]{p.getNif()}, new StudentMapper());
             student.setPassword("-");
-            student.setNif("-");
+//            student.setNif("-");
             return new Pair<>(student, p);
         } catch (EmptyResultDataAccessException e) {
             System.out.println("Propuesta no encontrada " + id);

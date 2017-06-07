@@ -29,10 +29,11 @@ public class RequestDao {
     }
 
 
-//    public List<Request> getRequests() {
-//        String sql = "select * from request_of_collaboration order by initial_date, skill_name";
-//        return jdbcTemplate.query(sql, new RequestMapper());
-//    }
+    public List<Request> getRequests(String nif) {
+        String sql = "select * from request_of_collaboration WHERE finish_date > CURRENT_DATE AND nif != ?" +
+                "order by initial_date, skill_name, skill_level";
+        return jdbcTemplate.query(sql, new Object[]{nif}, new RequestMapper());
+    }
 
     public List<Request> getRequestsByNif(String nif) {
         String sql = "select * from request_of_collaboration where nif = ? AND finish_date > CURRENT_DATE order by initial_date, skill_name";
@@ -51,7 +52,7 @@ public class RequestDao {
                 request.getInitialDate(), request.getFinishDate());
     }
 
-    public Pair<Student, Request> getRequestsByID(AtomicInteger id) {
+    public Pair<Student, Request> getRequestByID(AtomicInteger id) {
         Request p;
         String sql = "SELECT * FROM request_of_collaboration WHERE id = ? and finish_date > CURRENT_DATE";
         Student student;
@@ -61,7 +62,7 @@ public class RequestDao {
             p = jdbcTemplate.queryForObject(sql, new Object[]{id.get()}, new RequestMapper());
             student = jdbcTemplate.queryForObject(sqlStudent, new Object[]{p.getNif()}, new StudentMapper());
             student.setPassword("-");
-            student.setNif("-");
+//            student.setNif("-");
             return new Pair<>(student, p);
         } catch (EmptyResultDataAccessException e) {
             System.out.println("Solicitud no encontrada " + id);
