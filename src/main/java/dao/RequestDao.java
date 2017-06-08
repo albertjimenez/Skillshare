@@ -31,12 +31,15 @@ public class RequestDao {
 
     public List<Request> getRequests(String nif) {
         String sql = "select * from request_of_collaboration WHERE finish_date > CURRENT_DATE AND nif != ?" +
+                " EXCEPT select r.* from request_of_collaboration r JOIN collaboration c ON id_req = id " +
                 "order by initial_date, skill_name, skill_level";
         return jdbcTemplate.query(sql, new Object[]{nif}, new RequestMapper());
     }
 
     public List<Request> getRequestsByNif(String nif) {
-        String sql = "select * from request_of_collaboration where nif = ? AND finish_date > CURRENT_DATE order by initial_date, skill_name";
+        String sql = "select * from request_of_collaboration  where nif = ? AND finish_date > CURRENT_DATE " +
+                " EXCEPT select r.* from request_of_collaboration r JOIN collaboration c ON id_req = id " +
+                "order by initial_date, skill_name";
         try {
             return jdbcTemplate.query(sql, new Object[]{nif}, new RequestMapper());
         } catch (EmptyResultDataAccessException e) {
@@ -52,6 +55,15 @@ public class RequestDao {
                 request.getInitialDate(), request.getFinishDate());
     }
 
+    /**
+     * @param idRequest
+     * @return True if there is a single ID of the idRequest on Collaboration or false if there is not any
+     */
+    public boolean alreadyCollaborating(AtomicInteger idRequest) {
+        String sql = "select r.* from collaboration c join request_of_collaboration r on id_req = id where id = ?";
+        return !jdbcTemplate.query(sql, new Object[]{idRequest.get()}, new RequestMapper()).isEmpty();
+    }
+
     public Pair<Student, Request> getRequestByID(AtomicInteger id) {
         Request p;
         String sql = "SELECT * FROM request_of_collaboration WHERE id = ? and finish_date > CURRENT_DATE";
@@ -62,7 +74,6 @@ public class RequestDao {
             p = jdbcTemplate.queryForObject(sql, new Object[]{id.get()}, new RequestMapper());
             student = jdbcTemplate.queryForObject(sqlStudent, new Object[]{p.getNif()}, new StudentMapper());
             student.setPassword("-");
-//            student.setNif("-");
             return new Pair<>(student, p);
         } catch (EmptyResultDataAccessException e) {
             System.out.println("Solicitud no encontrada " + id);
@@ -77,7 +88,8 @@ public class RequestDao {
      * @return A list containing all your request that match with skillName
      */
     public List<Request> getRequestWithSkills(String skillName, String nif) {
-        String sql = "SELECT * FROM request_of_collaboration WHERE skill_name = ? AND nif = ?";
+        String sql = "SELECT * FROM request_of_collaboration WHERE skill_name = ? AND nif = ?"
+                + " EXCEPT select r.* from request_of_collaboration r JOIN collaboration c ON id_req = id ";
         return jdbcTemplate.query(sql, new Object[]{skillName, nif}, new RequestMapper());
 
     }

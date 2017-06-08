@@ -1,10 +1,12 @@
 package controller;
 
 import controller.validator.ProposalValidator;
+import dao.CollaborationDao;
 import dao.ProposalDao;
 import dao.RequestDao;
 import dao.SkillDao;
 import model.Tools.Pair;
+import model.collaboration.Collaboration;
 import model.proposal.Proposal;
 import model.request.Request;
 import model.skill.Level;
@@ -34,14 +36,24 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Controller
 public class ProposalController {
 
+
+    private static final Integer DEFAULT_HOURS = 2;
+
+
     private ProposalDao proposalDao;
     private SkillDao skillDao;
     private RequestDao requestDao;
+    private CollaborationDao collaborationDao;
 
     @Autowired
     private HttpSession httpSession;
 
     private static final String LOGIN_URL = "redirect:../login/login.html";
+
+    @Autowired
+    public void setCollaborationDao(CollaborationDao collaborationDao) {
+        this.collaborationDao = collaborationDao;
+    }
 
     @Autowired
     public void setRequestDao(RequestDao requestDao) {
@@ -187,19 +199,7 @@ public class ProposalController {
 
             model.addAttribute("id", id);
             pair = proposalDao.getProposalByID(new AtomicInteger(Integer.parseInt(id)));
-            if (pair != null) {
-                model.addAttribute("student_proposal", pair.getLeft());
-                model.addAttribute("proposal", pair.getRight());
-                List<Request> l = requestDao.getRequestWithSkills
-                        (pair.getRight().getSkillName(), student.getNif());
-                List<String> skillNames = new LinkedList<>();
-                for (Request r : l)
-                    skillNames.add(r.getId() + "-" + r.getSkillName() + "-" + Level.getLevelToString(r.getLevel()));
-
-                System.out.println(l);
-                System.out.println(skillNames);
-                model.addAttribute("match_request", skillNames);
-            }
+            loadRelativeRequests(pair, model, student);
         } catch (NumberFormatException e) {
             return "proposal/error";
         }
@@ -234,9 +234,69 @@ public class ProposalController {
                                                    @ModelAttribute("newrequest")
                                                            Request request,
                                                    BindingResult bindingResult, Model model) {
-        System.out.println("mi propuesta->" + request);
-//De path variable tengo un id y el otro está en la propuesta, en la descripcion de proposal
-        //esta el numero de horas
+        if (!getSessionStudent())
+            return "redirect:../../login/login.html";
+        if (Type.getType(getType()) == Type.CP)
+            model.addAttribute("cp", "-");
+
+        Student student = (Student) httpSession.getAttribute("user");
+        String name = getStudentName();
+        model.addAttribute("name", name);
+        model.addAttribute("type", getType());
+        model.addAttribute("student", student);
+        model.addAttribute("type", Type.getName(student.getType().toString()));
+
+        //TODO Y también poner el modulo de limite de 20 horas
+        System.out.println("Propuesta de las mias->" + request);
+        Pair<Student, Request> pairRequest = null;
+        AtomicInteger idFromParam;
+
+        try {
+            idFromParam = new AtomicInteger(Integer.parseInt(id));
+        } catch (NumberFormatException e2) {
+            System.out.println("Error con la id");
+            return "proposal/error";
+        }
+        Pair<Student, Proposal> myProposalFromParam = proposalDao.getProposalByID(idFromParam);
+        loadRelativeRequests(myProposalFromParam, model, student);
+
+
+        try {
+            String[] elements = request.getSkillName().split("-");
+            AtomicInteger myID = new AtomicInteger(Integer.parseInt(elements[0]));
+            pairRequest = requestDao.getRequestByID(myID);
+            System.out.println("Propuesta de las mias->" + pairRequest.getRight());
+
+        } catch (NumberFormatException e) {
+            System.out.println("Error con la id");
+            return "proposal/error";
+        } catch (NullPointerException n) {
+            //Copy the request -> proposal
+            requestDao.createAutorequest(student.getNif(), myProposalFromParam.getRight());
+            List<Request> newAutoRequest = requestDao.
+                    getRequestWithSkills(myProposalFromParam.getRight().getSkillName(), student.getNif());
+            //last proposal
+            Request r = newAutoRequest.get(newAutoRequest.size() - 1);
+            Collaboration collaboration = Collaboration.factoryCollaboration(r.getId(),
+                    myProposalFromParam.getRight().getId(), request.getDescription());
+            if (proposalDao.alreadyCollaborating(myProposalFromParam.getRight().getId()) &&
+                    !collaborationDao.insertCollab(collaboration))
+                model.addAttribute("duplicated", "--");
+            else {
+                model.addAttribute("correct", "--");
+                return "proposal/detail";
+            }
+        }
+//IF is not an autorequest
+
+        System.out.println("La request que capturo del param: " + myProposalFromParam.getRight());
+        //Put collab on DB
+        Collaboration collaboration = Collaboration.factoryCollaboration(idFromParam,
+                pairRequest.getRight().getId(), request.getDescription());
+        if (!collaborationDao.insertCollab(collaboration))
+            model.addAttribute("duplicated", "--");
+        else
+            model.addAttribute("correct", "--");
         return "proposal/detail";
 
     }
@@ -257,5 +317,20 @@ public class ProposalController {
         return Type.getName(student.getType().toString());
     }
 
+    private void loadRelativeRequests(Pair<Student, Proposal> pair, Model model, Student student) {
+        if (pair != null) {
+            model.addAttribute("student_proposal", pair.getLeft());
+            model.addAttribute("proposal", pair.getRight());
+            List<Request> l = requestDao.getRequestWithSkills
+                    (pair.getRight().getSkillName(), student.getNif());
+            List<String> skillNames = new LinkedList<>();
+            for (Request r : l)
+                skillNames.add(r.getId() + "-" + r.getSkillName() + "-" + Level.getLevelToString(r.getLevel()));
+
+            System.out.println(l);
+            System.out.println(skillNames);
+            model.addAttribute("match_request", skillNames);
+        }
+    }
 
 }

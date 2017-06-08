@@ -24,6 +24,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.4/sweetalert2.min.js"></script>
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.4/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script src="/js/effect-text-3d.js"></script>
     <style>
         main {
@@ -59,6 +62,17 @@
 
     </ul>
 </md:sidenav-md>
+
+<c:if test="${not empty duplicated}">
+    <script>
+        toastr.error('Colaboración repetida');
+    </script>
+</c:if>
+<c:if test="${not empty correct}">
+    <script>
+        toastr.success('Colaboración creada');
+    </script>
+</c:if>
 
 <main class="container">
 
@@ -128,15 +142,15 @@
                         </form:select>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="input-field col s6 offset-s3 ">
-                            <%--<i class="material-icons">format_list_numbered</i>--%>
-                        <form:label path="description">Número de horas que dedicarás</form:label>
-                        <form:input path="description"></form:input>
-
-                    </div>
-                </div>
             </c:if>
+            <div class="row">
+                <div class="input-field col s6 offset-s3 ">
+                        <%--<i class="material-icons">format_list_numbered</i>--%>
+                    <form:label path="description">Número de horas que dedicarás</form:label>
+                    <form:input path="description"></form:input>
+
+                </div>
+            </div>
 
         </form:form>
     </div>

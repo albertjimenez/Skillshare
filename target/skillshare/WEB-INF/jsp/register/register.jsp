@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="/js/effect-text-3d.js"></script>
 
     <style>
 
@@ -63,7 +64,7 @@
            href="${pageContext.request.contextPath}/register/register.html">Registro</a></li>
 </md:sidenav-md>
 
-<h4 class="center-align font-lobster"><strong>Regístrate</strong></h4>
+<h4 class="center-align font-lobster text3d"><strong>Regístrate</strong></h4>
 
 <main class="container">
 

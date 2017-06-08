@@ -27,6 +27,7 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <title>Iniciar sesión</title>
+    <script src="/js/effect-text-3d.js"></script>
 </head>
 <style>
     body {
@@ -61,7 +62,7 @@
     <div class="bar"></div>
 </div>
 <main class="container">
-    <h4 class="center-align animated slideInDown font-lobster">Inicia la sesión</h4>
+    <h4 class="center-align animated slideInDown font-lobster text3d">Inicia la sesión</h4>
 
     <%--Abrimos formulario--%>
     <div class="section z-depth-2 my-bw-nw  hoverable animated slideInUp" id="myForm">

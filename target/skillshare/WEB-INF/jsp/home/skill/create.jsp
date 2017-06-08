@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="/js/effect-text-3d.js"></script>
     <style>
         @import url(http://fonts.googleapis.com/css?family=Raleway:100,400,700);
 
@@ -39,16 +40,6 @@
         main {
             opacity: 0.8;
         }
-
-        /*.blurred-bg {*/
-        /*background-image: url("/images/background-create-skill-blur.jpg");*/
-        /*background-repeat: no-repeat;*/
-        /*-moz-background-size: cover;*/
-        /*-o-background-size: cover;*/
-        /*-webkit-background-size: cover;*/
-        /*background-size: cover;*/
-        /*background-attachment: fixed;*/
-        /*}*/
 
     </style>
 </head>
@@ -73,16 +64,11 @@
     <li>
         <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Peticiones</a>
     </li>
-    <li><a class="subheader">Promotor de colaboraciones</a></li>
-    <li>
-        <a class="waves-effect" href="${pageContext.request.contextPath}/banned/ban.html">
-            <i class="material-icons">warning</i>Lista de baneados</a>
-    </li>
 </md:sidenav-md>
 
 <%--<div class="col s8">--%>
 <main class="container">
-    <h2 class="font-lobster center-align blue-text animated slideInDown">Crear habilidad</h2>
+    <h2 class="font-lobster center-align blue-text animated slideInDown text3d">Crear habilidad</h2>
     <div class="section z-depth-2 my-bw-nw animated slideInDown blue-text" id="myForm">
         <form:form method="post" modelAttribute="createskill" onsubmit="return white_spaces();">
             <div class="row">

@@ -188,11 +188,21 @@ public class RequestController {
         model.addAttribute("student", student);
         model.addAttribute("type", Type.getName(student.getType().toString()));
 
-
-        //TODO queda por evitar dobles colaboraciones y obtener el numero de horas
         //TODO Y también poner el modulo de limite de 20 horas
         System.out.println("Propuesta de las mias->" + proposal);
-        Pair<Student, Proposal> pairProposal;
+        Pair<Student, Proposal> pairProposal = null;
+        AtomicInteger idFromParam;
+
+        try {
+            idFromParam = new AtomicInteger(Integer.parseInt(id));
+        } catch (NumberFormatException e2) {
+            System.out.println("Error con la id");
+            return "request/error";
+        }
+        Pair<Student, Request> myRequestFromParam = requestDao.getRequestByID(idFromParam);
+        loadRelativeProposals(myRequestFromParam, model, student);
+
+
         try {
             String[] elements = proposal.getSkillName().split("-");
             AtomicInteger myID = new AtomicInteger(Integer.parseInt(elements[0]));
@@ -202,36 +212,35 @@ public class RequestController {
         } catch (NumberFormatException e) {
             System.out.println("Error con la id");
             return "request/error";
-        }
-        AtomicInteger idFromParam;
-        try {
-            idFromParam = new AtomicInteger(Integer.parseInt(id));
-        } catch (NumberFormatException e2) {
-            System.out.println("Error con la id");
-            return "request/error";
-        }
-        Pair<Student, Request> myRequestFromParam = requestDao.getRequestByID(idFromParam);
-        loadRelativeProposals(myRequestFromParam, model, student);
-        System.out.println("La request que capturo del param: " + myRequestFromParam.getRight());
-        System.out.println("Y su estudiante que la da: " + myRequestFromParam.getLeft());
-        if (pairProposal.getLeft().getNif().equals(myRequestFromParam.getLeft().getNif()))
-            System.out.println("Son del mismo student eh!!");
-        else {
-            //Put collab on DB
-            Collaboration collaboration = new Collaboration();
-            try {
-                Integer numberOfHours = Integer.parseInt(proposal.getDescription());
-                collaboration.setHours(numberOfHours);
-            } catch (NumberFormatException e) {
-                System.out.println("error con el numero de horas");
-                collaboration.setHours(DEFAULT_HOURS);
-            } finally {
-                collaboration.setIdProposal(pairProposal.getRight().getId());
-                collaboration.setIdRequest(idFromParam);
-            }
-            if (!collaborationDao.insertCollab(collaboration))
+        } catch (NullPointerException n) {
+            //Copy the request -> proposal
+            proposalDao.createAutoproposal(student.getNif(), myRequestFromParam.getRight());
+            List<Proposal> newAutoProposal = proposalDao.getProposalWithSkills
+                    (myRequestFromParam.getRight().getSkillName(), student.getNif());
+            //last proposal
+            Proposal p = newAutoProposal.get(newAutoProposal.size() - 1);
+            Collaboration collaboration = Collaboration.factoryCollaboration(pairProposal.getRight().getId(),
+                    idFromParam, proposal.getDescription());
+            if (requestDao.alreadyCollaborating(myRequestFromParam.getRight().getId()) || !collaborationDao.insertCollab(collaboration))
                 model.addAttribute("duplicated", "--");
+            else {
+                model.addAttribute("correct", "--");
+                return "request/detail";
+            }
         }
+        //IF is not an autoproposal
+
+        System.out.println("La request que capturo del param: " + myRequestFromParam.getRight());
+        //Put collab on DB
+
+
+        Collaboration collaboration = Collaboration.factoryCollaboration(pairProposal.getRight().getId(),
+                idFromParam, proposal.getDescription());
+
+        if (!collaborationDao.insertCollab(collaboration))
+            model.addAttribute("duplicated", "--");
+        else
+            model.addAttribute("correct", "--");
 
         return "request/detail";
 

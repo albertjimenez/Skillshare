@@ -92,15 +92,15 @@
 
         <%--Boton fijo--%>
         <ul class="rig columns-3 live-search-list">
-        <c:forEach items="${proposals}" var="prop">
-            <a href="${pageContext.request.contextPath}/proposal/detail/${prop.id}.html">
+            <c:forEach items="${proposals}" var="collab">
+                <a href="${pageContext.request.contextPath}/proposal/detail/${collab.id}.html">
                 <li class="hoverable animated flipInY">
-                    <img class="activator profile center-align circle" data-name=${prop.skillName}}">
-                    <h3 class="center-align">${prop.skillName} ${prop.level}</h3>
+                    <img class="activator profile center-align circle" data-name=${collab.skillName}}">
+                    <h3 class="center-align">${collab.skillName} ${collab.level}</h3>
                     <p class="blue-grey-text darken-3"><strong>Descripción:</strong></p>
-                    <p class="center-align blue-text">${prop.description}</p>
-                    <p class="black-text"><strong>Inicio:</strong> ${prop.initialDate}</p>
-                    <p class="black-text"><strong>Fin:</strong> ${prop.finishDate}</p>
+                    <p class="center-align blue-text">${collab.description}</p>
+                    <p class="black-text"><strong>Inicio:</strong> ${collab.initialDate}</p>
+                    <p class="black-text"><strong>Fin:</strong> ${collab.finishDate}</p>
 
                 </li>
             </a>

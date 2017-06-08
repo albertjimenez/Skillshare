@@ -28,7 +28,7 @@
             </a>
 
             <c:if test="${not empty tour}">
-                <a onmouseenter="showSideNav();" href="#" data-activates="slide-out" id="tour"
+                <a href="#" data-activates="slide-out" id="tour"
                    data-intro='Este es el boton menu que muestra las opciones y los sitios a los que puedes ir, Dale click para comenzar'
                    class="button-collapse show-on-large"><i
                         class="material-icons">menu</i></a>

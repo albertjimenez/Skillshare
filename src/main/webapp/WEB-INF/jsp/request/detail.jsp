@@ -70,6 +70,11 @@
         toastr.error('Colaboración repetida');
     </script>
 </c:if>
+<c:if test="${not empty correct}">
+    <script>
+        toastr.success('Colaboración creada');
+    </script>
+</c:if>
 
 <main class="container">
 

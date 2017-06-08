@@ -23,6 +23,7 @@
     <link href="/css/animate.css" rel="stylesheet">
     <link href="/css/font-google.css" rel="stylesheet">
     <link href="/css/my-backgrounds-opac.css" rel="stylesheet">
+    <script src="/js/effect-text-3d.js"></script>
 </head>
 <style>
     body {
@@ -65,7 +66,7 @@
     <%--Resto de la página--%>
 <%--<div class="col s9 ">--%>
 <main class="container">
-    <h4 class="center-align font-lobster">Editar habilidad ${editskill.name}</h4>
+    <h4 class="center-align font-lobster text3d">Editar habilidad ${editskill.name}</h4>
     <div class="section z-depth-2 my-bw-nw animated fadeInDown ">
         <form:form method="post" modelAttribute="editskill" id="myform">
                     <div class="row">

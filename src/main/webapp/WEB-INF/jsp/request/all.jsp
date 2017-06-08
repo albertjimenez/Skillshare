@@ -72,10 +72,10 @@
     <%--<div class="col s12 m8 l9" style="height: 100%">--%>
     <c:if test="${empty requests}">
         <div class="valign-wrapper">
-            <a class="valign" style="font-size: 50px;text-align: center">
+            <a class="valign white-text" style="font-size: 50px;text-align: center">
                 <i class="material-icons valign" style="font-size: 200px; text-align: center">insert_invitation</i>
                 <br>
-                No hay propuestas todavía, te sugerimos crear una :)</a>
+                No hay solicitudes todavía, te sugerimos crear una :)</a>
         </div>
     </c:if>
 
@@ -92,15 +92,15 @@
 
         <%--Boton fijo--%>
         <ul class="rig columns-3 live-search-list">
-            <c:forEach items="${requests}" var="prop">
-                <a href="${pageContext.request.contextPath}/request/detail/${prop.id}.html">
+            <c:forEach items="${requests}" var="collab">
+                <a href="${pageContext.request.contextPath}/request/detail/${collab.id}.html">
                     <li class="hoverable animated flipInY">
-                        <img class="activator profile center-align circle" data-name=${prop.skillName}}">
-                        <h3 class="center-align">${prop.skillName} ${prop.level}</h3>
+                        <img class="activator profile center-align circle" data-name=${collab.skillName}}">
+                        <h3 class="center-align">${collab.skillName} ${collab.level}</h3>
                         <p class="blue-grey-text darken-3"><strong>Descripción:</strong></p>
-                        <p class="center-align blue-text">${prop.description}</p>
-                        <p class="black-text"><strong>Inicio:</strong> ${prop.initialDate}</p>
-                        <p class="black-text"><strong>Fin:</strong> ${prop.finishDate}</p>
+                        <p class="center-align blue-text">${collab.description}</p>
+                        <p class="black-text"><strong>Inicio:</strong> ${collab.initialDate}</p>
+                        <p class="black-text"><strong>Fin:</strong> ${collab.finishDate}</p>
                     </li>
                 </a>
 

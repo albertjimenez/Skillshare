@@ -88,15 +88,15 @@
 
 
         <ul class="rig columns-3 live-search-list">
-            <c:forEach items="${requests}" var="prop">
-                <a href="${pageContext.request.contextPath}/request/detail/${prop.id}.html">
+            <c:forEach items="${requests}" var="collab">
+                <a href="${pageContext.request.contextPath}/request/detail/${collab.id}.html">
                     <li class="hoverable animated flipInY">
-                        <img class="activator profile center-align circle" data-name=${prop.skillName}}">
-                        <h3 class="center-align">${prop.skillName} ${prop.level}</h3>
+                        <img class="activator profile center-align circle" data-name=${collab.skillName}}">
+                        <h3 class="center-align">${collab.skillName} ${collab.level}</h3>
                         <p>Descripción:</p>
-                        <p class="center-align">${prop.description}</p>
-                        <p class="">Inicio: ${prop.initialDate}</p>
-                        <p class="">Fin: ${prop.finishDate}</p>
+                        <p class="center-align">${collab.description}</p>
+                        <p class="">Inicio: ${collab.initialDate}</p>
+                        <p class="">Fin: ${collab.finishDate}</p>
 
                     </li>
                 </a>
