@@ -30,6 +30,7 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/introjs.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/intro.min.js"></script>
     <script src="/js/effect-text-3d.js"></script>
+    <script src="/js/jQuery.jPulse.min.js"></script>
 
     <style>
         body {
@@ -86,6 +87,18 @@
                     <i class="material-icons">playlist_add</i></a></li>
             </ul>
         </div>
+
+        <script>
+            $(".btn-large").jPulse({
+                color: "#00ACED",
+                size: 150,
+                speed: 700,
+                interval: 440,
+                left: 20,
+                top: -20,
+                zIndex: -1
+            });
+        </script>
     </c:if>
 
     <c:if test="${empty tour2}">

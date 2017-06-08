@@ -82,6 +82,8 @@ public class RequestController {
         model.addAttribute("count", l.size());
         if (student.getType() == Type.CP)
             model.addAttribute("cp", "-");
+        if (l.isEmpty())
+            model.addAttribute("tour2", "--");
         return "request/list";
     }
 

@@ -30,6 +30,7 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/introjs.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/intro.min.js"></script>
     <script src="/js/effect-text-3d.js"></script>
+    <script src="/js/jQuery.jPulse.min.js"></script>
 
     <style>
         body {
@@ -86,6 +87,18 @@
                     <i class="material-icons">playlist_add</i></a></li>
             </ul>
         </div>
+
+        <script>
+            $( ".btn-large" ).jPulse({
+                color: "#00ACED",
+                size: 150,
+                speed: 700,
+                interval: 440,
+                left: 20,
+                top: -20,
+                zIndex: -1
+            });
+        </script>
     </c:if>
 
     <c:if test="${empty tour2}">
@@ -118,15 +131,15 @@
 
 
         <ul class="rig columns-3 live-search-list">
-            <c:forEach items="${proposals}" var="prop">
-                <a href="${pageContext.request.contextPath}/proposal/detail/${prop.id}.html">
+            <c:forEach items="${proposals}" var="collab">
+                <a href="${pageContext.request.contextPath}/proposal/detail/${collab.id}.html">
                     <li class="hoverable animated flipInY">
-                        <img class="activator profile center-align circle" data-name=${prop.skillName}}">
-                        <h3 class="center-align">${prop.skillName} ${prop.level}</h3>
+                        <img class="activator profile center-align circle" data-name=${collab.skillName}}">
+                        <h3 class="center-align">${collab.skillName} ${collab.level}</h3>
                         <p>Descripción:</p>
-                        <p class="center-align">${prop.description}</p>
-                        <p class="">Inicio: ${prop.initialDate}</p>
-                        <p class="">Fin: ${prop.finishDate}</p>
+                        <p class="center-align">${collab.description}</p>
+                        <p class="">Inicio: ${collab.initialDate}</p>
+                        <p class="">Fin: ${collab.finishDate}</p>
 
                     </li>
                 </a>

@@ -67,73 +67,76 @@
     </ul>
 </md:sidenav-md>
 
-<%--Fondo restante de la web sin panel--%>
 <main class="container">
-    <%--<div class="col s12 m8 l9" style="height: 100%">--%>
     <h4 class="font-lobster center-align text3d">Mis ${count} colaboraciones</h4>
 
-    <%--<c:if test="${not empty tour2}">--%>
-    <%--<div class="fixed-action-btn horizontal" id="tour2"--%>
-    <%--data-intro='Este es el boton extra que muestra opciones adicionales para cada elemento.'--%>
-    <%--data-position='top'>--%>
 
-    <%--<a class="btn-floating btn-large red">--%>
-    <%--<i class="material-icons">menu</i>--%>
-    <%--</a>--%>
-    <%--<ul>--%>
-    <%--<li><a class="btn-floating green" href="${pageContext.request.contextPath}/proposal/create.html">--%>
-    <%--<i class="material-icons">playlist_add</i></a></li>--%>
-    <%--</ul>--%>
+    <%--<c:if test="${empty collaborationsProposal}">--%>
+    <%--<div class="valign-wrapper">--%>
+    <%--<a class="valign" style="font-size: 50px;text-align: center">--%>
+    <%--<i class="material-icons valign" style="font-size: 200px; text-align: center">insert_invitation</i>--%>
+    <%--<br>--%>
+    <%--Esto está vacío... Prueba a empezar ayudando a alguien en las secciones de ofertas y solicitudes.</a>--%>
     <%--</div>--%>
     <%--</c:if>--%>
+    <%--TODO transformar con tupla de 3--%>
+    <div id="search-wrapper">
+        <input type="text" id="search" class="live-search-box" placeholder="Buscar colaboraciones"/>
+        <div id="close-icon"></div>
+    </div>
+    <c:if test="${not empty collaborationsProposal}">
 
-    <%--<c:if test="${empty tour2}">--%>
-    <%--<div class="fixed-action-btn horizontal">--%>
-
-    <%--<a class="btn-floating btn-large red">--%>
-    <%--<i class="material-icons">menu</i>--%>
-    <%--</a>--%>
-    <%--<ul>--%>
-    <%--<li><a class="btn-floating green" href="${pageContext.request.contextPath}/proposal/create.html">--%>
-    <%--<i class="material-icons">playlist_add</i></a></li>--%>
-    <%--</ul>--%>
-    <%--</div>--%>
-    <%--</c:if>--%>
-
-    <c:if test="${empty collaborations}">
-        <div class="valign-wrapper">
-            <a class="valign" style="font-size: 50px;text-align: center">
-                <i class="material-icons valign" style="font-size: 200px; text-align: center">insert_invitation</i>
-                <br>
-                Esto está vacío... Prueba a empezar ayudando a alguien en las secciones de ofertas y solicitudes.</a>
-        </div>
-    </c:if>
-    <c:if test="${not empty collaborations}">
-
-        <div id="search-wrapper">
-            <input type="text" id="search" class="live-search-box" placeholder="Buscar colaboraciones"/>
-            <div id="close-icon"></div>
-        </div>
-
-
+        <h4 class="text3d center-align">Colaboraciones a partir de ofertas</h4>
         <ul class="rig columns-3 live-search-list">
-                <%--<c:forEach items="${collaborations}" var="collab">--%>
-                <%--<a href="${pageContext.request.contextPath}/proposal/detail/${collab.id}.html">--%>
-                <%--<li class="hoverable animated flipInY">--%>
-                <%--<img class="activator profile center-align circle" data-name=${collab.skillName}}">--%>
-                <%--<h3 class="center-align">${collab.skillName} ${collab.level}</h3>--%>
-                <%--<p>Descripción:</p>--%>
-                <%--<p class="center-align">${collab.description}</p>--%>
-                <%--<p class="">Inicio: ${collab.initialDate}</p>--%>
-                <%--<p class="">Fin: ${collab.finishDate}</p>--%>
-
-                <%--</li>--%>
-                <%--</a>--%>
-                <%--</c:forEach>--%>
+            <c:forEach items="${collaborationsProposal}" var="collab">
+                <a href="${pageContext.request.contextPath}/collaboration/detail/${collab.idProposal}/${collab.idRequest}.html">
+                    <li class="hoverable animated flipInY">
+                        <img class="activator profile center-align circle" data-name=${collab.hours}h>
+                        <h3 class="center-align">Propuesta ${collab.idProposal} Solicitud ${collab.idRequest}</h3>
+                        <p class="black-text">Horas: ${collab.hours}</p>
+                        <p class="blue-text"><strong>Click para más detalles</strong></p>
+                    </li>
+                </a>
+            </c:forEach>
         </ul>
 
 
     </c:if>
+
+    <c:if test="${not empty collaborationsRequest}">
+        <h4 class="text3d center-align">Colaboraciones a partir de solicitudes</h4>
+        <ul class="rig columns-3 live-search-list">
+            <c:forEach items="${collaborationsRequest}" var="collabReq">
+                <a href="${pageContext.request.contextPath}/collaboration/detail/${collabReq.idProposal}/${collabReq.idRequest}.html">
+                    <li class="hoverable animated flipInY">
+                        <img class="activator profile center-align circle" data-name=${collabReq.hours}h>
+                        <h3 class="center-align">Propuesta ${collabReq.idProposal} Solicitud ${collabReq.idRequest}</h3>
+                        <p class="black-text">Horas: ${collabReq.hours}</p>
+                        <p class="blue-text"><strong>Click para más detalles</strong></p>
+                    </li>
+                </a>
+            </c:forEach>
+        </ul>
+    </c:if>
+
+    <c:if test="${ empty collaborationsProposal}">
+        <div class="valign-wrapper">
+            <a class="valign" style="font-size: 50px;text-align: center">
+                <i class="material-icons valign" style="font-size: 100px; text-align: center">insert_invitation</i>
+                <br>
+                Esto está vacío... Prueba creando alguna oferta.</a>
+        </div>
+    </c:if>
+    <c:if test="${ empty collaborationsRequest}">
+        <div class="valign-wrapper">
+            <a class="valign" style="font-size: 50px;text-align: center">
+                <i class="material-icons valign" style="font-size: 100px; text-align: center">insert_invitation</i>
+                <br>
+                Esto está vacío... Prueba creando alguna petición.</a>
+        </div>
+    </c:if>
+
+
 </main>
 
 
@@ -150,7 +153,9 @@
 </script>
 <script type="text/javascript" src="/js/initial.min.js"></script>
 <script>
-    $('.profile').initial();
+    $('.profile').initial({
+        charCount: 3
+    });
 </script>
 <script>
     AOS.init();

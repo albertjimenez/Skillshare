@@ -24,6 +24,10 @@
     <link rel="stylesheet" href="/css/search.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="/js/effect-text-3d.js"></script>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/introjs.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/intro.min.js"></script>
+    <script src="/js/jQuery.jPulse.min.js"></script>
     <style>
         body {
             background-image: url("/images/background-list-req.jpg");
@@ -60,18 +64,6 @@
     <h4 class="font-lobster center-align text3d">Mis ${count} Peticiones</h4>
 
 
-
-    <%--Boton material de crear solicitud--%>
-    <div class="fixed-action-btn horizontal">
-        <a class="btn-floating btn-large red">
-            <i class="material-icons">menu</i>
-        </a>
-        <ul>
-            <li><a class="btn-floating green" href="${pageContext.request.contextPath}/request/create.html">
-                <i class="material-icons">playlist_add</i></a></li>
-        </ul>
-    </div>
-
     <c:if test="${empty requests}">
         <div class="valign-wrapper">
             <a class="valign" style="font-size: 50px;text-align: center">
@@ -79,8 +71,45 @@
                 <br>
                 Esto está vacío... Prueba creando alguna petición.</a>
         </div>
+
+        <%--Boton material de crear solicitud--%>
+        <div class="fixed-action-btn horizontal"
+             data-intro='Este es el boton extra que muestra opciones adicionales para cada elemento.'
+             data-position='top'>
+            <a class="btn-floating btn-large red">
+                <i class="material-icons" id="myButton">menu</i>
+            </a>
+            <ul>
+                <li><a class="btn-floating green" href="${pageContext.request.contextPath}/request/create.html">
+                    <i class="material-icons">playlist_add</i></a></li>
+            </ul>
+        </div>
+
+
+        <script>
+            $("#myButton").jPulse({
+                color: "#00ACED",
+                size: 150,
+                speed: 700,
+                interval: 440,
+                left: 20,
+                top: -20,
+                zIndex: -1
+            });
+        </script>
     </c:if>
     <c:if test="${not empty requests}">
+
+        <div class="fixed-action-btn horizontal">
+            <a class="btn-floating btn-large red">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul>
+                <li><a class="btn-floating green" href="${pageContext.request.contextPath}/request/create.html">
+                    <i class="material-icons">playlist_add</i></a></li>
+            </ul>
+        </div>
+
         <div id="search-wrapper">
             <input type="text" id="search" class="live-search-box" placeholder="Buscar peticiones"/>
             <div id="close-icon"></div>
@@ -112,58 +141,6 @@
             </c:forEach>
         </ul>
 
-        <%--<ul class="collapsible popout" data-collapsible="accordion">--%>
-
-
-        <%--<c:forEach items="${requests}" var="req">--%>
-
-        <%--<md:desplegable-md name="${req.skillName}" name2="${req.initialDate}">--%>
-
-        <%--<table class="highlight bordered">--%>
-        <%--<tr>--%>
-        <%--<td><span class="font-raleway">Nivel:</span></td>--%>
-        <%--<td class="font-raleway">${req.level}</td>--%>
-        <%--</tr>--%>
-        <%--<tr>--%>
-        <%--<td><span class="font-raleway">Descripción:</span></td>--%>
-        <%--<td class="font-raleway">${req.description}</td>--%>
-        <%--</tr>--%>
-        <%--<tr>--%>
-        <%--<td><span class="font-raleway">Fecha fin:</span></td>--%>
-        <%--<td class="font-raleway">${req.finishDate}</td>--%>
-        <%--</tr>--%>
-        <%--<tr>--%>
-        <%--<td>--%>
-        <%--<a class="waves-effect waves-light btn"--%>
-        <%--href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html">--%>
-        <%--<i class="material-icons left">delete</i>--%>
-        <%--Borrar Solicitud</a>--%>
-        <%--</td>--%>
-        <%--</tr>--%>
-        <%--</table>--%>
-
-
-        <%--&lt;%&ndash;Botonera fija en la parte inferior derecha&ndash;%&gt;--%>
-        <%--&lt;%&ndash;Button Material&ndash;%&gt;--%>
-        <%--<div class="fixed-action-btn">--%>
-        <%--<a class="btn-floating btn-large red pulse">--%>
-        <%--<i class="large material-icons">mode_edit</i>--%>
-        <%--</a>--%>
-
-        <%--&lt;%&ndash;SUBButtons&ndash;%&gt;--%>
-        <%--<ul>--%>
-        <%--<li><a class="btn-floating red pulse"--%>
-        <%--href="${pageContext.request.contextPath}/proposal/delete/${req.id}.html"><i--%>
-        <%--class="material-icons">delete</i></a></li>--%>
-        <%--<li><a class="btn-floating green pulse"--%>
-        <%--href="${pageContext.request.contextPath}/proposal/create.html">--%>
-        <%--<i class="material-icons">playlist_add</i></a></li>--%>
-        <%--</ul>--%>
-        <%--</div>--%>
-
-        <%--</md:desplegable-md>--%>
-        <%--</c:forEach>--%>
-        <%--</ul>--%>
     </c:if>
 </main>
 
@@ -183,8 +160,12 @@
 <script>
     $('.profile').initial();
     AOS.init();
+
 </script>
 
+<script>
+    introJs().start();
+</script>
 
 </body>
 </html>

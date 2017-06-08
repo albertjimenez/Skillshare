@@ -31,6 +31,7 @@ public class CollaborationController {
     }
 
 
+
     @RequestMapping("/collaboration/list")
     public String myCollaborations(Model model) {
 
@@ -39,18 +40,20 @@ public class CollaborationController {
         if (Type.getType(getType()) == Type.CP)
             model.addAttribute("cp", "-");
 
-        Student student = (Student) httpSession.getAttribute("user");
+        Student student = getStudent();
         String name = getStudentName();
         model.addAttribute("name", name);
         model.addAttribute("type", getType());
         model.addAttribute("student", student);
         model.addAttribute("type", Type.getName(student.getType().toString()));
-        List<Collaboration> l = collaborationDao.myCollaborations(student.getNif());
-        model.addAttribute("collaborations", l);
-        model.addAttribute("count", l.size());
+        List<Collaboration> l = collaborationDao.myCollaborationsFromProposal(student.getNif());
+        List<Collaboration> l2 = collaborationDao.myCollaborationsFromRequest(student.getNif());
+        model.addAttribute("collaborationsProposal", l);
+        model.addAttribute("collaborationsRequest", l2);
+        model.addAttribute("count", l.size() + l2.size());
 
 
-        return "/collaboration/list";
+        return "collaboration/list";
     }
 
 

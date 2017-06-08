@@ -128,7 +128,7 @@
                         <form:option value="" disabled="true">
                             Escoge qué tipo de estudiante eres</form:option>
                         <form:option value="NO">Estudiante de grado</form:option>
-                        <form:option value="CP">Promotor de colaboraciones</form:option>
+                        <%--<form:option value="CP">Promotor de colaboraciones</form:option>--%>
                         <form:option value="CM">Miembro del consejo</form:option>
                         <form:option value="MA">Estudiante de máster</form:option>
                         <%--<form:option value="PG">Estudiante de postgrado</form:option>--%>
@@ -195,22 +195,6 @@
     AOS.init();
 </script>
 
-<%--<script>--%>
-<%--var degrees = ${degrees};--%>
-<%--var masters = ${masters};--%>
-<%--console.log(degrees);--%>
-<%--console.log(masters);--%>
-<%--$('#type').change(function(){--%>
-<%--console.log($('#type').find(":selected").text());--%>
-<%--if($('#type').find(":selected").text()!='Estudiante de máster'){--%>
-
-
-<%--}--%>
-<%--else {--%>
-<%--console.log("Has tocado master");--%>
-<%--}--%>
-<%--});--%>
-<%--</script>--%>
 <script>
     $(document).ready(function () {
         $('input.autocomplete').autocomplete({

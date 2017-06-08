@@ -64,9 +64,37 @@ public class CollaborationDao {
 
     }
 
-    public List<Collaboration> myCollaborations(String nif) {
-        String sql = "select * from collaboration where nif = ?";
+    //TODO pensar como obtener c.* y p.* supongo que con un Pair<Collaboration, Proposal>
+    public List<Collaboration> myCollaborationsFromProposal(String nif) {
+        final String sql = "select c.* from proposal_of_collaboration p join collaboration c " +
+                "on id = id_pro" +
+                " where nif = ? ORDER BY hours";
         return jdbcTemplate.query(sql, new Object[]{nif}, new CollaborationMapper());
 
     }
+
+    //TODO pensar como obtener c.* y r.* supongo que con un Pair<Collaboration, Request>
+    public List<Collaboration> myCollaborationsFromRequest(String nif) {
+        final String sql = "select c.* from request_of_collaboration r join collaboration c " +
+                "on id = id_req" +
+                " where nif = ? ORDER BY hours";
+        return jdbcTemplate.query(sql, new Object[]{nif}, new CollaborationMapper());
+
+    }
+
+    /**
+     * @param nif
+     * @return The number of hours given minus received. It can be negative
+     */
+    public int getHours(String nif) {
+        final String sql = "select sum(hours) as num_hours from request_of_collaboration p join collaboration c on id= id_req\n" +
+                "where nif = ?";
+        Integer numHoursRequest = jdbcTemplate.queryForInt(sql, nif);
+
+        final String sql2 = "select sum(hours) as num_hours from proposal_of_collaboration p join collaboration c on id= id_pro\n" +
+                "where nif = ?";
+        Integer numHoursProposal = jdbcTemplate.queryForInt(sql2, nif);
+        return numHoursProposal - numHoursRequest;
+    }
+
 }

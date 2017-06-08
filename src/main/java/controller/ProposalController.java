@@ -104,7 +104,8 @@ public class ProposalController {
         List<Proposal> l = proposalDao.getProposalsByNif(student.getNif());
         model.addAttribute("proposals", l);
         model.addAttribute("count", l.size());
-
+        if (l.isEmpty())
+            model.addAttribute("tour2", "--");
 
         if (student.getType() == Type.CP)
             model.addAttribute("cp", "-");
