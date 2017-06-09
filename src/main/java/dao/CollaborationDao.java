@@ -1,8 +1,12 @@
 package dao;
 
 import mapper.CollaborationMapper;
+import mapper.CollaborationProposalMapper;
 import mapper.CollaborationRequestMapper;
+import model.Tools.Pair;
 import model.collaboration.Collaboration;
+import model.proposal.Proposal;
+import model.request.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -65,32 +69,30 @@ public class CollaborationDao {
 
     }
 
-    public List<Collaboration> myCollaborationsFromProposal(String nif) {
+    public List<Pair<Collaboration, Proposal>> myCollaborationsFromProposal(String nif) {
 
-        //TODO eliminar este sql, ya está el objeto creado y ya se puede usar
-        final String sql = "select c.* from proposal_of_collaboration p join collaboration c " +
-                "on id = id_pro" +
-                " where nif = ? ORDER BY hours";
+//        final String sql = "select c.* from proposal_of_collaboration p join collaboration c " +
+//                "on id = id_pro" +
+//                " where nif = ? ORDER BY hours";
+
         final String sqlAll = "select * from proposal_of_collaboration p join collaboration c " +
                 "on id = id_pro" +
-                " where nif = ? ORDER BY hours";
+                " where nif = ? ORDER BY initial_date DESC ";
 
 
-
-        return jdbcTemplate.query(sql, new Object[]{nif}, new CollaborationMapper());
+        return jdbcTemplate.query(sqlAll, new Object[]{nif}, new CollaborationProposalMapper());
 
     }
 
-    public List<Collaboration> myCollaborationsFromRequest(String nif) {
-        //TODO eliminar este sql, ya está el objeto creado y ya se puede usar
-        final String sql = "select c.* from request_of_collaboration r join collaboration c " +
-                "on id = id_req" +
-                " where nif = ? ORDER BY hours";
+    public List<Pair<Collaboration, Request>> myCollaborationsFromRequest(String nif) {
+//        final String sql = "select c.* from request_of_collaboration r join collaboration c " +
+//                "on id = id_req" +
+//                " where nif = ? ORDER BY hours";
         final String sqlAll = "select * from request_of_collaboration r join collaboration c " +
                 "on id = id_req" +
-                " where nif = ? ORDER BY hours";
+                " where nif = ? ORDER BY initial_date DESC ";
         System.out.println(jdbcTemplate.query(sqlAll, new Object[]{nif}, new CollaborationRequestMapper()));
-        return jdbcTemplate.query(sql, new Object[]{nif}, new CollaborationMapper());
+        return jdbcTemplate.query(sqlAll, new Object[]{nif}, new CollaborationRequestMapper());
 
     }
 

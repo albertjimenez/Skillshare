@@ -1,7 +1,10 @@
 package controller;
 
 import dao.CollaborationDao;
+import model.Tools.Pair;
 import model.collaboration.Collaboration;
+import model.proposal.Proposal;
+import model.request.Request;
 import model.student.Student;
 import model.student.Type;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,8 +49,10 @@ public class CollaborationController {
         model.addAttribute("type", getType());
         model.addAttribute("student", student);
         model.addAttribute("type", Type.getName(student.getType().toString()));
-        List<Collaboration> l = collaborationDao.myCollaborationsFromProposal(student.getNif());
-        List<Collaboration> l2 = collaborationDao.myCollaborationsFromRequest(student.getNif());
+//        List<Collaboration> l = collaborationDao.myCollaborationsFromProposal(student.getNif());
+//        List<Collaboration> l2 = collaborationDao.myCollaborationsFromRequest(student.getNif());
+        List<Pair<Collaboration, Proposal>> l = collaborationDao.myCollaborationsFromProposal(student.getNif());
+        List<Pair<Collaboration, Request>> l2 = collaborationDao.myCollaborationsFromRequest(student.getNif());
         model.addAttribute("collaborationsProposal", l);
         model.addAttribute("collaborationsRequest", l2);
         model.addAttribute("count", l.size() + l2.size());

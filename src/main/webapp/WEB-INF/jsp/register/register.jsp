@@ -58,10 +58,10 @@
 <md:navbar-md></md:navbar-md>
 
 <md:sidenav-md>
-    <li><a class="grey-text text-lighten-3" href="${pageContext.request.contextPath}/login/login.html">Entrar</a>
-    </li>
-    <li><a class="grey-text text-lighten-3"
-           href="${pageContext.request.contextPath}/register/register.html">Registro</a></li>
+    <%--<li><a class="grey-text text-lighten-3" href="${pageContext.request.contextPath}/login/login.html">Entrar</a>--%>
+    <%--</li>--%>
+    <%--<li><a class="grey-text text-lighten-3"--%>
+    <%--href="${pageContext.request.contextPath}/register/register.html">Registro</a></li>--%>
 </md:sidenav-md>
 
 <h4 class="center-align font-lobster text3d"><strong>Regístrate</strong></h4>
@@ -77,10 +77,10 @@
         <form:form method="post" modelAttribute="studentRegister" onsubmit="return check_register();"
                    cssClass="animated lightSpeedIn">
             <div class="row">
-                <div class="input-field col s6 offset-s3 ">
+                <div class="input-field col s6 offset-s3">
                     <i class="material-icons prefix">perm_identity</i>
                     <form:label path="nif">NIF</form:label>
-                    <form:input path="nif" id="nif" cssClass="validate"/>
+                    <form:input path="nif" id="nif" cssClass="validate" data-length="9" maxlength="9"/>
                     <i class="materialize-red-text">
                         <form:errors path="nif"/>
                     </i>
@@ -90,35 +90,35 @@
                 <div class="input-field col s6 offset-s3 ">
                     <i class="material-icons prefix">account_circle</i>
                     <form:label path="username">Nombre de usuario</form:label>
-                    <form:input path="username" id="username" cssClass="validate"/>
+                    <form:input path="username" id="username" cssClass="validate" data-length="20" maxlength="20"/>
                 </div>
             </div>
             <div class="row ">
                 <div class="input-field col s6 offset-s3">
                     <i class="material-icons prefix">dialpad</i>
                     <form:label path="password">Contraseña</form:label>
-                    <form:password path="password" id="password1"/>
+                    <form:password path="password" id="password1" data-length="20" maxlength="20"/>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s6 offset-s3 ">
                     <i class="material-icons prefix">assignment_ind</i>
                     <form:label path="name">Nombre</form:label>
-                    <form:input path="name" id="name" cssClass="validate"/>
+                    <form:input path="name" id="name" cssClass="validate" data-length="20" maxlength="20"/>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s6 offset-s3 ">
                     <i class="material-icons prefix">assignment_ind</i>
                     <form:label path="surname">Apellidos</form:label>
-                    <form:input path="surname" id="surname" cssClass="validate"/>
+                    <form:input path="surname" id="surname" cssClass="validate" data-length="50" maxlength="50"/>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s6 offset-s3 ">
                     <i class="material-icons prefix">email</i>
                     <form:label path="email">Email UJI</form:label>
-                    <form:input path="email" id="email" cssClass="validate"/>
+                    <form:input path="email" id="email" cssClass="validate" data-length="40" maxlength="40"/>
                 </div>
             </div>
             <div class="row">
@@ -139,7 +139,8 @@
                 <div class="input-field col s6 offset-s3 ">
                     <i class="material-icons prefix">business</i>
                     <form:label path="degree">Titulación</form:label>
-                    <form:input path="degree" id="autocomplete-input" cssClass="autocomplete" autocomplete="false"/>
+                    <form:input path="degree" id="autocomplete-input" cssClass="autocomplete" autocomplete="false"
+                                data-length="140" maxlength="140"/>
                 </div>
             </div>
             <div class="row">
@@ -285,6 +286,12 @@
         });
     });
 
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('input#input_text, textarea#textarea1, password#input_text').characterCounter();
+    });
 </script>
 
 </body>

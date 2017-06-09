@@ -113,8 +113,15 @@
                 </div>
             </div>
                 <div class="card-action blue center-align lighten-4">
-                    <a href="#modal1" class="red  lighten-2  center-align btn waves-effect"><i class="material-icons">supervisor_account</i>
-                        Colaborar</a>
+                    <c:if test="${proposal.nif != student.nif}">
+                        <a href="#modal1" class="red  lighten-2  center-align btn waves-effect"><i class="material-icons">supervisor_account</i>
+                            Colaborar</a>
+                    </c:if>
+                    <c:if test="${proposal.nif == student.nif}">
+                        <a href="#modal1" class="red  lighten-2  center-align btn waves-effect disabled"><i
+                                class="material-icons">supervisor_account</i>
+                            Colaborar</a>
+                    </c:if>
                 </div>
         </div>
     </div>

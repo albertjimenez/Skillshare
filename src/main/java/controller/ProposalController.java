@@ -200,7 +200,8 @@ public class ProposalController {
 
             model.addAttribute("id", id);
             pair = proposalDao.getProposalByID(new AtomicInteger(Integer.parseInt(id)));
-            loadRelativeRequests(pair, model, student);
+            if (pair != null)
+                loadRelativeRequests(pair, model, student);
         } catch (NumberFormatException e) {
             return "proposal/error";
         }
@@ -319,19 +320,17 @@ public class ProposalController {
     }
 
     private void loadRelativeRequests(Pair<Student, Proposal> pair, Model model, Student student) {
-        if (pair != null) {
-            model.addAttribute("student_proposal", pair.getLeft());
-            model.addAttribute("proposal", pair.getRight());
-            List<Request> l = requestDao.getRequestWithSkills
-                    (pair.getRight().getSkillName(), student.getNif());
-            List<String> skillNames = new LinkedList<>();
-            for (Request r : l)
-                skillNames.add(r.getId() + "-" + r.getSkillName() + "-" + Level.getLevelToString(r.getLevel()));
+        model.addAttribute("student_proposal", pair.getLeft());
+        model.addAttribute("proposal", pair.getRight());
+        List<Request> l = requestDao.getRequestWithSkills
+                (pair.getRight().getSkillName(), student.getNif());
+        List<String> skillNames = new LinkedList<>();
+        for (Request r : l)
+            skillNames.add(r.getId() + "-" + r.getSkillName() + "-" + Level.getLevelToString(r.getLevel()));
 
-            System.out.println(l);
-            System.out.println(skillNames);
-            model.addAttribute("match_request", skillNames);
-        }
+        System.out.println(l);
+        System.out.println(skillNames);
+        model.addAttribute("match_request", skillNames);
     }
 
 }

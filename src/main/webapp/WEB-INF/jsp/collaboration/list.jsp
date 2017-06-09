@@ -89,12 +89,17 @@
         <h4 class="text3d center-align">Colaboraciones a partir de ofertas</h4>
         <ul class="rig columns-3 live-search-list">
             <c:forEach items="${collaborationsProposal}" var="collab">
-                <a href="${pageContext.request.contextPath}/collaboration/detail/${collab.idProposal}/${collab.idRequest}.html">
+                <a href="${pageContext.request.contextPath}/collaboration/detail/${collab.left.idProposal}/${collab.left.idRequest}.html">
                     <li class="hoverable animated flipInY">
-                        <img class="activator profile center-align circle" data-name=${collab.hours}h>
-                        <h3 class="center-align">Propuesta ${collab.idProposal} Solicitud ${collab.idRequest}</h3>
-                        <p class="black-text">Horas: ${collab.hours}</p>
-                        <p class="blue-text"><strong>Click para más detalles</strong></p>
+                        <img class="activator profile center-align circle" data-name=${collab.right.skillName}h>
+                        <h3 class="center-align">${collab.right.skillName}</h3>
+                        <p class="black-text">Horas: ${collab.left.hours}</p>
+                        <p class="black-text">Fecha inicio: ${collab.right.initialDate}</p>
+                        <p class="black-text">Fecha fin: ${collab.right.finishDate}</p>
+                        <c:if test="${empty collab.left.rating}">
+                            <p class="red-text">No hay valoración todavía</p>
+                        </c:if>
+                        <p class="blue-text center-align"><strong>Click para más detalles</strong></p>
                     </li>
                 </a>
             </c:forEach>
@@ -107,12 +112,17 @@
         <h4 class="text3d center-align">Colaboraciones a partir de solicitudes</h4>
         <ul class="rig columns-3 live-search-list">
             <c:forEach items="${collaborationsRequest}" var="collabReq">
-                <a href="${pageContext.request.contextPath}/collaboration/detail/${collabReq.idProposal}/${collabReq.idRequest}.html">
+                <a href="${pageContext.request.contextPath}/collaboration/detail/${collabReq.left.idProposal}/${collabReq.left.idRequest}.html">
                     <li class="hoverable animated flipInY">
-                        <img class="activator profile center-align circle" data-name=${collabReq.hours}h>
-                        <h3 class="center-align">Propuesta ${collabReq.idProposal} Solicitud ${collabReq.idRequest}</h3>
-                        <p class="black-text">Horas: ${collabReq.hours}</p>
-                        <p class="blue-text"><strong>Click para más detalles</strong></p>
+                        <img class="activator profile center-align circle" data-name=${collabReq.right.skillName}h>
+                        <h3 class="center-align">${collabReq.right.skillName}</h3>
+                        <p class="black-text">Horas: ${collabReq.left.hours}</p>
+                        <p class="black-text">Fecha inicio: ${collabReq.right.initialDate}</p>
+                        <p class="black-text">Fecha fin: ${collabReq.right.finishDate}</p>
+                        <c:if test="${empty collabReq.left.rating}">
+                            <p class="red-text">No hay valoración todavía</p>
+                        </c:if>
+                        <p class="blue-text center-align"><strong>Click para más detalles</strong></p>
                     </li>
                 </a>
             </c:forEach>
@@ -154,7 +164,7 @@
 <script type="text/javascript" src="/js/initial.min.js"></script>
 <script>
     $('.profile').initial({
-        charCount: 3
+        charCount: 1
     });
 </script>
 <script>

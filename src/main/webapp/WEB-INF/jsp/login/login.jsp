@@ -46,10 +46,10 @@
 <body class="blue lighten-3">
 
 <md:sidenav-md>
-    <li><a class="grey-text text-lighten-3" href="${pageContext.request.contextPath}/login/login.html">Entrar</a>
-    </li>
-    <li><a class="grey-text text-lighten-3"
-           href="${pageContext.request.contextPath}/register/register.html">Registro</a></li>
+    <%--<li><a class="grey-text text-lighten-3" href="${pageContext.request.contextPath}/login/login.html">Entrar</a>--%>
+    <%--</li>--%>
+    <%--<li><a class="grey-text text-lighten-3"--%>
+    <%--href="${pageContext.request.contextPath}/register/register.html">Registro</a></li>--%>
 </md:sidenav-md>
 
 <header>

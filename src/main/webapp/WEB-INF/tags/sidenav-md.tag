@@ -40,6 +40,7 @@
                 <a href="#${pageContext.request.contextPath}/login/login.html">
                     <span class="blue-text lighten-1 name">${type}</span></a>
 
+
             </c:if>
             <c:if test="${not empty cp}">
                 <a class="waves-effect" href="${pageContext.request.contextPath}/banned/ban.html">
@@ -47,25 +48,29 @@
                 <a class="waves-effect" href="${pageContext.request.contextPath}/home/home_pc.html">
                     Listado de Habilidades</a>
             </c:if>
-            <a href="${pageContext.request.contextPath}/login/logout.html">
-                        <span class="red-text darken-2">
-                            Salir
-                        </span>
-            </a>
+
+            <c:if test="${not empty name}">
+                <a href="${pageContext.request.contextPath}/login/logout.html">
+                    <span class="red-text darken-2">Salir</span>
+                </a>
+            </c:if>
+
         </div>
     </li>
     <li><a class="subheader">Herramientas</a></li>
 
     <div class="light-blue lighten-3">
         <jsp:doBody/>
-        <li>
-            <a class="waves-effect" href="${pageContext.request.contextPath}/request/all.html">Solicitudes
-                disponibles</a>
-        </li>
-        <li>
-            <a class="waves-effect" href="${pageContext.request.contextPath}/collaboration/list.html">Mis
-                colaboraciones</a>
-        </li>
+        <c:if test="${not empty name}">
+            <li>
+                <a class="waves-effect" href="${pageContext.request.contextPath}/request/all.html">Solicitudes
+                    de la comunidad</a>
+            </li>
+            <li>
+                <a class="waves-effect" href="${pageContext.request.contextPath}/collaboration/list.html">Mis
+                    colaboraciones</a>
+            </li>
+        </c:if>
     </div>
 
 </ul>

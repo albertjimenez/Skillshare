@@ -162,7 +162,8 @@ public class RequestController {
 
             model.addAttribute("id", id);
             pair = requestDao.getRequestByID(new AtomicInteger(Integer.parseInt(id)));
-            loadRelativeProposals(pair, model, student);
+            if (pair != null)
+                loadRelativeProposals(pair, model, student);
         } catch (NumberFormatException e) {
             return "request/error";
         }
@@ -290,7 +291,6 @@ public class RequestController {
     }
 
     private void loadRelativeProposals(Pair<Student, Request> pair, Model model, Student student) {
-        if (pair != null) {
             model.addAttribute("student_request", pair.getLeft());
             model.addAttribute("request", pair.getRight());
             List<Proposal> l = proposalDao.getProposalWithSkills
@@ -302,7 +302,6 @@ public class RequestController {
             System.out.println(l);
             System.out.println(skillNames);
             model.addAttribute("match_proposals", skillNames);
-        }
     }
 
     private boolean getSessionStudent() {
