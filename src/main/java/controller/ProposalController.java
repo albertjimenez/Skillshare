@@ -38,6 +38,7 @@ public class ProposalController {
 
 
     private static final Integer DEFAULT_HOURS = 2;
+    private final static int MAX_HOURS = -20;
 
 
     private ProposalDao proposalDao;
@@ -202,6 +203,9 @@ public class ProposalController {
             pair = proposalDao.getProposalByID(new AtomicInteger(Integer.parseInt(id)));
             if (pair != null)
                 loadRelativeRequests(pair, model, student);
+            System.out.println("mis horas" + collaborationDao.getHours(student.getNif()));
+            if (collaborationDao.getHours(student.getNif()) <= MAX_HOURS)
+                model.addAttribute("limit", "--");
         } catch (NumberFormatException e) {
             return "proposal/error";
         }

@@ -114,8 +114,26 @@
             </div>
                 <div class="card-action blue center-align lighten-4">
                     <c:if test="${proposal.nif != student.nif}">
-                        <a href="#modal1" class="red  lighten-2  center-align btn waves-effect"><i class="material-icons">supervisor_account</i>
-                            Colaborar</a>
+
+                        <c:if test="${not empty limit}">
+                            <script>
+                                swal({
+                                    title: 'No puedes recibir más clases',
+                                    html: $('<div>')
+                                        .addClass('some-class')
+                                        .text('Has alcanzado el límite de 20 horas de saldo. Debes dar más horas para restaurar tus horas.'),
+                                    animation: false,
+                                    customClass: 'animated tada'
+                                })
+                            </script>
+                            <a href="#modal1" class="red disabled  lighten-2  center-align btn waves-effect"><i
+                                    class="material-icons">supervisor_account</i>
+                                Colaborar</a>
+                        </c:if>
+                        <c:if test="${empty limit}">
+                            <a href="#modal1" class="red  lighten-2  center-align btn waves-effect"><i class="material-icons">supervisor_account</i>
+                                Colaborar</a>
+                        </c:if>
                     </c:if>
                     <c:if test="${proposal.nif == student.nif}">
                         <a href="#modal1" class="red  lighten-2  center-align btn waves-effect disabled"><i

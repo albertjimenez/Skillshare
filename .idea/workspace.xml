@@ -8,25 +8,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0695153-a83b-4add-9f52-0017f11374ad" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/error.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/prop/detail.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/req/detail.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/fontawesome-stars.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery.barrating.min.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/detail.jsp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/CollaborationController.class" afterPath="$PROJECT_DIR$/target/classes/controller/CollaborationController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/ProposalController.class" afterPath="$PROJECT_DIR$/target/classes/controller/ProposalController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/RequestController.class" afterPath="$PROJECT_DIR$/target/classes/controller/RequestController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/CollaborationDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/CollaborationDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare.war" afterPath="$PROJECT_DIR$/target/skillshare.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/CollaborationController.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/CollaborationController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/ProposalController.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/ProposalController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/RequestController.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/RequestController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/dao/CollaborationDao.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/dao/CollaborationDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/CollaborationController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/CollaborationController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/ProposalController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/ProposalController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/RequestController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/RequestController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/CollaborationDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/CollaborationDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_student.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_student.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/all.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/all.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/detail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/detail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sidenav-md.tag" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sidenav-md.tag" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/all.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/all.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/search.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/search.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/home/home_pc.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/home/home_pc.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/home/home_student.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/home/home_student.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/login/login.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/login/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/proposal/list.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/proposal/list.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/register/register.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/register/register.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/request/list.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/request/list.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/tags/sidenav-md.tag" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/tags/sidenav-md.tag" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/css/search.css" afterPath="$PROJECT_DIR$/target/skillshare/css/search.css" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,33 +70,12 @@
       <file leaf-file-name="list.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="98" column="50" lean-forward="false" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
+            <state relative-caret-position="480">
+              <caret line="154" column="76" lean-forward="false" selection-start-line="154" selection-start-column="76" selection-end-line="154" selection-end-column="76" />
               <folding>
-                <marker date="1497030535000" expanded="false" signature="2660:2694" ph="..." />
-                <marker date="1497030535000" expanded="false" signature="2749:2785" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProposalController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/ProposalController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="261" column="95" lean-forward="false" selection-start-line="261" selection-start-column="95" selection-end-line="261" selection-end-column="95" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CollaborationController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/CollaborationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="45" column="36" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1497044301000" expanded="false" signature="2660:2694" ph="..." />
+                <marker date="1497044301000" expanded="false" signature="2749:2785" ph="..." />
               </folding>
             </state>
           </provider>
@@ -105,7 +98,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>position:</find>
       <find>position:relative;</find>
       <find>req.id</find>
       <find>sect</find>
@@ -135,6 +127,7 @@
       <find>C</find>
       <find>newreques</find>
       <find>col</find>
+      <find>level</find>
     </findStrings>
     <replaceStrings>
       <replace>proposal</replace>
@@ -164,10 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/css/my-backgrounds-opac.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/desplegable-md.tag" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/propreq-md.tag" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/validador.js" />
         <option value="$PROJECT_DIR$/src/main/java/dao/SkillDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/validator/SkillValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/SkillController.java" />
@@ -184,35 +173,39 @@
         <option value="$PROJECT_DIR$/src/main/java/controller/BannedController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/my-grid.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/effect-text-3d.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/all.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/create.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/create.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/update.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_student.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/navbar-md.tag" />
         <option value="$PROJECT_DIR$/src/main/java/dao/RequestDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/ProposalDao.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/all.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/model/collaboration/Collaboration.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/all.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/detail.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/controller/LoginRegisterController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/mapper/CollaborationProposalMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Tools/Pair.java" />
         <option value="$PROJECT_DIR$/src/main/java/mapper/CollaborationRequestMapper.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/ProposalController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/RequestController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/detail.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register/register.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sidenav-md.tag" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/search.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/error.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/detail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/all.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/all.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/req/detail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_student.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/controller/CollaborationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/ProposalController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/prop/detail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/dao/CollaborationDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/list.jsp" />
       </list>
@@ -286,7 +279,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="height" value="1024" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -626,6 +619,82 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collaboration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="req" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skillshare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skillshare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collaboration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skillshare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skillshare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -765,7 +834,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="Contr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;list&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/collaboration/list.jsp&#10;contr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/CollaborationController.java&#10;home&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp&#10;log&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/login/login.jsp&#10;side&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/sidenav-md.tag&#10;crea&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp&#10;regi&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp&#10;deta&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/detail.jsp&#10;req&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/RequestController.java&#10;newrequest&#9;PSI&#9;JAVA://org.eclipse.jetty.http.HttpTester#newRequest&#10;propo&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;web&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/web.xml&#10;disp&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/dispatcher-servlet.xml&#10;pair&#9;PSI&#9;JAVA://model.Tools.Pair&#10;Da&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/CollaborationDao.java&#10;t&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/list.jsp&#10;Req&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/RequestController.java&#10;prop&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;Col&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/CollaborationDao.java&#10;nav&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/sidenav-md.tag&#10;Colcon&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/CollaborationController.java&#10;Logi&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;re&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/RequestController.java&#10;collabocon&#9;PSI&#9;JAVA://controller.CollaborationController&#10;mapp&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/mapper/CollaborationMapper.java&#10;dao&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/CollaborationDao.java&#10;reg&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp&#10;det&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp&#10;all&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/all.jsp&#10;col&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/CollaborationDao.java&#10;Reqda&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/RequestDao.java&#10;Proposa&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/ProposalDao.java&#10;NAV&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/navbar-md.tag&#10;homepc&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp&#10;Colla&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/CollaborationDao.java&#10;mygr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/css/my-grid.css&#10;Re&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/RequestDao.java&#10;pr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/ProposalDao.java&#10;propd&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/ProposalDao.java&#10;Banned&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/BannedController.java&#10;ban&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/banned/ban.jsp&#10;create&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/create.jsp&#10;rop&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/ProposalDao.java&#10;requ&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/RequestDao.java&#10;Prop&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/ProposalDao.java&#10;cre&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/create.jsp&#10;Login&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;homest&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_student.jsp&#10;Propos&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/model/proposal/Proposal.java" />
+    <property name="SearchEverywhereHistoryKey" value="det&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp&#10;Prop&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;homest&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_student.jsp&#10;detai&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp&#10;homep&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp&#10;de&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/collaboration/prop/detail.jsp&#10;dao&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/ProposalDao.java&#10;all&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/all.jsp&#10;lis&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/list.jsp&#10;list&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/list.jsp&#10;propo&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;sear&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/css/search.css&#10;Contr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;contr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/CollaborationController.java&#10;home&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp&#10;log&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/login/login.jsp&#10;side&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/sidenav-md.tag&#10;crea&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp&#10;regi&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp&#10;deta&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/detail.jsp&#10;req&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/RequestController.java&#10;newrequest&#9;PSI&#9;JAVA://org.eclipse.jetty.http.HttpTester#newRequest&#10;web&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/web.xml&#10;disp&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/dispatcher-servlet.xml&#10;pair&#9;PSI&#9;JAVA://model.Tools.Pair&#10;Da&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/CollaborationDao.java&#10;t&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/list.jsp&#10;Req&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/RequestController.java&#10;prop&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;Col&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/CollaborationDao.java&#10;nav&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/sidenav-md.tag&#10;Colcon&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/CollaborationController.java&#10;Logi&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;re&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/RequestController.java&#10;collabocon&#9;PSI&#9;JAVA://controller.CollaborationController&#10;mapp&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/mapper/CollaborationMapper.java&#10;reg&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp&#10;col&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/CollaborationDao.java&#10;Reqda&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/RequestDao.java&#10;Proposa&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/ProposalDao.java&#10;NAV&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/navbar-md.tag&#10;homepc&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp&#10;Colla&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/CollaborationDao.java&#10;mygr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/css/my-grid.css&#10;Re&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/RequestDao.java&#10;pr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/ProposalDao.java&#10;propd&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/ProposalDao.java&#10;Banned&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/BannedController.java&#10;ban&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/banned/ban.jsp&#10;create&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/create.jsp" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="last.edited.regexp" value="&#10;" />
@@ -775,19 +844,19 @@
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/js" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/css" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/req" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/prop" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/images" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/js" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Skillshare">
@@ -1315,14 +1384,7 @@
       <workItem from="1496836542703" duration="16890000" />
       <workItem from="1496929273261" duration="7140000" />
       <workItem from="1497002898873" duration="675000" />
-      <workItem from="1497024759658" duration="5267000" />
-    </task>
-    <task id="LOCAL-00014" summary="Profiles pictures added plus mine description.">
-      <created>1490492266511</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1490492266511</updated>
+      <workItem from="1497024759658" duration="17868000" />
     </task>
     <task id="LOCAL-00015" summary="Order by (Idea de Alba)">
       <created>1490552494764</created>
@@ -1660,11 +1722,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497002477231</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Updated with Pair class. Now is beautified. UI fixed on register (maxLength applied). UI fixed on sideNav, there is no exit button when there is not present any session.">
+      <created>1497030759757</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1497030759758</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="483682000" />
+    <option name="totallyTimeSpent" value="496283000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1676,7 +1745,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="1024" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1701,15 +1770,15 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32809225" sideWeight="0.49676898" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29863015" sideWeight="0.6987076" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22851153" sideWeight="0.6987076" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52465755" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29159936" sideWeight="0.49041095" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29159936" sideWeight="0.80163044" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3245033" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22859451" sideWeight="0.509589" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29159936" sideWeight="0.19836956" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1791,7 +1860,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Animations added and UI beautify" />
     <MESSAGE value="All.jsp of proposals has a GRIDLAYOUT. FIXED DAOBANNED when non-exists student trying to be banned" />
     <MESSAGE value="FIXED Banned checking type may cause redirect to home/student" />
     <MESSAGE value="FIXED REDIRECT home-pc" />
@@ -1816,7 +1884,8 @@
     <MESSAGE value="Deleted CP from Register Page" />
     <MESSAGE value="UI fixed. Tour updated for proposal , request and collab with pulse effect (no material). Although MANDATORY change the signature of GetCollabs to Pair in order to obtain the relative information" />
     <MESSAGE value="Pair&lt;Collaboration , Request/Proposal&gt; Available and ready for use. Todo update Collaboration/list.jsp with the Pair" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pair&lt;Collaboration , Request/Proposal&gt; Available and ready for use. Todo update Collaboration/list.jsp with the Pair" />
+    <MESSAGE value="Updated with Pair class. Now is beautified. UI fixed on register (maxLength applied). UI fixed on sideNav, there is no exit button when there is not present any session." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated with Pair class. Now is beautified. UI fixed on register (maxLength applied). UI fixed on sideNav, there is no exit button when there is not present any session." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1829,57 +1898,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://SpringLocalModels/module=skillshare">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>SpringLocalModels</ID>
-          <OriginalElement>module=skillshare</OriginalElement>
-          <nodes>
-            <node x="" y="">module=skillshare</node>
-            <node x="" y="">fileset=skillshare/Spring Application Context</node>
-            <node x="" y="">filePath=/Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/resources/application-context.xml</node>
-            <node x="" y="">fileset=skillshare/MVC application context</node>
-            <node x="" y="">filePath=/Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/dispatcher-servlet.xml</node>
-            <node x="" y="">fileset=skillshare/MVC dispatcher servlet context</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="314.0" y="70.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Show filesets as groups</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/ApplicationContext.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/MailMail.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/images/background-list-req.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="66" column="83" lean-forward="false" selection-start-line="66" selection-start-column="83" selection-end-line="66" selection-end-column="83" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/error.jsp">
@@ -1954,6 +1975,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="72" column="69" lean-forward="false" selection-start-line="72" selection-start-column="69" selection-end-line="72" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1961,6 +1983,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="59" column="47" lean-forward="false" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1971,31 +1994,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_student.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="27" column="49" lean-forward="false" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/navbar-md.tag">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
           <caret line="26" column="41" lean-forward="false" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/all.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="74" column="39" lean-forward="false" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/all.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="17" column="60" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2007,18 +2009,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/detail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mapper/CollaborationMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2034,13 +2029,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="63" column="102" lean-forward="true" selection-start-line="63" selection-start-column="102" selection-end-line="63" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/collaboration/Collaboration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-384">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2062,6 +2050,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
           <caret line="40" column="50" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="40" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2069,6 +2060,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="49" lean-forward="true" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2099,22 +2093,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="138" column="41" lean-forward="true" selection-start-line="138" selection-start-column="41" selection-end-line="138" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="120" column="99" lean-forward="false" selection-start-line="120" selection-start-column="99" selection-end-line="120" selection-end-column="99" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/RequestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -2133,9 +2111,115 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sidenav-md.tag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="47" column="38" lean-forward="false" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="60" column="4" lean-forward="false" selection-start-line="60" selection-start-column="8" selection-end-line="63" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="61" column="27" lean-forward="true" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="139" column="38" lean-forward="true" selection-start-line="139" selection-start-column="38" selection-end-line="139" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/search.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/error.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="66" column="112" lean-forward="false" selection-start-line="66" selection-start-column="112" selection-end-line="66" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/error.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="66" column="83" lean-forward="false" selection-start-line="66" selection-start-column="83" selection-end-line="66" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="134" column="69" lean-forward="true" selection-start-line="134" selection-start-column="69" selection-end-line="134" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="137" column="24" lean-forward="false" selection-start-line="137" selection-start-column="24" selection-end-line="145" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/all.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="106" column="31" lean-forward="false" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/all.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="106" column="27" lean-forward="false" selection-start-line="106" selection-start-column="27" selection-end-line="106" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/fontawesome-stars.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/jquery.barrating.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/ProposalDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
+        <state relative-caret-position="430">
           <caret line="100" column="35" lean-forward="false" selection-start-line="100" selection-start-column="35" selection-end-line="100" selection-end-column="35" />
           <folding>
             <marker date="1496880242000" expanded="true" signature="1107:1219" ph="SELECT * FRO... proposal_of_collaboration" />
@@ -2158,102 +2242,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/collaboration/Collaboration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="149" column="11" lean-forward="false" selection-start-line="149" selection-start-column="11" selection-end-line="149" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sidenav-md.tag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="47" column="38" lean-forward="false" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="60" column="4" lean-forward="false" selection-start-line="60" selection-start-column="8" selection-end-line="63" selection-end-column="97" />
-          <folding />
+        <state relative-caret-position="231">
+          <caret line="36" column="16" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+          <folding>
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
+        <state relative-caret-position="-1430">
           <caret line="70" column="56" lean-forward="false" selection-start-line="70" selection-start-column="56" selection-end-line="70" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/login.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/req/detail.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="61" column="27" lean-forward="true" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
+        <state relative-caret-position="190">
+          <caret line="172" column="91" lean-forward="false" selection-start-line="172" selection-start-column="91" selection-end-line="172" selection-end-column="91" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/CollaborationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="139" column="38" lean-forward="true" selection-start-line="139" selection-start-column="38" selection-end-line="139" selection-end-column="38" />
+        <state relative-caret-position="253">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1221#1222#0" expanded="true" />
+            <element signature="e#1265#1266#0" expanded="true" />
+            <element signature="e#1339#1340#0" expanded="true" />
+            <element signature="e#1385#1386#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/prop/detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="113" column="31" lean-forward="true" selection-start-line="113" selection-start-column="31" selection-end-line="113" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ProposalController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="206" column="39" lean-forward="false" selection-start-line="206" selection-start-column="39" selection-end-line="206" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/CollaborationDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="93" column="59" lean-forward="false" selection-start-line="93" selection-start-column="59" selection-end-line="93" selection-end-column="59" />
-          <folding>
-            <marker date="1497030086000" expanded="true" signature="1039:1066" ph="select * fro... collaboration" />
-            <marker date="1497030086000" expanded="true" signature="1410:1469" ph="Select * fro... collaboration" />
-            <marker date="1497030086000" expanded="true" signature="1876:1916" ph="insert into collaboration... " />
-            <marker date="1497030086000" expanded="true" signature="2142:2180" ph="insert into collaboration... " />
-            <marker date="1497030086000" expanded="true" signature="2515:2654" ph="select c.* f... proposal_of_collaboration" />
-            <marker date="1497030086000" expanded="true" signature="2515:2669" ph="select c.* f... proposal_of_collaboration" />
-            <marker date="1497030086000" expanded="true" signature="2640:2654" ph="select * fro... collaboration" />
-            <marker date="1497030086000" expanded="true" signature="2704:2859" ph="select c.* f... proposal_of_collaboration" />
-            <marker date="1497030086000" expanded="true" signature="2704:2864" ph="select * fro... proposal_of_collaboration" />
-            <marker date="1497030086000" expanded="true" signature="3094:3247" ph="select c.* f... request_of_collaboration" />
-            <marker date="1497030086000" expanded="true" signature="3281:3423" ph="select c.* f... request_of_collaboration" />
-            <marker date="1497030086000" expanded="true" signature="3281:3435" ph="select * fro... request_of_collaboration" />
-            <marker date="1497030086000" expanded="true" signature="3833:3966" ph="select sum(h... request_of_collaboration" />
-            <marker date="1497030086000" expanded="true" signature="4069:4203" ph="select sum(h... proposal_of_collaboration" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/CollaborationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="45" column="36" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="36" />
+        <state relative-caret-position="865">
+          <caret line="64" column="32" lean-forward="true" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1497044218000" expanded="true" signature="1089:1116" ph="select * fro... collaboration" />
+            <marker date="1497044218000" expanded="true" signature="1470:1529" ph="Select * fro... collaboration" />
+            <marker date="1497044218000" expanded="true" signature="1767:1834" ph="update colla... " />
+            <marker date="1497044218000" expanded="true" signature="2261:2320" ph="Select * fro... collaboration" />
+            <marker date="1497044218000" expanded="true" signature="2727:2767" ph="insert into collaboration... " />
+            <marker date="1497044218000" expanded="true" signature="2993:3031" ph="insert into collaboration... " />
+            <marker date="1497044218000" expanded="true" signature="3368:3523" ph="select c.* f... proposal_of_collaboration" />
+            <marker date="1497044218000" expanded="true" signature="3368:3528" ph="select * fro... proposal_of_collaboration" />
+            <marker date="1497044218000" expanded="true" signature="3758:3900" ph="select c.* f... request_of_collaboration" />
+            <marker date="1497044218000" expanded="true" signature="3758:3912" ph="select * fro... request_of_collaboration" />
+            <marker date="1497044218000" expanded="true" signature="3758:3917" ph="select * fro... request_of_collaboration" />
+            <marker date="1497044218000" expanded="true" signature="4201:4334" ph="select sum(h... request_of_collaboration" />
+            <marker date="1497044218000" expanded="true" signature="4437:4571" ph="select sum(h... proposal_of_collaboration" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/ProposalController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_student.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="261" column="95" lean-forward="false" selection-start-line="261" selection-start-column="95" selection-end-line="261" selection-end-column="95" />
+        <state relative-caret-position="1015">
+          <caret line="106" column="88" lean-forward="false" selection-start-line="106" selection-start-column="88" selection-end-line="106" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1420">
+          <caret line="117" column="53" lean-forward="false" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="98" column="50" lean-forward="false" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
+        <state relative-caret-position="480">
+          <caret line="154" column="76" lean-forward="false" selection-start-line="154" selection-start-column="76" selection-end-line="154" selection-end-column="76" />
           <folding>
-            <marker date="1497030535000" expanded="false" signature="2660:2694" ph="..." />
-            <marker date="1497030535000" expanded="false" signature="2749:2785" ph="..." />
+            <element signature="n#style#0;n#i#0;n#a#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1497044301000" expanded="false" signature="2660:2694" ph="..." />
+            <marker date="1497044301000" expanded="false" signature="2749:2785" ph="..." />
           </folding>
         </state>
       </provider>

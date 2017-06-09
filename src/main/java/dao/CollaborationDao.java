@@ -14,6 +14,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Created by Beruto and Pablo Berbel on 29/3/17. Project -> skillshare
@@ -37,6 +38,23 @@ public class CollaborationDao {
     public List<Collaboration> getAllCollaborations() {
         String sql = "select * from collaboration";
         return jdbcTemplate.query(sql, new CollaborationMapper());
+    }
+
+    /**
+     * @param idProposal
+     * @param idRequest
+     * @return If there is any, it returns the collaboration that matches the proper ids.
+     */
+    public Collaboration getCollaborationByIDs(AtomicInteger idProposal, AtomicInteger idRequest) {
+        String sql = "Select * from collaboration where id_pro = ? and id_req = ?";
+        return jdbcTemplate.queryForObject(sql, new Object[]{idProposal.get(), idRequest.get()},
+                new CollaborationMapper());
+    }
+
+    public void rateCollaboration(Collaboration collaboration) {
+        String sql = "update collaboration set rating = ? where id_pro = ? and id_req = ?";
+        jdbcTemplate.update(sql, collaboration.getRating(), collaboration.getIdProposal().get(),
+                collaboration.getIdRequest().get());
     }
 
     /**
@@ -71,9 +89,6 @@ public class CollaborationDao {
 
     public List<Pair<Collaboration, Proposal>> myCollaborationsFromProposal(String nif) {
 
-//        final String sql = "select c.* from proposal_of_collaboration p join collaboration c " +
-//                "on id = id_pro" +
-//                " where nif = ? ORDER BY hours";
 
         final String sqlAll = "select * from proposal_of_collaboration p join collaboration c " +
                 "on id = id_pro" +
@@ -85,13 +100,9 @@ public class CollaborationDao {
     }
 
     public List<Pair<Collaboration, Request>> myCollaborationsFromRequest(String nif) {
-//        final String sql = "select c.* from request_of_collaboration r join collaboration c " +
-//                "on id = id_req" +
-//                " where nif = ? ORDER BY hours";
         final String sqlAll = "select * from request_of_collaboration r join collaboration c " +
                 "on id = id_req" +
                 " where nif = ? ORDER BY initial_date DESC ";
-        System.out.println(jdbcTemplate.query(sqlAll, new Object[]{nif}, new CollaborationRequestMapper()));
         return jdbcTemplate.query(sqlAll, new Object[]{nif}, new CollaborationRequestMapper());
 
     }

@@ -89,10 +89,18 @@
         <h4 class="text3d center-align">Colaboraciones a partir de ofertas</h4>
         <ul class="rig columns-3 live-search-list">
             <c:forEach items="${collaborationsProposal}" var="collab">
-                <a href="${pageContext.request.contextPath}/collaboration/detail/${collab.left.idProposal}/${collab.left.idRequest}.html">
+                <a href="${pageContext.request.contextPath}/collaboration/prop/detail/${collab.left.idProposal}/${collab.left.idRequest}.html">
                     <li class="hoverable animated flipInY">
-                        <img class="activator profile center-align circle" data-name=${collab.right.skillName}h>
-                        <h3 class="center-align">${collab.right.skillName}</h3>
+                        <img class="activator profile center-align circle" data-name=${collab.right.skillName}>
+                        <c:if test="${collab.right.level == 'A'}">
+                            <h3 class="center-align">${collab.right.skillName} Avanzado</h3>
+                        </c:if>
+                        <c:if test="${collab.right.level == 'M'}">
+                            <h3 class="center-align">${collab.right.skillName} Medio</h3>
+                        </c:if>
+                        <c:if test="${collab.right.level == 'N'}">
+                            <h3 class="center-align">${collab.right.skillName} Novato</h3>
+                        </c:if>
                         <p class="black-text">Horas: ${collab.left.hours}</p>
                         <p class="black-text">Fecha inicio: ${collab.right.initialDate}</p>
                         <p class="black-text">Fecha fin: ${collab.right.finishDate}</p>
@@ -112,10 +120,18 @@
         <h4 class="text3d center-align">Colaboraciones a partir de solicitudes</h4>
         <ul class="rig columns-3 live-search-list">
             <c:forEach items="${collaborationsRequest}" var="collabReq">
-                <a href="${pageContext.request.contextPath}/collaboration/detail/${collabReq.left.idProposal}/${collabReq.left.idRequest}.html">
+                <a href="${pageContext.request.contextPath}/collaboration/req/detail/${collabReq.left.idProposal}/${collabReq.left.idRequest}.html">
                     <li class="hoverable animated flipInY">
                         <img class="activator profile center-align circle" data-name=${collabReq.right.skillName}h>
-                        <h3 class="center-align">${collabReq.right.skillName}</h3>
+                        <c:if test="${collabReq.right.level == 'A'}">
+                            <h3 class="center-align">${collabReq.right.skillName} Avanzado</h3>
+                        </c:if>
+                        <c:if test="${collabReq.right.level == 'M'}">
+                            <h3 class="center-align">${collabReq.right.skillName} Medio</h3>
+                        </c:if>
+                        <c:if test="${collabReq.right.level == 'N'}">
+                            <h3 class="center-align">${collabReq.right.skillName} Novato</h3>
+                        </c:if>
                         <p class="black-text">Horas: ${collabReq.left.hours}</p>
                         <p class="black-text">Fecha inicio: ${collabReq.right.initialDate}</p>
                         <p class="black-text">Fecha fin: ${collabReq.right.finishDate}</p>
@@ -130,20 +146,15 @@
     </c:if>
 
     <c:if test="${ empty collaborationsProposal}">
-        <div class="valign-wrapper">
-            <a class="valign" style="font-size: 50px;text-align: center">
-                <i class="material-icons valign" style="font-size: 100px; text-align: center">insert_invitation</i>
-                <br>
-                Esto está vacío... Prueba creando alguna oferta.</a>
-        </div>
-    </c:if>
-    <c:if test="${ empty collaborationsRequest}">
-        <div class="valign-wrapper">
-            <a class="valign" style="font-size: 50px;text-align: center">
-                <i class="material-icons valign" style="font-size: 100px; text-align: center">insert_invitation</i>
-                <br>
-                Esto está vacío... Prueba creando alguna petición.</a>
-        </div>
+
+        <c:if test="${ empty collaborationsRequest}">
+            <div class="valign-wrapper">
+                <a class="valign" style="font-size: 50px;text-align: center">
+                    <i class="material-icons valign" style="font-size: 200px; text-align: center">insert_invitation</i>
+                    <br>
+                    Esto está vacío... Prueba creando colaborando con alguna oferta o demanda.</a>
+            </div>
+        </c:if>
     </c:if>
 
 

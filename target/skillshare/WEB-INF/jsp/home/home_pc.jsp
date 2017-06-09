@@ -50,11 +50,11 @@
     <%--Barra gris--%>
 
 <%--TODO meter todo en <li>--%>
-<md:sidenav-md name="${name}" type="${type}">
+<md:sidenav-md name="${name}" type="${type}" cp="${cp}">
 
-    <li>
-        <a class="waves-effect" href="${pageContext.request.contextPath}/home/home_pc.html">Colección de Habilidades</a>
-    </li>
+    <%--<li>--%>
+    <%--<a class="waves-effect" href="${pageContext.request.contextPath}/home/home_pc.html">Colección de Habilidades</a>--%>
+    <%--</li>--%>
     <li>
         <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
     </li>
@@ -68,7 +68,7 @@
 </md:sidenav-md>
 
 <main class="container">
-    <h4 class="font-lobster center-align text3d">Colección de habilidades</h4>
+    <h4 class="font-lobster center-align text3d">Listado de habilidades</h4>
         <div class="fixed-action-btn horizontal">
             <a class="btn-floating btn-large red">
                 <i class="material-icons">menu</i>
