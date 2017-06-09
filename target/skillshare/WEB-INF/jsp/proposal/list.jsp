@@ -89,7 +89,7 @@
         </div>
 
         <script>
-            $( ".btn-large" ).jPulse({
+            $(".btn-large").jPulse({
                 color: "#00ACED",
                 size: 150,
                 speed: 700,

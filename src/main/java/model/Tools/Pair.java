@@ -34,4 +34,8 @@ public class Pair<L, R> {
                 this.right.equals(pairo.getRight());
     }
 
+    @Override
+    public String toString() {
+        return "\nComponent Left:-> " + left.toString() + "\nComponent Right:-> " + right.toString();
+    }
 }

@@ -61,7 +61,8 @@
         <li>
             <a class="waves-effect" href="${pageContext.request.contextPath}/request/all.html">Solicitudes
                 disponibles</a>
-        </li><li>
+        </li>
+        <li>
             <a class="waves-effect" href="${pageContext.request.contextPath}/collaboration/list.html">Mis
                 colaboraciones</a>
         </li>

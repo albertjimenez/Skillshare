@@ -1,6 +1,7 @@
 package dao;
 
 import mapper.CollaborationMapper;
+import mapper.CollaborationRequestMapper;
 import model.collaboration.Collaboration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -64,20 +65,31 @@ public class CollaborationDao {
 
     }
 
-    //TODO pensar como obtener c.* y p.* supongo que con un Pair<Collaboration, Proposal>
     public List<Collaboration> myCollaborationsFromProposal(String nif) {
+
+        //TODO eliminar este sql, ya está el objeto creado y ya se puede usar
         final String sql = "select c.* from proposal_of_collaboration p join collaboration c " +
                 "on id = id_pro" +
                 " where nif = ? ORDER BY hours";
+        final String sqlAll = "select * from proposal_of_collaboration p join collaboration c " +
+                "on id = id_pro" +
+                " where nif = ? ORDER BY hours";
+
+
+
         return jdbcTemplate.query(sql, new Object[]{nif}, new CollaborationMapper());
 
     }
 
-    //TODO pensar como obtener c.* y r.* supongo que con un Pair<Collaboration, Request>
     public List<Collaboration> myCollaborationsFromRequest(String nif) {
+        //TODO eliminar este sql, ya está el objeto creado y ya se puede usar
         final String sql = "select c.* from request_of_collaboration r join collaboration c " +
                 "on id = id_req" +
                 " where nif = ? ORDER BY hours";
+        final String sqlAll = "select * from request_of_collaboration r join collaboration c " +
+                "on id = id_req" +
+                " where nif = ? ORDER BY hours";
+        System.out.println(jdbcTemplate.query(sqlAll, new Object[]{nif}, new CollaborationRequestMapper()));
         return jdbcTemplate.query(sql, new Object[]{nif}, new CollaborationMapper());
 
     }
