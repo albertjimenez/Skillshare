@@ -68,7 +68,7 @@
 </md:sidenav-md>
 
 <main class="container">
-    <h4 class="font-lobster center-align text3d">Mis ${count} colaboraciones</h4>
+    <h4 class="font-lobster center-align text3d">Mis Colaboraciones</h4>
 
 
     <div id="search-wrapper">

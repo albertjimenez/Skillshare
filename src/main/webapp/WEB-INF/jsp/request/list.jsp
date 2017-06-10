@@ -61,7 +61,7 @@
 </md:sidenav-md>
 
 <main class="container">
-    <h4 class="font-lobster center-align text3d">Mis ${count} Peticiones</h4>
+    <h4 class="font-lobster center-align text3d">Mis Peticiones</h4>
 
 
     <c:if test="${empty requests}">
