@@ -2,11 +2,8 @@ package controller.validator;
 
 import model.proposal.Proposal;
 import org.springframework.validation.Errors;
-import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
-import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
@@ -24,8 +21,6 @@ public class ProposalValidator implements Validator {
     public void validate(Object o, Errors errors) {
         Proposal aProposal = (Proposal) o;
         System.out.println("Propuesta en validación" + aProposal);
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "initialDate", "Error", "Fecha vacía");
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "finishDate", "Error", "Fecha vacía");
 
         if (aProposal.getFinishDate() == null) {
             errors.rejectValue("finishDate", "error", "Fecha vacía");
@@ -35,19 +30,18 @@ public class ProposalValidator implements Validator {
             errors.rejectValue("initialDate", "error", "Fecha vacía");
             return;
         }
-
-
-        GregorianCalendar calendar = new GregorianCalendar();
-        calendar.set(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH), 0, 0, 0);
-        aProposal.setInitialDate(new Date(new GregorianCalendar(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH), 0, 0, 1).getTimeInMillis()));
-        System.out.println("Calendario" + calendar.getTime().toString());
+        if (aProposal.getFinishDate() == null || aProposal.getInitialDate() == null)
+            return;
         if (aProposal.getFinishDate().before(aProposal.getInitialDate()))
-            errors.rejectValue("finishDate", "error", "La fecha seleccionada es anterior que la inicial");
-        if (aProposal.getInitialDate().before(calendar.getTime()))
-            errors.rejectValue("initialDate", "error", "La fecha seleccionada es anterior a la actual");
+            errors.rejectValue("finishDate", "error", "");
+        if (aProposal.getFinishDate().equals(aProposal.getInitialDate())) {
+            errors.rejectValue("initialDate", "error", "");
+            errors.rejectValue("finishDate", "error", "");
+        }
+        if (aProposal.getFinishDate().before(new GregorianCalendar().getTime()) || aProposal.getInitialDate().before(new GregorianCalendar().getTime())) {
+            errors.rejectValue("initialDate", "error", "");
+            errors.rejectValue("finishDate", "error", "");
+        }
 
-
-        if (aProposal.getFinishDate().before(calendar.getTime()))
-            errors.rejectValue("finishDate", "error", "La fecha seleccionada es anterior a la actual");
     }
 }

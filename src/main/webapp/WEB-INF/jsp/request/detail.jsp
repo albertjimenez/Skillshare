@@ -78,7 +78,15 @@
 
 <main class="container">
 
-    <h2 class="center-align font-lobster text3d">Demanda - ${request.skillName} | ${request.level}  </h2>
+    <c:if test="${request.level == 'A'}">
+        <h2 class="center-align font-lobster text3d">Demanda ${request.skillName} Avanzado</h2>
+    </c:if>
+    <c:if test="${request.level == 'M'}">
+        <h2 class="center-align font-lobster text3d">Demanda ${request.skillName} Medio</h2>
+    </c:if>
+    <c:if test="${request.level == 'N'}">
+        <h2 class="center-align font-lobster text3d">Demanda ${request.skillName} Novato</h2>
+    </c:if>
     <div class="animated zoomInRight z-depth-3 hoverable" style="border-radius: 25px">
         <div class="card blue">
             <%--<div class="card-image">--%>
