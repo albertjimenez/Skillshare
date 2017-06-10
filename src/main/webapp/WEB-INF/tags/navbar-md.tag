@@ -39,9 +39,6 @@
                         class="material-icons">menu</i></a>
             </c:if>
 
-            <%--<a href="#" data-activates="mobile-demo" class="button-collapse">--%>
-            <%--<i class="material-icons ">menu</i>--%>
-            <%--</a>--%>
             <%--Esto es la cabecera de arriba--%>
             <ul class="right hide-on-med-and-down">
                 <c:if test="${empty name}">

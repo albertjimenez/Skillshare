@@ -40,16 +40,7 @@
 </header>
 
 
-<md:sidenav-md>
-    <ul>
-        <li>
-            <a class="waves-effect" href="${pageContext.request.contextPath}/login/login.html">Iniciar sesión</a>
-        </li>
-        <li>
-            <a class="waves-effect" href="${pageContext.request.contextPath}/register/register.html">Registrarse</a>
-        </li>
-    </ul>
-</md:sidenav-md>
+<md:sidenav-md></md:sidenav-md>
 <%--Carrousel--%>
 <div class="carousel carousel-slider">
     <a href="#one!" class="carousel-item"><img src="images/carousel/1.jpeg" alt=""></a>

@@ -50,18 +50,19 @@
         <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
     </li>
     <li>
+        <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Demandas</a>
+    </li>
+    <li>
         <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/all.html">Ofertas de la
             comunidad</a>
     </li>
-    <li>
-        <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Peticiones</a>
-    </li>
+
 
 
 </md:sidenav-md>
 
 <main class="container">
-    <h4 class="font-lobster center-align text3d">Mis Peticiones</h4>
+    <h4 class="font-lobster center-align text3d">Mis Demandas</h4>
 
 
     <c:if test="${empty requests}">
@@ -69,7 +70,7 @@
             <a class="valign" style="font-size: 50px;text-align: center">
                 <i class="material-icons valign" style="font-size: 200px; text-align: center">insert_invitation</i>
                 <br>
-                Esto está vacío... Prueba creando alguna petición.</a>
+                Esto está vacío... Prueba creando alguna demanda.</a>
         </div>
 
         <%--Boton material de crear solicitud--%>

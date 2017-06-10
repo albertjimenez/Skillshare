@@ -60,7 +60,7 @@
 <main class="container">
 
     <div class="center-align">
-        <h1 class="center-align black-text font-lobster">No se encuentra la solicitud ${id}</h1>
+        <h1 class="center-align black-text font-lobster">No se encuentra la demanda ${id}</h1>
         <img src="/images/404.png" class="responsive-img">
     </div>
 </main>

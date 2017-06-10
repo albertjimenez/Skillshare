@@ -7,6 +7,7 @@
 <%@attribute name="name" required="false" %>
 <%@attribute name="name2" required="false" %>
 <%@attribute name="name3" required="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
 <%--Pongo etiquetas li porque esto va siempre dentro de un forEach--%>
@@ -20,7 +21,15 @@
             <img class=" activator profile" data-name=${name}}">
         </div>
         <span class="font-raleway">
-            Nombre: ${name} /\ ${name2}
+            <c:if test="${name2 == 'A'}">
+                Nombre: ${name} - Avanzado
+            </c:if>
+                        <c:if test="${name2 == 'M'}">
+                            Nombre: ${name} - Medio
+                        </c:if>
+            <c:if test="${name2 == 'N'}">
+                Nombre: ${name} - Novato
+            </c:if>
         </span>
     </div>
 

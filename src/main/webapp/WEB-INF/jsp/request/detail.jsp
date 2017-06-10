@@ -11,7 +11,7 @@
 
 <html>
 <head>
-    <title>Detalles de la propuesta</title>
+    <title>Detalles de la demanda</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection"/>
@@ -78,20 +78,20 @@
 
 <main class="container">
 
-    <h2 class="center-align font-lobster text3d">Solicitud - ${request.skillName} | ${request.level}  </h2>
+    <h2 class="center-align font-lobster text3d">Demanda - ${request.skillName} | ${request.level}  </h2>
     <div class="animated zoomInRight z-depth-3 hoverable" style="border-radius: 25px">
         <div class="card blue">
             <%--<div class="card-image">--%>
             <%--<img class="activator profile center-align circle" data-name=${proposal.skillName}}">--%>
             <%--</div>--%>
             <div class="card-content white-text">
-                En la pestaña de <strong>Solicitud</strong>, encontrarás más detalles de la oferta.
+                En la pestaña de <strong>Demanda</strong>, encontrarás más detalles de la oferta.
                 En la pestaña de <strong>Estudiante</strong> encontrarás la información del estudiante así como sus
                 datos de contacto.
             </div>
             <div class="card-tabs ">
                 <ul class="tabs tabs-fixed-width tabs-transparent ">
-                    <li class="tab"><a class="active" href="#test5">Solicitud</a></li>
+                    <li class="tab"><a class="active" href="#test5">Demanda</a></li>
                     <li class="tab"><a href="#test4">Estudiante</a></li>
                 </ul>
             </div>
@@ -139,15 +139,15 @@
         <form:form method="post" modelAttribute="newproposal" id="myForm">
 
             <c:if test="${empty match_proposals}">
-                <p class="center-align red-text">No hay propuestas que coincidan,
-                    se creará automáticamente a partir de esta solicitud</p>
+                <p class="center-align red-text">No hay ofertas que coincidan,
+                    se creará automáticamente a partir de esta demanda</p>
 
             </c:if>
             <c:if test="${not empty match_proposals}">
                 <div class="row">
                     <div class="col s6 offset-s3 ">
                             <%--<i class="material-icons">announcement</i>--%>
-                        <form:label path="skillName">Nombre de tu propuesta</form:label>
+                        <form:label path="skillName">Nombre de tu oferta</form:label>
                         <form:select path="skillName">
                             <form:option value="Lista de propuestas que coinciden" disabled="true"></form:option>
                             <form:options items="${match_proposals}"></form:options>

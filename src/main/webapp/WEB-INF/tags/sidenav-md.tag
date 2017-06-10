@@ -44,7 +44,7 @@
             </c:if>
             <c:if test="${not empty cp}">
                 <a class="waves-effect" href="${pageContext.request.contextPath}/banned/ban.html">
-                    <i class="material-icons">warning</i>Lista de baneados</a>
+                    <i class="material-icons">warning</i>Listado de baneados</a>
                 <a class="waves-effect" href="${pageContext.request.contextPath}/home/home_pc.html">
                     Listado de Habilidades</a>
             </c:if>
@@ -57,25 +57,61 @@
 
         </div>
     </li>
-    <li><a class="subheader">Herramientas</a></li>
 
+    <c:if test="${not empty name}">
+        <li><a class="subheader">Herramientas</a></li>
+    </c:if>
     <div class="light-blue lighten-3">
-        <jsp:doBody/>
+
+        <%--<jsp:doBody/>--%>
         <c:if test="${not empty name}">
+
             <li>
-                <a class="waves-effect" href="${pageContext.request.contextPath}/request/all.html">Solicitudes
-                    de la comunidad</a>
+                <a class="waves-effect" href="${pageContext.request.contextPath}/home/home_pc.html">Mi Area</a>
+            </li>
+            <li>
+                <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
+            </li>
+            <li>
+                <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Demandas</a>
             </li>
             <li>
                 <a class="waves-effect" href="${pageContext.request.contextPath}/collaboration/list.html">Mis
                     colaboraciones</a>
             </li>
+            <li>
+                <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/all.html">Ofertas de la
+                    comunidad</a>
+            </li>
+            <li>
+                <a class="waves-effect" href="${pageContext.request.contextPath}/request/all.html">Demandas
+                    de la comunidad</a>
+            </li>
+            <li>
+                <a href="#modal-help" class="waves-effect"><i class="material-icons">live_help</i>Ayuda</a>
+            </li>
+
+            <script>
+                $(document).ready(function () {
+                    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+                    $('.modal').modal();
+                });
+            </script>
+
+
         </c:if>
     </div>
 
 </ul>
 
-
+<div class="modal" id="modal-help">
+    <div class="modal-content cyan lighten-4 hoverable z-depth-5">
+        <h5 class="font-raleway">Bienvenido</h5>
+        <p>Hola ${name}, en el panel blanco de la izquierda puedes ver todas las
+            herramientas de las que puedes hacer uso.</p>
+        <p>Disfruta ayudando y aprendiendo con el resto de la comunidad universitaria.</p>
+    </div>
+</div>
 <%--<li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>--%>
 
 <%--<li><a href="#!">Second Link</a></li>--%>

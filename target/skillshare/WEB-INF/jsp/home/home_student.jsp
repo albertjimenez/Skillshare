@@ -91,7 +91,7 @@
         <h5 class="font-raleway">Bienvenido</h5>
         <p>Hola ${name}, en el panel blanco de tu izquierda encontrarás todas las
             herramientas de las que puedes hacer uso.</p>
-        <p>¡Pásatelo genial aprendiendo y enseñando con el resto de la comunidad universitaria!</p>
+        <p>¡Pásatelo genial aprendiendo y enseñamdo con el resto de la comunidad universitaria!</p>
     </div>
 </div>
 

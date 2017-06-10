@@ -49,9 +49,6 @@
     <md:navbar-md name="${name}"></md:navbar-md>
 </header>
 
-<%--<div class="row">--%>
-<%--Barra gris--%>
-
 
 <md:sidenav-md name="${name}" type="${type}" cp="${cp}">
     <ul>
@@ -59,11 +56,11 @@
             <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
         </li>
         <li>
-            <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/all.html">Ofertas de la
-                comunidad</a>
+            <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Demandas</a>
         </li>
         <li>
-            <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Peticiones</a>
+            <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/all.html">Ofertas de la
+                comunidad</a>
         </li>
     </ul>
 </md:sidenav-md>
@@ -71,7 +68,7 @@
 <%--Fondo restante de la web sin panel--%>
 <main class="container">
     <%--<div class="col s12 m8 l9" style="height: 100%">--%>
-    <h4 class="font-lobster center-align text3d">Mis ${count} ofertas</h4>
+    <h4 class="font-lobster center-align text3d">Mis Ofertas</h4>
 
     <%--Boton material de crear oferta--%>
     <c:if test="${not empty tour2}">

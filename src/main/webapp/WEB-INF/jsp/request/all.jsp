@@ -10,7 +10,7 @@
 
 <html>
 <head>
-    <title>Listado de ofertas</title>
+    <title>Listado de demandas</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection"/>
@@ -59,7 +59,7 @@
 
 <main class="container">
 
-    <h4 class="center-align font-lobster text3d">Solicitudes disponibles</h4>
+    <h4 class="center-align font-lobster text3d">Demandas disponibles</h4>
     <div class="fixed-action-btn horizontal">
         <a class="btn-floating btn-large blue">
             <i class="material-icons">menu</i>
@@ -75,7 +75,7 @@
             <a class="valign white-text" style="font-size: 50px;text-align: center">
                 <i class="material-icons valign" style="font-size: 200px; text-align: center">insert_invitation</i>
                 <br>
-                No hay solicitudes todavía, te sugerimos crear una :)</a>
+                No hay demandas todavía, te sugerimos crear una :)</a>
         </div>
     </c:if>
 

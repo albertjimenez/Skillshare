@@ -10,7 +10,7 @@
 <%@ taglib prefix="md" tagdir="/WEB-INF/tags" %>
 <html>
 <head>
-    <title>Crear petición</title>
+    <title>Crear demanda</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection"/>

@@ -7,15 +7,30 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0695153-a83b-4add-9f52-0017f11374ad" name="Default" comment="statisticalController not working">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/CollaborationDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/CollaborationDao.class" />
+    <list default="true" id="a0695153-a83b-4add-9f52-0017f11374ad" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare.war" afterPath="$PROJECT_DIR$/target/skillshare.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/dao/CollaborationDao.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/dao/CollaborationDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/list.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_student.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_student.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/all.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/all.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/create.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/create.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/detail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/detail.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/error.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/error.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/desplegable-md.tag" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/desplegable-md.tag" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/navbar-md.tag" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/navbar-md.tag" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sidenav-md.tag" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sidenav-md.tag" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/dispatcher-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/home/home_student.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/home/home_student.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/proposal/list.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/proposal/list.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/request/list.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/request/list.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/tags/desplegable-md.tag" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/tags/desplegable-md.tag" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/tags/navbar-md.tag" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/tags/navbar-md.tag" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/tags/sidenav-md.tag" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/tags/sidenav-md.tag" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/index.jsp" afterPath="$PROJECT_DIR$/target/skillshare/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,73 +56,12 @@
     <favorites_list name="skillshare" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="statistical.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/statistical/statistical.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StatisticalController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/StatisticalController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="86" column="46" lean-forward="false" selection-start-line="86" selection-start-column="46" selection-end-line="86" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1139#1140#0" expanded="true" />
-                <element signature="e#1191#1192#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StatisticalDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/StatisticalDao.java">
+    <leaf>
+      <file leaf-file-name="StatisticalElement.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/Tools/StatisticalElement.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
-              <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1497050169000" expanded="true" signature="821:848" ph="select * fro... collaboration" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="63" column="53" lean-forward="false" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RequestController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/RequestController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="45" column="36" lean-forward="true" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -130,7 +84,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>position:relative;</find>
       <find>req.id</find>
       <find>sect</find>
       <find>repe</find>
@@ -160,6 +113,7 @@
       <find>newreques</find>
       <find>col</find>
       <find>level</find>
+      <find>Herra</find>
     </findStrings>
     <replaceStrings>
       <replace>proposal</replace>
@@ -189,12 +143,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/services/JavaMailSender.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-context.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/services/MailMail.java" />
         <option value="$PROJECT_DIR$/src/main/resources/ApplicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/error.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/error.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/mapper/CollaborationMapper.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/testings/test.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/banned/ban.jsp" />
@@ -202,10 +152,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/css/my-grid.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/effect-text-3d.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/create.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/create.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/update.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/navbar-md.tag" />
         <option value="$PROJECT_DIR$/src/main/java/dao/RequestDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/ProposalDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/collaboration/Collaboration.java" />
@@ -215,18 +163,14 @@
         <option value="$PROJECT_DIR$/src/main/java/model/Tools/Pair.java" />
         <option value="$PROJECT_DIR$/src/main/java/mapper/CollaborationRequestMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/RequestController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/detail.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register/register.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sidenav-md.tag" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/search.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/error.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/detail.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/all.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/all.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/req/detail.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_student.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/controller/CollaborationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/ProposalController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/prop/detail.jsp" />
@@ -237,9 +181,19 @@
         <option value="$PROJECT_DIR$/src/main/java/controller/StatisticalController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/statistical/statistical.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/navbar-md.tag" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_student.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/desplegable-md.tag" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sidenav-md.tag" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/create.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/all.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/detail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/error.jsp" />
       </list>
     </option>
   </component>
@@ -757,32 +711,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skillshare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skillshare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -803,140 +731,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skillshare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skillshare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skillshare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skillshare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skillshare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skillshare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skillshare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skillshare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skillshare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skillshare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -957,7 +751,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/list.jsp&#10;list&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/collaboration/list.jsp&#10;dis&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/dispatcher-servlet.xml&#10;sear&#9;ACTION&#9;Spy-js.SearchFunctionFromStack&#10;det&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp&#10;Prop&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;homest&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_student.jsp&#10;detai&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp&#10;homep&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp&#10;de&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/collaboration/prop/detail.jsp&#10;dao&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/ProposalDao.java&#10;all&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/all.jsp&#10;lis&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/list.jsp&#10;propo&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;Contr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;contr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/CollaborationController.java&#10;home&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp&#10;log&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/login/login.jsp&#10;side&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/sidenav-md.tag&#10;crea&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp&#10;regi&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp&#10;deta&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/detail.jsp&#10;req&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/RequestController.java&#10;newrequest&#9;PSI&#9;JAVA://org.eclipse.jetty.http.HttpTester#newRequest&#10;web&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/web.xml&#10;disp&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/dispatcher-servlet.xml&#10;pair&#9;PSI&#9;JAVA://model.Tools.Pair&#10;Da&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/CollaborationDao.java&#10;t&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/list.jsp&#10;Req&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/RequestController.java&#10;prop&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;Col&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/CollaborationDao.java&#10;nav&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/sidenav-md.tag&#10;Colcon&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/CollaborationController.java&#10;Logi&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;re&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/RequestController.java&#10;collabocon&#9;PSI&#9;JAVA://controller.CollaborationController&#10;mapp&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/mapper/CollaborationMapper.java&#10;reg&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp&#10;col&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/CollaborationDao.java&#10;Reqda&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/RequestDao.java&#10;Proposa&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/ProposalDao.java&#10;NAV&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/navbar-md.tag&#10;homepc&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp&#10;Colla&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/CollaborationDao.java&#10;mygr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/css/my-grid.css&#10;Re&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/RequestDao.java&#10;pr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/ProposalDao.java&#10;propd&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/ProposalDao.java&#10;Banned&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/BannedController.java" />
+    <property name="SearchEverywhereHistoryKey" value="list&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/list.jsp&#10;Stat&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/model/Tools/StatisticalElement.java&#10;tag&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/desplegable-md.tag&#10;web&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/web.xml&#10;home&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_student.jsp&#10;side&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/sidenav-md.tag&#10;search&#9;ACTION&#9;SearchEverywhere&#10;dis&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/dispatcher-servlet.xml&#10;sear&#9;ACTION&#9;Spy-js.SearchFunctionFromStack&#10;det&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp&#10;Prop&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;homest&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_student.jsp&#10;detai&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp&#10;homep&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp&#10;de&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/collaboration/prop/detail.jsp&#10;dao&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/ProposalDao.java&#10;all&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/all.jsp&#10;lis&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/list.jsp&#10;propo&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;Contr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;contr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/CollaborationController.java&#10;log&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/login/login.jsp&#10;crea&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp&#10;regi&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp&#10;deta&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/detail.jsp&#10;req&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/RequestController.java&#10;newrequest&#9;PSI&#9;JAVA://org.eclipse.jetty.http.HttpTester#newRequest&#10;disp&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/dispatcher-servlet.xml&#10;pair&#9;PSI&#9;JAVA://model.Tools.Pair&#10;Da&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/CollaborationDao.java&#10;t&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/list.jsp&#10;Req&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/RequestController.java&#10;prop&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;Col&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/CollaborationDao.java&#10;nav&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/sidenav-md.tag&#10;Colcon&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/CollaborationController.java&#10;Logi&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;re&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/RequestController.java&#10;collabocon&#9;PSI&#9;JAVA://controller.CollaborationController&#10;mapp&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/mapper/CollaborationMapper.java&#10;reg&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp&#10;col&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/CollaborationDao.java&#10;Reqda&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/RequestDao.java&#10;Proposa&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/ProposalDao.java&#10;NAV&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/navbar-md.tag&#10;homepc&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp&#10;Colla&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/CollaborationDao.java&#10;mygr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/css/my-grid.css&#10;Re&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/RequestDao.java&#10;pr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/ProposalDao.java" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="last.edited.regexp" value="&#10;" />
@@ -1506,14 +1300,7 @@
       <workItem from="1496836542703" duration="16890000" />
       <workItem from="1496929273261" duration="7140000" />
       <workItem from="1497002898873" duration="675000" />
-      <workItem from="1497024759658" duration="23343000" />
-    </task>
-    <task id="LOCAL-00017" summary="Works reading ONLY Strings from JSP to Javascript">
-      <created>1491089559724</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1491089559724</updated>
+      <workItem from="1497024759658" duration="27986000" />
     </task>
     <task id="LOCAL-00018" summary="Validators added and working">
       <created>1491760012905</created>
@@ -1851,11 +1638,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497086654224</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Issue #13 fixed">
+      <created>1497127991902</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1497127991902</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="501758000" />
+    <option name="totallyTimeSpent" value="506401000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1867,7 +1661,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="998" extended-state="6" />
+    <frame x="0" y="22" width="1280" height="998" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1892,7 +1686,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32809225" sideWeight="0.49676898" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2406181" sideWeight="0.6987076" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25827813" sideWeight="0.6987076" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52465755" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29159936" sideWeight="0.80163044" order="0" side_tool="false" content_ui="combo" />
@@ -1928,22 +1722,22 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670453" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29863015" sideWeight="0.6203554" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2976939" sideWeight="0.6203554" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32809225" sideWeight="0.49676898" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29863015" sideWeight="0.6987076" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2406181" sideWeight="0.6987076" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52465755" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29159936" sideWeight="0.49041095" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29159936" sideWeight="0.80163044" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3245033" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22859451" sideWeight="0.509589" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29159936" sideWeight="0.19836956" order="7" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1982,7 +1776,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="FIXED REDIRECT home-pc" />
     <MESSAGE value="FIXED REDIRECT home-pc 2.0 and limited textarea characters" />
     <MESSAGE value="onmouseenter function to sideNav" />
     <MESSAGE value="Autocomplete working and fixed background of logout.jsp" />
@@ -2007,7 +1800,8 @@
     <MESSAGE value="Updated with Pair class. Now is beautified. UI fixed on register (maxLength applied). UI fixed on sideNav, there is no exit button when there is not present any session." />
     <MESSAGE value="Good job. Collaboration limit added up to 20 hours. Detailed Collaboration done. Rating collabortion done. Text inputs limited to max SQL" />
     <MESSAGE value="statisticalController not working" />
-    <option name="LAST_COMMIT_MESSAGE" value="statisticalController not working" />
+    <MESSAGE value="Issue #13 fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Issue #13 fixed" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -2020,28 +1814,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/BannedController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="86" column="48" lean-forward="true" selection-start-line="86" selection-start-column="48" selection-end-line="86" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/my-grid.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/effect-text-3d.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/create.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -2050,25 +1822,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/create.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="59" column="47" lean-forward="false" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/update.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="68" column="47" lean-forward="false" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/navbar-md.tag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="26" column="41" lean-forward="false" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -2137,14 +1894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-http/9.2.11.v20150529/jetty-http-9.2.11.v20150529.jar!/org/eclipse/jetty/http/HttpTester.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -2153,22 +1902,6 @@
             <element signature="e#1227#1228#0" expanded="true" />
             <element signature="e#1274#1275#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/detail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="122" column="99" lean-forward="false" selection-start-line="122" selection-start-column="99" selection-end-line="122" selection-end-column="99" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sidenav-md.tag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="47" column="38" lean-forward="false" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2217,16 +1950,6 @@
         <state relative-caret-position="430">
           <caret line="66" column="83" lean-forward="false" selection-start-line="66" selection-start-column="83" selection-end-line="66" selection-end-column="83" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/all.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="106" column="31" lean-forward="false" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2328,14 +2051,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_student.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1015">
-          <caret line="106" column="88" lean-forward="false" selection-start-line="106" selection-start-column="88" selection-end-line="106" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1420">
@@ -2399,14 +2114,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Tools/StatisticalElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="56" lean-forward="false" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/StatisticalDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -2456,14 +2163,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="63" column="53" lean-forward="false" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -2482,10 +2181,108 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-222">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/navbar-md.tag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        <state relative-caret-position="430">
+          <caret line="59" column="13" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="59" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_student.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="60" column="4" lean-forward="false" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/desplegable-md.tag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sidenav-md.tag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="77" column="16" lean-forward="true" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+          <folding>
+            <marker date="1497132006000" expanded="true" signature="2536:2699" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/all.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/create.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="199" column="17" lean-forward="true" selection-start-line="199" selection-start-column="17" selection-end-line="199" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/error.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="62" column="83" lean-forward="false" selection-start-line="62" selection-start-column="83" selection-end-line="62" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="72" column="64" lean-forward="false" selection-start-line="72" selection-start-column="64" selection-end-line="72" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Tools/StatisticalElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>

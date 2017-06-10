@@ -50,18 +50,19 @@
         <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
     </li>
     <li>
+        <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Demandas</a>
+    </li>
+    <li>
         <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/all.html">Ofertas de la
             comunidad</a>
     </li>
-    <li>
-        <a class="waves-effect" href="${pageContext.request.contextPath}/request/list.html">Mis Peticiones</a>
-    </li>
+
 
 
 </md:sidenav-md>
 
 <main class="container">
-    <h4 class="font-lobster center-align text3d">Mis ${count} Peticiones</h4>
+    <h4 class="font-lobster center-align text3d">Mis Peticiones</h4>
 
 
     <c:if test="${empty requests}">
