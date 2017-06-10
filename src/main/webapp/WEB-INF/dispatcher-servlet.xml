@@ -29,6 +29,7 @@ http://www.springframework.org/schema/context/spring-context.xsd">
     <bean id="studentDao" class="dao.StudentDao"/>
     <bean id="bannedDao" class="dao.BannedDao"/>
     <bean id="mensajesDao" class="dao.MensajesDao"/>
+    <bean id="statisticalDao" class="dao.StatisticalDao"/>
 
     <!--<bean class="java.net.URI" id="dbUrl">-->
     <!--<constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/>-->

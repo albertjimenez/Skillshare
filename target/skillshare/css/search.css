@@ -18,6 +18,7 @@ input[type=text] {
 input[type=text]:focus {
     width: 100%;
 }
+
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #212121;
+    color: #212121;
 }

@@ -84,5 +84,8 @@
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4.7" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" name="intro" level="application" />
+    <orderEntry type="library" name="highcharts" level="application" />
+    <orderEntry type="library" name="highcharts-3d" level="application" />
+    <orderEntry type="library" name="exporting" level="application" />
   </component>
 </module>

@@ -31,16 +31,6 @@ public class CollaborationDao {
 
 
     /**
-     * Designed for statistical purposes. Get number of collaborations done
-     *
-     * @return
-     */
-    public List<Collaboration> getAllCollaborations() {
-        String sql = "select * from collaboration";
-        return jdbcTemplate.query(sql, new CollaborationMapper());
-    }
-
-    /**
      * @param idProposal
      * @param idRequest
      * @return If there is any, it returns the collaboration that matches the proper ids.

@@ -136,7 +136,7 @@
                     <li class="hoverable animated flipInY">
                         <img class="activator profile center-align circle" data-name=${collab.skillName}}">
                         <c:if test="${collab.level == 'A'}">
-                        <h3 class="center-align">${collab.skillName} Avanzado</h3>
+                            <h3 class="center-align">${collab.skillName} Avanzado</h3>
                         </c:if>
                         <c:if test="${collab.level == 'M'}">
                             <h3 class="center-align">${collab.skillName} Medio</h3>

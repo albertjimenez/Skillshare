@@ -71,15 +71,6 @@
     <h4 class="font-lobster center-align text3d">Mis ${count} colaboraciones</h4>
 
 
-    <%--<c:if test="${empty collaborationsProposal}">--%>
-    <%--<div class="valign-wrapper">--%>
-    <%--<a class="valign" style="font-size: 50px;text-align: center">--%>
-    <%--<i class="material-icons valign" style="font-size: 200px; text-align: center">insert_invitation</i>--%>
-    <%--<br>--%>
-    <%--Esto está vacío... Prueba a empezar ayudando a alguien en las secciones de ofertas y solicitudes.</a>--%>
-    <%--</div>--%>
-    <%--</c:if>--%>
-    <%--TODO transformar con tupla de 3--%>
     <div id="search-wrapper">
         <input type="text" id="search" class="live-search-box" placeholder="Buscar colaboraciones"/>
         <div id="close-icon"></div>
