@@ -26,6 +26,7 @@
     <script src="/js/raphael-2.1.4.min.js"></script>
     <script src="/js/justgage.js"></script>
     <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/search.css">
     <link rel="stylesheet" href="/css/my-grid.css">
     <style>
         body {
@@ -73,6 +74,7 @@
     </c:if>
 
     <c:if test="${not empty requests and not empty proposals}">
+        <h3 class="text3d font-lobster center-align">Mi última demanda y oferta</h3>
         <div id="search-wrapper">
             <input type="text" id="search" class="live-search-box" placeholder="Buscar..."/>
             <div id="close-icon"></div>
@@ -144,6 +146,7 @@
     <c:if test="${not empty proposals and empty requests}">
 
         <%--If has any proposal--%>
+        <h3 class="text3d font-lobster center-align">Mi última oferta</h3>
         <ul class="rig columns-2 live-search-list">
             <a href="${pageContext.request.contextPath}/proposal/detail/${proposals.id}.html">
                 <li class="hoverable animated flipInY">

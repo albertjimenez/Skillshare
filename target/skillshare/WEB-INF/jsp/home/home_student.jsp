@@ -26,14 +26,13 @@
     <script src="/js/raphael-2.1.4.min.js"></script>
     <script src="/js/justgage.js"></script>
     <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/search.css">
     <link rel="stylesheet" href="/css/my-grid.css">
-    <link rel="stylesheet" href="/css/jquery.fullpage.min.css">
-    <script src="/js/jquery.fullpage.min.js"></script>
-<style>
-    body{
-        background-image: url("/images/mywwe.jpg");
-    }
-</style>
+    <style>
+        body {
+            background-image: url("/images/mywwe.jpg");
+        }
+    </style>
 </head>
 <body class="blue lighten-3">
 
@@ -64,7 +63,7 @@
 
 </md:sidenav-md>
 <%--Fondo restante de la web sin panel--%>
-<div id="fullscreen">
+<main class="container">
     <c:if test="${empty proposals and empty requests}">
         <div class="valign-wrapper">
             <a class="valign" style="font-size: 50px;text-align: center">
@@ -75,6 +74,7 @@
     </c:if>
 
     <c:if test="${not empty requests and not empty proposals}">
+        <h3 class="text3d font-lobster center-align">Mi última demanda y oferta</h3>
         <div id="search-wrapper">
             <input type="text" id="search" class="live-search-box" placeholder="Buscar..."/>
             <div id="close-icon"></div>
@@ -146,6 +146,7 @@
     <c:if test="${not empty proposals and empty requests}">
 
         <%--If has any proposal--%>
+        <h3 class="text3d font-lobster center-align">Mi última oferta</h3>
         <ul class="rig columns-2 live-search-list">
             <a href="${pageContext.request.contextPath}/proposal/detail/${proposals.id}.html">
                 <li class="hoverable animated flipInY">
@@ -212,22 +213,20 @@
         </ul>
 
         <h3 class="text3d font-lobster center-align">Resumen de mi actividad</h3>
-        <div class="section">
-            <div class="row">
-                <div class="col s6">
-                    <div id="numberCollab" style="width:200px; height:200px"></div>
-                </div>
-                <div class="col s6">
-                    <div id="numberProp" style="width:200px; height:200px"></div>
-                </div>
-                <div class="col s6">
-                    <div id="numberReq" style="width:200px; height:200px"></div>
-                </div>
-                <div class="col s6">
-                    <div id="numberHours" style="width:200px; height:200px"></div>
-                </div>
-
+        <div class="row">
+            <div class="col s6">
+                <div id="numberCollab" style="width:200px; height:200px"></div>
             </div>
+            <div class="col s6">
+                <div id="numberProp" style="width:200px; height:200px"></div>
+            </div>
+            <div class="col s6">
+                <div id="numberReq" style="width:200px; height:200px"></div>
+            </div>
+            <div class="col s6">
+                <div id="numberHours" style="width:200px; height:200px"></div>
+            </div>
+
         </div>
     </c:if>
 
@@ -235,7 +234,7 @@
     <%--Resumen--%>
 
 
-</div>
+</main>
 
 
 <c:if test=" ${not empty success}">
@@ -261,8 +260,6 @@
     $(document).ready(function () {
         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
         $('.modal').modal();
-        $('#fullpage').fullpage();
-
     });
 </script>
 
