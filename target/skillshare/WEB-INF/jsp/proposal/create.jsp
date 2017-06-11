@@ -164,7 +164,7 @@
 
 </script>
 <script>
-    if($('#errorInitialDate').get().length > 0){
+    if ($('#errorInitialDate').get().length > 0) {
         toastr.error('Revisa las fecha de inicio');
     }
 </script>

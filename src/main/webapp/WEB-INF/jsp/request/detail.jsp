@@ -128,6 +128,9 @@
                             Colaborar</a>
                     </c:if>
                     <c:if test="${student.nif == request.nif}">
+                        <script>
+                            toastr.warning('No puedes colaborar contigo');
+                        </script>
                         <a href="#modal1" class="red  lighten-2  center-align btn waves-effect disabled"><i
                                 class="material-icons">supervisor_account</i>
                             Colaborar</a>

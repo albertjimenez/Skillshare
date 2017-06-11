@@ -104,8 +104,8 @@
             <div class="card-content blue lighten-4">
                 <%--Seccion Oferta--%>
                 <div id="test5" class="blue lighten-4">
-                    Fecha de inicio: <input value="${proposal.initialDate}" disabled="true">
-                    Fecha de fin: <input value="${proposal.finishDate}" disabled="true">
+                    Fecha inicio: <input value="${proposal.initialDate}" disabled="true">
+                    Fecha fin: <input value="${proposal.finishDate}" disabled="true">
                     Descripción: <p>${proposal.description}</p>
                 </div>
                 <%--Seccion estudiante--%>
@@ -144,6 +144,9 @@
                         </c:if>
                     </c:if>
                     <c:if test="${proposal.nif == student.nif}">
+                        <script>
+                            toastr.warning('No puedes colaborar contigo');
+                        </script>
                         <a href="#modal1" class="red  lighten-2  center-align btn waves-effect disabled"><i
                                 class="material-icons">supervisor_account</i>
                             Colaborar</a>
