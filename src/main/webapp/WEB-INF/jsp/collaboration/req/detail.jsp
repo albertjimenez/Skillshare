@@ -135,8 +135,8 @@
                 <div id="test6" class="blue lighten-4">
                     Nombre de la habilidad: <input value="${request.skillName}" disabled="true">
                     Nivel: <input value="${level}" disabled="true">
-                    Fecha Inicio: <input value="${request.initialDate}" disabled="true">
-                    Fecha Fin: <input value="${request.finishDate}" disabled="true">
+                    Fecha de Inicio: <input value="${request.initialDate}" disabled="true">
+                    Fecha de Fin: <input value="${request.finishDate}" disabled="true">
                     Descripción: <input value="${request.description}" disabled="true">
                 </div>
                 <%--Seccion estudiante--%>

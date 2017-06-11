@@ -104,8 +104,8 @@
             <div class="card-content blue lighten-4">
                 <%--Seccion Oferta--%>
                 <div id="test5" class="blue lighten-4">
-                    Fecha inicio: <input value="${proposal.initialDate}" disabled="true">
-                    Fecha fin: <input value="${proposal.finishDate}" disabled="true">
+                    Fecha de inicio: <input value="${proposal.initialDate}" disabled="true">
+                    Fecha de fin: <input value="${proposal.finishDate}" disabled="true">
                     Descripción: <p>${proposal.description}</p>
                 </div>
                 <%--Seccion estudiante--%>
