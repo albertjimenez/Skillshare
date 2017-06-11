@@ -1,17 +1,14 @@
 package controller;
 
 import com.google.gson.Gson;
-import dao.*;
+import dao.StatisticalDao;
 import model.Tools.StatisticalElement;
-import model.collaboration.Collaboration;
 import model.student.Student;
 import model.student.Type;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 import java.util.LinkedList;
@@ -23,13 +20,11 @@ import java.util.List;
 @Controller
 public class StatisticalController {
 
+    private final String CP_STRING = "Promotor de colaboraciones";
+
     @Autowired
     private HttpSession httpSession;
 
-    private RequestDao requestDao;
-    private ProposalDao proposalDao;
-    private SkillDao skillDao;
-    private CollaborationDao collaborationDao;
     private StatisticalDao statisticalDao;
 
 
@@ -40,52 +35,55 @@ public class StatisticalController {
         this.statisticalDao = statisticalDao;
     }
 
-    @Autowired
-    public void setCollaborationDao(CollaborationDao collaborationDao) {
-        this.collaborationDao = collaborationDao;
-    }
-
-    @Autowired
-    public void setRequestDao(RequestDao requestDao) {
-        this.requestDao = requestDao;
-    }
-
-    @Autowired
-    public void setSkillDao(SkillDao skillDao) {
-        this.skillDao = skillDao;
-    }
-
-    @Autowired
-    public void setProposalDao(ProposalDao proposalDao) {
-        this.proposalDao = proposalDao;
-    }
-
-
     @RequestMapping("/statistical/statistical")
     public String statisticalData(Model model) {
+        if (!getSessionStudent())
+            return "redirect:../login/login.html";
 
-        List<Collaboration> list = statisticalDao.getAllCollaborations();
-        List<StatisticalElement> statisticalElements = new LinkedList<>();
-        for (Collaboration c : list)
-            statisticalElements.add(new StatisticalElement
-                    (c.getIdProposal() + "-" + c.getIdRequest(), c.getHours()));
+        model.addAttribute("name", getStudentName());
+        model.addAttribute("type", getType());
 
-        model.addAttribute("list", gson.toJson(statisticalElements));
+        if (!getType().equals(CP_STRING))
+            return "home/home_student";
+
+
+        model.addAttribute("plotCollaborations", gson.toJson(plotCollaborations()));
+        model.addAttribute("plotMostSkills", gson.toJson(demandedSkills()));
+        model.addAttribute("degreesMoreCollaborative", gson.toJson(degreesMoreCollaborative()));
+
         return "statistical/statistical";
     }
 
-
-    @RequestMapping(value = "/hotSkills", method = RequestMethod.GET, produces = "application/json")
-    public
-    @ResponseBody
-    String hotSkills() {
-        List<Collaboration> list = statisticalDao.getAllCollaborations();
+    private List<StatisticalElement> plotCollaborations() {
         List<StatisticalElement> statisticalElements = new LinkedList<>();
-        for (Collaboration c : list)
-            statisticalElements.add(new StatisticalElement
-                    (c.getIdProposal() + "-" + c.getIdRequest(), c.getHours()));
-        return statisticalElements.toString();
+        statisticalElements.add(new StatisticalElement("Ofertas sin atender",
+                statisticalDao.pendingProposals()));
+        statisticalElements.add(new StatisticalElement("Demandas sin atender",
+                statisticalDao.pendingRequests()));
+        statisticalElements.add(new StatisticalElement("Colaboraciones a partir de ofertas",
+                statisticalDao.collaborationsOnProposals()));
+        statisticalElements.add(new StatisticalElement("Colaboraciones a partir de demandas",
+                statisticalDao.collaborationsOnRequests()));
+        return statisticalElements;
     }
+
+    private List<StatisticalElement> demandedSkills() {
+        return statisticalDao.demandedSkills();
+    }
+
+    private List<StatisticalElement> degreesMoreCollaborative() {
+        return statisticalDao.degreesMoreCollaborative();
+    }
+
+//    private List<StatisticalElement> plotHours() {
+//        List<StatisticalElement> statisticalElements = new LinkedList<>();
+//        statisticalElements.add(new StatisticalElement("Horas empleadas en ofertas",
+//                statisticalDao.hoursOnProposal()));
+//        statisticalElements.add(new StatisticalElement("Horas empleadas en demandas",
+//                statisticalDao.hoursOnRequest()));
+//        return statisticalElements;
+//
+//    }
 
     private boolean getSessionStudent() {
         Student student = (Student) httpSession.getAttribute("user");

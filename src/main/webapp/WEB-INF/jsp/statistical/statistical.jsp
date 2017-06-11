@@ -15,21 +15,19 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="/css/font-google.css"/>
-    <link rel="stylesheet" href="/css/aos.css">
     <link rel="stylesheet" href="/css/animate.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <%--Avisa al navegador de que el html es valido para moviles--%>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="/css/my-backgrounds-opac.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/aos.css">
+    <script src="/js/aos.js"></script>
     <script src="/js/effect-text-3d.js"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script type="text/javascript" src="/js/fusioncharts.js"></script>
 
     <style>
         body {
-            background-image: url("/images/statistic-bg.jpg");
+            background-image: url("/images/stats-wpp.jpg");
         }
     </style>
 </head>
@@ -61,9 +59,22 @@
 </md:sidenav-md>
 
 <main class="container">
-    <h4 class="font-lobster center-align text3d">Informes estadísticos</h4>
+    <h2 class="font-lobster center-align text3d">Informes estadísticos</h2>
+    <div class="divider"></div>
 
-    <div id="container" style="height: 400px"></div>
+    <div class="center-align">
+        <h4 class="font-lobster blue-text">Estadísticas de colaboraciones</h4>
+        <br>
+        <div id="chart-container" class="animated bounceInLeft">Aquí se mostrará la gráfica de datos...</div>
+        <br>
+        <h4 class="font-lobster blue-text">Estadísticas de las habilidades más demandadas</h4>
+        <br>
+        <div id="chart-container2" class="animated bounceInRight">Aquí se mostrará la gráfica de datos...</div>
+        <br>
+        <h4 class="font-lobster blue-text">Estadísticas de los grados más colaboradores</h4>
+        <br>
+        <div id="chart-container3" class="animated bounceInLeft">Aquí se mostrará la gráfica de datos...</div>
+    </div>
 </main>
 
 
@@ -71,77 +82,145 @@
 <script type="text/javascript" src="/js/materialize.min.js"></script>
 <script src="/js/scroll.js"></script>
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
-<script>
-    function st() {
-        var hotSkills;
-        $.getJSON({
-            url: "/hotSkills",
-            success: function (data) {
-                hotSkills = data;
-            }
-        });
 
-        console.log(hotSkills);
-    }
-    window.onload = st;
+<script>
+    FusionCharts.ready(function () {
+        var l = ${plotCollaborations};
+        var revenueChart = new FusionCharts({
+            type: 'column3d',
+            renderAt: 'chart-container',
+            width: "60%",
+            height: "60%",
+            useRoundEdges: 1,
+            dataFormat: 'json',
+            dataSource: {
+                "chart": {
+                    "caption": "Estadísticas de colaboración",
+                    "subCaption": "junto a ofertas y demandas",
+                    "paletteColors": "#0075c2,#1aaf5d,#f2c500,#f45b00,#8e0000",
+                    "bgColor": "EEEEEE,CCCCCC",
+                    //opaqueness of each color
+                    "bgAlpha": "70,80",
+                    "bgRatio": "60, 40",
+                    "canvasBgAlpha": "0",
+                    "exportEnabled": "1",
+                    "showBorder": "0",
+                    "use3DLighting": "1",
+                    "showShadow": "1",
+                    "enableSmartLabels": "0",
+                    "startingAngle": "310",
+                    "showLabels": "1",
+                    "showPercentValues": "1",
+//                    "showLegend": "1",
+                    "legendShadow": "0",
+                    "legendBorderAlpha": "0",
+                    "decimals": "0",
+                    "captionFontSize": "14",
+                    "subcaptionFontSize": "14",
+                    "subcaptionFontBold": "0",
+                    "toolTipColor": "#ffffff",
+                    "toolTipBorderThickness": "0",
+                    "toolTipBgColor": "#000000",
+                    "toolTipBgAlpha": "80",
+                    "toolTipBorderRadius": "2",
+                    "toolTipPadding": "5",
+                    "useRoundEdges": "1",
+                },
+                "data": l
+            }
+        }).render();
+    });
 </script>
-
 <script>
-    var l = ${list};
-    console.log(l);
-
-    Highcharts.chart('container', {
-        chart: {
-            type: 'pie',
-            borderRadius: 25,
-            plotBackgroundColor: {
-                linearGradient: [0, 0, 500, 500],
-                stops: [
-                    [0, 'rgb(255, 255, 255)'],
-                    [1, 'rgb(200, 200, 255)']
-                ]
-            },
-            options3d: {
-                enabled: true,
-                alpha: 45,
-                beta: 0
+    FusionCharts.ready(function () {
+        var l = ${plotMostSkills};
+        var revenueChart = new FusionCharts({
+            type: 'column3d',
+            renderAt: 'chart-container2',
+            width: "60%",
+            height: "60%",
+            dataFormat: 'json',
+            dataSource: {
+                "chart": {
+                    "caption": "Habilidades más demandadas",
+                    "paletteColors": "#0075c2,#1aaf5d,#f2c500,#f45b00,#8e0000",
+                    "bgColor": "EEEEEE,CCCCCC",
+                    //opaqueness of each color
+                    "bgAlpha": "70,80",
+                    "bgRatio": "60, 40",
+                    "canvasBgAlpha": "0",
+                    "exportEnabled": "1",
+                    "showBorder": "0",
+                    "use3DLighting": "1",
+                    "showShadow": "1",
+                    "enableSmartLabels": "0",
+                    "startingAngle": "310",
+                    "showLabels": "1",
+                    "showPercentValues": "1",
+//                    "showLegend": "1",
+                    "legendShadow": "0",
+                    "legendBorderAlpha": "0",
+                    "decimals": "0",
+                    "captionFontSize": "14",
+                    "subcaptionFontSize": "14",
+                    "subcaptionFontBold": "0",
+                    "toolTipColor": "#ffffff",
+                    "toolTipBorderThickness": "0",
+                    "toolTipBgColor": "#000000",
+                    "toolTipBgAlpha": "80",
+                    "toolTipBorderRadius": "2",
+                    "toolTipPadding": "5",
+                    "useRoundEdges": "1",
+                },
+                "data": l
             }
-        },
-        title: {
-            text: 'Browser market shares at a specific website, 2014'
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                depth: 35,
-                dataLabels: {
-                    enabled: true,
-                    format: '{point.name}'
-                }
+        }).render();
+    });
+</script>
+<script>
+    FusionCharts.ready(function () {
+        var l = ${degreesMoreCollaborative};
+        var revenueChart = new FusionCharts({
+            type: 'column3d',
+            renderAt: 'chart-container3',
+            width: "60%",
+            height: "60%",
+            dataFormat: 'json',
+            dataSource: {
+                "chart": {
+                    "caption": "Grados más colaboradores",
+                    "paletteColors": "#0075c2,#1aaf5d,#f2c500,#f45b00,#8e0000",
+                    "bgColor": "EEEEEE,CCCCCC",
+                    //opaqueness of each color
+                    "bgAlpha": "70,80",
+                    "bgRatio": "60, 40",
+                    "canvasBgAlpha": "0",
+                    "exportEnabled": "1",
+                    "showBorder": "0",
+                    "use3DLighting": "1",
+                    "showShadow": "1",
+                    "enableSmartLabels": "0",
+                    "startingAngle": "310",
+                    "showLabels": "1",
+                    "showPercentValues": "1",
+//                    "showLegend": "1",
+                    "legendShadow": "0",
+                    "legendBorderAlpha": "0",
+                    "decimals": "0",
+                    "captionFontSize": "14",
+                    "subcaptionFontSize": "14",
+                    "subcaptionFontBold": "0",
+                    "toolTipColor": "#ffffff",
+                    "toolTipBorderThickness": "0",
+                    "toolTipBgColor": "#000000",
+                    "toolTipBgAlpha": "80",
+                    "toolTipBorderRadius": "2",
+                    "toolTipPadding": "5",
+                    "useRoundEdges": "1",
+                },
+                "data": l
             }
-        },
-        series: [{
-            type: 'pie',
-            name: 'Browser share',
-            data: [l]
-//            data: [
-//                ['Firefox', 45.0],
-//                ['IE', 26.8],
-//                {
-//                    name: 'Chrome',
-//                    y: 12.8,
-//                    sliced: true,
-//                    selected: true
-//                },
-//                ['Safari', 8.5],
-//                ['Opera', 6.2],
-//                ['Others', 0.7]
-//            ]
-        }]
+        }).render();
     });
 </script>
 </body>

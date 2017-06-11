@@ -47,6 +47,8 @@
                     <i class="material-icons">warning</i>Listado de baneados</a>
                 <a class="waves-effect" href="${pageContext.request.contextPath}/home/home_pc.html">
                     Listado de Habilidades</a>
+                <a class="waves-effect" href="${pageContext.request.contextPath}/statistical/statistical.html">
+                    Estadisticas de uso</a>
             </c:if>
 
             <c:if test="${not empty name}">
@@ -58,16 +60,16 @@
         </div>
     </li>
 
-<c:if test="${not empty name}">
-    <li><a class="subheader">Herramientas</a></li>
-</c:if>
+    <c:if test="${not empty name}">
+        <li><a class="subheader">Herramientas</a></li>
+    </c:if>
     <div class="light-blue lighten-3">
 
         <%--<jsp:doBody/>--%>
         <c:if test="${not empty name}">
 
             <li>
-                <a class="waves-effect" href="${pageContext.request.contextPath}/home/home_pc.html">Mi Área</a>
+                <a class="waves-effect" href="${pageContext.request.contextPath}/home/home_pc.html">Mi Area</a>
             </li>
             <li>
                 <a class="waves-effect" href="${pageContext.request.contextPath}/proposal/list.html">Mis Ofertas</a>
@@ -109,7 +111,7 @@
         <h5 class="font-raleway">Bienvenido</h5>
         <p>Hola ${name}, en el panel blanco de la izquierda puedes ver todas las
             herramientas de las que puedes hacer uso.</p>
-        <p>¡Disfruta ayudando y aprendiendo con el resto de la comunidad universitaria!</p>
+        <p>Disfruta ayudando y aprendiendo con el resto de la comunidad universitaria.</p>
     </div>
 </div>
 <%--<li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>--%>

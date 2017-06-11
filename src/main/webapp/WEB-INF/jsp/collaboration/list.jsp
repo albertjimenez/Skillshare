@@ -108,7 +108,7 @@
     </c:if>
 
     <c:if test="${not empty collaborationsRequest}">
-        <h4 class="text3d center-align">Colaboraciones a partir de solicitudes</h4>
+        <h4 class="text3d center-align">Colaboraciones a partir de demandas</h4>
         <ul class="rig columns-3 live-search-list">
             <c:forEach items="${collaborationsRequest}" var="collabReq">
                 <a href="${pageContext.request.contextPath}/collaboration/req/detail/${collabReq.left.idProposal}/${collabReq.left.idRequest}.html">

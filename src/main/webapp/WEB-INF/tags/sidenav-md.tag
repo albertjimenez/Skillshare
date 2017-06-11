@@ -47,6 +47,8 @@
                     <i class="material-icons">warning</i>Listado de baneados</a>
                 <a class="waves-effect" href="${pageContext.request.contextPath}/home/home_pc.html">
                     Listado de Habilidades</a>
+                <a class="waves-effect" href="${pageContext.request.contextPath}/statistical/statistical.html">
+                    Estadisticas de uso</a>
             </c:if>
 
             <c:if test="${not empty name}">

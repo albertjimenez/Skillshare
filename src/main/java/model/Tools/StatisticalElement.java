@@ -9,6 +9,10 @@ public class StatisticalElement {
 
     private int value;
 
+    public StatisticalElement() {
+
+    }
+
     public StatisticalElement(String label, int value) {
         this.label = label;
         this.value = value;
@@ -20,6 +24,14 @@ public class StatisticalElement {
 
     public void setLabel(String label) {
         this.label = label;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
     }
 
     @Override
