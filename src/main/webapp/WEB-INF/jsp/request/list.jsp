@@ -132,7 +132,7 @@
                             <h3 class="center-align">${prop.skillName} Novato</h3>
                         </c:if>
                         <p class="blue-grey-text darken-3"><strong>Descripción:</strong></p>
-                        <p class="center-align blue-text">${prop.description}</p>
+                        <p class="blue-text">${prop.description}</p>
                         <p class="black-text"><strong>Inicio:</strong> ${prop.initialDate}</p>
                         <p class="black-text"><strong>Fin:</strong> ${prop.finishDate}</p>
 
