@@ -170,7 +170,7 @@
     $('#accept').click(function () {
         swal({
             title: '¿Quieres realizar la valoración?',
-            text: "Recuerda que será visible solo para ti y para el estudiante. Sé sincero.",
+            text: "Recuerda que será visible solo para ti y para el estudiante con el que has realizado la colaboración. Sé sincero.",
             type: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
