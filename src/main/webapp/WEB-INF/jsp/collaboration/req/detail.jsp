@@ -67,7 +67,7 @@
 <main class="container">
 
     <h2 class="center-align font-lobster text3d">
-        Colaboración ${collaboration.idProposal}-${collaboration.idRequest}</h2>
+        Colaboración </h2>
     <div class="animated zoomInRight z-depth-3 hoverable" style="border-radius: 25px">
         <div class="card blue">
             <%--<div class="card-image">--%>

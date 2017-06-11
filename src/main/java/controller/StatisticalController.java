@@ -45,6 +45,7 @@ public class StatisticalController {
 
         if (!getType().equals(CP_STRING))
             return "home/home_student";
+        model.addAttribute("cp", "-");
 
 
         model.addAttribute("plotCollaborations", gson.toJson(plotCollaborations()));

@@ -4,7 +4,11 @@ import com.google.gson.Gson;
 import controller.validator.LoginValidator;
 import controller.validator.RegisterValidator;
 import dao.*;
+import model.Tools.Pair;
+import model.collaboration.Collaboration;
 import model.login.LoginEntity;
+import model.proposal.Proposal;
+import model.request.Request;
 import model.skill.Skill;
 import model.student.LoginStatus;
 import model.student.Student;
@@ -34,7 +38,14 @@ public class LoginRegisterController {
 
     private SkillDao skillDao;
 
+    private CollaborationDao collaborationDao;
+
     private ProposalDao proposalDao;
+
+    @Autowired
+    public void setCollaborationDao(CollaborationDao collaborationDao) {
+        this.collaborationDao = collaborationDao;
+    }
 
     @Autowired
     public void setRequestDao(RequestDao requestDao) {
@@ -206,9 +217,22 @@ public class LoginRegisterController {
         model.addAttribute("student", student);
         model.addAttribute("name", name);
         model.addAttribute("type", Type.getName(student.getType().toString()));
-        model.addAttribute("proposals", proposalDao.getProposalsByNif(student.getNif()));
+        List<Proposal> p = proposalDao.getProposalsByNif(student.getNif());
+        List<Request> r = requestDao.getRequestsByNif(student.getNif());
+        List<Pair<Collaboration, Proposal>> cP = collaborationDao.myCollaborationsFromProposal(student.getNif());
+        List<Pair<Collaboration, Request>> cR = collaborationDao.myCollaborationsFromRequest(student.getNif());
+        if (!p.isEmpty())
+            model.addAttribute("proposals", p.get(p.size() - 1));
+        if (!r.isEmpty())
+            model.addAttribute("requests", r.get(r.size() - 1));
+
+        model.addAttribute("numberCollab", cP.size() + cR.size());
+        model.addAttribute("numberProposals", p.size());
+        model.addAttribute("numberRequests", r.size());
+        model.addAttribute("numberHours", collaborationDao.getHours(student.getNif()));
+
         //Creates the tour
-        if (proposalDao.getProposalsByNif(student.getNif()).isEmpty() && requestDao.getRequestsByNif(student.getNif()).isEmpty())
+        if (p.isEmpty() && r.isEmpty())
             model.addAttribute("tour", "-");
         if (registered) {
             model.addAttribute("success", "-");

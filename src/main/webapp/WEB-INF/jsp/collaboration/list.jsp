@@ -79,23 +79,23 @@
 
         <h4 class="text3d center-align">Colaboraciones a partir de ofertas</h4>
         <ul class="rig columns-3 live-search-list">
-            <c:forEach items="${collaborationsProposal}" var="collab">
-                <a href="${pageContext.request.contextPath}/collaboration/prop/detail/${collab.left.idProposal}/${collab.left.idRequest}.html">
+            <c:forEach items="${collaborationsProposal}" var="prop">
+                <a href="${pageContext.request.contextPath}/collaboration/prop/detail/${prop.left.idProposal}/${prop.left.idRequest}.html">
                     <li class="hoverable animated flipInY">
-                        <img class="activator profile center-align circle" data-name=${collab.right.skillName}>
-                        <c:if test="${collab.right.level == 'A'}">
-                            <h3 class="center-align">${collab.right.skillName} Avanzado</h3>
+                        <img class="activator profile center-align circle" data-name=${prop.right.skillName}>
+                        <c:if test="${prop.right.level == 'A'}">
+                            <h3 class="center-align">${prop.right.skillName} Avanzado</h3>
                         </c:if>
-                        <c:if test="${collab.right.level == 'M'}">
-                            <h3 class="center-align">${collab.right.skillName} Medio</h3>
+                        <c:if test="${prop.right.level == 'M'}">
+                            <h3 class="center-align">${prop.right.skillName} Medio</h3>
                         </c:if>
-                        <c:if test="${collab.right.level == 'N'}">
-                            <h3 class="center-align">${collab.right.skillName} Novato</h3>
+                        <c:if test="${prop.right.level == 'N'}">
+                            <h3 class="center-align">${prop.right.skillName} Novato</h3>
                         </c:if>
-                        <p class="black-text">Horas: ${collab.left.hours}</p>
-                        <p class="black-text">Fecha inicio: ${collab.right.initialDate}</p>
-                        <p class="black-text">Fecha fin: ${collab.right.finishDate}</p>
-                        <c:if test="${empty collab.left.rating}">
+                        <p class="black-text">Horas: ${prop.left.hours}</p>
+                        <p class="black-text">Fecha inicio: ${prop.right.initialDate}</p>
+                        <p class="black-text">Fecha fin: ${prop.right.finishDate}</p>
+                        <c:if test="${empty prop.left.rating}">
                             <p class="red-text">No hay valoración todavía</p>
                         </c:if>
                         <p class="blue-text center-align"><strong>Click para más detalles</strong></p>

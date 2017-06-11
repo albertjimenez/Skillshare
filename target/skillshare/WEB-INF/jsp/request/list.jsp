@@ -118,23 +118,23 @@
 
 
         <ul class="rig columns-3 live-search-list">
-            <c:forEach items="${requests}" var="collab">
-                <a href="${pageContext.request.contextPath}/request/detail/${collab.id}.html">
+            <c:forEach items="${requests}" var="prop">
+                <a href="${pageContext.request.contextPath}/request/detail/${prop.id}.html">
                     <li class="hoverable animated flipInY">
-                        <img class="activator profile center-align circle" data-name=${collab.skillName}}">
-                        <c:if test="${collab.level == 'A'}">
-                            <h3 class="center-align">${collab.skillName} Avanzado</h3>
+                        <img class="activator profile center-align circle" data-name=${prop.skillName}}">
+                        <c:if test="${prop.level == 'A'}">
+                            <h3 class="center-align">${prop.skillName} Avanzado</h3>
                         </c:if>
-                        <c:if test="${collab.level == 'M'}">
-                            <h3 class="center-align">${collab.skillName} Medio</h3>
+                        <c:if test="${prop.level == 'M'}">
+                            <h3 class="center-align">${prop.skillName} Medio</h3>
                         </c:if>
-                        <c:if test="${collab.level == 'N'}">
-                            <h3 class="center-align">${collab.skillName} Novato</h3>
+                        <c:if test="${prop.level == 'N'}">
+                            <h3 class="center-align">${prop.skillName} Novato</h3>
                         </c:if>
-                        <p>Descripción:</p>
-                        <p class="center-align">${collab.description}</p>
-                        <p class="">Inicio: ${collab.initialDate}</p>
-                        <p class="">Fin: ${collab.finishDate}</p>
+                        <p class="blue-grey-text darken-3"><strong>Descripción:</strong></p>
+                        <p class="center-align blue-text">${prop.description}</p>
+                        <p class="black-text"><strong>Inicio:</strong> ${prop.initialDate}</p>
+                        <p class="black-text"><strong>Fin:</strong> ${prop.finishDate}</p>
 
                     </li>
                 </a>
