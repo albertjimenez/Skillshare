@@ -67,7 +67,7 @@
 
     <c:if test="${empty requests}">
         <div class="valign-wrapper">
-            <a class="valign" style="font-size: 50px;text-align: center">
+            <a class="valign white-text" style="font-size: 50px;text-align: center">
                 <i class="material-icons valign" style="font-size: 200px; text-align: center">insert_invitation</i>
                 <br>
                 Esto está vacío... Prueba creando alguna demanda.</a>
