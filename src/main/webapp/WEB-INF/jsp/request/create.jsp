@@ -147,7 +147,7 @@
     if ($('#errorinitialDate').get().length > 0) {
         $('#myForm').removeClass('animated fadeInDown');
         $('#initialDate').addClass('animated shake');
-        toastr.warning('Revisa la fecha');
+        toastr.error('Revisa las fecha de inicio');
     }
     if ($('#errorfinishlDate').get().length > 0) {
         $('#myForm').removeClass('animated fadeInDown');

@@ -23,9 +23,11 @@
     <link href="/css/animate.css" rel="stylesheet">
     <link href="/css/my-backgrounds-opac.css" rel="stylesheet">
     <script src="/js/effect-text-3d.js"></script>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
     <style>
-        @import url(http://fonts.googleapis.com/css?family=Raleway:100,400,700);
 
         body {
             background-image: url("/images/proposal-create.jpg");
@@ -109,7 +111,7 @@
                         <i class="material-icons prefix">date_range</i>
                         <form:label path="initialDate">Fecha de inicio</form:label>
                         <form:input path="initialDate" cssClass="datepicker" id="initialDate"></form:input>
-                        <form:errors path="initialDate"></form:errors>
+                        <form:errors path="initialDate" id="errorInitialDate"></form:errors>
                     </div>
                 </div>
                 <div class="row">
@@ -160,6 +162,11 @@
         $('input#input_text, textarea#textarea1').characterCounter();
     });
 
+</script>
+<script>
+    if ($('#errorInitialDate').get().length > 0) {
+        toastr.error('Revisa las fecha de inicio');
+    }
 </script>
 </body>
 </html>

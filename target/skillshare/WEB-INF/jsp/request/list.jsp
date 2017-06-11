@@ -67,7 +67,7 @@
 
     <c:if test="${empty requests}">
         <div class="valign-wrapper">
-            <a class="valign" style="font-size: 50px;text-align: center">
+            <a class="valign white-text" style="font-size: 50px;text-align: center">
                 <i class="material-icons valign" style="font-size: 200px; text-align: center">insert_invitation</i>
                 <br>
                 Esto está vacío... Prueba creando alguna demanda.</a>
@@ -132,7 +132,7 @@
                             <h3 class="center-align">${prop.skillName} Novato</h3>
                         </c:if>
                         <p class="blue-grey-text darken-3"><strong>Descripción:</strong></p>
-                        <p class="center-align blue-text">${prop.description}</p>
+                        <p class="blue-text">${prop.description}</p>
                         <p class="black-text"><strong>Inicio:</strong> ${prop.initialDate}</p>
                         <p class="black-text"><strong>Fin:</strong> ${prop.finishDate}</p>
 

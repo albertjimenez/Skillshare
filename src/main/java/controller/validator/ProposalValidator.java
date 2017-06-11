@@ -38,6 +38,9 @@ public class ProposalValidator implements Validator {
             errors.rejectValue("initialDate", "error", "");
             errors.rejectValue("finishDate", "error", "");
         }
+
+        if (aProposal.getInitialDate().after(aProposal.getFinishDate()))
+            errors.rejectValue("initialDate", "error", "");
         if (aProposal.getFinishDate().before(new GregorianCalendar().getTime()) || aProposal.getInitialDate().before(new GregorianCalendar().getTime())) {
             errors.rejectValue("initialDate", "error", "");
             errors.rejectValue("finishDate", "error", "");

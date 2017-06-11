@@ -39,6 +39,8 @@ public class RequestValidator implements Validator {
             errors.rejectValue("initialDate", "error", "");
             errors.rejectValue("finishDate", "error", "");
         }
+        if (request.getInitialDate().after(request.getFinishDate()))
+            errors.rejectValue("initialDate", "error", "");
         if (request.getFinishDate().before(new GregorianCalendar().getTime()) || request.getInitialDate().before(new GregorianCalendar().getTime())) {
             errors.rejectValue("initialDate", "error", "");
             errors.rejectValue("finishDate", "error", "");
