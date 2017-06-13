@@ -307,6 +307,40 @@ public class RequestController {
 
     }
 
+    @RequestMapping("request/delete/{id}")
+    public String removeRequest(@PathVariable("id") String id, Model model) {
+        if (!getSessionStudent())
+            return "redirect:../../login/login.html";
+        if (Type.getType(getType()) == Type.CP)
+            model.addAttribute("cp", "-");
+
+        Student student = (Student) httpSession.getAttribute("user");
+        String name = getStudentName();
+        model.addAttribute("name", name);
+        model.addAttribute("type", getType());
+        model.addAttribute("student", student);
+        model.addAttribute("type", Type.getName(student.getType().toString()));
+        //Todo recuerda hacer la validación
+        Pair<Student, Request> pair = requestDao.getRequestByID(new AtomicInteger(Integer.parseInt(id)));
+        if (pair.getRight().getNif().equals(student.getNif())) {
+            if (requestDao.deleteRequest(pair.getRight().getId()))
+                model.addAttribute("correct", "--");
+        } else
+            model.addAttribute("error", "--");
+
+        List<Request> l = requestDao.getRequestsByNif(student.getNif());
+        model.addAttribute("requests", l);
+        model.addAttribute("count", l.size());
+        if (l.isEmpty())
+            model.addAttribute("tour2", "--");
+
+        if (student.getType() == Type.CP)
+            model.addAttribute("cp", "-");
+        return "request/list";
+
+
+    }
+
     private void loadRelativeProposals(Pair<Student, Request> pair, Model model, Student student) {
             model.addAttribute("student_request", pair.getLeft());
             model.addAttribute("request", pair.getRight());

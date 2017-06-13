@@ -150,6 +150,10 @@
                         <a href="#modal1" class="red  lighten-2  center-align btn waves-effect disabled"><i
                                 class="material-icons">supervisor_account</i>
                             Colaborar</a>
+                        <a class="blue  white-text center-align btn waves-effect"
+                           id="deleteProp" href="#${proposal.id}"><i
+                                class="material-icons">delete_forever</i>
+                            Borrar oferta</a>
                     </c:if>
                 </div>
         </div>
@@ -190,6 +194,12 @@
 
         </form:form>
     </div>
+    <c:if test="${not empty correct}">
+        <script>
+            toastr.success('Oferta borrada');
+        </script>
+    </c:if>
+    
     <div class="modal-footer">
         <a href="#!" id="accept" class="modal-action waves-effect waves-purple blue btn-flat right">Colaborar</a>
         <a href="#!" class="modal-close waves-effect waves-purple red btn-flat left">Cancelar</a>
@@ -223,6 +233,34 @@
                 'success'
             );
             $('#myForm').trigger('submit');
+        });
+    });
+</script>
+
+<script>
+    $('#deleteProp').click(function () {
+        var href = $('#deleteProp').attr('href');
+        var myArray = href.split('#');
+        console.log(myArray);
+        var myURL = "/proposal/delete/" + myArray[1] + ".html";
+        console.log(myURL);
+
+
+        swal({
+            title: '¿Quieres eliminar la oferta?',
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '¡Sí, elimínala!',
+            cancelButtonText: 'Cancelar'
+        }).then(function () {
+            swal(
+                'Oferta eliminada!',
+                'Se te redirigirá al inicio.',
+                'success'
+            );
+            window.location.href = myURL;
         });
     });
 </script>

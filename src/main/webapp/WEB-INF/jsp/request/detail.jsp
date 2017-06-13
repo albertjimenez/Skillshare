@@ -134,6 +134,10 @@
                         <a href="#modal1" class="red  lighten-2  center-align btn waves-effect disabled"><i
                                 class="material-icons">supervisor_account</i>
                             Colaborar</a>
+                        <a class="blue  white-text center-align btn waves-effect"
+                           id="deleteReq" href="#${request.id}"><i
+                                class="material-icons">delete_forever</i>
+                            Borrar demanda</a>
                     </c:if>
             </div>
         </div>
@@ -182,6 +186,11 @@
         <a href="#!" class="modal-close waves-effect waves-purple red btn-flat left">Cancelar</a>
     </div>
 </div>
+<c:if test="${not empty correct}">
+    <script>
+        toastr.success('Oferta borrada');
+    </script>
+</c:if>
 
 
 <md:footer-md></md:footer-md>
@@ -195,6 +204,34 @@
 </script>
 <%--Script de smooth scroll--%>
 <script src="/js/BarraLateralMovil.js"></script>
+
+<script>
+    $('#deleteReq').click(function () {
+        var href = $('#deleteReq').attr('href');
+        var myArray = href.split('#');
+        console.log(myArray);
+        var myURL = "/request/delete/" + myArray[1] + ".html";
+        console.log(myURL);
+
+
+        swal({
+            title: '¿Quieres eliminar la demanda?',
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '¡Sí, elimínala!',
+            cancelButtonText: 'Cancelar'
+        }).then(function () {
+            swal(
+                'Demanda eliminada!',
+                'Se te redirigirá al inicio.',
+                'success'
+            );
+            window.location.href = myURL;
+        });
+    });
+</script>
 <%--Script para confirmar--%>
 <script>
     $('#accept').click(function () {

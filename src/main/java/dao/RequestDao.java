@@ -106,4 +106,20 @@ public class RequestDao {
                 proposal.getInitialDate(), proposal.getFinishDate());
     }
 
+    /**
+     * @param id SERIAL de la secuencia
+     * @return True si lo ha borrado o false si no lo ha borrado
+     */
+    public boolean deleteRequest(AtomicInteger id) {
+        String sql = "UPDATE request_of_collaboration SET finish_date = CURRENT_DATE " +
+                "where id = ? and id not in(select id_req from " +
+                "collaboration)";
+        try {
+            jdbcTemplate.update(sql, id.get());
+            return true;
+        } catch (EmptyResultDataAccessException e) {
+            return false;
+        }
+    }
+
 }

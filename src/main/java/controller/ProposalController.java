@@ -322,6 +322,40 @@ public class ProposalController {
 
     }
 
+    @RequestMapping("proposal/delete/{id}")
+    public String removeProposal(@PathVariable("id") String id, Model model) {
+        if (!getSessionStudent())
+            return "redirect:../../login/login.html";
+        if (Type.getType(getType()) == Type.CP)
+            model.addAttribute("cp", "-");
+
+        Student student = (Student) httpSession.getAttribute("user");
+        String name = getStudentName();
+        model.addAttribute("name", name);
+        model.addAttribute("type", getType());
+        model.addAttribute("student", student);
+        model.addAttribute("type", Type.getName(student.getType().toString()));
+        //Todo recuerda hacer la validación
+        Pair<Student, Proposal> pair = proposalDao.getProposalByID(new AtomicInteger(Integer.parseInt(id)));
+        if (pair.getRight().getNif().equals(student.getNif())) {
+            if (proposalDao.deleteProposal(pair.getRight().getId()))
+                model.addAttribute("correct", "--");
+        } else
+            model.addAttribute("error", "--");
+
+        List<Proposal> l = proposalDao.getProposalsByNif(student.getNif());
+        model.addAttribute("proposals", l);
+        model.addAttribute("count", l.size());
+        if (l.isEmpty())
+            model.addAttribute("tour2", "--");
+
+        if (student.getType() == Type.CP)
+            model.addAttribute("cp", "-");
+        return "proposal/list";
+
+
+    }
+
 
     private boolean getSessionStudent() {
         Student student = (Student) httpSession.getAttribute("user");

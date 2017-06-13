@@ -13,7 +13,6 @@ import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -70,33 +69,30 @@ public class ProposalDao {
      * @return True si lo ha borrado o false si no lo ha borrado
      */
     public boolean deleteProposal(AtomicInteger id) {
-        String sql = "UPDATE FROM proposal_of_collaboration SET initial_date = ?, finish_date = ? WHERE nif = ?";
+        String sql = "UPDATE proposal_of_collaboration SET finish_date = CURRENT_DATE " +
+                "WHERE id = ? AND id NOT IN(SELECT id_pro FROM " +
+                "collaboration)";
         try {
-            Date epoch = new Date(0);
-            jdbcTemplate.update(sql, epoch, epoch, id);
+            jdbcTemplate.update(sql, id.get());
             return true;
         } catch (EmptyResultDataAccessException e) {
             return false;
         }
     }
 
-    /**
-     * @param proposal Propuesta, no modifica ni la ID ni el nif
-     * @return
-     */
-    public boolean updateProposal(Proposal proposal) {
-
-
-        String sql = "UPDATE proposal_of_collaboration SET skill_name = ?, skill_level = ?, description = ?," +
-                "initial_date = ?, finish_date = ?";
-        try {
-            jdbcTemplate.update(sql, proposal.getSkillName(), proposal.getLevel().toString(),
-                    proposal.getDescription(), proposal.getInitialDate(), proposal.getFinishDate());
-            return true;
-        } catch (EmptyResultDataAccessException e) {
-            return false;
-        }
-    }
+//    public boolean updateProposal(Proposal proposal) {
+//
+//
+//        String sql = "UPDATE proposal_of_collaboration SET skill_name = ?, skill_level = ?, description = ?," +
+//                "initial_date = ?, finish_date = ?";
+//        try {
+//            jdbcTemplate.update(sql, proposal.getSkillName(), proposal.getLevel().toString(),
+//                    proposal.getDescription(), proposal.getInitialDate(), proposal.getFinishDate());
+//            return true;
+//        } catch (EmptyResultDataAccessException e) {
+//            return false;
+//        }
+//    }
 
     public Pair<Student, Proposal> getProposalByID(AtomicInteger id) {
         Proposal p;
