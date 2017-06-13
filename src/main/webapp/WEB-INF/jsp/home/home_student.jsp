@@ -331,7 +331,8 @@
 </script>
 <script>
     var myNif = ${student.nif};
-    var myWS = new WebSocket("ws://localhost:8080/notification/{" + myNif + "}");
+    //    var myWS = new WebSocket("ws://localhost:8080/notification/{" + myNif + "}");
+    var myWS = new WebSocket("ws://skillshare-uji.herokuapp.com/notification/{" + myNif + "}");
     var myURL = "${pageContext.request.contextPath}/collaboration/";
     function myOpenF() {
         console.log("opened WS:");
