@@ -5,6 +5,7 @@ import dao.SkillDao;
 import model.skill.Level;
 import model.skill.Skill;
 import model.student.Student;
+import model.student.Type;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -132,5 +133,13 @@ public class SkillController {
     }
 
 
+    private String getType() {
+        Student student = (Student) httpSession.getAttribute("user");
+        return Type.getName(student.getType().toString());
+    }
+
+    private Student getStudent() {
+        return (Student) httpSession.getAttribute("user");
+    }
     private Skill tempSkill;
 }

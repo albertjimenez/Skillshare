@@ -1,5 +1,6 @@
 package controller;
 
+import com.google.gson.Gson;
 import controller.validator.RequestValidator;
 import dao.CollaborationDao;
 import dao.ProposalDao;
@@ -22,6 +23,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import websocket.ChatWSHandler;
+import websocket.MensajesWS;
 
 import javax.servlet.http.HttpSession;
 import java.util.LinkedList;
@@ -224,8 +227,15 @@ public class RequestController {
             Proposal p = newAutoProposal.get(newAutoProposal.size() - 1);
             Collaboration collaboration = Collaboration.factoryCollaboration(pairProposal.getRight().getId(),
                     idFromParam, proposal.getDescription());
-            if (requestDao.alreadyCollaborating(myRequestFromParam.getRight().getId()) || !collaborationDao.insertCollab(collaboration))
+            if (requestDao.alreadyCollaborating(myRequestFromParam.getRight().getId()) || !collaborationDao.insertCollab(collaboration)) {
                 model.addAttribute("duplicated", "--");
+                MensajesWS m = new MensajesWS();
+                m.setNif(myRequestFromParam.getRight().getNif());
+                m.setIdProp(p.getId().get());
+                m.setIdReq(idFromParam.get());
+                m.setProposalURL(false);
+                ChatWSHandler.sendMessage(m.getNif(), new Gson().toJson(m));
+            }
             else {
                 model.addAttribute("correct", "--");
                 return "request/detail";
@@ -242,8 +252,15 @@ public class RequestController {
 
         if (!collaborationDao.insertCollab(collaboration))
             model.addAttribute("duplicated", "--");
-        else
+        else {
             model.addAttribute("correct", "--");
+            MensajesWS m = new MensajesWS();
+            m.setNif(myRequestFromParam.getRight().getNif());
+            m.setIdProp(pairProposal.getRight().getId().get());
+            m.setIdReq(idFromParam.get());
+            m.setProposalURL(false);
+            ChatWSHandler.sendMessage(m.getNif(), new Gson().toJson(m));
+        }
 
         return "request/detail";
 

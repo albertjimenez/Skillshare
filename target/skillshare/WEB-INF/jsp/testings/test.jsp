@@ -19,8 +19,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link href="/css/jquery.dynatable.css" rel="stylesheet">
-    <script src="/js/jquery.dynatable.js"></script>
 
 </head>
 <body class="blue lighten-3">
@@ -44,26 +42,6 @@
 </main>
 <md:footer-md></md:footer-md>
 
-<script>
-    var records = ${skills};
-    $('#my-final-table').dynatable({
-        dataset: {
-            records: records,
-            perPageDefault: 10,
-            perPageOptions: [10, 25, 50, 75, 100]
-        },
-        inputs: {
-            paginationPrev: 'Anterior',
-            paginationNext: 'Siguiente',
-            perPageText: 'Mostrar: ',
-            recordCountText: 'Mostrando-> ',
-            processingText: 'Procesando...'
-        }
-    });
-
-    $('.input').addClass('search_1');
-
-</script>
 
 
 <script type="text/javascript" src="/js/materialize.min.js"></script>
@@ -71,25 +49,47 @@
 <script type="text/javascript" src="/js/BarraLateralMovil.js"></script>
 <script type="text/javascript" src="/js/validador.js"></script>
 
-<script>
-    //TODO cuidado con la direccion del websocket, de localhost a skillshare
-    //HAy una funcion setTimeout para enviar periodicamente mensajes
-    //var ruta = window.location.host;
-    var myWS = new WebSocket("ws://skillshare-uji.herokuapp.com/chat/{22}");
-    myWS.onopen = (() = > console.log("Guei abierto")
-    )
-    ;
-    window.onbeforeunload = (() = > myWS.close()
-    )
-    ;
-    myWS.onclose = (() = > console.log("Guei cerrado")
-    )
-    ;
-    myWS.onerror = (() = > console.log("Guei error")
-    )
-    ;
-</script>
+<%--<script>--%>
+    <%--//TODO cuidado con la direccion del websocket, de localhost a skillshare--%>
+    <%--//HAy una funcion setTimeout para enviar periodicamente mensajes--%>
+    <%--//var ruta = window.location.host;--%>
+<%--//    var myWS = new WebSocket("ws://skillshare-uji.herokuapp.com/notification/{22}");--%>
+    <%--console.log("hola?");--%>
+    <%--var myWS = new WebSocket("ws://localhost:8080/notification/{22}");--%>
+    <%--myWS.onopen = (() => console.log("Guei abierto")--%>
+    <%--)--%>
+    <%--;--%>
+    <%--window.onbeforeunload = (() => myWS.close()--%>
+    <%--)--%>
+    <%--;--%>
+    <%--myWS.onclose = (() = > console.log("Guei cerrado")--%>
+    <%--)--%>
+    <%--;--%>
+    <%--myWS.onerror = (() = > console.log("Guei error")--%>
+    <%--)--%>
+    <%--;--%>
+<%--</script>--%>
 
+<script>
+    var myNif = ${student.nif};
+    var myWS = new WebSocket("ws://localhost:8080/notification/{"+myNif+"}");
+    <%--var myURL = ${pageContext.request.contextPath};--%>
+    function myOpenF() {
+        console.log("opened WS:");
+
+    }
+    myWS.onopen = myOpenF;
+    myWS.onmessage = function (e) {
+        console.log("Received data"+e.data);
+//        if(myNif == msg.nif){
+//
+//            console.log("Es mi colaboración");
+//        } else {
+//            console.log("En algun lugar en alguna parte, se ha producido una colaboración, pero no conmigo :(");
+//        }
+    }
+
+</script>
 
 </body>
 </html>

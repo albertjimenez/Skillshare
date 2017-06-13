@@ -1,47 +1,57 @@
 package websocket;
 
-import java.util.Date;
+import java.io.Serializable;
 
 /**
  * Created by Beruto and Pablo Berbel on 24/4/17. Project -> skillshare
  */
-public class MensajesWS {
+public class MensajesWS implements Serializable {
 
-    private String texto;
     //Son el correo
-    private String destinatario;
-    private String emisor;
-    private Date fecha;
+    private String nif;
+    private int idProp;
+    private int idReq;
+    private boolean isProposalURL;
 
-    public String getTexto() {
-        return texto;
+    public boolean isProposalURL() {
+        return isProposalURL;
     }
 
-    public void setTexto(String texto) {
-        this.texto = texto;
+    public void setProposalURL(boolean proposalURL) {
+        isProposalURL = proposalURL;
     }
 
-    public String getDestinatario() {
-        return destinatario;
+    public int getIdReq() {
+        return idReq;
     }
 
-    public void setDestinatario(String destinatario) {
-        this.destinatario = destinatario;
+    public void setIdReq(int idReq) {
+        this.idReq = idReq;
     }
 
-    public String getEmisor() {
-        return emisor;
+    public Integer getIdProp() {
+        return idProp;
     }
 
-    public void setEmisor(String emisor) {
-        this.emisor = emisor;
+    public void setIdProp(int idProp) {
+        this.idProp = idProp;
     }
 
-    public Date getFecha() {
-        return fecha;
+    public String getNif() {
+        return nif;
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+    public void setNif(String nif) {
+        this.nif = nif;
+    }
+
+    @Override
+    public String toString() {
+        return "MensajesWS{" +
+                "nif='" + nif + '\'' +
+                ", idProp=" + idProp +
+                ", idReq=" + idReq +
+                ", isProposalURL=" + isProposalURL +
+                '}';
     }
 }

@@ -1,9 +1,11 @@
 package model.student;
 
+import java.io.Serializable;
+
 /**
  * Created by Beruto on 12/3/17.
  */
-public class Student {
+public class Student implements Serializable {
 
     private String nif, username, password, name, email, degree;
     private int course;

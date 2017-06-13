@@ -93,7 +93,7 @@
                         <tr>
                             <td>
                                 <a class="waves-effect waves-light btn" href="skill/update/${sk.name}/${sk.level}.html">
-                                    <i class="material-icons left ">mode_edit
+                                    <i class="material-icons right ">mode_edit
                                     </i>Editar habilidad</a>
                             </td>
                             <td>
@@ -183,8 +183,8 @@
             text: "Se borrarán las colaboraciones, propuestas y ofertas",
             type: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
+            confirmButtonColor: '#3085d6',
             confirmButtonText: '¡Sí, borra la habilidad!',
             cancelButtonText: 'Cancelar'
         }).then(function () {

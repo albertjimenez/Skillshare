@@ -13,7 +13,7 @@ import java.io.StringReader;
  */
 
 //Mi correo en la colaboracion SOLO
-@ServerEndpoint("/chat/{myemail}")
+@ServerEndpoint("/notification/{nif}")
 public class ChatWS {
 
     static ChatWSHandler chatWSHandler = new ChatWSHandler();
@@ -21,27 +21,32 @@ public class ChatWS {
 
 
     @OnOpen
-    public void open(@PathParam("myemail") String myemail, Session session) {
-        System.out.println("Estoy abierto como el minas");
-        chatWSHandler.registerSession(myemail, session);
+    public void open(@PathParam("nif") String nif, Session session) {
+        //Poll for keeping alive
+//        new Timer().schedule(new TimerWS(session),0L,10000L);
+        System.out.println("Estoy abierto como el minas: Nif " + nif);
+        chatWSHandler.registerSession(nif, session);
+        System.out.println(session.isOpen());
 
     }
 
     @OnClose
-    public void close(@PathParam("myemail") String myemail) {
-        chatWSHandler.unregister(myemail);
+    public void close(@PathParam("nif") String nif) {
+        chatWSHandler.unregister(nif);
         System.out.println("Me he chapado");
     }
 
     @OnMessage
     public void message(String message) {
+        System.out.println("mensaje recibido de WS->" + message);
         jsonReader = Json.createReader(new StringReader(message));
         JsonObject jsonMessage = jsonReader.readObject();
-        //TODO construir mensaje a base de atributos
-        MensajesWS mensajesWS = null;
-//        jsonMessage.getString("texto");
-        //Mirar http://stackoverflow.com/questions/15761101/how-to-get-a-date-from-a-json-object
-
+        MensajesWS mensajesWS = new MensajesWS();
+        mensajesWS.setNif(jsonMessage.getString("nif"));
+        mensajesWS.setIdProp(jsonMessage.getInt("idProp"));
+        mensajesWS.setIdReq(jsonMessage.getInt("idReq"));
+        mensajesWS.setProposalURL(jsonMessage.getBoolean("isProposalURL"));
+        System.out.println(mensajesWS);
         chatWSHandler.handleMessage(mensajesWS);
     }
 

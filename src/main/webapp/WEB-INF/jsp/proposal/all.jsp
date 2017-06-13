@@ -132,7 +132,61 @@
 <script src="/js/aos.js"></script>
 <script src="/js/BarraLateralMovil.js"></script>
 <script type="text/javascript" src="/js/search.js"></script>
+<script>
+    var myNif = ${student.nif};
+    var myWS = new WebSocket("ws://localhost:8080/notification/{" + myNif + "}");
+    var myURL = "${pageContext.request.contextPath}/collaboration/";
+    function myOpenF() {
+        console.log("opened WS:");
 
+    }
+    function myClose() {
+        myWS.close();
+    }
+    myWS.onopen = myOpenF;
+    myWS.onclose = myClose;
+    window.onbeforeunload = myClose;
+
+    myWS.onmessage = function (e) {
+        console.log("Received data" + e.data);
+        var msg = JSON.parse(e.data);
+        console.log(msg);
+        if (myNif == msg.nif) {
+            console.log("Es mi colaboración");
+            if (msg.isProposalURL) {
+
+                swal({
+                    title: 'Una de tus propuestas ha sido atendida :)',
+                    text: "¿Quieres ver los detalles?",
+                    showCancelButton: true,
+                    cancelButtonColor: '#d33',
+                    cancelButtonText: 'Mejor no',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: '¡Sí, llévame a los detalles!',
+                    imageUrl: "/images/handshakeicon.png"
+                }).then(function () {
+                    window.location.href = myURL + "prop/detail/" + msg.idProp + "/" + msg.idReq + ".html";
+                });
+            } else {
+                swal({
+                    title: 'Una de tus demandas ha sido atendida :)',
+                    text: "¿Quieres ver los detalles?",
+                    showCancelButton: true,
+                    cancelButtonColor: '#d33',
+                    cancelButtonText: 'Mejor no',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: '¡Sí, llévame a los detalles!',
+                    imageUrl: "/images/handshakeicon.png"
+                }).then(function () {
+                    window.location.href = myURL + "req/detail/" + msg.idReq + "/" + msg.idProp + ".html";
+                });
+            }
+        } else {
+            console.log("En algun lugar en alguna parte, se ha producido una colaboración, pero no conmigo :(");
+        }
+    }
+
+</script>
 <script>
     AOS.init();
 </script>

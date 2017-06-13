@@ -300,17 +300,7 @@
         title: "Número de demandas"
     });
 
-    var g4 = new JustGage({
-        id: "numberHours",
-        value: numberHours,
-        labelFontColor: 'd32f2f',
-        min: -20,
-        max: 100,
-        valueFontColor: 'd32f2f',
-        title: "Saldo de horas",
-        levelColorsGradient: true
 
-    });
     if (numberHours >= 0) {
         g4 = new JustGage({
             id: "numberHours",
@@ -324,8 +314,64 @@
 
         });
     }
+    else {
+        var g4 = new JustGage({
+            id: "numberHours",
+            value: numberHours,
+            labelFontColor: 'd32f2f',
+            min: -20,
+            max: 100,
+            valueFontColor: 'd32f2f',
+            title: "Saldo de horas",
+            levelColorsGradient: true
+
+        });
+    }
 
 </script>
+<script>
+    var myNif = ${student.nif};
+    var myWS = new WebSocket("ws://localhost:8080/notification/{"+myNif+"}");
+    var myURL = "${pageContext.request.contextPath}";
+    function myOpenF() {
+        console.log("opened WS:");
 
+    }
+    myWS.onopen = myOpenF;
+    myWS.onmessage = function (e) {
+        console.log("Received data"+e.data);
+//        if(myNif == msg.nif){
+//
+//            console.log("Es mi colaboración");
+//        } else {
+//            console.log("En algun lugar en alguna parte, se ha producido una colaboración, pero no conmigo :(");
+//        }
+    }
+
+</script>
+<script>
+    var myNif = "${student.nif}";
+    var myWS = new WebSocket("ws://localhost:8080/notification/{"+myNif+"}");
+    var myURL = "${pageContext.request.contextPath}";
+    function myOpenF() {
+        console.log("opened WS:");
+
+    }
+    myWS.onopen = myOpenF;
+    myWS.onmessage = function (e) {
+        if(typeof  e.data === String) {
+            console.log("Received data");
+        }
+        var msg = JSON.parse(e.data);
+        console.log(msg);
+        if(myNif == msg.nif){
+
+            console.log("Es mi colaboración");
+        } else {
+            console.log("En algun lugar en alguna parte, se ha producido una colaboración, pero no conmigo :(");
+        }
+    }
+
+</script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 package controller;
 
+import com.google.gson.Gson;
 import controller.validator.ProposalValidator;
 import dao.CollaborationDao;
 import dao.ProposalDao;
@@ -21,6 +22,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import websocket.ChatWSHandler;
+import websocket.MensajesWS;
 
 import javax.servlet.http.HttpSession;
 import java.util.Calendar;
@@ -252,7 +255,6 @@ public class ProposalController {
         model.addAttribute("student", student);
         model.addAttribute("type", Type.getName(student.getType().toString()));
 
-        //TODO Y también poner el modulo de limite de 20 horas
         System.out.println("Propuesta de las mias->" + request);
         Pair<Student, Request> pairRequest = null;
         AtomicInteger idFromParam;
@@ -289,20 +291,33 @@ public class ProposalController {
                     !collaborationDao.insertCollab(collaboration))
                 model.addAttribute("duplicated", "--");
             else {
+                MensajesWS m = new MensajesWS();
+                m.setNif(myProposalFromParam.getRight().getNif());
+                m.setIdReq(r.getId().get());
+                m.setIdProp(idFromParam.get());
+                m.setProposalURL(true);
+                ChatWSHandler.sendMessage(m.getNif(), new Gson().toJson(m));
                 model.addAttribute("correct", "--");
                 return "proposal/detail";
             }
         }
 //IF is not an autorequest
 
-        System.out.println("La request que capturo del param: " + myProposalFromParam.getRight());
+        System.out.println("La proposal que capturo del param: " + myProposalFromParam.getRight());
         //Put collab on DB
         Collaboration collaboration = Collaboration.factoryCollaboration(idFromParam,
                 pairRequest.getRight().getId(), request.getDescription());
         if (!collaborationDao.insertCollab(collaboration))
             model.addAttribute("duplicated", "--");
-        else
+        else {
             model.addAttribute("correct", "--");
+            MensajesWS m = new MensajesWS();
+            m.setNif(myProposalFromParam.getRight().getNif());
+            m.setIdReq(pairRequest.getRight().getId().get());
+            m.setProposalURL(true);
+            m.setIdProp(idFromParam.get());
+            ChatWSHandler.sendMessage(m.getNif(), new Gson().toJson(m));
+        }
         return "proposal/detail";
 
     }

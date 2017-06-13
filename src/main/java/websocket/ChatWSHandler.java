@@ -1,7 +1,5 @@
 package websocket;
 
-import dao.MensajesDao;
-
 import javax.json.JsonObject;
 import javax.json.spi.JsonProvider;
 import javax.websocket.Session;
@@ -14,49 +12,46 @@ import java.util.logging.Logger;
  */
 public class ChatWSHandler {
 
-    private ConcurrentHashMap<String, Session> activeSessions;
-
-    private MensajesDao mensajesDao = new MensajesDao();
+    private static ConcurrentHashMap<String, Session> activeSessions = new ConcurrentHashMap<>();
 
 
-    public ChatWSHandler() {
-        activeSessions = new ConcurrentHashMap<>();
+    public void registerSession(String nif, Session session) {
+        activeSessions.put(nif, session);
+        System.out.println(activeSessions);
     }
 
-    public void registerSession(String email, Session session) {
-        activeSessions.put(email, session);
-    }
-
-    public void unregister(String email) {
+    public static void unregister(String email) {
         activeSessions.remove(email);
     }
 
-    public void handleMessage(MensajesWS mensajesWS) {
-        mensajesDao.addMensaje(mensajesWS);
-
+    public static void handleMessage(MensajesWS mensajesWS) {
         JsonProvider jsonProvider = JsonProvider.provider();
         JsonObject jsonObject = jsonProvider.createObjectBuilder().
-                add("texto", mensajesWS.getTexto()).
-                add("destintario", mensajesWS.getDestinatario()).
-                add("emisor", mensajesWS.getEmisor()).
-                add("fecha", mensajesWS.getFecha().toString()).build();
+                add("nif", mensajesWS.getNif()).
+                add("idProp", mensajesWS.getIdProp()).
+                add("idReq", mensajesWS.getIdReq()).
+                add("isProposalURL", mensajesWS.isProposalURL()).
+                build();
 
-        sendMessage(mensajesWS.getEmisor(), jsonObject.toString());
-        sendMessage(mensajesWS.getDestinatario(), jsonObject.toString());
+        sendMessage(mensajesWS.getNif(), jsonObject.toString());
     }
 
-    private void sendMessage(String email, String message) {
-        Session session = activeSessions.get(email);
+    public static void sendMessage(String nif, String message) {
+
+
+        Session session = activeSessions.get(nif);
+        System.out.println("Lo que envio del server " + message);
 
         if (session == null)
             return;
-
         try {
             session.getBasicRemote().sendText(message);
-
+            System.out.println("mi mensaje que envio del server:->" + message);
         } catch (IOException e) {
             Logger.getAnonymousLogger().info(e.getMessage());
-            unregister(email);
+            unregister(nif);
+        } catch (NullPointerException e) {
+            e.printStackTrace();
         }
     }
 

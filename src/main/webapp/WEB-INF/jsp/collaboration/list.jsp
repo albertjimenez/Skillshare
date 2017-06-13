@@ -30,6 +30,9 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/introjs.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/intro.min.js"></script>
     <script src="/js/effect-text-3d.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.4/sweetalert2.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.4/sweetalert2.min.css">
 
     <style>
         body {
@@ -172,7 +175,61 @@
 <script>
     AOS.init();
 </script>
+<script>
+    var myNif = ${student.nif};
+    var myWS = new WebSocket("ws://localhost:8080/notification/{" + myNif + "}");
+    var myURL = "${pageContext.request.contextPath}/collaboration/";
+    function myOpenF() {
+        console.log("opened WS:");
 
+    }
+    function myClose() {
+        myWS.close();
+    }
+    myWS.onopen = myOpenF;
+    myWS.onclose = myClose;
+    window.onbeforeunload = myClose;
+
+    myWS.onmessage = function (e) {
+        console.log("Received data" + e.data);
+        var msg = JSON.parse(e.data);
+        console.log(msg);
+        if (myNif == msg.nif) {
+            console.log("Es mi colaboración");
+            if (msg.isProposalURL) {
+
+                swal({
+                    title: 'Una de tus propuestas ha sido atendida :)',
+                    text: "¿Quieres ver los detalles?",
+                    showCancelButton: true,
+                    cancelButtonColor: '#d33',
+                    cancelButtonText: 'Mejor no',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: '¡Sí, llévame a los detalles!',
+                    imageUrl: "/images/handshakeicon.png"
+                }).then(function () {
+                    window.location.href = myURL + "prop/detail/" + msg.idProp + "/" + msg.idReq + ".html";
+                });
+            } else {
+                swal({
+                    title: 'Una de tus demandas ha sido atendida :)',
+                    text: "¿Quieres ver los detalles?",
+                    showCancelButton: true,
+                    cancelButtonColor: '#d33',
+                    cancelButtonText: 'Mejor no',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: '¡Sí, llévame a los detalles!',
+                    imageUrl: "/images/handshakeicon.png"
+                }).then(function () {
+                    window.location.href = myURL + "req/detail/" + msg.idReq + "/" + msg.idProp + ".html";
+                });
+            }
+        } else {
+            console.log("En algun lugar en alguna parte, se ha producido una colaboración, pero no conmigo :(");
+        }
+    }
+
+</script>
 <script>
     introJs().start();
 </script>

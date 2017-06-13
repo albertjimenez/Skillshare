@@ -20,6 +20,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import websocket.ChatWSHandler;
+import websocket.MensajesWS;
 
 import javax.servlet.http.HttpSession;
 import java.util.*;
@@ -77,6 +79,7 @@ public class LoginRegisterController {
 
     private static boolean registered = false;
 
+
     @RequestMapping(value = "/login/login")
     public String login(Model model) {
 
@@ -111,6 +114,7 @@ public class LoginRegisterController {
         }
 
         httpSession.setAttribute("user", s);
+        model.addAttribute("student", s);
         if (s.getType() == Type.CP)
             model.addAttribute("cp", "-");
         return s.getType() == Type.CP ? "redirect:../home/home_pc.html" : "redirect:../home/home_student.html";
@@ -187,17 +191,18 @@ public class LoginRegisterController {
 
         if (!getSessionStudent())
             return "redirect:../login/login.html";
+
         model.addAttribute("name", getStudentName());
         model.addAttribute("type", getType());
         model.addAttribute("skills", skillDao.getSkillsCollection());
         model.addAttribute("editskill", new Skill());
         Student student = (Student) httpSession.getAttribute("user");
-        System.out.println(student.getType() == Type.CP);
-        System.out.println(student.getType());
+        model.addAttribute("student", student);
         if (registered) {
             model.addAttribute("success", "-");
             registered = false;
         }
+
         if (student.getType() == Type.CP)
             model.addAttribute("cp", "-");
         else
@@ -271,11 +276,13 @@ public class LoginRegisterController {
             return "redirect:../login/login.html";
         Student student = (Student) httpSession.getAttribute("user");
         String name = student.getName().split("\\s+")[0];
+        MensajesWS m = new MensajesWS();
+        m.setNif(student.getNif());
+        m.setProposalURL(true);
+        m.setIdProp(1);
+        m.setIdReq(1);
+        ChatWSHandler.sendMessage(student.getNif(), new Gson().toJson(m));
         model.addAttribute("student", student);
-        List<Skill> list = skillDao.getSkillsCollection();
-        Gson gson = new Gson();
-        System.out.println(gson.toJson(list));
-        model.addAttribute("skills", gson.toJson(list));
         model.addAttribute("name", name);
         model.addAttribute("type", Type.getName(student.getType().toString()));
         return "testings/test";

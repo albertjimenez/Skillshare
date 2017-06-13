@@ -35,7 +35,7 @@
 
     main {
         flex: 1 0 auto;
-        opacity: 0.7;
+        /*opacity: 0.7;*/
     }
 
 </style>
@@ -44,9 +44,6 @@
 <%--Inicio del navbar con movil--%>
 <header><md:navbar-md name="${name}"></md:navbar-md></header>
 <%--Cuerpo principal--%>
-
-<%--Barra gris--%>
-<%--<div class="row">--%>
 
 <md:sidenav-md name="${name}" type="${type}">
 
@@ -64,7 +61,6 @@
 </md:sidenav-md>
 
     <%--Resto de la página--%>
-<%--<div class="col s9 ">--%>
 <main class="container">
     <h4 class="center-align font-lobster text3d">Editar habilidad ${editskill.name}</h4>
     <div class="section z-depth-2 my-bw-nw animated fadeInDown ">
@@ -94,7 +90,8 @@
                     <i class="material-icons prefix">toc</i>
                     <form:label path="description">Descripción</form:label>
                     <form:textarea path="description" id="description" value="${editskill.description}"
-                                   cssClass="validate"/>
+                                   cssClass="validate" data-length="140"
+                                   maxlength="140"/>
                 </div>
             </div>
             <div class="row">
@@ -128,5 +125,12 @@
 <script>
     AOS.init();
 </script>
+<script>
+    $(document).ready(function () {
+        $('input#input_text, textarea#textarea1').characterCounter();
+    });
+
+</script>
+
 </body>
 </html>
