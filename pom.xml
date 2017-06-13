@@ -124,12 +124,6 @@
             <version>3.2.0.RELEASE</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.glassfish/json -->
-        <dependency>
-            <groupId>org.glassfish</groupId>
-            <artifactId>json</artifactId>
-            <version>1.1</version>
-        </dependency>
         <dependency>
             <groupId>org.glassfish</groupId>
             <artifactId>javax.json</artifactId>

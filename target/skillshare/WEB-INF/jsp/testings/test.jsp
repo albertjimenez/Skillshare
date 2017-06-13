@@ -50,29 +50,29 @@
 <script type="text/javascript" src="/js/validador.js"></script>
 
 <%--<script>--%>
-    <%--//TODO cuidado con la direccion del websocket, de localhost a skillshare--%>
-    <%--//HAy una funcion setTimeout para enviar periodicamente mensajes--%>
-    <%--//var ruta = window.location.host;--%>
+<%--//TODO cuidado con la direccion del websocket, de localhost a skillshare--%>
+<%--//HAy una funcion setTimeout para enviar periodicamente mensajes--%>
+<%--//var ruta = window.location.host;--%>
 <%--//    var myWS = new WebSocket("ws://skillshare-uji.herokuapp.com/notification/{22}");--%>
-    <%--console.log("hola?");--%>
-    <%--var myWS = new WebSocket("ws://localhost:8080/notification/{22}");--%>
-    <%--myWS.onopen = (() => console.log("Guei abierto")--%>
-    <%--)--%>
-    <%--;--%>
-    <%--window.onbeforeunload = (() => myWS.close()--%>
-    <%--)--%>
-    <%--;--%>
-    <%--myWS.onclose = (() = > console.log("Guei cerrado")--%>
-    <%--)--%>
-    <%--;--%>
-    <%--myWS.onerror = (() = > console.log("Guei error")--%>
-    <%--)--%>
-    <%--;--%>
+<%--console.log("hola?");--%>
+<%--var myWS = new WebSocket("ws://localhost:8080/notification/{22}");--%>
+<%--myWS.onopen = (() => console.log("Guei abierto")--%>
+<%--)--%>
+<%--;--%>
+<%--window.onbeforeunload = (() => myWS.close()--%>
+<%--)--%>
+<%--;--%>
+<%--myWS.onclose = (() = > console.log("Guei cerrado")--%>
+<%--)--%>
+<%--;--%>
+<%--myWS.onerror = (() = > console.log("Guei error")--%>
+<%--)--%>
+<%--;--%>
 <%--</script>--%>
 
 <script>
     var myNif = ${student.nif};
-    var myWS = new WebSocket("ws://localhost:8080/notification/{"+myNif+"}");
+    var myWS = new WebSocket("ws://localhost:8080/notification/{" + myNif + "}");
     <%--var myURL = ${pageContext.request.contextPath};--%>
     function myOpenF() {
         console.log("opened WS:");
@@ -80,7 +80,7 @@
     }
     myWS.onopen = myOpenF;
     myWS.onmessage = function (e) {
-        console.log("Received data"+e.data);
+        console.log("Received data" + e.data);
 //        if(myNif == msg.nif){
 //
 //            console.log("Es mi colaboración");

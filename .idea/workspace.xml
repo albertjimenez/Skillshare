@@ -7,63 +7,29 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0695153-a83b-4add-9f52-0017f11374ad" name="Default" comment="WebSockets are sending message to servers and servers are receiving the messages but console.log does not see any event.data">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/images/handshakeicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_javax_json_1_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_json_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/Tools/TimerWS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/myWS.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_javax_mail_api_1_5_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_4_7.xml" afterPath="" />
+    <list default="true" id="a0695153-a83b-4add-9f52-0017f11374ad" name="Default" comment="Websockets notification UP and running!!! At least it works on collaboration/list but it seems that can be done on the rest of the web. Pending the testing of any web to test WS">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_json_1_1.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/CollaborationController.class" afterPath="$PROJECT_DIR$/target/classes/controller/CollaborationController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/LoginRegisterController.class" afterPath="$PROJECT_DIR$/target/classes/controller/LoginRegisterController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/ProposalController.class" afterPath="$PROJECT_DIR$/target/classes/controller/ProposalController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/RequestController.class" afterPath="$PROJECT_DIR$/target/classes/controller/RequestController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/SkillController.class" afterPath="$PROJECT_DIR$/target/classes/controller/SkillController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/student/Student.class" afterPath="$PROJECT_DIR$/target/classes/model/student/Student.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/websocket/ChatWS.class" afterPath="$PROJECT_DIR$/target/classes/websocket/ChatWS.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/websocket/ChatWSHandler.class" afterPath="$PROJECT_DIR$/target/classes/websocket/ChatWSHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/websocket/MensajesWS.class" afterPath="$PROJECT_DIR$/target/classes/websocket/MensajesWS.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare.war" afterPath="$PROJECT_DIR$/target/skillshare.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/CollaborationController.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/CollaborationController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/LoginRegisterController.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/LoginRegisterController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/ProposalController.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/ProposalController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/RequestController.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/RequestController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/SkillController.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/controller/SkillController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/model/student/Student.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/model/student/Student.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/websocket/ChatWS.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/websocket/ChatWS.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/websocket/ChatWSHandler.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/websocket/ChatWSHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/websocket/MensajesWS.class" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/classes/websocket/MensajesWS.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/skillshare_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/skillshare_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skillshare.iml" afterPath="$PROJECT_DIR$/skillshare.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/CollaborationController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/CollaborationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/LoginRegisterController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginRegisterController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/ProposalController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/ProposalController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/RequestController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/RequestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/SkillController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/SkillController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/student/Student.java" afterPath="$PROJECT_DIR$/src/main/java/model/student/Student.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/websocket/ChatWS.java" afterPath="$PROJECT_DIR$/src/main/java/websocket/ChatWS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/websocket/ChatWSHandler.java" afterPath="$PROJECT_DIR$/src/main/java/websocket/ChatWSHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/websocket/MensajesWS.java" afterPath="$PROJECT_DIR$/src/main/java/websocket/MensajesWS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/prop/detail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/prop/detail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/req/detail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/collaboration/req/detail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_student.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/home_student.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/update.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/update.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/all.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/all.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/create.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/create.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/all.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/all.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/create.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/create.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/detail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/detail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/testings/test.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/testings/test.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/dispatcher-servlet.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/home/home_pc.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/home/home_pc.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/home/home_student.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/home/home_student.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/home/skill/update.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/home/skill/update.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/proposal/create.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/proposal/create.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/proposal/list.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/proposal/list.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/request/list.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/request/list.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/testings/test.jsp" afterPath="$PROJECT_DIR$/target/skillshare/WEB-INF/jsp/testings/test.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -101,81 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="all.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="all.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/all.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="538">
               <caret line="188" column="9" lean-forward="false" selection-start-line="188" selection-start-column="9" selection-end-line="188" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/create.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="219" column="9" lean-forward="false" selection-start-line="219" selection-start-column="9" selection-end-line="219" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="282" column="9" lean-forward="false" selection-start-line="282" selection-start-column="9" selection-end-line="282" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="230" column="9" lean-forward="false" selection-start-line="230" selection-start-column="9" selection-end-line="230" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="all.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/all.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="187" column="9" lean-forward="false" selection-start-line="187" selection-start-column="9" selection-end-line="187" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/create.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="222" column="9" lean-forward="false" selection-start-line="222" selection-start-column="9" selection-end-line="222" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/detail.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="278" column="9" lean-forward="false" selection-start-line="278" selection-start-column="9" selection-end-line="278" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="231" column="9" lean-forward="false" selection-start-line="231" selection-start-column="9" selection-end-line="231" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -289,9 +185,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/js/justgage.js" />
         <option value="$PROJECT_DIR$/src/main/java/controller/validator/ProposalValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/validator/RequestValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/java/model/Tools/TimerWS.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/home/skill/update.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/model/student/Student.java" />
         <option value="$PROJECT_DIR$/src/main/java/websocket/MensajesWS.java" />
@@ -318,6 +212,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/create.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/detail.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
       </list>
     </option>
   </component>
@@ -352,6 +248,10 @@
           <option name="myItemId" value="skillshare Maven Webapp" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Dependencies" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
+        </PATH_ELEMENT>
       </PATH>
       <PATH>
         <PATH_ELEMENT>
@@ -383,6 +283,16 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="heroku" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="skillshare Maven Webapp" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
       </PATH>
     </treeState>
@@ -1030,7 +940,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="RequestC&#9;PSI&#9;JAVA://controller.RequestController&#10;Prop&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;home&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp&#10;nav&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/sidenav-md.tag&#10;SkillC&#9;PSI&#9;JAVA://controller.SkillController&#10;list&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/collaboration/list.jsp&#10;Coll&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/CollaborationController.java&#10;Me&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/websocket/MensajesWS.java&#10;upda&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/update.jsp&#10;homep&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp&#10;create&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/create.jsp&#10;update&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/update.jsp&#10;test&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/testings/test.jsp&#10;Log&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;log&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/login/login.jsp&#10;deta&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/detail.jsp&#10;pom&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/pom.xml&#10;logi&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;dis&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/dispatcher-servlet.xml&#10;det&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp&#10;h&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_student.jsp&#10;reque&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/RequestValidator.java&#10;regis&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp&#10;Reque&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/RequestValidator.java&#10;prop&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/ProposalValidator.java&#10;de&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp&#10;all&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/all.jsp&#10;al&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/all.jsp&#10;stat&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/StatisticalController.java&#10;Logreg&#9;PSI&#9;JAVA://controller.LoginRegisterController&#10;homest&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_student.jsp&#10;disp&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/dispatcher-servlet.xml&#10;Bann&#9;PSI&#9;JAVA://controller.BannedController&#10;Contr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;side&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/sidenav-md.tag&#10;Colla&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/CollaborationDao.java&#10;Req&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/RequestValidator.java&#10;Reqva&#9;PSI&#9;JAVA://controller.validator.RequestValidator&#10;des&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/desplegable-md.tag&#10;Stat&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/model/Tools/StatisticalElement.java&#10;tag&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/desplegable-md.tag&#10;web&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/web.xml&#10;search&#9;ACTION&#9;SearchEverywhere&#10;sear&#9;ACTION&#9;Spy-js.SearchFunctionFromStack&#10;detai&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp&#10;dao&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/ProposalDao.java&#10;lis&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/list.jsp&#10;propo&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;contr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/CollaborationController.java&#10;crea&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp" />
+    <property name="SearchEverywhereHistoryKey" value="pom&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/pom.xml&#10;dis&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/dispatcher-servlet.xml&#10;RequestC&#9;PSI&#9;JAVA://controller.RequestController&#10;Prop&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;home&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp&#10;nav&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/sidenav-md.tag&#10;SkillC&#9;PSI&#9;JAVA://controller.SkillController&#10;list&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/collaboration/list.jsp&#10;Coll&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/CollaborationController.java&#10;Me&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/websocket/MensajesWS.java&#10;upda&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/update.jsp&#10;homep&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_pc.jsp&#10;create&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/create.jsp&#10;update&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/update.jsp&#10;test&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/testings/test.jsp&#10;Log&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;log&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/login/login.jsp&#10;deta&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/detail.jsp&#10;logi&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/LoginRegisterController.java&#10;det&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp&#10;h&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_student.jsp&#10;reque&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/RequestValidator.java&#10;regis&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/register/register.jsp&#10;Reque&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/RequestValidator.java&#10;prop&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/ProposalValidator.java&#10;de&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp&#10;all&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/all.jsp&#10;al&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/all.jsp&#10;stat&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/StatisticalController.java&#10;Logreg&#9;PSI&#9;JAVA://controller.LoginRegisterController&#10;homest&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/home_student.jsp&#10;disp&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/dispatcher-servlet.xml&#10;Bann&#9;PSI&#9;JAVA://controller.BannedController&#10;Contr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;side&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/sidenav-md.tag&#10;Colla&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/CollaborationDao.java&#10;Req&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/validator/RequestValidator.java&#10;Reqva&#9;PSI&#9;JAVA://controller.validator.RequestValidator&#10;des&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/desplegable-md.tag&#10;Stat&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/model/Tools/StatisticalElement.java&#10;tag&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/tags/desplegable-md.tag&#10;web&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/web.xml&#10;search&#9;ACTION&#9;SearchEverywhere&#10;sear&#9;ACTION&#9;Spy-js.SearchFunctionFromStack&#10;detai&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp&#10;dao&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/dao/ProposalDao.java&#10;lis&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/request/list.jsp&#10;propo&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/ProposalController.java&#10;contr&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/java/controller/CollaborationController.java&#10;crea&#9;FILE&#9;file:///Users/Beruto/Documents/Eclipse_EE/WorkSpaceEE/skillshare/src/main/webapp/WEB-INF/jsp/home/skill/create.jsp" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="last.edited.regexp" value="&#10;" />
@@ -1586,14 +1496,7 @@
       <workItem from="1497216424456" duration="3133000" />
       <workItem from="1497273750543" duration="1609000" />
       <workItem from="1497300669450" duration="15312000" />
-      <workItem from="1497347225160" duration="8758000" />
-    </task>
-    <task id="LOCAL-00029" summary="Attribute seen created, cleaned trash code and UI improvements">
-      <created>1493425907527</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1493425907527</updated>
+      <workItem from="1497347225160" duration="9070000" />
     </task>
     <task id="LOCAL-00030" summary="Code improved, modified request and containers">
       <created>1493664919231</created>
@@ -1931,11 +1834,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497219540622</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Websockets notification UP and running!!! At least it works on collaboration/list but it seems that can be done on the rest of the web. Pending the testing of any web to test WS">
+      <created>1497356493036</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1497356493038</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="562880000" />
+    <option name="totallyTimeSpent" value="563192000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -2062,7 +1972,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Proposal Detail View implemented and working, but TODO is avoid nullpointer when url is changed by another ID which does not belong to any proposal" />
     <MESSAGE value="UI color tab added. Now are blue w/white text" />
     <MESSAGE value="Issues #8 #7 #4 solved" />
     <MESSAGE value="Collaboration from Request still buggy but almost finished" />
@@ -2087,7 +1996,8 @@
     <MESSAGE value="Issue #20 fixed" />
     <MESSAGE value="Issue #23 fixed" />
     <MESSAGE value="Issue #17 fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Issue #17 fixed" />
+    <MESSAGE value="Websockets notification UP and running!!! At least it works on collaboration/list but it seems that can be done on the rest of the web. Pending the testing of any web to test WS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Websockets notification UP and running!!! At least it works on collaboration/list but it seems that can be done on the rest of the web. Pending the testing of any web to test WS" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -2120,13 +2030,6 @@
         <state relative-caret-position="525">
           <caret line="41" column="50" lean-forward="false" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="51" column="11" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="51" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -2335,6 +2238,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2364,14 +2270,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="136" column="21" lean-forward="false" selection-start-line="136" selection-start-column="21" selection-end-line="136" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -2581,22 +2479,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/all.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="188" column="9" lean-forward="false" selection-start-line="188" selection-start-column="9" selection-end-line="188" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/create.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="219" column="9" lean-forward="false" selection-start-line="219" selection-start-column="9" selection-end-line="219" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/error.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2605,34 +2487,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="538">
-          <caret line="282" column="9" lean-forward="false" selection-start-line="282" selection-start-column="9" selection-end-line="282" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="230" column="9" lean-forward="false" selection-start-line="230" selection-start-column="9" selection-end-line="230" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/all.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="187" column="9" lean-forward="false" selection-start-line="187" selection-start-column="9" selection-end-line="187" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/create.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="222" column="9" lean-forward="false" selection-start-line="222" selection-start-column="9" selection-end-line="222" selection-end-column="9" />
+          <caret line="231" column="9" lean-forward="false" selection-start-line="231" selection-start-column="9" selection-end-line="231" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -2645,10 +2503,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/list.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/create.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="538">
-          <caret line="231" column="9" lean-forward="false" selection-start-line="231" selection-start-column="9" selection-end-line="231" selection-end-column="9" />
+          <caret line="222" column="9" lean-forward="false" selection-start-line="222" selection-start-column="9" selection-end-line="222" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/request/all.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="187" column="9" lean-forward="false" selection-start-line="187" selection-start-column="9" selection-end-line="187" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="230" column="9" lean-forward="false" selection-start-line="230" selection-start-column="9" selection-end-line="230" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="282" column="9" lean-forward="false" selection-start-line="282" selection-start-column="9" selection-end-line="282" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/create.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="219" column="9" lean-forward="false" selection-start-line="219" selection-start-column="9" selection-end-line="219" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="137" column="51" lean-forward="false" selection-start-line="137" selection-start-column="51" selection-end-line="137" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="41" column="54" lean-forward="false" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
+          <folding>
+            <element signature="e#2055#2080#0" expanded="true" />
+            <element signature="e#2136#2213#0" expanded="true" />
+            <element signature="e#2256#2274#0" expanded="true" />
+            <element signature="e#2317#2335#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/proposal/all.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="188" column="9" lean-forward="false" selection-start-line="188" selection-start-column="9" selection-end-line="188" selection-end-column="9" />
           <folding />
         </state>
       </provider>
