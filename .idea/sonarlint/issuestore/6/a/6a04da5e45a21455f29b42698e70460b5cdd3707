@@ -1,0 +1,13 @@
+
+ljavascript:S2814"MRename "noGradient" as this name is already used in declaration at line 1049.(ßàÿ¦üÿÿÿÿ
+Ajavascript:UnreachableCode"Remove this unreachable code.(´…ÈŠ
+Pjavascript:S1854"7Remove this useless assignment to local variable "path"(¿™îY
+@javascript:UnreachableCode"Remove this unreachable code.(¿™îY
+_javascript:S2814"ERename "max" as this name is already used in declaration at line 844.(ÀÍöÒ
+^javascript:S1854"?Remove this useless assignment to local variable "feComposite3"(ž¯­Ïúÿÿÿÿ
+Qjavascript:S1854"7Remove this useless assignment to local variable "path"(´…ÈŠ
+}javascript:S2703"^Add the "let", "const" or "var" keyword to this declaration of "JustGage" to make it explicit.(î½âëûÿÿÿÿ
+Ojavascript:S1854"5Remove this useless assignment to local variable "Cx"(èÇ ò
+Xjavascript:S1854"?Remove this useless assignment to local variable "currentValue"(á¼Îu
+Ojavascript:S1854"5Remove this useless assignment to local variable "Cx"(èÇ ò
+Vjavascript:S1854"7Remove this useless assignment to local variable "maxY"(íÂÌºúÿÿÿÿ

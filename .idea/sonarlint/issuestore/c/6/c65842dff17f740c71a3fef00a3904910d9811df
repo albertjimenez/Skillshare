@@ -1,0 +1,19 @@
+
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(©¼ø£8•Í½óÉ+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(ýÌÀÿÿÿÿÿ8“ˆª‡Ê+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(ü£ÃÝüÿÿÿÿ8­§©‡Ê+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ÿ–¤Ç8“ˆª‡Ê+
+zsquid:S1450"YRemove the "jsonReader" field and declare it as a local variable in the relevant methods.(Ëÿ¢Àþÿÿÿÿ8Ÿ°êòÉ+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(ßà‹¥ûÿÿÿÿ8“ˆª‡Ê+
+Vsquid:S2209"5Change this instance-reference to a static reference.(—ãÒóøÿÿÿÿ8Î€šˆÊ+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(¡¾’¸ÿÿÿÿÿ8¼˜ÅñÉ+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÙÂÿûÿÿÿÿ8“ˆª‡Ê+
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(Þ¼µ¯
+Qsquid:S2209"5Change this instance-reference to a static reference.(Ùíò—8Î€šˆÊ+

@@ -1,0 +1,33 @@
+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÔÉë«8é¹©Ø+
+Nsquid:S1135"2Complete the task associated to this TODO comment.(‹Ú…Â8é¹©Ø+
+Msquid:S1068"1Remove this unused "DEFAULT_HOURS" private field.(°®ïÙ8é¹©Ø+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÔÉë«8é¹©Ø+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(„‘şˆşÿÿÿÿ8é¹©Ø+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(êğ»ıÿÿÿÿ8é¹©Ø+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(«¼î¤8é¹©Ø+
+dsquid:S1192"HDefine a constant instead of duplicating this literal "student" 5 times.(·ö ×8é¹©Ø+
+ysquid:S1192"]Define a constant instead of duplicating this literal "redirect:../login/login.html" 5 times.(–ı8é¹©Ø+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(½“èçÿÿÿÿÿ8é¹©Ø+
+Ssquid:S1135"2Complete the task associated to this TODO comment.(€•Ğáøÿÿÿÿ8é¹©Ø+
+jsquid:S1192"NDefine a constant instead of duplicating this literal "request/error" 4 times.(§ìª²8é¹©Ø+
+dsquid:S1192"HDefine a constant instead of duplicating this literal "correct" 3 times.(—Ô8é¹©Ø+
+isquid:S1192"MDefine a constant instead of duplicating this literal "request/list" 4 times.(‚å¯î8é¹©Ø+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(¡åÉÛùÿÿÿÿ8é¹©Ø+
+jsquid:S2259"IA "NullPointerException" could be thrown; "pairProposal" is nullable here(³÷Æüÿÿÿÿ8é¹©Ø+
+esquid:S1192"IDefine a constant instead of duplicating this literal "requests" 5 times.(ùßİ8é¹©Ø+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(¶®éÓøÿÿÿÿ8é¹©Ø+
+squid:S1192"`Define a constant instead of duplicating this literal "redirect:../../login/login.html" 4 times.(ìÍ‘íıÿÿÿÿ8é¹©Ø+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ÿİùƒ8é¹©Ø+
+ksquid:S1192"ODefine a constant instead of duplicating this literal "request/detail" 3 times.(äŠŞÓ8é¹©Ø+
+gsquid:S1192"FDefine a constant instead of duplicating this literal "tour2" 3 times.(Éšòùÿÿÿÿ8é¹©Ø+
+bsquid:S1192"FDefine a constant instead of duplicating this literal "count" 5 times.(«î£8é¹©Ø+

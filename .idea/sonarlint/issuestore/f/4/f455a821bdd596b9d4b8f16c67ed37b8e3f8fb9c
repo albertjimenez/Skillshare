@@ -1,0 +1,8 @@
+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ı¢öÎ8é¦¥È+
+Hsquid:S1659"'Declare "idRequest" on a separate line.(™Ø—¾şÿÿÿÿ8İëêšÇ+
+lsquid:S1206"PThis class overrides "equals()" and should therefore also override "hashCode()".(ÜÑã8İëêšÇ+
+Esquid:S1659"$Declare "rating" on a separate line.(äœÁİûÿÿÿÿ8İëêšÇ+
+[squid:S2204":Use ".get()" to retrieve the value and compare it instead.(òä•Çøÿÿÿÿ8İëêšÇ+
+[squid:S2204":Use ".get()" to retrieve the value and compare it instead.(ï¼Œøÿÿÿÿ8İëêšÇ+

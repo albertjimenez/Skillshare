@@ -1,0 +1,8 @@
+
+>squid:S1659"$Declare "degree" on a separate line.(”ÄÃøÿÿÿÿ
+@squid:S1659"&Declare "password" on a separate line.(”ÄÃøÿÿÿÿ
+<squid:S1659""Declare "name" on a separate line.(”ÄÃøÿÿÿÿ
+wsquid:S1157"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(³‘¡)
+=squid:S1659"#Declare "email" on a separate line.(”ÄÃøÿÿÿÿ
+esquid:S1206"PThis class overrides "equals()" and should therefore also override "hashCode()".(ÜÑã
+@squid:S1659"&Declare "username" on a separate line.(”ÄÃøÿÿÿÿ

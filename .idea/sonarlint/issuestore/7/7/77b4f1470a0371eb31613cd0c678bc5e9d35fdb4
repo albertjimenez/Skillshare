@@ -1,0 +1,7 @@
+
+tsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(Òß‡ıÿÿÿÿ8…“òĞÇ+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(³úà‘üÿÿÿÿ8¨»ÄøÅ+
+osquid:S00116"SRename this field "SEQUENCE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æšõe8ÅñĞÇ+
+µsquid:S1192"˜Define a constant instead of duplicating this literal " EXCEPT select r.* from request_of_collaboration r JOIN collaboration c ON id_req = id " 3 times.(ôËî²8Ì’Õ¥È+
+5squid:S1170"!Make this final field static too.(Æšõe

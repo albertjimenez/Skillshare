@@ -1,0 +1,40 @@
+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ì‹¡­üÿÿÿÿ8›ŒóõÈ+
+[squid:S1192"FDefine a constant instead of duplicating this literal "count" 5 times.(«î£
+]squid:S1192"HDefine a constant instead of duplicating this literal "student" 8 times.(·ö ×
+hsquid:S1192"NDefine a constant instead of duplicating this literal "proposal/list" 4 times.(×Ã©Êøÿÿÿÿ
+jsquid:S1192"PDefine a constant instead of duplicating this literal "proposal/create" 3 times.(ú°òäøÿÿÿÿ
+Msquid:S1068"1Remove this unused "DEFAULT_HOURS" private field.(°®ïÙ8à‰§È+
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(•ÓÄ°øÿÿÿÿ
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(°şƒÃ8™é¹§È+
+bsquid:S1192"FDefine a constant instead of duplicating this literal "tour2" 3 times.(ìúˆ—8ş­™Ê+
+ksquid:S1192"ODefine a constant instead of duplicating this literal "proposal/error" 4 times.(Û‘Õ©8·Ãû¦È+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(«¼î¤8ğ«•™Ê+
+isquid:S1192"ODefine a constant instead of duplicating this literal "listSkillnames" 3 times.(²íÁÿÿÿÿÿ
+dsquid:S1192"JDefine a constant instead of duplicating this literal "proposals" 5 times.(¦Î¶˜ÿÿÿÿÿ
+dsquid:S1192"HDefine a constant instead of duplicating this literal "correct" 3 times.(—Ô8í¤£™Ê+
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(‹Õéûúÿÿÿÿ
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(êğ»ıÿÿÿÿ8Ò§­™Ê+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(šÄ…Õ8¸Ëâ¦È+
+qsquid:S1192"PDefine a constant instead of duplicating this literal "proposal/detail" 3 times.(İ™ŒÖøÿÿÿÿ8î›ü¦È+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(Õ‚ğ†øÿÿÿÿ8¸Ëâ¦È+
+squid:S1192"`Define a constant instead of duplicating this literal "redirect:../../login/login.html" 4 times.(ìÍ‘íıÿÿÿÿ8Óá¦È+
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(•ÓÄ°øÿÿÿÿ
+Nsquid:S1135"2Complete the task associated to this TODO comment.(‹Ú…Â8ñÚ•™Ê+
+isquid:S2259"HA "NullPointerException" could be thrown; "pairRequest" is nullable here(äã«Ùûÿÿÿÿ8™é¹§È+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÔÉë«8¸Ëâ¦È+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÔÉë«8¸Ëâ¦È+
+nsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(»äÅB8¯ÔóõÈ+
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÃÁ¦¹øÿÿÿÿ
