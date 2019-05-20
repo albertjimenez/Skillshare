@@ -4,8 +4,8 @@ websocket/ChatWSHandler.class
 dao/MensajesDao.class
 model/Tools/StatisticalElement.class
 main/Application.class
-controller/validator/BannedValidator$1.class
 mapper/CollaborationRequestMapper.class
+controller/validator/BannedValidator$1.class
 dao/StatisticalDao.class
 dao/RequestDao.class
 controller/BannedController.class
@@ -19,8 +19,8 @@ controller/validator/BannedValidator.class
 controller/validator/ProposalValidator.class
 model/student/BannedStudent.class
 controller/validator/RegisterValidator.class
-controller/LoginRegisterController.class
 websocket/ChatWS.class
+controller/LoginRegisterController.class
 mapper/CollaborationMapper.class
 controller/RequestController.class
 controller/SkillController.class
@@ -33,8 +33,8 @@ mapper/StudentMapper.class
 dao/SkillDao$1.class
 model/student/ErrorCode.class
 controller/validator/SkillValidator.class
-controller/CollaborationController.class
 controller/validator/RequestValidator.class
+controller/CollaborationController.class
 dao/BannedDao.class
 mapper/ProposalMapper.class
 model/proposal/Proposal.class

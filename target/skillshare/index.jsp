@@ -122,7 +122,9 @@
         <div class="center promo promo-example">
             <img src="images/profile/pablo.png" class="responsive-img" width="512" height="512">
             <p class="promo-caption">Pablo Berbel</p>
-            <p class="light center">Rellenar.</p>
+            <p class="light center">Amante de las nuevas tecnologías y melómano a partes iguales.
+            Creo en los retos y en las ideas que surgen en el día a día. Proyectos disponibles en
+                <a href="http://github.com/Berbel93/">mi Github</a>.</p>
         </div>
     </div>
 </div>
